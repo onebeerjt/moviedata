@@ -1,0 +1,43 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # every day, 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: IMDb datasets
+        run: npm run data:imdb
+      - name: TMDB (posters, now playing)
+        run: npm run data:tmdb
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+      - name: Letterboxd
+        # Datacenter IPs can get blocked; a failure here shouldn't stop the rest.
+        continue-on-error: true
+        run: npm run data:letterboxd -- --limit 1500
+      - name: OMDb (Rotten Tomatoes, Metacritic)
+        run: npm run data:omdb
+        env:
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+      - name: Build site data
+        run: npm run data:build
+      - name: Commit
+        run: |
+          git config user.name "moviedata-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/site data/sources
+          git diff --cached --quiet || git commit -m "Daily data refresh $(date -u +%F)"
+          git push

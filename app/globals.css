@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #0e0e0d;
+  --surface: #1a1a19;
+  --surface-2: #242422;
+  --line: #2e2e2b;
+  --text: #f4f3ee;
+  --text-2: #c3c2b7;
+  --text-3: #8a897f;
+  --neutral: #383835;
+
+  /* Source identity colors, validated as an adjacent set on --surface in the
+     order listed in lib/sources.ts. Change them together. */
+  --src-letterboxd: #199e70;
+  --src-imdb: #c98500;
+  --src-tmdb: #3987e5;
+  --src-rt: #d95926;
+  --src-metacritic: #9085e9;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.scroller {
+  scrollbar-width: none;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
