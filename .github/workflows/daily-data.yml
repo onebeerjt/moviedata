@@ -20,6 +20,8 @@ jobs:
       - name: IMDb datasets
         run: npm run data:imdb
       - name: TMDB (posters, now playing)
+        # A bad key or API hiccup shouldn't block the other sources.
+        continue-on-error: true
         run: npm run data:tmdb
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
@@ -29,6 +31,7 @@ jobs:
         continue-on-error: true
         run: npm run data:letterboxd -- --limit 1500
       - name: OMDb (Rotten Tomatoes, Metacritic)
+        continue-on-error: true
         run: npm run data:omdb
         env:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
