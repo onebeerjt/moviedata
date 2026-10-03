@@ -30,17 +30,17 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mx-auto max-w-3xl px-4 pb-10 pt-14 text-center sm:pt-20">
-        <h1 className="font-display text-5xl leading-[0.95] sm:text-7xl">
+      <section className="hero mx-auto max-w-3xl px-4 pb-10 pt-14 text-center sm:pt-20">
+        <h1 className="hero-title font-display text-5xl leading-[0.95] sm:text-7xl">
           Every score.
           <br />
-          <span className="text-text-2">One you can trust.</span>
+          <span className="hero-accent text-text-2">One you can trust.</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-text-2">
+        <p className="hero-sub mx-auto mt-5 max-w-xl text-text-2">
           We pull Letterboxd, IMDb, Rotten Tomatoes, Metacritic and TMDB into a single balanced score, and show you exactly
           where they disagree.
         </p>
-        <div className="mx-auto mt-8 max-w-xl text-left">
+        <div className="hero-search mx-auto mt-8 max-w-xl text-left">
           <Search large />
         </div>
         <p className="sr-only">{SITE_TAGLINE}</p>

@@ -10,6 +10,9 @@
   --text-2: #c3c2b7;
   --text-3: #8a897f;
   --neutral: #383835;
+  --ring: var(--text);
+  --display-font: var(--font-display), Georgia, serif;
+  --body-font: var(--font-geist-sans), system-ui, sans-serif;
 
   /* Source identity colors, validated as an adjacent set on --surface in the
      order listed in lib/sources.ts. Change them together. */
@@ -35,11 +38,11 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--body-font);
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--display-font);
   letter-spacing: -0.01em;
 }
 
@@ -52,4 +55,329 @@ body {
 }
 .scroller::-webkit-scrollbar {
   display: none;
+}
+
+/* ------------------------------------------------------------------------
+   Designs. Each one is a [data-theme] block: first the tokens (colors,
+   fonts, score ring), then a few overrides keyed to the class hooks
+   (hero, hero-title, site-header, site-logo, theme-bar) and Tailwind
+   utilities. Cinema is the default above. The list is in lib/themes.ts.
+   Light designs re-tune the source colors so they stay readable.
+   ------------------------------------------------------------------------ */
+
+.tour-new {
+  animation: tour-glow 2s ease-in-out infinite;
+}
+@keyframes tour-glow {
+  50% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--ring) 35%, transparent);
+  }
+}
+
+/* Broadsheet: the film section of a daily paper. */
+[data-theme="broadsheet"] {
+  color-scheme: light;
+  --bg: #f2ede3;
+  --surface: #faf7f0;
+  --surface-2: #e8e1d3;
+  --line: #cfc6b4;
+  --text: #1b1915;
+  --text-2: #4a453b;
+  --text-3: #7a7365;
+  --neutral: #ddd5c5;
+  --ring: #1b1915;
+  --display-font: var(--font-playfair), Georgia, serif;
+  --body-font: var(--font-source-serif), Georgia, serif;
+  --src-letterboxd: #0e7a55;
+  --src-imdb: #a26600;
+  --src-tmdb: #1f63c4;
+  --src-rt: #c03d0c;
+  --src-metacritic: #5d50cf;
+}
+[data-theme="broadsheet"] .font-display {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+[data-theme="broadsheet"] :is(.rounded-2xl, .rounded-xl, .rounded-lg, .rounded) {
+  border-radius: 2px;
+}
+[data-theme="broadsheet"] .site-header {
+  border-bottom: 3px double var(--text);
+}
+[data-theme="broadsheet"] .site-logo {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+[data-theme="broadsheet"] .hero {
+  max-width: 72rem;
+  text-align: left;
+  padding-top: 2.5rem;
+}
+[data-theme="broadsheet"] .hero::before {
+  content: "The Film Section \00B7  Daily Scores From Five Sites \00B7  Est. 2026";
+  display: block;
+  margin-bottom: 2rem;
+  padding: 0.4rem 0;
+  border-top: 4px double var(--text);
+  border-bottom: 1px solid var(--text);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+[data-theme="broadsheet"] .hero-title {
+  font-size: clamp(3.25rem, 9vw, 7.5rem);
+}
+[data-theme="broadsheet"] .hero-accent {
+  font-style: italic;
+  font-weight: 700;
+}
+[data-theme="broadsheet"] :is(.hero-sub, .hero-search) {
+  margin-left: 0;
+}
+[data-theme="broadsheet"] .hero-sub {
+  font-size: 1.15rem;
+  max-width: 40rem;
+}
+[data-theme="broadsheet"] .aspect-\[2\/3\] img {
+  filter: sepia(0.14) contrast(1.04);
+}
+[data-theme="broadsheet"] h2.font-display {
+  border-top: 1px solid var(--text);
+  padding-top: 0.5rem;
+}
+
+/* Marquee: an old movie palace, oxblood and gold with chasing bulbs. */
+[data-theme="marquee"] {
+  --bg: #1a0a0c;
+  --surface: #2a1215;
+  --surface-2: #3a1a1e;
+  --line: #5a2f2a;
+  --text: #fbecd0;
+  --text-2: #e3c99a;
+  --text-3: #b08d66;
+  --neutral: #4a2a26;
+  --ring: #f2c14e;
+  --gold: #f2c14e;
+  --bulb: #ffe7a3;
+  --display-font: var(--font-bebas), Impact, sans-serif;
+  --src-letterboxd: #2fbf8a;
+  --src-imdb: #f2c14e;
+  --src-tmdb: #5aa2f0;
+  --src-rt: #f06a3a;
+  --src-metacritic: #a99bf5;
+}
+[data-theme="marquee"] body {
+  background: radial-gradient(ellipse at top, #3a1216 0%, var(--bg) 60%) fixed;
+}
+[data-theme="marquee"] .font-display {
+  color: var(--gold);
+  font-size-adjust: 0.62;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 18px rgba(242, 193, 78, 0.35);
+}
+[data-theme="marquee"] .site-header {
+  border-bottom: 2px solid var(--gold);
+}
+[data-theme="marquee"] .hero {
+  position: relative;
+  z-index: 10;
+  margin-top: 2rem;
+  padding: 3.5rem 2.5rem 3rem;
+}
+[data-theme="marquee"] .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 1rem;
+  z-index: -1;
+  border: 3px solid var(--gold);
+  border-radius: 18px;
+  background-color: #23090c;
+  background-image:
+    radial-gradient(circle, var(--bulb) 0 3px, transparent 4px), radial-gradient(circle, var(--bulb) 0 3px, transparent 4px),
+    radial-gradient(circle, var(--bulb) 0 3px, transparent 4px), radial-gradient(circle, var(--bulb) 0 3px, transparent 4px);
+  background-size: 24px 14px, 24px 14px, 14px 24px, 14px 24px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0 6px, 0 calc(100% - 6px), 6px 0, calc(100% - 6px) 0;
+  box-shadow: 0 0 40px rgba(242, 193, 78, 0.18), inset 0 0 60px rgba(0, 0, 0, 0.6);
+  animation: marquee-chase 1.2s steps(2) infinite;
+}
+@keyframes marquee-chase {
+  to {
+    background-position: 24px 6px, -24px calc(100% - 6px), 6px -24px, calc(100% - 6px) 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="marquee"] .hero::before,
+  .tour-new {
+    animation: none;
+  }
+}
+[data-theme="marquee"] .hero-title {
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  line-height: 0.9;
+}
+[data-theme="marquee"] .hero-accent {
+  color: var(--text);
+}
+[data-theme="marquee"] .rounded-2xl {
+  border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+}
+
+/* Rewind: a neon video store, mono type and scanlines. */
+[data-theme="rewind"] {
+  --bg: #0a0618;
+  --surface: #140d2b;
+  --surface-2: #1f1640;
+  --line: #3a2a6b;
+  --text: #f3eaff;
+  --text-2: #c7b6f2;
+  --text-3: #8d7dbf;
+  --neutral: #2c2054;
+  --ring: #ff3dbb;
+  --display-font: var(--font-vt323), monospace;
+  --body-font: var(--font-space-mono), ui-monospace, monospace;
+  --src-letterboxd: #19f2a0;
+  --src-imdb: #ffd23d;
+  --src-tmdb: #3fc8ff;
+  --src-rt: #ff6a3d;
+  --src-metacritic: #b892ff;
+}
+[data-theme="rewind"] body {
+  background:
+    linear-gradient(to bottom, transparent 70%, rgba(255, 61, 187, 0.08)),
+    var(--bg);
+  font-size: 0.93em;
+}
+[data-theme="rewind"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 3px);
+}
+[data-theme="rewind"] .font-display {
+  font-size-adjust: 0.62;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 6px rgba(255, 61, 187, 0.8), 0 0 22px rgba(255, 61, 187, 0.45);
+}
+[data-theme="rewind"] .hero {
+  max-width: 64rem;
+}
+[data-theme="rewind"] .hero-title {
+  text-transform: uppercase;
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
+  line-height: 0.95;
+}
+[data-theme="rewind"] .hero-accent {
+  color: #3fc8ff;
+  text-shadow: 0 0 6px rgba(63, 200, 255, 0.8), 0 0 22px rgba(63, 200, 255, 0.45);
+}
+[data-theme="rewind"] .hero::after {
+  content: "\25B6  PLAY  \00B7  SP  \00B7  00:00:00";
+  display: block;
+  margin-top: 1.75rem;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--text-3);
+}
+[data-theme="rewind"] .site-logo {
+  background: linear-gradient(90deg, #ff3dbb, #3fc8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+[data-theme="rewind"] .site-header {
+  border-bottom: 1px solid #ff3dbb;
+  box-shadow: 0 1px 12px rgba(255, 61, 187, 0.35);
+}
+[data-theme="rewind"] .group .aspect-\[2\/3\] {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+[data-theme="rewind"] .group:hover .aspect-\[2\/3\] {
+  transform: rotate(-1.5deg) scale(1.03);
+  box-shadow: 0 0 0 2px #ff3dbb, 0 0 24px rgba(255, 61, 187, 0.5);
+}
+
+/* Index: a Swiss poster. White, black, one red, hard edges, huge type. */
+[data-theme="index"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f4f4f2;
+  --surface-2: #e7e7e4;
+  --line: #111111;
+  --text: #111111;
+  --text-2: #3d3d3d;
+  --text-3: #6b6b6b;
+  --neutral: #dcdcd8;
+  --ring: #e10600;
+  --display-font: var(--font-inter-tight), Helvetica, Arial, sans-serif;
+  --body-font: var(--font-inter-tight), Helvetica, Arial, sans-serif;
+  --src-letterboxd: #00835a;
+  --src-imdb: #b07000;
+  --src-tmdb: #0a5fd6;
+  --src-rt: #e10600;
+  --src-metacritic: #5b3fd9;
+}
+[data-theme="index"] .font-display {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+[data-theme="index"] :is(.rounded-2xl, .rounded-xl, .rounded-lg, .rounded) {
+  border-radius: 0;
+}
+[data-theme="index"] :is(input, button, a).rounded-full {
+  border-radius: 0;
+}
+[data-theme="index"] .site-header {
+  border-bottom: 3px solid var(--text);
+}
+[data-theme="index"] .site-logo::before {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.3em;
+  background: var(--ring);
+}
+[data-theme="index"] .hero {
+  max-width: 72rem;
+  text-align: left;
+  padding-top: 2.5rem;
+}
+[data-theme="index"] .hero::before {
+  content: "01 \2014  Movie scores, balanced";
+  display: block;
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 12px solid var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+[data-theme="index"] .hero-title {
+  font-size: clamp(3.5rem, 12vw, 10rem);
+  line-height: 0.84;
+}
+[data-theme="index"] .hero-accent {
+  color: var(--ring);
+}
+[data-theme="index"] :is(.hero-sub, .hero-search) {
+  margin-left: 0;
+}
+[data-theme="index"] .hero-sub {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+[data-theme="index"] h2.font-display {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
+  border-top: 3px solid var(--text);
+  padding-top: 0.4rem;
 }
