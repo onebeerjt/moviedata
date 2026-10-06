@@ -53,24 +53,25 @@ export default function CultPage() {
         <ol className="mt-8 space-y-1">
           {rows.map(({ film, audience, critics, gap }, i) => (
             <li key={film.id}>
-              <Link href={`/film/${film.id}`} className="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-surface-2 sm:gap-4">
-                <span className="tabular w-7 shrink-0 text-right text-sm text-text-3">{i + 1}</span>
+              <Link href={`/film/${film.id}`} className="flex items-start gap-3 rounded-lg px-2 py-2 hover:bg-surface-2 sm:items-center sm:gap-4">
+                <span className="tabular w-7 shrink-0 self-center text-right text-sm text-text-3">{i + 1}</span>
                 <Poster film={film} size="w185" className="w-12 shrink-0 rounded" />
-                <div className="min-w-0 flex-1">
-                  <div className="truncate">{film.title}</div>
-                  <div className="text-xs text-text-3">{film.year}</div>
-                </div>
-                <div className="tabular flex gap-4 text-right text-xs text-text-3">
-                  <span>
-                    <span className="block text-sm text-text-2">{Math.round(audience)}</span>Audience
-                  </span>
-                  <span>
-                    <span className="block text-sm text-text-2">{Math.round(critics)}</span>Critics
-                  </span>
-                </div>
-                <div className="tabular w-14 shrink-0 text-right">
-                  <span className="block text-sm text-text-2">+{Math.round(gap)}</span>
-                  <span className="text-xs text-text-3">gap</span>
+                <div className="min-w-0 flex-1 sm:flex sm:items-center sm:gap-4">
+                  <div className="min-w-0 sm:flex-1">
+                    <div className="break-words">{film.title}</div>
+                    <div className="text-xs text-text-3">{film.year}</div>
+                  </div>
+                  <div className="tabular mt-2 flex gap-5 text-xs text-text-3 sm:mt-0 sm:gap-4 sm:text-right">
+                    <span>
+                      <span className="block text-sm text-text-2">{Math.round(audience)}</span>Audience
+                    </span>
+                    <span>
+                      <span className="block text-sm text-text-2">{Math.round(critics)}</span>Critics
+                    </span>
+                    <span className="sm:w-10">
+                      <span className="block text-sm text-text-2">+{Math.round(gap)}</span>gap
+                    </span>
+                  </div>
                 </div>
               </Link>
             </li>
