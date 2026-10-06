@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4">
-        {nowPlaying.length > 0 && <Rail title="In theaters now" subtitle="Refreshed daily" films={nowPlaying} />}
+        {nowPlaying.length > 0 && <Rail title="In theaters now" subtitle="New releases · last 12 weeks" films={nowPlaying} />}
         {recent.length > 0 && <Rail title="Best of the last year" films={recent} />}
 
         {lbLoves.length > 0 && imdbLoves.length > 0 && (

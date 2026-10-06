@@ -66,15 +66,25 @@ function toEntry(m: TmdbMovie): TmdbEntry {
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
 const cache = readJson<Record<string, TmdbEntry>>(OUT, {});
 
-// 1. What's in theaters (US) right now.
+// 1. What's in theaters (US) right now. TMDB's now_playing includes one-off revival screenings, so only
+// films released in the last 12 weeks (or opening within 2 weeks) get the label. Everyone keeps their data.
+const WINDOW_PAST_DAYS = 84;
+const WINDOW_FUTURE_DAYS = 14;
+
+function isNewRelease(releaseDate: string | undefined): boolean {
+  if (!releaseDate) return false;
+  const days = (Date.now() - new Date(releaseDate).getTime()) / 864e5;
+  return days <= WINDOW_PAST_DAYS && days >= -WINDOW_FUTURE_DAYS;
+}
+
 const nowPlaying: string[] = [];
 for (let page = 1; page <= 3; page++) {
   const { results } = await tmdb<{ results: TmdbMovie[] }>("/movie/now_playing", { region: "US", page: String(page) });
   for (const m of results) {
     const { imdb_id } = await tmdb<{ imdb_id: string | null }>(`/movie/${m.id}/external_ids`);
     if (!imdb_id) continue;
-    nowPlaying.push(imdb_id);
     cache[imdb_id] = toEntry(m);
+    if (isNewRelease(m.release_date)) nowPlaying.push(imdb_id);
   }
 }
 writeJson(NOW_PLAYING, { updatedAt: new Date().toISOString(), ids: nowPlaying }, true);
