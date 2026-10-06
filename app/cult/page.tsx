@@ -45,6 +45,10 @@ export default function CultPage() {
         Beloved by audiences, dismissed by critics — ranked by how far apart they are. Films at least {MIN_AGE_YEARS} years old
         with all five sources, an audience percentile of {MIN_AUDIENCE}+ and a critic percentile of {MAX_CRITICS} or below.
       </p>
+      <p className="mt-3 max-w-2xl text-xs text-text-3">
+        A note on foreign films: critic scores for non-English and less-covered films often come from a handful of reviews, so
+        gaps can look bigger than they are. Audience scores are more reliable here.
+      </p>
       {rows.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-line bg-surface p-8 text-text-2">
           No films qualify yet. The Cult view needs films that are {MIN_AGE_YEARS}+ years old with scores from all five sources.
