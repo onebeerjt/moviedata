@@ -247,7 +247,7 @@ export function Scatter({ films, genres, available }: { films: ScatterFilm[]; ge
                     {s.name}
                   </span>
                   <span className="tabular text-text">
-                    {s.format(hover.v[i]!)} <span className="text-text-3">(rank {Math.round(hover.p[i]!)})</span>
+                    {Math.round(s.normalize(hover.v[i]!))} <span className="text-text-3">({s.format(hover.v[i]!)})</span> <span className="text-text-3">· rank {Math.round(hover.p[i]!)}</span>
                   </span>
                 </div>
               );

@@ -95,7 +95,7 @@ export function Filmography({ films }: { films: Point[] }) {
                     {s.name}
                   </span>
                   <span className="tabular text-text">
-                    {hf.raw[s.key]} <span className="text-text-3">({hf.p[s.key]})</span>
+                    {hf.raw[s.key]} <span className="text-text-3">· rank {hf.p[s.key]}</span>
                   </span>
                 </div>
               ) : null,

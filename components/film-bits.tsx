@@ -57,7 +57,7 @@ export function FilmCard({ film, note }: { film: Film; note?: React.ReactNode })
   );
 }
 
-/** Row used in "biggest split" lists: two sources' raw scores side by side. */
+/** Row used in "biggest split" lists: two sources' scores (0–100, native in parens) side by side. */
 export function SplitRow({ film, a, b }: { film: Film; a: SourceKey; b: SourceKey }) {
   const sa = film.s[a];
   const sb = film.s[b];
@@ -70,10 +70,10 @@ export function SplitRow({ film, a, b }: { film: Film; a: SourceKey; b: SourceKe
         <div className="truncate text-sm">{film.title}</div>
         <div className="flex gap-3 text-xs text-text-3">
           <span className="flex items-center gap-1">
-            <SourceDot k={a} /> {SOURCE[a].format(sa.v)}
+            <SourceDot k={a} /> <span className="font-semibold text-text-2">{Math.round(SOURCE[a].normalize(sa.v))}</span> ({SOURCE[a].format(sa.v)})
           </span>
           <span className="flex items-center gap-1">
-            <SourceDot k={b} /> {SOURCE[b].format(sb.v)}
+            <SourceDot k={b} /> <span className="font-semibold text-text-2">{Math.round(SOURCE[b].normalize(sb.v))}</span> ({SOURCE[b].format(sb.v)})
           </span>
         </div>
       </div>

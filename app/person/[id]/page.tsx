@@ -84,7 +84,7 @@ function compact(f: Film) {
     year: f.year,
     score: f.score,
     p: Object.fromEntries(Object.entries(f.s).map(([k, v]) => [k, Math.round(v.p)])),
-    raw: Object.fromEntries(Object.entries(f.s).map(([k, v]) => [k, SOURCE[k as keyof typeof SOURCE].format(v.v)])),
+    raw: Object.fromEntries(Object.entries(f.s).map(([k, v]) => [k, String(Math.round(SOURCE[k as keyof typeof SOURCE].normalize(v.v)))])),
   };
 }
 
@@ -134,7 +134,7 @@ function FilmTable({ films }: { films: Film[] }) {
               </td>
               {SOURCES.map((s) => (
                 <td key={s.key} className="tabular px-3 py-2 text-right text-text-2">
-                  {f.s[s.key] ? s.format(f.s[s.key]!.v).replace(/ \/ (5|10|100)$/, "") : "—"}
+                  {f.s[s.key] ? Math.round(s.normalize(f.s[s.key]!.v)) : "—"}
                 </td>
               ))}
             </tr>
