@@ -6,16 +6,17 @@ import type { Film } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Cult Consensus",
-  description: "Films audiences rescued: where audience love outruns critic reception.",
+  description: "The most audience-beloved films that critics scored 20+ points lower.",
 };
 
 const MIN_AGE_YEARS = 10;
-const MIN_AUDIENCE = 85;
+const MIN_AUDIENCE = 90;
+const MIN_GAP = 20;
 const TOP = 50;
 
 const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 
-/** Cult score = audience percentile − critic percentile, for older films with all five sources and a beloved (85+) audience percentile. */
+/** Older films with all five sources, a 90+ audience percentile and a 20+ point audience-over-critics gap, ranked by audience percentile. */
 function cultFilms() {
   const cutoff = new Date();
   cutoff.setFullYear(cutoff.getFullYear() - MIN_AGE_YEARS);
@@ -27,9 +28,11 @@ function cultFilms() {
     const audience = mean([letterboxd.p, imdb.p, tmdb.p]);
     if (audience < MIN_AUDIENCE) continue;
     const critics = mean([rt.p, metacritic.p]);
-    rows.push({ film, audience, critics, gap: audience - critics });
+    const gap = audience - critics;
+    if (gap < MIN_GAP) continue;
+    rows.push({ film, audience, critics, gap });
   }
-  return rows.sort((a, b) => b.gap - a.gap).slice(0, TOP);
+  return rows.sort((a, b) => b.audience - a.audience).slice(0, TOP);
 }
 
 export default function CultPage() {
@@ -39,8 +42,8 @@ export default function CultPage() {
     <div className="mx-auto max-w-4xl px-4 py-10">
       <h1 className="font-display text-5xl">Cult Consensus</h1>
       <p className="mt-2 max-w-2xl text-text-2">
-        Films audiences rescued, ranked by how far audience love outruns critic reception. The cult score is the audience
-        percentile minus the critic percentile, for films at least {MIN_AGE_YEARS} years old with all five sources and an audience percentile of {MIN_AUDIENCE}+.
+        The most audience-beloved films that critics scored {MIN_GAP}+ points lower. Ranked by audience percentile, for films
+        at least {MIN_AGE_YEARS} years old with all five sources and an audience percentile of {MIN_AUDIENCE}+.
       </p>
       {rows.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-line bg-surface p-8 text-text-2">
@@ -66,8 +69,8 @@ export default function CultPage() {
                   </span>
                 </div>
                 <div className="tabular w-14 shrink-0 text-right">
-                  <span className="block text-xl font-semibold">+{Math.round(gap)}</span>
-                  <span className="text-xs text-text-3">cult</span>
+                  <span className="block text-sm text-text-2">+{Math.round(gap)}</span>
+                  <span className="text-xs text-text-3">gap</span>
                 </div>
               </Link>
             </li>
