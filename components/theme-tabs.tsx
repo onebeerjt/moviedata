@@ -3,6 +3,7 @@
 import { useState, useSyncExternalStore } from "react";
 import { DEFAULT_THEME, THEMES, THEME_STORAGE_KEY, type ThemeId } from "@/lib/themes";
 import { Tour } from "./tour";
+import { VersionTabs } from "./version-tabs";
 
 const CHANGE = "consensus-theme-change";
 const TOURED_KEY = "consensus-toured";
@@ -48,6 +49,7 @@ export function ThemeTabs() {
     <>
       <div className="theme-bar border-b border-line bg-surface">
         <div className="mx-auto flex max-w-6xl items-center gap-2 px-4">
+          <VersionTabs />
           <span className="hidden shrink-0 text-[11px] uppercase tracking-wider text-text-3 sm:inline">Design</span>
           <div role="tablist" aria-label="Site design" className="scroller flex min-w-0 flex-1 gap-1 overflow-x-auto py-1.5">
             {THEMES.map((t) => (

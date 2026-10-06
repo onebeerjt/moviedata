@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FilmCard, SplitRow } from "@/components/film-bits";
 import { Search } from "@/components/search";
+import { TheatersRail } from "@/components/theaters-rail";
 import { allFilms, isWellKnown } from "@/lib/data";
 import { SITE_TAGLINE } from "@/lib/site";
 import type { Film } from "@/lib/types";
@@ -47,7 +48,9 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4">
-        {nowPlaying.length > 0 && <Rail title="In theaters now" subtitle="Refreshed daily" films={nowPlaying} />}
+        {nowPlaying.length > 0 && (
+          <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
+        )}
         {recent.length > 0 && <Rail title="Best of the last year" films={recent} />}
 
         {lbLoves.length > 0 && imdbLoves.length > 0 && (
