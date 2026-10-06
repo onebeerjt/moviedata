@@ -10,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 const MIN_AGE_YEARS = 10;
+const MIN_AUDIENCE = 85;
 const TOP = 50;
 
 const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 
-/** Cult score = audience percentile − critic percentile, for older films with all five sources. */
+/** Cult score = audience percentile − critic percentile, for older films with all five sources and a beloved (85+) audience percentile. */
 function cultFilms() {
   const cutoff = new Date();
   cutoff.setFullYear(cutoff.getFullYear() - MIN_AGE_YEARS);
@@ -24,6 +25,7 @@ function cultFilms() {
     if (!letterboxd || !imdb || !tmdb || !rt || !metacritic || !film.releaseDate) continue;
     if (new Date(film.releaseDate) > cutoff) continue;
     const audience = mean([letterboxd.p, imdb.p, tmdb.p]);
+    if (audience < MIN_AUDIENCE) continue;
     const critics = mean([rt.p, metacritic.p]);
     rows.push({ film, audience, critics, gap: audience - critics });
   }
@@ -38,7 +40,7 @@ export default function CultPage() {
       <h1 className="font-display text-5xl">Cult Consensus</h1>
       <p className="mt-2 max-w-2xl text-text-2">
         Films audiences rescued, ranked by how far audience love outruns critic reception. The cult score is the audience
-        percentile minus the critic percentile, for films at least {MIN_AGE_YEARS} years old with all five sources.
+        percentile minus the critic percentile, for films at least {MIN_AGE_YEARS} years old with all five sources and an audience percentile of {MIN_AUDIENCE}+.
       </p>
       {rows.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-line bg-surface p-8 text-text-2">
