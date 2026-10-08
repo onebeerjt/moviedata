@@ -136,8 +136,8 @@ films.sort((a, b) => (b.s.imdb?.n ?? 0) - (a.s.imdb?.n ?? 0));
 const people: Record<string, Person> = {};
 const person = (pid: string) => (people[pid] ??= { id: pid, name: names[pid] ?? pid, directed: [], actedIn: [] });
 for (const f of films) {
-  f.directors.forEach((d) => person(d).directed.push(f.id));
-  f.cast.forEach((c) => person(c).actedIn.push(f.id));
+  (f.directors ?? []).forEach((d) => person(d).directed.push(f.id));
+  (f.cast ?? []).forEach((c) => person(c).actedIn.push(f.id));
 }
 
 // Insights: how each group of films leans between sources.
@@ -164,14 +164,14 @@ const groupBy = (fn: (f: Film) => string[]) => {
   return m;
 };
 
-const genres = [...groupBy((f) => f.genres)]
+const genres = [...groupBy((f) => f.genres ?? [])]
   .filter(([, g]) => g.length >= 50)
   .map(([k, g]) => stat(k, k, g));
 const decades = [...groupBy((f) => (f.year ? [`${Math.floor(f.year / 10) * 10}`] : []))]
   .filter(([, g]) => g.length >= 30)
   .sort(([a], [b]) => Number(a) - Number(b))
   .map(([k, g]) => stat(k, `${k}s`, g));
-const directors = [...groupBy((f) => f.directors)]
+const directors = [...groupBy((f) => f.directors ?? [])]
   .filter(([, g]) => g.length >= 5)
   .map(([k, g]) => stat(k, names[k] ?? k, g));
 
