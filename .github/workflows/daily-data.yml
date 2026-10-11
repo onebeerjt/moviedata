@@ -17,6 +17,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - name: Free streaming catalog (Tubi, Pluto, Plex, Roku...)
+        # Runs first so IMDb ingest picks up newly free films.
+        continue-on-error: true
+        run: npm run data:free
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: IMDb datasets
         run: npm run data:imdb
       - name: TMDB (posters, now playing)

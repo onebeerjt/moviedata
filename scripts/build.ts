@@ -15,13 +15,15 @@ import type { ImdbFilm } from "./ingest-imdb.ts";
 import type { LetterboxdEntry } from "./scrape-letterboxd.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
 import type { OmdbEntry } from "./enrich-omdb.ts";
-import type { Film, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
+import type { FreeFile } from "./free-catalog.ts";
+import type { Film, FreeService, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
 
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
 const names = readJson<Record<string, string>>(join(SOURCES, "imdb-people.json"), {});
 const lb = readJson<Record<string, LetterboxdEntry>>(join(SOURCES, "letterboxd.json"), {});
 const tmdb = readJson<Record<string, TmdbEntry>>(join(SOURCES, "tmdb.json"), {});
 const omdb = readJson<Record<string, OmdbEntry>>(join(SOURCES, "omdb.json"), {});
+const free = readJson<FreeFile>(join(SOURCES, "free.json"), { updatedAt: "", services: {}, films: {}, checked: {} });
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
 const historyPath = join(SOURCES, "history.json");
 const history = readJson<Record<string, Film["h"]>>(historyPath, {});
@@ -121,6 +123,8 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     rated: omdb[id]?.rated,
     nowPlaying: nowPlaying.has(id) || undefined,
     letterboxdSlug: lb[id]?.slug,
+    free: free.films[id]?.services,
+    watchLink: free.films[id]?.link,
     s,
     audience: round(audience),
     critics: round(critics),
@@ -184,7 +188,15 @@ const insights: Insights = {
   directors,
 };
 
+// Free services, biggest catalog first.
+const serviceCounts = new Map<number, number>();
+for (const f of films) for (const sid of f.free ?? []) serviceCounts.set(sid, (serviceCounts.get(sid) ?? 0) + 1);
+const services: FreeService[] = [...serviceCounts]
+  .map(([sid, count]) => ({ ...free.services[sid], count }))
+  .sort((a, b) => b.count - a.count);
+
 writeJson(join(SITE, "films.json"), films);
+writeJson(join(SITE, "free.json"), { updatedAt: free.updatedAt, services }, true);
 writeJson(join(SITE, "people.json"), people);
 writeJson(join(SITE, "insights.json"), insights, true);
 writeJson(historyPath, history);

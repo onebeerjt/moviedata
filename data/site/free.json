@@ -1,0 +1,361 @@
+{
+ "updatedAt": "2026-10-11T01:10:46.329Z",
+ "services": [
+  {
+   "id": 73,
+   "name": "Tubi TV",
+   "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
+   "count": 14002
+  },
+  {
+   "id": 212,
+   "name": "Hoopla",
+   "logo": "/gtjNBzAoGgUtYzt0UKXmwG34WWL.png",
+   "library": true,
+   "count": 8614
+  },
+  {
+   "id": 2077,
+   "name": "Plex Channel",
+   "logo": "/1gC0K43JMyMtVpqczxvwBp0pkxn.png",
+   "count": 8558
+  },
+  {
+   "id": 538,
+   "name": "Plex",
+   "logo": "/blAEhvx3XX8sV0fFVFk88FFjubs.png",
+   "count": 8409
+  },
+  {
+   "id": 2409,
+   "name": "Fawesome",
+   "logo": "/dNF4vWhF3TduWvOyfVxEyTqSNRl.png",
+   "count": 8113
+  },
+  {
+   "id": 191,
+   "name": "Kanopy",
+   "logo": "/cltb8XKan9ierp23ItPmCOcVLRa.png",
+   "library": true,
+   "count": 6908
+  },
+  {
+   "id": 207,
+   "name": "The Roku Channel",
+   "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png",
+   "count": 6644
+  },
+  {
+   "id": 235,
+   "name": "YouTube Free",
+   "logo": "/gqaJWT5oFiJyVDojVLYRSFPbhQ1.png",
+   "count": 5405
+  },
+  {
+   "id": 332,
+   "name": "Fandango at Home Free",
+   "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png",
+   "count": 4568
+  },
+  {
+   "id": 613,
+   "name": "Amazon Prime Video Free with Ads",
+   "logo": "/fuVBtr57kxnYzOILZ38xqSmBeyR.png",
+   "count": 4009
+  },
+  {
+   "id": 1898,
+   "name": "Amazon MX Player",
+   "logo": "/46U3TOB3PhVDjA7qaFOuYSaGMiq.png",
+   "count": 3841
+  },
+  {
+   "id": 300,
+   "name": "Pluto TV",
+   "logo": "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png",
+   "count": 3055
+  },
+  {
+   "id": 1963,
+   "name": "Xumo Play",
+   "logo": "/n6E9OeoQicCDd43PnLsMpVIVYFK.png",
+   "count": 2384
+  },
+  {
+   "id": 1957,
+   "name": "Cineverse",
+   "logo": "/rqCIpmrCBpnL6oliak6E1mrq5DD.png",
+   "count": 2153
+  },
+  {
+   "id": 2533,
+   "name": "Mometu",
+   "logo": "/zrzvU8SGxItb3xFCX7WpyHzo4k7.png",
+   "count": 1190
+  },
+  {
+   "id": 83,
+   "name": "The CW",
+   "logo": "/6fcYLKQIjGnrswtH7WxjjoSiyy3.png",
+   "count": 1087
+  },
+  {
+   "id": 2383,
+   "name": "Philo",
+   "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png",
+   "count": 989
+  },
+  {
+   "id": 439,
+   "name": "Shout! Factory TV",
+   "logo": "/ezTLm8lPMse9QRKTYInPOBD2jUM.png",
+   "count": 751
+  },
+  {
+   "id": 2285,
+   "name": "JustWatch TV",
+   "logo": "/aJXLTvX11u4fBLMPRVJZVKkLYHP.png",
+   "count": 631
+  },
+  {
+   "id": 2308,
+   "name": "Darkroom",
+   "logo": "/naf5wQA91UCj0OetKOEYZgWZLqe.png",
+   "count": 612
+  },
+  {
+   "id": 2555,
+   "name": "Bloodstream",
+   "logo": "/grSWrznc2QaymD5bM0MxMmcdrQl.png",
+   "count": 577
+  },
+  {
+   "id": 559,
+   "name": "Filmzie",
+   "logo": "/6tVbNdx7Yzvi6LThNW5Wo1yov6A.png",
+   "count": 522
+  },
+  {
+   "id": 2239,
+   "name": "FlixHouse",
+   "logo": "/ezTsuy3T7Byi7XRbAozgJrsnbQC.png",
+   "count": 487
+  },
+  {
+   "id": 638,
+   "name": "Public Domain Movies",
+   "logo": "/pDodO7jgdP0eYO1vP2Dwu9YjeVJ.png",
+   "count": 366
+  },
+  {
+   "id": 1971,
+   "name": "DistroTV",
+   "logo": "/theOpF1b4doC39xCrPT5IOEsClp.png",
+   "count": 338
+  },
+  {
+   "id": 2667,
+   "name": "YOW.tv",
+   "logo": "/oMEvAYpfx85D9HHQzXqFbHC0S6F.png",
+   "count": 299
+  },
+  {
+   "id": 457,
+   "name": "VIX",
+   "logo": "/ieJ55scAVrvboTpeJcZa3JlLIrS.png",
+   "count": 265
+  },
+  {
+   "id": 2679,
+   "name": "Amasian TV",
+   "logo": "/gnmo98waJ6PHt9uKZaTo8Wq95Ky.png",
+   "count": 228
+  },
+  {
+   "id": 1960,
+   "name": "Midnight Pulp",
+   "logo": "/c1dWUx3AwvoZ13meOTQSDEBonZD.png",
+   "count": 220
+  },
+  {
+   "id": 514,
+   "name": "AsianCrush",
+   "logo": "/oPEgKhJZjWEjCjySvwozKQyrNKi.png",
+   "count": 147
+  },
+  {
+   "id": 575,
+   "name": "OnDemandKorea",
+   "logo": "/t4tushezwJkXCposaC73oZTwF5a.png",
+   "count": 138
+  },
+  {
+   "id": 1875,
+   "name": "Runtime",
+   "logo": "/erEYCN3EGN4yzcRvix2DunZLxHE.png",
+   "count": 131
+  },
+  {
+   "id": 1972,
+   "name": "myfilmfriend",
+   "logo": "/dJsyipsIt597fzdXUlr5sDifNRa.png",
+   "count": 117
+  },
+  {
+   "id": 344,
+   "name": "Rakuten Viki",
+   "logo": "/AoNsevRecTdVv4xQEf1oLRGO2yh.png",
+   "count": 106
+  },
+  {
+   "id": 2623,
+   "name": "Artiflix",
+   "logo": "/hO4tZhtSJ7VrVnJusimkY3MltSx.png",
+   "count": 78
+  },
+  {
+   "id": 25,
+   "name": "Fandor",
+   "logo": "/vR0RxwoqbM0ZP10LR3uT6rpuamc.png",
+   "count": 62
+  },
+  {
+   "id": 2782,
+   "name": "Filmtap",
+   "logo": "/jaekUwv4s9rVc0GvQhsnwDp82MA.png",
+   "count": 41
+  },
+  {
+   "id": 2478,
+   "name": "FOUND TV",
+   "logo": "/2hAu4MUecOOMTtrlJ3XEqB4dhZr.png",
+   "count": 40
+  },
+  {
+   "id": 2129,
+   "name": "BYUtv",
+   "logo": "/nIlP6X2QcJbnXA5Tm4hrsKsniAP.png",
+   "count": 28
+  },
+  {
+   "id": 446,
+   "name": "Retrocrush",
+   "logo": "/pqXjcTVXpOVHF3IfWo9siRZkLXo.png",
+   "count": 23
+  },
+  {
+   "id": 1990,
+   "name": "GlewedTV",
+   "logo": "/8CWCON0bheDTk0VmLloPENLJmHW.png",
+   "count": 11
+  },
+  {
+   "id": 2529,
+   "name": "Vimeo",
+   "logo": "/1vm2fDHqpRYJIQREgOfvnMNs8K3.png",
+   "count": 11
+  },
+  {
+   "id": 2616,
+   "name": "Paramount Plus Essential",
+   "logo": "/uPWQPyF4nqwtfPNmGcFcenU57HG.png",
+   "count": 10
+  },
+  {
+   "id": 192,
+   "name": "YouTube",
+   "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png",
+   "count": 10
+  },
+  {
+   "id": 692,
+   "name": "Cultpix",
+   "logo": "/hBR1NB5z52BHMqowq0TgZqMcDBv.png",
+   "count": 10
+  },
+  {
+   "id": 1958,
+   "name": "AD tv",
+   "logo": "/3evrYMmDN3wsD8d5iatp9hFXlEs.png",
+   "count": 7
+  },
+  {
+   "id": 473,
+   "name": "Revry",
+   "logo": "/emSd1j9jOjNzUA2iTKk8qRSvcjs.png",
+   "count": 6
+  },
+  {
+   "id": 1964,
+   "name": "National Geographic",
+   "logo": "/yZtxolQEo9EEfu72AtegMwXE4Em.png",
+   "count": 5
+  },
+  {
+   "id": 2621,
+   "name": "KQED",
+   "logo": "/gq031DkuykfuuHVoLPx9BFNyfPU.png",
+   "count": 3
+  },
+  {
+   "id": 157,
+   "name": "Lifetime",
+   "logo": "/qZrPlzjZWFHSmvE3bQdRlFGy8iW.png",
+   "count": 3
+  },
+  {
+   "id": 2736,
+   "name": "Brew",
+   "logo": "/mwGw3KrIZxnACdeojp2a5cO41hi.png",
+   "count": 2
+  },
+  {
+   "id": 2684,
+   "name": "TPT",
+   "logo": "/6gYrafZiBpckxlEUr29U0Azvy6C.png",
+   "count": 2
+  },
+  {
+   "id": 1956,
+   "name": "Angel Studios",
+   "logo": "/pusUxS9dP5VK7HkN8SLf2wnP9gm.png",
+   "count": 2
+  },
+  {
+   "id": 209,
+   "name": "PBS",
+   "logo": "/kwKCUFjKjq1GlZeIjImBV62IypB.png",
+   "count": 1
+  },
+  {
+   "id": 2657,
+   "name": "WETA+",
+   "logo": "/fwzxYZXp5T57T2WaazFhzArAmYd.png",
+   "count": 1
+  },
+  {
+   "id": 9,
+   "name": "Amazon Prime Video",
+   "logo": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png",
+   "count": 1
+  },
+  {
+   "id": 258,
+   "name": "Criterion Channel",
+   "logo": "/32XVilXkVbrwV96O3N5i0rtuyd6.png",
+   "count": 1
+  },
+  {
+   "id": 677,
+   "name": "Eventive",
+   "logo": "/3TLkIBBnZQ9KdjIjWU7NdqXincI.png",
+   "count": 1
+  },
+  {
+   "id": 79,
+   "name": "NBC",
+   "logo": "/geRNAmvuPF6hOLExMHLKpt7bGBD.png",
+   "count": 1
+  }
+ ]
+}

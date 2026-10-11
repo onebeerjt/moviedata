@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Poster, ScoreBadge } from "@/components/film-bits";
 import { SourceBars } from "@/components/source-bars";
-import { getFilm, personName, posterUrl } from "@/lib/data";
+import { freeInfo, getFilm, personName, posterUrl } from "@/lib/data";
+import { serviceName } from "@/lib/free";
 import { agreement, notes, scoreLabel } from "@/lib/verdict";
 
 export async function generateMetadata({ params }: PageProps<"/film/[id]">): Promise<Metadata> {
@@ -85,6 +86,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
         </section>
 
         <aside className="space-y-6">
+          {film.free && film.free.length > 0 && <WatchFree ids={film.free} link={film.watchLink} />}
           {filmNotes.length > 0 && (
             <div className="rounded-2xl border border-line bg-surface p-5">
               <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-3">What stands out</h2>
@@ -110,6 +112,39 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
           )}
         </aside>
       </div>
+    </div>
+  );
+}
+
+/** Free services for this film, from JustWatch via TMDB. */
+function WatchFree({ ids, link }: { ids: number[]; link?: string }) {
+  const byId = new Map(freeInfo().services.map((s) => [s.id, s]));
+  const services = ids.flatMap((id) => (byId.get(id) ? [byId.get(id)!] : [])).sort((a, b) => b.count - a.count);
+  if (!services.length) return null;
+  return (
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-3">Watch free</h2>
+      <div className="flex flex-wrap gap-2">
+        {services.slice(0, 8).map((s) => (
+          <a
+            key={s.id}
+            href={link ?? "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-line py-1 pl-1 pr-3 text-sm hover:bg-surface-2"
+          >
+            {s.logo && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={posterUrl(s.logo, "w92")} alt="" className="h-6 w-6 rounded-full" />
+            )}
+            {serviceName(s)}
+          </a>
+        ))}
+      </div>
+      <p className="mt-3 text-xs text-text-3">
+        Free with ads{services.some((s) => s.library) ? " (Kanopy and Hoopla need a library card)" : ""}. Streaming data from
+        JustWatch. <Link href="/free" className="underline underline-offset-2">Browse all free movies →</Link>
+      </p>
     </div>
   );
 }

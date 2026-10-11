@@ -48,14 +48,15 @@ for await (const [id, type, title, , adult, start, , runtime, genres] of tsvRows
     },
   ]);
 }
-// Keep the most-voted films, plus anything recent or in theaters even if it
-// hasn't built up many votes yet.
+// Keep the most-voted films, plus anything recent, in theaters, or streaming
+// free (free-catalog.ts) even if it hasn't built up many votes.
 candidates.sort((a, b) => b[1].votes - a[1].votes);
 const recentYear = new Date().getFullYear() - 1;
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
+const free = readJson<{ films: Record<string, unknown> }>(join(SOURCES, "free.json"), { films: {} }).films;
 const films = new Map(
   candidates.filter(
-    ([id, f], i) => i < LIMIT || nowPlaying.has(id) || ((f.year ?? 0) >= recentYear && f.votes >= 500),
+    ([id, f], i) => i < LIMIT || nowPlaying.has(id) || id in free || ((f.year ?? 0) >= recentYear && f.votes >= 500),
   ),
 );
 ratings.clear();

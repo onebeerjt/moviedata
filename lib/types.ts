@@ -24,6 +24,10 @@ export type Film = {
   releaseDate?: string;
   nowPlaying?: boolean;
   letterboxdSlug?: string;
+  /** Services streaming it free in the US (ids into FreeService), from JustWatch via TMDB. */
+  free?: number[];
+  /** TMDB's "where to watch" page for the film (JustWatch links to each service). */
+  watchLink?: string;
   s: Partial<Record<SourceKey, SourceScore>>;
   /** Mean percentile of audience sources (Letterboxd, IMDb, TMDB). */
   audience: number | null;
@@ -65,4 +69,14 @@ export type Insights = {
   genres: GroupStat[];
   decades: GroupStat[];
   directors: GroupStat[];
+};
+
+export type FreeService = {
+  id: number;
+  name: string;
+  logo?: string;
+  /** Free with a library card rather than with ads. */
+  library?: boolean;
+  /** How many tracked films it streams free. */
+  count: number;
 };
