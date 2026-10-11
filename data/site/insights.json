@@ -9311,7 +9311,7 @@
    "criticsVsAudience": -21.3,
    "avgScore": 38,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0410139",
@@ -14300,6 +14300,16 @@
    "lbVsImdb": 8.5,
    "criticsVsAudience": null,
    "avgScore": 34,
+   "lbN": 5,
+   "caN": 0
+  },
+  {
+   "key": "nm0444870",
+   "label": "Jon Keeyes",
+   "count": 5,
+   "lbVsImdb": 16.3,
+   "criticsVsAudience": null,
+   "avgScore": 15,
    "lbN": 5,
    "caN": 0
   },
