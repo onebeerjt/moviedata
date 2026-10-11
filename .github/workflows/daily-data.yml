@@ -30,6 +30,9 @@ jobs:
         # New or changed free films only; capped so the job stays short.
         continue-on-error: true
         run: npm run data:free-links -- --limit 2000
+      - name: Tubi and Pluto links from their own catalogs
+        continue-on-error: true
+        run: npm run data:service-links
       - name: TMDB (posters, now playing)
         # A bad key or API hiccup shouldn't block the other sources.
         continue-on-error: true

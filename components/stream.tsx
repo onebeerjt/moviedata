@@ -420,7 +420,7 @@ function WatchButton({ film, serviceId, primary = false }: { film: StreamFilm; s
   const sid = serviceId ?? sorted[0] ?? film.services[0];
   const s = sid !== undefined ? services[sid] : undefined;
   // Straight to the film on the service (scripts/free-links.ts).
-  const href = sid !== undefined ? film.links[sid] : undefined;
+  const href = sid !== undefined ? film.links?.[sid] : undefined;
   if (!href) return null;
   return (
     <a

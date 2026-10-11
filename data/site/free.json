@@ -5,7 +5,7 @@
    "id": 73,
    "name": "Tubi TV",
    "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
-   "count": 14002
+   "count": 14572
   },
   {
    "id": 212,
@@ -52,6 +52,12 @@
    "count": 5405
   },
   {
+   "id": 300,
+   "name": "Pluto TV",
+   "logo": "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png",
+   "count": 5128
+  },
+  {
    "id": 332,
    "name": "Fandango at Home Free",
    "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png",
@@ -68,12 +74,6 @@
    "name": "Amazon MX Player",
    "logo": "/46U3TOB3PhVDjA7qaFOuYSaGMiq.png",
    "count": 3841
-  },
-  {
-   "id": 300,
-   "name": "Pluto TV",
-   "logo": "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png",
-   "count": 3055
   },
   {
    "id": 1963,

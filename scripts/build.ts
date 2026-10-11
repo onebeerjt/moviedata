@@ -17,6 +17,7 @@ import type { TmdbEntry } from "./enrich-tmdb.ts";
 import type { OmdbEntry } from "./enrich-omdb.ts";
 import type { FreeFile } from "./free-catalog.ts";
 import type { FreeLinks } from "./free-links.ts";
+import type { ServiceLinks } from "./service-catalogs.ts";
 import type { Film, FreeService, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
 
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
@@ -26,6 +27,7 @@ const tmdb = readJson<Record<string, TmdbEntry>>(join(SOURCES, "tmdb.json"), {})
 const omdb = readJson<Record<string, OmdbEntry>>(join(SOURCES, "omdb.json"), {});
 const free = readJson<FreeFile>(join(SOURCES, "free.json"), { updatedAt: "", services: {}, films: {}, checked: {} });
 const freeLinks = readJson<FreeLinks>(join(SOURCES, "free-links.json"), {});
+const serviceLinks = readJson<ServiceLinks>(join(SOURCES, "service-links.json"), { updatedAt: "", links: {} }).links;
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
 const historyPath = join(SOURCES, "history.json");
 const history = readJson<Record<string, Film["h"]>>(historyPath, {});
@@ -125,7 +127,7 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     rated: omdb[id]?.rated,
     nowPlaying: nowPlaying.has(id) || undefined,
     letterboxdSlug: lb[id]?.slug,
-    free: free.films[id]?.services,
+    free: freeServices(id),
     watchLink: free.films[id]?.link,
     links: directLinks(id),
     s,
@@ -139,11 +141,24 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
 
 films.sort((a, b) => (b.s.imdb?.n ?? 0) - (a.s.imdb?.n ?? 0));
 
-/** Direct links for the services the film is free on right now. */
+/** Free services: JustWatch's list plus anything Tubi or Pluto's own catalogs show. */
+function freeServices(id: string) {
+  const ids = new Set([...(free.films[id]?.services ?? []), ...Object.keys(serviceLinks[id] ?? {}).map(Number)]);
+  return ids.size ? [...ids] : undefined;
+}
+
+/**
+ * Direct links for the services the film is free on right now. Tubi and
+ * Pluto's own catalogs (service-catalogs.ts) win over JustWatch's links,
+ * which sometimes point at a dubbed copy.
+ */
 function directLinks(id: string) {
   const services = free.films[id]?.services ?? [];
-  const links = freeLinks[id]?.links ?? {};
-  const out = Object.fromEntries(services.flatMap((sid) => (links[sid] && usableLink(links[sid]) ? [[sid, links[sid]]] : [])));
+  const jw = freeLinks[id]?.links ?? {};
+  const out: Record<number, string> = Object.fromEntries(
+    services.flatMap((sid) => (jw[sid] && usableLink(jw[sid]) ? [[sid, jw[sid]]] : [])),
+  );
+  Object.assign(out, serviceLinks[id]);
   return Object.keys(out).length ? out : undefined;
 }
 
