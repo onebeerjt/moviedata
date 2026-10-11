@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-10-11T01:10:46.329Z",
+ "updatedAt": "2026-10-11T15:48:43.842Z",
  "services": [
   {
    "id": 73,
    "name": "Tubi TV",
    "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
-   "count": 14572
+   "count": 14579
   },
   {
    "id": 212,
@@ -18,19 +18,19 @@
    "id": 2077,
    "name": "Plex Channel",
    "logo": "/1gC0K43JMyMtVpqczxvwBp0pkxn.png",
-   "count": 8558
+   "count": 8561
   },
   {
    "id": 538,
    "name": "Plex",
    "logo": "/blAEhvx3XX8sV0fFVFk88FFjubs.png",
-   "count": 8409
+   "count": 8412
   },
   {
    "id": 2409,
    "name": "Fawesome",
    "logo": "/dNF4vWhF3TduWvOyfVxEyTqSNRl.png",
-   "count": 8113
+   "count": 8117
   },
   {
    "id": 191,
@@ -43,7 +43,7 @@
    "id": 207,
    "name": "The Roku Channel",
    "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png",
-   "count": 6644
+   "count": 6646
   },
   {
    "id": 235,
@@ -67,7 +67,7 @@
    "id": 613,
    "name": "Amazon Prime Video Free with Ads",
    "logo": "/fuVBtr57kxnYzOILZ38xqSmBeyR.png",
-   "count": 4009
+   "count": 4010
   },
   {
    "id": 1898,
@@ -103,7 +103,7 @@
    "id": 2383,
    "name": "Philo",
    "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png",
-   "count": 989
+   "count": 991
   },
   {
    "id": 439,
@@ -163,7 +163,7 @@
    "id": 457,
    "name": "VIX",
    "logo": "/ieJ55scAVrvboTpeJcZa3JlLIrS.png",
-   "count": 265
+   "count": 267
   },
   {
    "id": 2679,
@@ -235,7 +235,7 @@
    "id": 2129,
    "name": "BYUtv",
    "logo": "/nIlP6X2QcJbnXA5Tm4hrsKsniAP.png",
-   "count": 28
+   "count": 29
   },
   {
    "id": 446,
