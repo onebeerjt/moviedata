@@ -86,7 +86,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
         </section>
 
         <aside className="space-y-6">
-          {film.free && film.free.length > 0 && <WatchFree ids={film.free} link={film.watchLink} />}
+          {film.links && <WatchFree links={film.links} />}
           {filmNotes.length > 0 && (
             <div className="rounded-2xl border border-line bg-surface p-5">
               <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-3">What stands out</h2>
@@ -117,9 +117,12 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
 }
 
 /** Free services for this film, from JustWatch via TMDB. */
-function WatchFree({ ids, link }: { ids: number[]; link?: string }) {
+function WatchFree({ links }: { links: Record<number, string> }) {
   const byId = new Map(freeInfo().services.map((s) => [s.id, s]));
-  const services = ids.flatMap((id) => (byId.get(id) ? [byId.get(id)!] : [])).sort((a, b) => b.count - a.count);
+  // Only services we can link straight to the film on, biggest first.
+  const services = Object.keys(links)
+    .flatMap((id) => (byId.get(Number(id)) ? [byId.get(Number(id))!] : []))
+    .sort((a, b) => b.count - a.count);
   if (!services.length) return null;
   return (
     <div className="rounded-2xl border border-line bg-surface p-5">
@@ -128,7 +131,7 @@ function WatchFree({ ids, link }: { ids: number[]; link?: string }) {
         {services.slice(0, 8).map((s) => (
           <a
             key={s.id}
-            href={link ?? "#"}
+            href={links[s.id]}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full border border-line py-1 pl-1 pr-3 text-sm hover:bg-surface-2"

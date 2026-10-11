@@ -28,6 +28,8 @@ export type Film = {
   free?: number[];
   /** TMDB's "where to watch" page for the film (JustWatch links to each service). */
   watchLink?: string;
+  /** Direct link to the film on each free service, by service id. */
+  links?: Record<number, string>;
   s: Partial<Record<SourceKey, SourceScore>>;
   /** Mean percentile of audience sources (Letterboxd, IMDb, TMDB). */
   audience: number | null;

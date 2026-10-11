@@ -23,7 +23,7 @@ export type StreamFilm = {
   /** Percentile per source, for the little bars in the detail sheet. */
   s: Partial<Record<SourceKey, number>>;
   services: number[];
-  watchLink?: string;
+  links: Record<number, string>;
   directors: string[];
   cast: string[];
 };
@@ -73,7 +73,12 @@ const byScore = (a: Film, b: Film) => (b.score ?? -1) - (a.score ?? -1) || votes
 const hasArt = (f: Film) => !!f.poster;
 
 export function buildStream(serviceId: number | null) {
-  const pool = allFilms().filter((f) => f.free?.length && hasArt(f) && (serviceId === null || f.free.includes(serviceId)));
+  // Only films we can send straight to the movie on at least one service.
+  const linked = (f: Film) => Object.keys(f.links ?? {}).map(Number);
+  const pool = allFilms().filter((f) => {
+    const ids = linked(f);
+    return ids.length && hasArt(f) && (serviceId === null || ids.includes(serviceId));
+  });
   const scored = pool.filter((f) => f.score !== null);
   const familiar = scored.filter((f) => votes(f) >= MIN_VOTES_FAMILIAR);
   const used = new Set<string>();
@@ -179,8 +184,9 @@ function toStream(f: Film): StreamFilm {
     critics: f.critics,
     audience: f.audience,
     s: Object.fromEntries(Object.entries(f.s).map(([k, v]) => [k, Math.round(v.p)])),
-    services: f.free ?? [],
-    watchLink: f.watchLink,
+    // Only services with a direct link: those are the ones we can show.
+    services: Object.keys(f.links ?? {}).map(Number),
+    links: f.links ?? {},
     directors: f.directors.slice(0, 2).map(personName),
     cast: f.cast.slice(0, 4).map(personName),
   };

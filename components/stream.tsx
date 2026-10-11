@@ -12,13 +12,6 @@ export type StreamService = { id: number; name: string; logo?: string; library?:
 
 const img = (path: string | undefined, size: string) => (path ? `https://image.tmdb.org/t/p/${size}${path}` : undefined);
 
-// Where "Watch" goes. TMDB's where-to-watch page links straight to the film
-// on each service (via JustWatch), which beats most services' own search
-// pages: Pluto's ignores the query and Tubi's often comes back empty.
-// Roku's search is reliable, so it goes there directly.
-const SEARCH: Record<string, (q: string) => string> = {
-  "The Roku Channel": (q) => `https://therokuchannel.roku.com/search/${encodeURIComponent(q)}`,
-};
 
 type Ctx = {
   films: Record<string, StreamFilm>;
@@ -426,7 +419,9 @@ function WatchButton({ film, serviceId, primary = false }: { film: StreamFilm; s
   const sorted = useSorted(film.services);
   const sid = serviceId ?? sorted[0] ?? film.services[0];
   const s = sid !== undefined ? services[sid] : undefined;
-  const href = (s && SEARCH[s.name]?.(film.title)) ?? film.watchLink ?? "#";
+  // Straight to the film on the service (scripts/free-links.ts).
+  const href = sid !== undefined ? film.links[sid] : undefined;
+  if (!href) return null;
   return (
     <a
       href={href}
@@ -465,6 +460,7 @@ const rank = (s: StreamService | undefined) => {
   const i = PREFERRED.indexOf(s.name);
   return i > -1 ? i : s.library ? 50 : 20;
 };
+/** Services in lead order: the tab being browsed first, then by PREFERRED. */
 function useSorted(ids: number[]) {
   const { services, preferred } = useStream();
   return ids

@@ -26,6 +26,10 @@ jobs:
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: IMDb datasets
         run: npm run data:imdb
+      - name: Direct watch links for free films
+        # New or changed free films only; capped so the job stays short.
+        continue-on-error: true
+        run: npm run data:free-links -- --limit 2000
       - name: TMDB (posters, now playing)
         # A bad key or API hiccup shouldn't block the other sources.
         continue-on-error: true

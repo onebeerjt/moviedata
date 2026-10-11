@@ -15,7 +15,7 @@ export default function Home() {
     .slice(0, 16);
 
   const freeTonight = films
-    .filter((f) => f.free?.length && f.poster && isWellKnown(f))
+    .filter((f) => f.links && f.poster && isWellKnown(f))
     .sort((a, b) => (b.score ?? -1) - (a.score ?? -1))
     .slice(0, 16);
 

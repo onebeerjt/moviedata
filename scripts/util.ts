@@ -72,3 +72,16 @@ export function staleAfterDays(year: number | null, releaseDate?: string | null)
 export function isStale(fetchedAt: string | undefined, days: number) {
   return !fetchedAt || (Date.now() - new Date(fetchedAt).getTime()) / 864e5 >= days;
 }
+
+/**
+ * Only real web pages. Some services (Mometu) hand JustWatch a raw video
+ * stream URL that expires and embeds the requester's IP: never keep those.
+ */
+export function usableLink(url: string) {
+  try {
+    const u = new URL(url);
+    return u.protocol === "https:" && !/\.m3u8|logevent|[?&]ip=/i.test(url) && !u.hostname.includes("mometu");
+  } catch {
+    return false;
+  }
+}

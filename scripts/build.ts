@@ -10,12 +10,13 @@
 //  3. Average the audience percentiles and the critic percentiles separately,
 //     then weight the two groups equally. If only one group exists, use it.
 import { join } from "node:path";
-import { SITE, SOURCES, readJson, writeJson } from "./util.ts";
+import { SITE, SOURCES, readJson, usableLink, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 import type { LetterboxdEntry } from "./scrape-letterboxd.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
 import type { OmdbEntry } from "./enrich-omdb.ts";
 import type { FreeFile } from "./free-catalog.ts";
+import type { FreeLinks } from "./free-links.ts";
 import type { Film, FreeService, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
 
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
@@ -24,6 +25,7 @@ const lb = readJson<Record<string, LetterboxdEntry>>(join(SOURCES, "letterboxd.j
 const tmdb = readJson<Record<string, TmdbEntry>>(join(SOURCES, "tmdb.json"), {});
 const omdb = readJson<Record<string, OmdbEntry>>(join(SOURCES, "omdb.json"), {});
 const free = readJson<FreeFile>(join(SOURCES, "free.json"), { updatedAt: "", services: {}, films: {}, checked: {} });
+const freeLinks = readJson<FreeLinks>(join(SOURCES, "free-links.json"), {});
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
 const historyPath = join(SOURCES, "history.json");
 const history = readJson<Record<string, Film["h"]>>(historyPath, {});
@@ -125,6 +127,7 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     letterboxdSlug: lb[id]?.slug,
     free: free.films[id]?.services,
     watchLink: free.films[id]?.link,
+    links: directLinks(id),
     s,
     audience: round(audience),
     critics: round(critics),
@@ -135,6 +138,14 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
 });
 
 films.sort((a, b) => (b.s.imdb?.n ?? 0) - (a.s.imdb?.n ?? 0));
+
+/** Direct links for the services the film is free on right now. */
+function directLinks(id: string) {
+  const services = free.films[id]?.services ?? [];
+  const links = freeLinks[id]?.links ?? {};
+  const out = Object.fromEntries(services.flatMap((sid) => (links[sid] && usableLink(links[sid]) ? [[sid, links[sid]]] : [])));
+  return Object.keys(out).length ? out : undefined;
+}
 
 // People
 const people: Record<string, Person> = {};

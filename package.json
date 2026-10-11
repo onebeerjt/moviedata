@@ -12,8 +12,9 @@
     "data:tmdb": "node scripts/enrich-tmdb.ts",
     "data:omdb": "node scripts/enrich-omdb.ts",
     "data:free": "node scripts/free-catalog.ts",
+    "data:free-links": "node scripts/free-links.ts",
     "data:build": "node scripts/build.ts",
-    "data:daily": "npm run data:free && npm run data:imdb && npm run data:tmdb && npm run data:letterboxd && npm run data:omdb && npm run data:build"
+    "data:daily": "npm run data:free && npm run data:imdb && npm run data:free-links && npm run data:tmdb && npm run data:letterboxd && npm run data:omdb && npm run data:build"
   },
   "dependencies": {
     "next": "16.3.8",
