@@ -27,7 +27,7 @@
    "criticsVsAudience": -21.8,
    "avgScore": 50,
    "lbN": 2361,
-   "caN": 611
+   "caN": 1676
   },
   {
    "key": "Thriller",
@@ -107,7 +107,7 @@
    "criticsVsAudience": -14.9,
    "avgScore": 52,
    "lbN": 108,
-   "caN": 20
+   "caN": 74
   },
   {
    "key": "Biography",
@@ -137,7 +137,7 @@
    "criticsVsAudience": -20.8,
    "avgScore": 62,
    "lbN": 232,
-   "caN": 51
+   "caN": 159
   },
   {
    "key": "Horror",
@@ -177,7 +177,7 @@
    "criticsVsAudience": -20.7,
    "avgScore": 49,
    "lbN": 536,
-   "caN": 143
+   "caN": 406
   },
   {
    "key": "Music",
@@ -197,7 +197,7 @@
    "criticsVsAudience": -26.2,
    "avgScore": 56,
    "lbN": 244,
-   "caN": 59
+   "caN": 174
   },
   {
    "key": "Musical",
@@ -207,7 +207,7 @@
    "criticsVsAudience": -17.2,
    "avgScore": 56,
    "lbN": 156,
-   "caN": 31
+   "caN": 101
   },
   {
    "key": "Film-Noir",
@@ -259,7 +259,7 @@
    "criticsVsAudience": -2.4,
    "avgScore": 61,
    "lbN": 64,
-   "caN": 9
+   "caN": 41
   },
   {
    "key": "1940",
@@ -269,7 +269,7 @@
    "criticsVsAudience": -0.4,
    "avgScore": 66,
    "lbN": 109,
-   "caN": 18
+   "caN": 78
   },
   {
    "key": "1950",
@@ -279,7 +279,7 @@
    "criticsVsAudience": -4.9,
    "avgScore": 60,
    "lbN": 166,
-   "caN": 34
+   "caN": 125
   },
   {
    "key": "1960",
@@ -289,7 +289,7 @@
    "criticsVsAudience": -9.5,
    "avgScore": 57,
    "lbN": 251,
-   "caN": 46
+   "caN": 182
   },
   {
    "key": "1970",
@@ -299,7 +299,7 @@
    "criticsVsAudience": -14,
    "avgScore": 50,
    "lbN": 363,
-   "caN": 65
+   "caN": 275
   },
   {
    "key": "1980",
@@ -381,7 +381,7 @@
    "criticsVsAudience": -26.9,
    "avgScore": 61,
    "lbN": 21,
-   "caN": 16
+   "caN": 20
   },
   {
    "key": "nm0000233",
@@ -391,7 +391,7 @@
    "criticsVsAudience": -24.9,
    "avgScore": 84,
    "lbN": 12,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0905154",
@@ -401,7 +401,7 @@
    "criticsVsAudience": -24,
    "avgScore": 57,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0905152",
@@ -411,7 +411,7 @@
    "criticsVsAudience": -31.8,
    "avgScore": 59,
    "lbN": 7,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0000338",
@@ -421,7 +421,7 @@
    "criticsVsAudience": -23,
    "avgScore": 54,
    "lbN": 17,
-   "caN": 8
+   "caN": 16
   },
   {
    "key": "nm0001392",
@@ -431,7 +431,7 @@
    "criticsVsAudience": -31.1,
    "avgScore": 74,
    "lbN": 14,
-   "caN": 10
+   "caN": 14
   },
   {
    "key": "nm0000631",
@@ -441,7 +441,7 @@
    "criticsVsAudience": -21,
    "avgScore": 59,
    "lbN": 29,
-   "caN": 23
+   "caN": 29
   },
   {
    "key": "nm0000217",
@@ -451,7 +451,7 @@
    "criticsVsAudience": -16,
    "avgScore": 82,
    "lbN": 26,
-   "caN": 18
+   "caN": 26
   },
   {
    "key": "nm0001129",
@@ -461,7 +461,7 @@
    "criticsVsAudience": -14,
    "avgScore": 57,
    "lbN": 8,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0680846",
@@ -471,7 +471,7 @@
    "criticsVsAudience": -26.3,
    "avgScore": 44,
    "lbN": 11,
-   "caN": 10
+   "caN": 11
   },
   {
    "key": "nm0000229",
@@ -481,7 +481,7 @@
    "criticsVsAudience": -15.9,
    "avgScore": 74,
    "lbN": 34,
-   "caN": 30
+   "caN": 34
   },
   {
    "key": "nm0000184",
@@ -491,7 +491,7 @@
    "criticsVsAudience": -18.8,
    "avgScore": 71,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0449984",
@@ -511,7 +511,7 @@
    "criticsVsAudience": -26.1,
    "avgScore": 72,
    "lbN": 10,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0751577",
@@ -521,7 +521,7 @@
    "criticsVsAudience": -23.4,
    "avgScore": 60,
    "lbN": 9,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0751648",
@@ -531,7 +531,7 @@
    "criticsVsAudience": -23.4,
    "avgScore": 60,
    "lbN": 9,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0001837",
@@ -541,7 +541,7 @@
    "criticsVsAudience": -16.2,
    "avgScore": 78,
    "lbN": 11,
-   "caN": 5
+   "caN": 11
   },
   {
    "key": "nm0348181",
@@ -551,7 +551,7 @@
    "criticsVsAudience": -19.3,
    "avgScore": 75,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000108",
@@ -561,7 +561,7 @@
    "criticsVsAudience": -34.5,
    "avgScore": 56,
    "lbN": 16,
-   "caN": 6
+   "caN": 14
   },
   {
    "key": "nm0893659",
@@ -571,7 +571,7 @@
    "criticsVsAudience": -37.2,
    "avgScore": 57,
    "lbN": 11,
-   "caN": 8
+   "caN": 11
   },
   {
    "key": "nm0004056",
@@ -591,7 +591,7 @@
    "criticsVsAudience": -25.3,
    "avgScore": 74,
    "lbN": 9,
-   "caN": 7
+   "caN": 9
   },
   {
    "key": "nm0591450",
@@ -601,7 +601,7 @@
    "criticsVsAudience": -6.3,
    "avgScore": 49,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0574625",
@@ -611,7 +611,7 @@
    "criticsVsAudience": -47,
    "avgScore": 43,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0001741",
@@ -621,7 +621,7 @@
    "criticsVsAudience": -20.6,
    "avgScore": 61,
    "lbN": 10,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0269463",
@@ -641,7 +641,7 @@
    "criticsVsAudience": -15.5,
    "avgScore": 80,
    "lbN": 13,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0001814",
@@ -651,7 +651,7 @@
    "criticsVsAudience": -19.2,
    "avgScore": 63,
    "lbN": 16,
-   "caN": 4
+   "caN": 13
   },
   {
    "key": "nm0881279",
@@ -671,7 +671,7 @@
    "criticsVsAudience": 3.2,
    "avgScore": 66,
    "lbN": 12,
-   "caN": 6
+   "caN": 12
   },
   {
    "key": "nm0001053",
@@ -681,7 +681,7 @@
    "criticsVsAudience": -10.2,
    "avgScore": 72,
    "lbN": 20,
-   "caN": 17
+   "caN": 20
   },
   {
    "key": "nm0001054",
@@ -691,7 +691,7 @@
    "criticsVsAudience": -10.2,
    "avgScore": 79,
    "lbN": 19,
-   "caN": 17
+   "caN": 19
   },
   {
    "key": "nm0005124",
@@ -711,7 +711,7 @@
    "criticsVsAudience": -6.5,
    "avgScore": 86,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0327273",
@@ -721,7 +721,7 @@
    "criticsVsAudience": -13,
    "avgScore": 60,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0000154",
@@ -731,7 +731,7 @@
    "criticsVsAudience": -45.2,
    "avgScore": 62,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0001232",
@@ -741,7 +741,7 @@
    "criticsVsAudience": -20.5,
    "avgScore": 80,
    "lbN": 7,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0796117",
@@ -761,7 +761,7 @@
    "criticsVsAudience": -24,
    "avgScore": 73,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0898288",
@@ -771,7 +771,7 @@
    "criticsVsAudience": -20.9,
    "avgScore": 81,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm1218281",
@@ -781,7 +781,7 @@
    "criticsVsAudience": -13.2,
    "avgScore": 61,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0000165",
@@ -791,7 +791,7 @@
    "criticsVsAudience": -32.9,
    "avgScore": 58,
    "lbN": 27,
-   "caN": 14
+   "caN": 24
   },
   {
    "key": "nm0946734",
@@ -801,7 +801,7 @@
    "criticsVsAudience": -23.1,
    "avgScore": 60,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0001532",
@@ -811,7 +811,7 @@
    "criticsVsAudience": -41,
    "avgScore": 49,
    "lbN": 10,
-   "caN": 7
+   "caN": 10
   },
   {
    "key": "nm0000361",
@@ -821,7 +821,7 @@
    "criticsVsAudience": -29.8,
    "avgScore": 52,
    "lbN": 19,
-   "caN": 6
+   "caN": 17
   },
   {
    "key": "nm0009190",
@@ -841,7 +841,7 @@
    "criticsVsAudience": -17,
    "avgScore": 78,
    "lbN": 19,
-   "caN": 6
+   "caN": 16
   },
   {
    "key": "nm0001486",
@@ -851,7 +851,7 @@
    "criticsVsAudience": -7.2,
    "avgScore": 71,
    "lbN": 14,
-   "caN": 5
+   "caN": 9
   },
   {
    "key": "nm0000600",
@@ -861,7 +861,7 @@
    "criticsVsAudience": -15.5,
    "avgScore": 64,
    "lbN": 15,
-   "caN": 11
+   "caN": 15
   },
   {
    "key": "nm0002653",
@@ -871,7 +871,7 @@
    "criticsVsAudience": -23.8,
    "avgScore": 52,
    "lbN": 9,
-   "caN": 6
+   "caN": 9
   },
   {
    "key": "nm0027572",
@@ -881,7 +881,7 @@
    "criticsVsAudience": -17.7,
    "avgScore": 81,
    "lbN": 12,
-   "caN": 10
+   "caN": 12
   },
   {
    "key": "nm0594503",
@@ -891,7 +891,7 @@
    "criticsVsAudience": -10.2,
    "avgScore": 93,
    "lbN": 12,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0005363",
@@ -901,7 +901,7 @@
    "criticsVsAudience": -40.9,
    "avgScore": 50,
    "lbN": 17,
-   "caN": 15
+   "caN": 16
   },
   {
    "key": "nm0004716",
@@ -911,7 +911,7 @@
    "criticsVsAudience": -20.2,
    "avgScore": 71,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0000948",
@@ -921,7 +921,7 @@
    "criticsVsAudience": -11.2,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000110",
@@ -931,7 +931,7 @@
    "criticsVsAudience": -11.6,
    "avgScore": 56,
    "lbN": 14,
-   "caN": 7
+   "caN": 14
   },
   {
    "key": "nm0001060",
@@ -941,7 +941,7 @@
    "criticsVsAudience": -36.2,
    "avgScore": 52,
    "lbN": 15,
-   "caN": 9
+   "caN": 15
   },
   {
    "key": "nm0083348",
@@ -961,7 +961,7 @@
    "criticsVsAudience": -26.8,
    "avgScore": 80,
    "lbN": 8,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0716257",
@@ -1001,7 +1001,7 @@
    "criticsVsAudience": -29.4,
    "avgScore": 43,
    "lbN": 12,
-   "caN": 10
+   "caN": 12
   },
   {
    "key": "nm0000965",
@@ -1011,7 +1011,7 @@
    "criticsVsAudience": -17,
    "avgScore": 70,
    "lbN": 14,
-   "caN": 11
+   "caN": 14
   },
   {
    "key": "nm0169806",
@@ -1021,7 +1021,7 @@
    "criticsVsAudience": -14.6,
    "avgScore": 74,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0213450",
@@ -1041,7 +1041,7 @@
    "criticsVsAudience": -17.5,
    "avgScore": 79,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm2676052",
@@ -1051,7 +1051,7 @@
    "criticsVsAudience": -28.6,
    "avgScore": 61,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0190859",
@@ -1061,7 +1061,7 @@
    "criticsVsAudience": -5.6,
    "avgScore": 88,
    "lbN": 7,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0001466",
@@ -1071,7 +1071,7 @@
    "criticsVsAudience": -16,
    "avgScore": 91,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0220600",
@@ -1081,7 +1081,7 @@
    "criticsVsAudience": -26.5,
    "avgScore": 46,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0426059",
@@ -1091,7 +1091,7 @@
    "criticsVsAudience": 0.5,
    "avgScore": 80,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm1349376",
@@ -1101,7 +1101,7 @@
    "criticsVsAudience": -30,
    "avgScore": 62,
    "lbN": 10,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0576987",
@@ -1111,7 +1111,7 @@
    "criticsVsAudience": -14.3,
    "avgScore": 64,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0000142",
@@ -1121,7 +1121,7 @@
    "criticsVsAudience": -19.2,
    "avgScore": 67,
    "lbN": 36,
-   "caN": 18
+   "caN": 36
   },
   {
    "key": "nm0000466",
@@ -1131,7 +1131,7 @@
    "criticsVsAudience": -15.3,
    "avgScore": 76,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0001675",
@@ -1141,7 +1141,7 @@
    "criticsVsAudience": -23.7,
    "avgScore": 39,
    "lbN": 20,
-   "caN": 12
+   "caN": 19
   },
   {
    "key": "nm0011470",
@@ -1161,7 +1161,7 @@
    "criticsVsAudience": -17.6,
    "avgScore": 65,
    "lbN": 12,
-   "caN": 8
+   "caN": 11
   },
   {
    "key": "nm0510731",
@@ -1171,7 +1171,7 @@
    "criticsVsAudience": -24,
    "avgScore": 58,
    "lbN": 12,
-   "caN": 6
+   "caN": 12
   },
   {
    "key": "nm0715636",
@@ -1181,7 +1181,7 @@
    "criticsVsAudience": -16,
    "avgScore": 47,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0286975",
@@ -1251,7 +1251,7 @@
    "criticsVsAudience": -6.2,
    "avgScore": 60,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0716347",
@@ -1261,7 +1261,7 @@
    "criticsVsAudience": -12,
    "avgScore": 58,
    "lbN": 9,
-   "caN": 5
+   "caN": 9
   },
   {
    "key": "nm0043742",
@@ -1271,7 +1271,7 @@
    "criticsVsAudience": -27.5,
    "avgScore": 44,
    "lbN": 11,
-   "caN": 6
+   "caN": 10
   },
   {
    "key": "nm1757929",
@@ -1291,7 +1291,7 @@
    "criticsVsAudience": -23,
    "avgScore": 57,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0500610",
@@ -1321,7 +1321,7 @@
    "criticsVsAudience": -18.4,
    "avgScore": 41,
    "lbN": 14,
-   "caN": 7
+   "caN": 13
   },
   {
    "key": "nm0868219",
@@ -1331,7 +1331,7 @@
    "criticsVsAudience": -18.9,
    "avgScore": 72,
    "lbN": 14,
-   "caN": 10
+   "caN": 13
   },
   {
    "key": "nm0000601",
@@ -1341,7 +1341,7 @@
    "criticsVsAudience": -19.1,
    "avgScore": 40,
    "lbN": 9,
-   "caN": 7
+   "caN": 9
   },
   {
    "key": "nm0393799",
@@ -1351,7 +1351,7 @@
    "criticsVsAudience": -25.7,
    "avgScore": 61,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0661791",
@@ -1361,7 +1361,7 @@
    "criticsVsAudience": -24.2,
    "avgScore": 86,
    "lbN": 11,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0000881",
@@ -1381,7 +1381,7 @@
    "criticsVsAudience": -15,
    "avgScore": 64,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000759",
@@ -1401,7 +1401,17 @@
    "criticsVsAudience": -21.3,
    "avgScore": 39,
    "lbN": 16,
-   "caN": 10
+   "caN": 16
+  },
+  {
+   "key": "nm0000487",
+   "label": "Ang Lee",
+   "count": 13,
+   "lbVsImdb": -0.8,
+   "criticsVsAudience": -2.2,
+   "avgScore": 63,
+   "lbN": 13,
+   "caN": 11
   },
   {
    "key": "nm0000487",
@@ -1421,7 +1431,7 @@
    "criticsVsAudience": -10.3,
    "avgScore": 58,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0001024",
@@ -1441,7 +1451,7 @@
    "criticsVsAudience": -19.5,
    "avgScore": 54,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0000576",
@@ -1481,6 +1491,16 @@
    "criticsVsAudience": -2.2,
    "avgScore": 62,
    "lbN": 28,
+   "caN": 25
+  },
+  {
+   "key": "nm0000416",
+   "label": "Terry Gilliam",
+   "count": 13,
+   "lbVsImdb": 4.3,
+   "criticsVsAudience": -6.7,
+   "avgScore": 58,
+   "lbN": 13,
    "caN": 12
   },
   {
@@ -1511,7 +1531,7 @@
    "criticsVsAudience": -46.5,
    "avgScore": 45,
    "lbN": 6,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0281508",
@@ -1521,7 +1541,7 @@
    "criticsVsAudience": -27.2,
    "avgScore": 42,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0281396",
@@ -1531,7 +1551,7 @@
    "criticsVsAudience": -8.3,
    "avgScore": 61,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0000255",
@@ -1541,7 +1561,7 @@
    "criticsVsAudience": -7,
    "avgScore": 74,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0001756",
@@ -1551,7 +1571,7 @@
    "criticsVsAudience": -19.7,
    "avgScore": 47,
    "lbN": 11,
-   "caN": 7
+   "caN": 10
   },
   {
    "key": "nm0000436",
@@ -1561,7 +1581,7 @@
    "criticsVsAudience": -11,
    "avgScore": 63,
    "lbN": 8,
-   "caN": 2
+   "caN": 8
   },
   {
    "key": "nm0002031",
@@ -1571,7 +1591,7 @@
    "criticsVsAudience": 0,
    "avgScore": 71,
    "lbN": 7,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0520488",
@@ -1601,7 +1621,7 @@
    "criticsVsAudience": -37,
    "avgScore": 51,
    "lbN": 8,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0000386",
@@ -1611,7 +1631,7 @@
    "criticsVsAudience": -23.7,
    "avgScore": 32,
    "lbN": 13,
-   "caN": 12
+   "caN": 13
   },
   {
    "key": "nm0000583",
@@ -1621,7 +1641,7 @@
    "criticsVsAudience": -18.6,
    "avgScore": 62,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0397174",
@@ -1641,7 +1661,7 @@
    "criticsVsAudience": -34.6,
    "avgScore": 68,
    "lbN": 7,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0307497",
@@ -1651,7 +1671,7 @@
    "criticsVsAudience": -6.2,
    "avgScore": 71,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm1853544",
@@ -1671,7 +1691,7 @@
    "criticsVsAudience": -25,
    "avgScore": 56,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm1490123",
@@ -1681,7 +1701,7 @@
    "criticsVsAudience": -31.3,
    "avgScore": 52,
    "lbN": 11,
-   "caN": 10
+   "caN": 11
   },
   {
    "key": "nm0610831",
@@ -1691,7 +1711,7 @@
    "criticsVsAudience": -65.5,
    "avgScore": 50,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0001880",
@@ -1701,7 +1721,7 @@
    "criticsVsAudience": -40.4,
    "avgScore": 60,
    "lbN": 12,
-   "caN": 7
+   "caN": 10
   },
   {
    "key": "nm0001639",
@@ -1731,7 +1751,7 @@
    "criticsVsAudience": -16.3,
    "avgScore": 49,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm1012501",
@@ -1741,7 +1761,7 @@
    "criticsVsAudience": -28,
    "avgScore": 43,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0001402",
@@ -1751,7 +1771,7 @@
    "criticsVsAudience": -13.3,
    "avgScore": 64,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0506613",
@@ -1761,7 +1781,7 @@
    "criticsVsAudience": -29.1,
    "avgScore": 39,
    "lbN": 14,
-   "caN": 12
+   "caN": 14
   },
   {
    "key": "nm0001469",
@@ -1771,7 +1791,7 @@
    "criticsVsAudience": -28.8,
    "avgScore": 49,
    "lbN": 17,
-   "caN": 5
+   "caN": 17
   },
   {
    "key": "nm0711840",
@@ -1781,7 +1801,7 @@
    "criticsVsAudience": -25.9,
    "avgScore": 41,
    "lbN": 11,
-   "caN": 9
+   "caN": 11
   },
   {
    "key": "nm0000318",
@@ -1791,7 +1811,7 @@
    "criticsVsAudience": -21.7,
    "avgScore": 65,
    "lbN": 20,
-   "caN": 18
+   "caN": 20
   },
   {
    "key": "nm0004303",
@@ -1801,7 +1821,7 @@
    "criticsVsAudience": -16.7,
    "avgScore": 62,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0718646",
@@ -1811,7 +1831,7 @@
    "criticsVsAudience": -15.7,
    "avgScore": 65,
    "lbN": 10,
-   "caN": 4
+   "caN": 9
   },
   {
    "key": "nm0291205",
@@ -1821,7 +1841,7 @@
    "criticsVsAudience": -38.5,
    "avgScore": 53,
    "lbN": 7,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0757858",
@@ -1831,7 +1851,7 @@
    "criticsVsAudience": -31.8,
    "avgScore": 56,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0038432",
@@ -1851,7 +1871,7 @@
    "criticsVsAudience": 0.5,
    "avgScore": 51,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm2320658",
@@ -1861,7 +1881,7 @@
    "criticsVsAudience": -6.7,
    "avgScore": 74,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0001716",
@@ -1871,7 +1891,7 @@
    "criticsVsAudience": -36.2,
    "avgScore": 56,
    "lbN": 16,
-   "caN": 12
+   "caN": 16
   },
   {
    "key": "nm0001008",
@@ -1881,7 +1901,7 @@
    "criticsVsAudience": -12.7,
    "avgScore": 76,
    "lbN": 8,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0885249",
@@ -1891,7 +1911,7 @@
    "criticsVsAudience": -27.7,
    "avgScore": 79,
    "lbN": 6,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0000916",
@@ -1901,7 +1921,7 @@
    "criticsVsAudience": -23.4,
    "avgScore": 50,
    "lbN": 11,
-   "caN": 9
+   "caN": 11
   },
   {
    "key": "nm0565336",
@@ -1911,7 +1931,7 @@
    "criticsVsAudience": -1,
    "avgScore": 74,
    "lbN": 6,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0000118",
@@ -1921,7 +1941,7 @@
    "criticsVsAudience": -31.7,
    "avgScore": 57,
    "lbN": 18,
-   "caN": 7
+   "caN": 18
   },
   {
    "key": "nm0362566",
@@ -1931,7 +1951,7 @@
    "criticsVsAudience": -11.3,
    "avgScore": 43,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0001068",
@@ -1941,7 +1961,7 @@
    "criticsVsAudience": -6.7,
    "avgScore": 61,
    "lbN": 8,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0640334",
@@ -1951,7 +1971,7 @@
    "criticsVsAudience": -34,
    "avgScore": 62,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0853238",
@@ -1961,7 +1981,7 @@
    "criticsVsAudience": -38,
    "avgScore": 37,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm1098493",
@@ -1981,7 +2001,7 @@
    "criticsVsAudience": -38.3,
    "avgScore": 49,
    "lbN": 16,
-   "caN": 12
+   "caN": 16
   },
   {
    "key": "nm0440458",
@@ -1991,7 +2011,7 @@
    "criticsVsAudience": -13.8,
    "avgScore": 44,
    "lbN": 8,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm1016428",
@@ -2011,7 +2031,7 @@
    "criticsVsAudience": -32.7,
    "avgScore": 40,
    "lbN": 7,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0031976",
@@ -2021,7 +2041,7 @@
    "criticsVsAudience": 15.4,
    "avgScore": 50,
    "lbN": 7,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0166256",
@@ -2031,7 +2051,7 @@
    "criticsVsAudience": -17.2,
    "avgScore": 84,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0615780",
@@ -2051,7 +2071,7 @@
    "criticsVsAudience": -11.5,
    "avgScore": 58,
    "lbN": 11,
-   "caN": 2
+   "caN": 9
   },
   {
    "key": "nm2308774",
@@ -2061,7 +2081,7 @@
    "criticsVsAudience": -15,
    "avgScore": 86,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0000941",
@@ -2071,7 +2091,7 @@
    "criticsVsAudience": -5,
    "avgScore": 69,
    "lbN": 9,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0001774",
@@ -2081,7 +2101,7 @@
    "criticsVsAudience": -26,
    "avgScore": 51,
    "lbN": 7,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0000080",
@@ -2091,7 +2111,7 @@
    "criticsVsAudience": 0,
    "avgScore": 77,
    "lbN": 7,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0001661",
@@ -2101,7 +2121,7 @@
    "criticsVsAudience": -31.2,
    "avgScore": 59,
    "lbN": 16,
-   "caN": 8
+   "caN": 13
   },
   {
    "key": "nm0914132",
@@ -2111,7 +2131,7 @@
    "criticsVsAudience": -18.2,
    "avgScore": 38,
    "lbN": 12,
-   "caN": 6
+   "caN": 9
   },
   {
    "key": "nm1164861",
@@ -2121,7 +2141,7 @@
    "criticsVsAudience": -17.3,
    "avgScore": 40,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0718645",
@@ -2131,7 +2151,7 @@
    "criticsVsAudience": -18.7,
    "avgScore": 39,
    "lbN": 14,
-   "caN": 6
+   "caN": 13
   },
   {
    "key": "nm0386246",
@@ -2141,7 +2161,7 @@
    "criticsVsAudience": -28,
    "avgScore": 79,
    "lbN": 6,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0629272",
@@ -2151,7 +2171,7 @@
    "criticsVsAudience": -37.7,
    "avgScore": 45,
    "lbN": 7,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0201509",
@@ -2171,7 +2191,7 @@
    "criticsVsAudience": -28.2,
    "avgScore": 53,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0153078",
@@ -2191,7 +2211,7 @@
    "criticsVsAudience": -18.7,
    "avgScore": 35,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000455",
@@ -2201,7 +2221,7 @@
    "criticsVsAudience": -28.3,
    "avgScore": 60,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000231",
@@ -2211,7 +2231,7 @@
    "criticsVsAudience": -23.2,
    "avgScore": 58,
    "lbN": 18,
-   "caN": 12
+   "caN": 16
   },
   {
    "key": "nm0001723",
@@ -2221,7 +2241,7 @@
    "criticsVsAudience": -28.5,
    "avgScore": 47,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000095",
@@ -2231,7 +2251,7 @@
    "criticsVsAudience": -10,
    "avgScore": 70,
    "lbN": 47,
-   "caN": 7
+   "caN": 44
   },
   {
    "key": "nm0919369",
@@ -2241,7 +2261,7 @@
    "criticsVsAudience": -13.3,
    "avgScore": 39,
    "lbN": 11,
-   "caN": 3
+   "caN": 9
   },
   {
    "key": "nm0281808",
@@ -2261,7 +2281,7 @@
    "criticsVsAudience": 2.5,
    "avgScore": 79,
    "lbN": 8,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0851537",
@@ -2281,7 +2301,7 @@
    "criticsVsAudience": -22.7,
    "avgScore": 28,
    "lbN": 11,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0000127",
@@ -2291,7 +2311,7 @@
    "criticsVsAudience": -11.5,
    "avgScore": 41,
    "lbN": 16,
-   "caN": 6
+   "caN": 14
   },
   {
    "key": "nm0000431",
@@ -2301,7 +2321,7 @@
    "criticsVsAudience": -31.7,
    "avgScore": 63,
    "lbN": 8,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0003160",
@@ -2311,7 +2331,7 @@
    "criticsVsAudience": -14.2,
    "avgScore": 76,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0323239",
@@ -2321,7 +2341,7 @@
    "criticsVsAudience": -13.7,
    "avgScore": 46,
    "lbN": 8,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0026442",
@@ -2331,7 +2351,7 @@
    "criticsVsAudience": -42.7,
    "avgScore": 47,
    "lbN": 9,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0510912",
@@ -2341,7 +2361,7 @@
    "criticsVsAudience": -23.5,
    "avgScore": 51,
    "lbN": 8,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0609236",
@@ -2381,7 +2401,7 @@
    "criticsVsAudience": -30.6,
    "avgScore": 76,
    "lbN": 11,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0024622",
@@ -2391,7 +2411,7 @@
    "criticsVsAudience": -23,
    "avgScore": 73,
    "lbN": 7,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0000247",
@@ -2401,7 +2421,7 @@
    "criticsVsAudience": -5.2,
    "avgScore": 66,
    "lbN": 13,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0067457",
@@ -2411,7 +2431,7 @@
    "criticsVsAudience": -20.7,
    "avgScore": 37,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0000490",
@@ -2421,7 +2441,7 @@
    "criticsVsAudience": -16.6,
    "avgScore": 63,
    "lbN": 15,
-   "caN": 5
+   "caN": 12
   },
   {
    "key": "nm0000957",
@@ -2431,7 +2451,7 @@
    "criticsVsAudience": -7.3,
    "avgScore": 34,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0081540",
@@ -2441,7 +2461,7 @@
    "criticsVsAudience": -25,
    "avgScore": 61,
    "lbN": 7,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0487166",
@@ -2451,7 +2471,7 @@
    "criticsVsAudience": -10.5,
    "avgScore": 70,
    "lbN": 8,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0781842",
@@ -2461,7 +2481,7 @@
    "criticsVsAudience": -34.3,
    "avgScore": 40,
    "lbN": 11,
-   "caN": 6
+   "caN": 10
   },
   {
    "key": "nm0899121",
@@ -2471,7 +2491,7 @@
    "criticsVsAudience": -15,
    "avgScore": 79,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm2497546",
@@ -2481,7 +2501,7 @@
    "criticsVsAudience": -2,
    "avgScore": 44,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0783139",
@@ -2491,7 +2511,7 @@
    "criticsVsAudience": -12,
    "avgScore": 66,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0005190",
@@ -2501,7 +2521,7 @@
    "criticsVsAudience": -35.7,
    "avgScore": 43,
    "lbN": 12,
-   "caN": 6
+   "caN": 12
   },
   {
    "key": "nm0336620",
@@ -2511,7 +2531,7 @@
    "criticsVsAudience": -33.6,
    "avgScore": 50,
    "lbN": 11,
-   "caN": 7
+   "caN": 11
   },
   {
    "key": "nm0001317",
@@ -2521,7 +2541,7 @@
    "criticsVsAudience": -16.3,
    "avgScore": 25,
    "lbN": 22,
-   "caN": 6
+   "caN": 18
   },
   {
    "key": "nm1396121",
@@ -2531,7 +2551,7 @@
    "criticsVsAudience": -8,
    "avgScore": 85,
    "lbN": 7,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0000041",
@@ -2541,7 +2561,7 @@
    "criticsVsAudience": -1.8,
    "avgScore": 87,
    "lbN": 16,
-   "caN": 5
+   "caN": 14
   },
   {
    "key": "nm0281945",
@@ -2551,7 +2571,7 @@
    "criticsVsAudience": -52,
    "avgScore": 39,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0386570",
@@ -2571,7 +2591,7 @@
    "criticsVsAudience": -23.6,
    "avgScore": 40,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0847223",
@@ -2581,7 +2601,7 @@
    "criticsVsAudience": -1,
    "avgScore": 87,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0629334",
@@ -2591,7 +2611,7 @@
    "criticsVsAudience": -15.8,
    "avgScore": 30,
    "lbN": 11,
-   "caN": 5
+   "caN": 10
   },
   {
    "key": "nm0178997",
@@ -2601,7 +2621,7 @@
    "criticsVsAudience": -32.5,
    "avgScore": 27,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0359387",
@@ -2611,7 +2631,7 @@
    "criticsVsAudience": -30.4,
    "avgScore": 54,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm1461392",
@@ -2621,7 +2641,7 @@
    "criticsVsAudience": -45.5,
    "avgScore": 55,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm1650283",
@@ -2641,7 +2661,7 @@
    "criticsVsAudience": -24,
    "avgScore": 61,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0001047",
@@ -2661,7 +2681,7 @@
    "criticsVsAudience": -32.5,
    "avgScore": 58,
    "lbN": 8,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm1291105",
@@ -2681,7 +2701,7 @@
    "criticsVsAudience": -41,
    "avgScore": 60,
    "lbN": 10,
-   "caN": 5
+   "caN": 10
   },
   {
    "key": "nm0000500",
@@ -2691,7 +2711,7 @@
    "criticsVsAudience": -2.7,
    "avgScore": 77,
    "lbN": 19,
-   "caN": 8
+   "caN": 18
   },
   {
    "key": "nm0942504",
@@ -2701,7 +2721,7 @@
    "criticsVsAudience": -21,
    "avgScore": 60,
    "lbN": 9,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0000230",
@@ -2721,7 +2741,7 @@
    "criticsVsAudience": -14.6,
    "avgScore": 52,
    "lbN": 11,
-   "caN": 8
+   "caN": 11
   },
   {
    "key": "nm0005509",
@@ -2731,7 +2751,7 @@
    "criticsVsAudience": -29,
    "avgScore": 45,
    "lbN": 11,
-   "caN": 7
+   "caN": 11
   },
   {
    "key": "nm0001403",
@@ -2741,7 +2761,7 @@
    "criticsVsAudience": -44,
    "avgScore": 59,
    "lbN": 13,
-   "caN": 1
+   "caN": 11
   },
   {
    "key": "nm1103162",
@@ -2751,7 +2771,7 @@
    "criticsVsAudience": -17,
    "avgScore": 35,
    "lbN": 13,
-   "caN": 4
+   "caN": 12
   },
   {
    "key": "nm0000976",
@@ -2761,7 +2781,7 @@
    "criticsVsAudience": -36.5,
    "avgScore": 58,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000876",
@@ -2771,7 +2791,7 @@
    "criticsVsAudience": -4,
    "avgScore": 58,
    "lbN": 11,
-   "caN": 3
+   "caN": 10
   },
   {
    "key": "nm0337773",
@@ -2781,7 +2801,7 @@
    "criticsVsAudience": -10.5,
    "avgScore": 40,
    "lbN": 11,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0583600",
@@ -2801,7 +2821,7 @@
    "criticsVsAudience": -17,
    "avgScore": 54,
    "lbN": 10,
-   "caN": 4
+   "caN": 9
   },
   {
    "key": "nm0345174",
@@ -2811,7 +2831,7 @@
    "criticsVsAudience": -13.7,
    "avgScore": 68,
    "lbN": 8,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0400436",
@@ -2821,7 +2841,7 @@
    "criticsVsAudience": -37.5,
    "avgScore": 64,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0400441",
@@ -2831,7 +2851,7 @@
    "criticsVsAudience": -37.5,
    "avgScore": 60,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0174374",
@@ -2841,7 +2861,7 @@
    "criticsVsAudience": -15,
    "avgScore": 48,
    "lbN": 11,
-   "caN": 3
+   "caN": 9
   },
   {
    "key": "nm1349522",
@@ -2851,7 +2871,7 @@
    "criticsVsAudience": -7,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0612322",
@@ -2871,7 +2891,7 @@
    "criticsVsAudience": -21,
    "avgScore": 47,
    "lbN": 9,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0125803",
@@ -2881,7 +2901,7 @@
    "criticsVsAudience": -17.3,
    "avgScore": 35,
    "lbN": 14,
-   "caN": 7
+   "caN": 13
   },
   {
    "key": "nm0001112",
@@ -2891,7 +2911,7 @@
    "criticsVsAudience": -21.8,
    "avgScore": 45,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0831557",
@@ -2901,7 +2921,7 @@
    "criticsVsAudience": 11,
    "avgScore": 44,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0002120",
@@ -2911,7 +2931,7 @@
    "criticsVsAudience": -40,
    "avgScore": 58,
    "lbN": 17,
-   "caN": 6
+   "caN": 14
   },
   {
    "key": "nm0000180",
@@ -2921,7 +2941,7 @@
    "criticsVsAudience": -5,
    "avgScore": 84,
    "lbN": 7,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0637518",
@@ -2931,7 +2951,7 @@
    "criticsVsAudience": -24,
    "avgScore": 48,
    "lbN": 12,
-   "caN": 5
+   "caN": 11
   },
   {
    "key": "nm0922346",
@@ -2941,7 +2961,7 @@
    "criticsVsAudience": -26.2,
    "avgScore": 25,
    "lbN": 9,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0006476",
@@ -2951,7 +2971,7 @@
    "criticsVsAudience": -45,
    "avgScore": 49,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm1294961",
@@ -2961,7 +2981,7 @@
    "criticsVsAudience": -13.2,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm1294962",
@@ -2971,7 +2991,7 @@
    "criticsVsAudience": -13.2,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0477035",
@@ -2991,7 +3011,7 @@
    "criticsVsAudience": -28,
    "avgScore": 38,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0000985",
@@ -3001,7 +3021,7 @@
    "criticsVsAudience": -21,
    "avgScore": 48,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0005540",
@@ -3011,7 +3031,7 @@
    "criticsVsAudience": -38.3,
    "avgScore": 33,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0677953",
@@ -3021,7 +3041,7 @@
    "criticsVsAudience": -57,
    "avgScore": 39,
    "lbN": 9,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0001149",
@@ -3031,7 +3051,7 @@
    "criticsVsAudience": -30.1,
    "avgScore": 56,
    "lbN": 17,
-   "caN": 13
+   "caN": 16
   },
   {
    "key": "nm0005436",
@@ -3041,7 +3061,7 @@
    "criticsVsAudience": -34.7,
    "avgScore": 54,
    "lbN": 8,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0459170",
@@ -3051,7 +3071,7 @@
    "criticsVsAudience": -34,
    "avgScore": 40,
    "lbN": 6,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0082450",
@@ -3061,7 +3081,7 @@
    "criticsVsAudience": -4,
    "avgScore": 52,
    "lbN": 10,
-   "caN": 7
+   "caN": 10
   },
   {
    "key": "nm0919363",
@@ -3071,7 +3091,7 @@
    "criticsVsAudience": -5.3,
    "avgScore": 43,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0844896",
@@ -3091,7 +3111,7 @@
    "criticsVsAudience": -47.3,
    "avgScore": 82,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0240797",
@@ -3141,7 +3161,7 @@
    "criticsVsAudience": -20,
    "avgScore": 57,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0784061",
@@ -3151,7 +3171,7 @@
    "criticsVsAudience": -32.7,
    "avgScore": 30,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0048918",
@@ -3171,7 +3191,7 @@
    "criticsVsAudience": -19.5,
    "avgScore": 39,
    "lbN": 12,
-   "caN": 10
+   "caN": 12
   },
   {
    "key": "nm0000697",
@@ -3181,7 +3201,7 @@
    "criticsVsAudience": -4.8,
    "avgScore": 86,
    "lbN": 16,
-   "caN": 5
+   "caN": 12
   },
   {
    "key": "nm0001351",
@@ -3191,7 +3211,7 @@
    "criticsVsAudience": -21,
    "avgScore": 68,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0467646",
@@ -3211,7 +3231,7 @@
    "criticsVsAudience": -18.2,
    "avgScore": 64,
    "lbN": 14,
-   "caN": 4
+   "caN": 12
   },
   {
    "key": "nm0001708",
@@ -3221,7 +3241,7 @@
    "criticsVsAudience": -37.4,
    "avgScore": 43,
    "lbN": 18,
-   "caN": 10
+   "caN": 17
   },
   {
    "key": "nm0905592",
@@ -3231,7 +3251,7 @@
    "criticsVsAudience": -33,
    "avgScore": 22,
    "lbN": 8,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0318916",
@@ -3241,7 +3261,7 @@
    "criticsVsAudience": -18.8,
    "avgScore": 58,
    "lbN": 9,
-   "caN": 5
+   "caN": 9
   },
   {
    "key": "nm1135423",
@@ -3251,7 +3271,7 @@
    "criticsVsAudience": -37.7,
    "avgScore": 25,
    "lbN": 8,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0387706",
@@ -3261,7 +3281,7 @@
    "criticsVsAudience": -42,
    "avgScore": 58,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0000269",
@@ -3271,7 +3291,7 @@
    "criticsVsAudience": -52.7,
    "avgScore": 69,
    "lbN": 7,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0936404",
@@ -3281,7 +3301,7 @@
    "criticsVsAudience": -25.7,
    "avgScore": 75,
    "lbN": 9,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0525659",
@@ -3291,7 +3311,7 @@
    "criticsVsAudience": -35.7,
    "avgScore": 30,
    "lbN": 7,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0000720",
@@ -3301,7 +3321,7 @@
    "criticsVsAudience": -11.3,
    "avgScore": 61,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0001878",
@@ -3311,7 +3331,7 @@
    "criticsVsAudience": -8.8,
    "avgScore": 45,
    "lbN": 10,
-   "caN": 5
+   "caN": 10
   },
   {
    "key": "nm0958387",
@@ -3321,7 +3341,7 @@
    "criticsVsAudience": -27.3,
    "avgScore": 64,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0049633",
@@ -3351,7 +3371,7 @@
    "criticsVsAudience": -4,
    "avgScore": 91,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm1720541",
@@ -3371,7 +3391,7 @@
    "criticsVsAudience": -2.5,
    "avgScore": 66,
    "lbN": 6,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0336695",
@@ -3381,7 +3401,7 @@
    "criticsVsAudience": 0,
    "avgScore": 66,
    "lbN": 8,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0001915",
@@ -3401,7 +3421,7 @@
    "criticsVsAudience": -20.5,
    "avgScore": 39,
    "lbN": 8,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0533284",
@@ -3411,7 +3431,7 @@
    "criticsVsAudience": 1,
    "avgScore": 67,
    "lbN": 8,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm1410815",
@@ -3421,7 +3441,7 @@
    "criticsVsAudience": -12,
    "avgScore": 80,
    "lbN": 8,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm1174251",
@@ -3431,7 +3451,7 @@
    "criticsVsAudience": -18,
    "avgScore": 41,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0836328",
@@ -3441,7 +3461,7 @@
    "criticsVsAudience": -10,
    "avgScore": 65,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0000343",
@@ -3451,7 +3471,7 @@
    "criticsVsAudience": -13.7,
    "avgScore": 64,
    "lbN": 18,
-   "caN": 6
+   "caN": 18
   },
   {
    "key": "nm0004410",
@@ -3471,7 +3491,7 @@
    "criticsVsAudience": -14.5,
    "avgScore": 20,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0679031",
@@ -3481,7 +3501,7 @@
    "criticsVsAudience": -15,
    "avgScore": 22,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0379179",
@@ -3501,7 +3521,7 @@
    "criticsVsAudience": -24.2,
    "avgScore": 50,
    "lbN": 10,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0001102",
@@ -3511,7 +3531,7 @@
    "criticsVsAudience": -30.2,
    "avgScore": 46,
    "lbN": 11,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0551076",
@@ -3521,7 +3541,7 @@
    "criticsVsAudience": -10.5,
    "avgScore": 36,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0142286",
@@ -3531,7 +3551,7 @@
    "criticsVsAudience": -25,
    "avgScore": 42,
    "lbN": 8,
-   "caN": 5
+   "caN": 8
   },
   {
    "key": "nm0005237",
@@ -3551,7 +3571,7 @@
    "criticsVsAudience": -36.5,
    "avgScore": 65,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0668247",
@@ -3571,7 +3591,7 @@
    "criticsVsAudience": 1.5,
    "avgScore": 28,
    "lbN": 8,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0943758",
@@ -3581,7 +3601,7 @@
    "criticsVsAudience": -12,
    "avgScore": 81,
    "lbN": 12,
-   "caN": 2
+   "caN": 9
   },
   {
    "key": "nm1026778",
@@ -3591,7 +3611,7 @@
    "criticsVsAudience": -29,
    "avgScore": 42,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm1417392",
@@ -3601,7 +3621,7 @@
    "criticsVsAudience": -1.2,
    "avgScore": 39,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm2366012",
@@ -3611,7 +3631,7 @@
    "criticsVsAudience": -14.2,
    "avgScore": 46,
    "lbN": 8,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm2419470",
@@ -3621,7 +3641,7 @@
    "criticsVsAudience": -14.2,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0339004",
@@ -3631,7 +3651,7 @@
    "criticsVsAudience": -39,
    "avgScore": 25,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0878638",
@@ -3641,7 +3661,7 @@
    "criticsVsAudience": -36.7,
    "avgScore": 44,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0400850",
@@ -3651,7 +3671,7 @@
    "criticsVsAudience": -31.5,
    "avgScore": 34,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0030735",
@@ -3661,7 +3681,7 @@
    "criticsVsAudience": -12,
    "avgScore": 53,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0218621",
@@ -3681,7 +3701,7 @@
    "criticsVsAudience": 0,
    "avgScore": 42,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0001508",
@@ -3691,7 +3711,7 @@
    "criticsVsAudience": -19,
    "avgScore": 63,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0381478",
@@ -3721,7 +3741,7 @@
    "criticsVsAudience": -39,
    "avgScore": 54,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0935095",
@@ -3741,7 +3761,7 @@
    "criticsVsAudience": -0.5,
    "avgScore": 42,
    "lbN": 7,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0593610",
@@ -3751,7 +3771,7 @@
    "criticsVsAudience": -7,
    "avgScore": 37,
    "lbN": 9,
-   "caN": 3
+   "caN": 9
   },
   {
    "key": "nm0466349",
@@ -3761,7 +3781,7 @@
    "criticsVsAudience": -16.2,
    "avgScore": 45,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0154819",
@@ -3781,7 +3801,7 @@
    "criticsVsAudience": -23.7,
    "avgScore": 40,
    "lbN": 6,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm1093039",
@@ -3791,7 +3811,7 @@
    "criticsVsAudience": -2.7,
    "avgScore": 58,
    "lbN": 8,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0000277",
@@ -3801,7 +3821,7 @@
    "criticsVsAudience": -14,
    "avgScore": 67,
    "lbN": 6,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0002728",
@@ -3841,7 +3861,17 @@
    "criticsVsAudience": -19,
    "avgScore": 41,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
+  },
+  {
+   "key": "nm0006960",
+   "label": "John Madden",
+   "count": 10,
+   "lbVsImdb": -7.4,
+   "criticsVsAudience": 1.6,
+   "avgScore": 51,
+   "lbN": 10,
+   "caN": 9
   },
   {
    "key": "nm0006960",
@@ -3861,7 +3891,7 @@
    "criticsVsAudience": -27.7,
    "avgScore": 42,
    "lbN": 14,
-   "caN": 7
+   "caN": 13
   },
   {
    "key": "nm0000484",
@@ -3871,7 +3901,7 @@
    "criticsVsAudience": -31.4,
    "avgScore": 49,
    "lbN": 14,
-   "caN": 7
+   "caN": 13
   },
   {
    "key": "nm0848414",
@@ -3881,7 +3911,7 @@
    "criticsVsAudience": -19.7,
    "avgScore": 48,
    "lbN": 8,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0000123",
@@ -3891,7 +3921,7 @@
    "criticsVsAudience": -6.2,
    "avgScore": 53,
    "lbN": 9,
-   "caN": 5
+   "caN": 9
   },
   {
    "key": "nm0414144",
@@ -3911,7 +3941,7 @@
    "criticsVsAudience": 18,
    "avgScore": 32,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm2153088",
@@ -3931,7 +3961,17 @@
    "criticsVsAudience": -18,
    "avgScore": 34,
    "lbN": 11,
-   "caN": 6
+   "caN": 11
+  },
+  {
+   "key": "nm0797869",
+   "label": "Brad Silberling",
+   "count": 6,
+   "lbVsImdb": 0.1,
+   "criticsVsAudience": -4,
+   "avgScore": 38,
+   "lbN": 6,
+   "caN": 4
   },
   {
    "key": "nm0797869",
@@ -3971,7 +4011,7 @@
    "criticsVsAudience": -12.3,
    "avgScore": 18,
    "lbN": 6,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0958969",
@@ -3981,7 +4021,7 @@
    "criticsVsAudience": -23.5,
    "avgScore": 37,
    "lbN": 6,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm1488800",
@@ -3991,7 +4031,7 @@
    "criticsVsAudience": 6,
    "avgScore": 42,
    "lbN": 8,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0000316",
@@ -4001,7 +4041,7 @@
    "criticsVsAudience": -33.2,
    "avgScore": 62,
    "lbN": 9,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm2482088",
@@ -4011,7 +4051,7 @@
    "criticsVsAudience": -22,
    "avgScore": 46,
    "lbN": 7,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm1442514",
@@ -4021,7 +4061,7 @@
    "criticsVsAudience": -7.7,
    "avgScore": 87,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0001338",
@@ -4041,7 +4081,7 @@
    "criticsVsAudience": -33.3,
    "avgScore": 63,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0481418",
@@ -4061,7 +4101,7 @@
    "criticsVsAudience": -15,
    "avgScore": 20,
    "lbN": 6,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0462895",
@@ -4071,7 +4111,7 @@
    "criticsVsAudience": -17.3,
    "avgScore": 41,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0474955",
@@ -4081,7 +4121,7 @@
    "criticsVsAudience": -27.5,
    "avgScore": 22,
    "lbN": 10,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0000776",
@@ -4091,7 +4131,7 @@
    "criticsVsAudience": -18,
    "avgScore": 57,
    "lbN": 13,
-   "caN": 2
+   "caN": 11
   },
   {
    "key": "nm0254786",
@@ -4101,7 +4141,7 @@
    "criticsVsAudience": -3.2,
    "avgScore": 24,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0997291",
@@ -4121,7 +4161,7 @@
    "criticsVsAudience": -16,
    "avgScore": 49,
    "lbN": 7,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0687042",
@@ -4141,7 +4181,7 @@
    "criticsVsAudience": -17.2,
    "avgScore": 62,
    "lbN": 8,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0611683",
@@ -4151,7 +4191,7 @@
    "criticsVsAudience": -41.5,
    "avgScore": 35,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0000005",
@@ -4161,7 +4201,7 @@
    "criticsVsAudience": -9.7,
    "avgScore": 94,
    "lbN": 14,
-   "caN": 3
+   "caN": 11
   },
   {
    "key": "nm0006854",
@@ -4171,7 +4211,7 @@
    "criticsVsAudience": -17,
    "avgScore": 46,
    "lbN": 8,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0001361",
@@ -4181,7 +4221,7 @@
    "criticsVsAudience": -7.5,
    "avgScore": 29,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm1224299",
@@ -4191,7 +4231,7 @@
    "criticsVsAudience": -11.8,
    "avgScore": 36,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0718627",
@@ -4201,7 +4241,7 @@
    "criticsVsAudience": -31.8,
    "avgScore": 76,
    "lbN": 7,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0000517",
@@ -4211,7 +4251,7 @@
    "criticsVsAudience": -16.3,
    "avgScore": 67,
    "lbN": 9,
-   "caN": 3
+   "caN": 9
   },
   {
    "key": "nm0697656",
@@ -4221,7 +4261,7 @@
    "criticsVsAudience": -2,
    "avgScore": 78,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0769874",
@@ -4241,7 +4281,7 @@
    "criticsVsAudience": -31,
    "avgScore": 61,
    "lbN": 9,
-   "caN": 1
+   "caN": 8
   },
   {
    "key": "nm0001885",
@@ -4251,7 +4291,7 @@
    "criticsVsAudience": -38.4,
    "avgScore": 72,
    "lbN": 11,
-   "caN": 7
+   "caN": 11
   },
   {
    "key": "nm0297935",
@@ -4271,7 +4311,7 @@
    "criticsVsAudience": -46.5,
    "avgScore": 46,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0531817",
@@ -4281,7 +4321,7 @@
    "criticsVsAudience": -19.7,
    "avgScore": 70,
    "lbN": 10,
-   "caN": 3
+   "caN": 8
   },
   {
    "key": "nm0744834",
@@ -4301,7 +4341,17 @@
    "criticsVsAudience": -15.5,
    "avgScore": 66,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
+  },
+  {
+   "key": "nm0001175",
+   "label": "Blake Edwards",
+   "count": 13,
+   "lbVsImdb": -2.4,
+   "criticsVsAudience": -4.6,
+   "avgScore": 63,
+   "lbN": 13,
+   "caN": 10
   },
   {
    "key": "nm0001175",
@@ -4321,7 +4371,7 @@
    "criticsVsAudience": -27.5,
    "avgScore": 72,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0394280",
@@ -4331,7 +4381,7 @@
    "criticsVsAudience": -28,
    "avgScore": 43,
    "lbN": 10,
-   "caN": 1
+   "caN": 9
   },
   {
    "key": "nm0812200",
@@ -4351,7 +4401,7 @@
    "criticsVsAudience": -18.2,
    "avgScore": 58,
    "lbN": 7,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0000485",
@@ -4361,7 +4411,7 @@
    "criticsVsAudience": 0,
    "avgScore": 79,
    "lbN": 7,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm2158772",
@@ -4371,7 +4421,7 @@
    "criticsVsAudience": -0.5,
    "avgScore": 76,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0001241",
@@ -4381,7 +4431,7 @@
    "criticsVsAudience": -1,
    "avgScore": 63,
    "lbN": 14,
-   "caN": 3
+   "caN": 11
   },
   {
    "key": "nm0829038",
@@ -4421,7 +4471,7 @@
    "criticsVsAudience": -9,
    "avgScore": 10,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0000362",
@@ -4431,7 +4481,7 @@
    "criticsVsAudience": -15,
    "avgScore": 57,
    "lbN": 6,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0314671",
@@ -4471,7 +4521,7 @@
    "criticsVsAudience": -25,
    "avgScore": 49,
    "lbN": 13,
-   "caN": 4
+   "caN": 12
   },
   {
    "key": "nm0891114",
@@ -4481,7 +4531,7 @@
    "criticsVsAudience": -28,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0950109",
@@ -4501,7 +4551,7 @@
    "criticsVsAudience": -41,
    "avgScore": 45,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0014960",
@@ -4511,7 +4561,7 @@
    "criticsVsAudience": -2.2,
    "avgScore": 42,
    "lbN": 9,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0715346",
@@ -4541,7 +4591,7 @@
    "criticsVsAudience": -46.5,
    "avgScore": 27,
    "lbN": 7,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0141961",
@@ -4551,7 +4601,7 @@
    "criticsVsAudience": -55,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm1890845",
@@ -4561,7 +4611,7 @@
    "criticsVsAudience": -28.2,
    "avgScore": 35,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0955443",
@@ -4571,7 +4621,7 @@
    "criticsVsAudience": -13.2,
    "avgScore": 72,
    "lbN": 9,
-   "caN": 4
+   "caN": 8
   },
   {
    "key": "nm0661751",
@@ -4601,7 +4651,7 @@
    "criticsVsAudience": -16,
    "avgScore": 86,
    "lbN": 9,
-   "caN": 2
+   "caN": 8
   },
   {
    "key": "nm0504495",
@@ -4621,7 +4671,7 @@
    "criticsVsAudience": -4.5,
    "avgScore": 38,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0915304",
@@ -4631,7 +4681,7 @@
    "criticsVsAudience": -31.5,
    "avgScore": 34,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm1164755",
@@ -4641,7 +4691,7 @@
    "criticsVsAudience": -29,
    "avgScore": 33,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0398185",
@@ -4651,7 +4701,7 @@
    "criticsVsAudience": -30,
    "avgScore": 33,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0802248",
@@ -4671,7 +4721,7 @@
    "criticsVsAudience": -30,
    "avgScore": 54,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm2391575",
@@ -4681,7 +4731,7 @@
    "criticsVsAudience": -36,
    "avgScore": 60,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0796923",
@@ -4691,7 +4741,7 @@
    "criticsVsAudience": -7,
    "avgScore": 71,
    "lbN": 8,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0000264",
@@ -4701,7 +4751,7 @@
    "criticsVsAudience": -5.2,
    "avgScore": 79,
    "lbN": 18,
-   "caN": 5
+   "caN": 15
   },
   {
    "key": "nm0222150",
@@ -4711,7 +4761,7 @@
    "criticsVsAudience": null,
    "avgScore": 33,
    "lbN": 5,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0771054",
@@ -4731,7 +4781,7 @@
    "criticsVsAudience": 0.5,
    "avgScore": 82,
    "lbN": 6,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0163706",
@@ -4741,7 +4791,7 @@
    "criticsVsAudience": -13,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0476201",
@@ -4801,7 +4851,7 @@
    "criticsVsAudience": -18,
    "avgScore": 45,
    "lbN": 8,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0587518",
@@ -4821,7 +4871,7 @@
    "criticsVsAudience": 2,
    "avgScore": 69,
    "lbN": 12,
-   "caN": 2
+   "caN": 12
   },
   {
    "key": "nm0001093",
@@ -4831,7 +4881,7 @@
    "criticsVsAudience": -51,
    "avgScore": 58,
    "lbN": 6,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0290556",
@@ -4851,7 +4901,7 @@
    "criticsVsAudience": -16.5,
    "avgScore": 69,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm4804442",
@@ -4871,7 +4921,7 @@
    "criticsVsAudience": -3.7,
    "avgScore": 53,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm1242054",
@@ -4901,7 +4951,17 @@
    "criticsVsAudience": -19.5,
    "avgScore": 71,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
+  },
+  {
+   "key": "nm0881038",
+   "label": "Ron Underwood",
+   "count": 5,
+   "lbVsImdb": 0.6,
+   "criticsVsAudience": 5.3,
+   "avgScore": 46,
+   "lbN": 5,
+   "caN": 4
   },
   {
    "key": "nm0881038",
@@ -4931,7 +4991,7 @@
    "criticsVsAudience": -17,
    "avgScore": 60,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0235719",
@@ -4941,7 +5001,7 @@
    "criticsVsAudience": -41,
    "avgScore": 33,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm1893457",
@@ -4971,7 +5031,7 @@
    "criticsVsAudience": -44,
    "avgScore": 70,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0109359",
@@ -4981,7 +5041,7 @@
    "criticsVsAudience": -11.3,
    "avgScore": 21,
    "lbN": 10,
-   "caN": 3
+   "caN": 10
   },
   {
    "key": "nm1170855",
@@ -4991,7 +5051,7 @@
    "criticsVsAudience": -6,
    "avgScore": 61,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0001628",
@@ -5001,7 +5061,7 @@
    "criticsVsAudience": -17.5,
    "avgScore": 70,
    "lbN": 12,
-   "caN": 4
+   "caN": 10
   },
   {
    "key": "nm0920425",
@@ -5031,7 +5091,7 @@
    "criticsVsAudience": -43,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0413875",
@@ -5071,7 +5131,7 @@
    "criticsVsAudience": 4,
    "avgScore": 72,
    "lbN": 6,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0759207",
@@ -5081,7 +5141,7 @@
    "criticsVsAudience": -29,
    "avgScore": 37,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm1481493",
@@ -5091,7 +5151,7 @@
    "criticsVsAudience": -19,
    "avgScore": 43,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0001789",
@@ -5101,7 +5161,7 @@
    "criticsVsAudience": -5.5,
    "avgScore": 97,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm1099918",
@@ -5131,7 +5191,17 @@
    "criticsVsAudience": -9.5,
    "avgScore": 76,
    "lbN": 7,
-   "caN": 2
+   "caN": 6
+  },
+  {
+   "key": "nm1247462",
+   "label": "Christopher Smith",
+   "count": 5,
+   "lbVsImdb": 0.1,
+   "criticsVsAudience": 13.5,
+   "avgScore": 40,
+   "lbN": 5,
+   "caN": 4
   },
   {
    "key": "nm0702797",
@@ -5171,7 +5241,7 @@
    "criticsVsAudience": -19,
    "avgScore": 77,
    "lbN": 8,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0922903",
@@ -5191,7 +5261,7 @@
    "criticsVsAudience": 3,
    "avgScore": 51,
    "lbN": 7,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0378893",
@@ -5201,7 +5271,7 @@
    "criticsVsAudience": -22.5,
    "avgScore": 46,
    "lbN": 12,
-   "caN": 2
+   "caN": 12
   },
   {
    "key": "nm0933505",
@@ -5221,7 +5291,7 @@
    "criticsVsAudience": 0,
    "avgScore": 79,
    "lbN": 6,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0662529",
@@ -5231,7 +5301,17 @@
    "criticsVsAudience": -29,
    "avgScore": 39,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
+  },
+  {
+   "key": "nm1410159",
+   "label": "David Bruckner",
+   "count": 6,
+   "lbVsImdb": 10.7,
+   "criticsVsAudience": 24,
+   "avgScore": 38,
+   "lbN": 6,
+   "caN": 6
   },
   {
    "key": "nm0352524",
@@ -5261,7 +5341,7 @@
    "criticsVsAudience": -3,
    "avgScore": 40,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm1413364",
@@ -5311,7 +5391,7 @@
    "criticsVsAudience": -13.3,
    "avgScore": 65,
    "lbN": 12,
-   "caN": 3
+   "caN": 12
   },
   {
    "key": "nm0000694",
@@ -5321,7 +5401,7 @@
    "criticsVsAudience": -10,
    "avgScore": 67,
    "lbN": 9,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0001219",
@@ -5331,7 +5411,7 @@
    "criticsVsAudience": -38,
    "avgScore": 52,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0331532",
@@ -5341,7 +5421,7 @@
    "criticsVsAudience": -7.4,
    "avgScore": 20,
    "lbN": 9,
-   "caN": 5
+   "caN": 9
   },
   {
    "key": "nm0000934",
@@ -5351,7 +5431,7 @@
    "criticsVsAudience": -32,
    "avgScore": 72,
    "lbN": 8,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0573796",
@@ -5371,7 +5451,7 @@
    "criticsVsAudience": -14,
    "avgScore": 31,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0601859",
@@ -5381,7 +5461,7 @@
    "criticsVsAudience": -14,
    "avgScore": 31,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0957772",
@@ -5391,7 +5471,7 @@
    "criticsVsAudience": -35.3,
    "avgScore": 22,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0001587",
@@ -5401,7 +5481,7 @@
    "criticsVsAudience": -23.5,
    "avgScore": 63,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0490487",
@@ -5431,7 +5511,7 @@
    "criticsVsAudience": -16.7,
    "avgScore": 54,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0950553",
@@ -5471,7 +5551,7 @@
    "criticsVsAudience": 0,
    "avgScore": 86,
    "lbN": 7,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0492909",
@@ -5481,7 +5561,7 @@
    "criticsVsAudience": -26,
    "avgScore": 36,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0002191",
@@ -5491,7 +5571,7 @@
    "criticsVsAudience": 19.5,
    "avgScore": 79,
    "lbN": 7,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm1108007",
@@ -5501,7 +5581,7 @@
    "criticsVsAudience": 17.5,
    "avgScore": 54,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0276169",
@@ -5521,7 +5601,7 @@
    "criticsVsAudience": -2,
    "avgScore": 89,
    "lbN": 9,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0000570",
@@ -5531,7 +5611,7 @@
    "criticsVsAudience": -45.2,
    "avgScore": 68,
    "lbN": 11,
-   "caN": 4
+   "caN": 11
   },
   {
    "key": "nm0155093",
@@ -5541,7 +5621,7 @@
    "criticsVsAudience": -45,
    "avgScore": 46,
    "lbN": 6,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm1258686",
@@ -5551,7 +5631,7 @@
    "criticsVsAudience": -1,
    "avgScore": 87,
    "lbN": 6,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0772259",
@@ -5571,7 +5651,7 @@
    "criticsVsAudience": -44,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0863387",
@@ -5611,7 +5691,7 @@
    "criticsVsAudience": -9.5,
    "avgScore": 46,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm1780037",
@@ -5631,7 +5711,7 @@
    "criticsVsAudience": -11,
    "avgScore": 55,
    "lbN": 7,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0318150",
@@ -5651,7 +5731,7 @@
    "criticsVsAudience": -30,
    "avgScore": 22,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0671957",
@@ -5661,7 +5741,7 @@
    "criticsVsAudience": -8,
    "avgScore": 69,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0499724",
@@ -5671,7 +5751,7 @@
    "criticsVsAudience": -8,
    "avgScore": 35,
    "lbN": 6,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0515891",
@@ -5691,7 +5771,7 @@
    "criticsVsAudience": -11.5,
    "avgScore": 43,
    "lbN": 9,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0139867",
@@ -5701,7 +5781,7 @@
    "criticsVsAudience": -0.5,
    "avgScore": 24,
    "lbN": 7,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0005647",
@@ -5711,7 +5791,7 @@
    "criticsVsAudience": -2,
    "avgScore": 19,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0504513",
@@ -5721,7 +5801,7 @@
    "criticsVsAudience": 9,
    "avgScore": 62,
    "lbN": 7,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0000915",
@@ -5731,7 +5811,7 @@
    "criticsVsAudience": -29.5,
    "avgScore": 51,
    "lbN": 6,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0003638",
@@ -5751,7 +5831,17 @@
    "criticsVsAudience": -19.5,
    "avgScore": 47,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
+  },
+  {
+   "key": "nm0424103",
+   "label": "Karan Johar",
+   "count": 7,
+   "lbVsImdb": 5.6,
+   "criticsVsAudience": -5.1,
+   "avgScore": 53,
+   "lbN": 7,
+   "caN": 7
   },
   {
    "key": "nm0424103",
@@ -5781,7 +5871,7 @@
    "criticsVsAudience": -27,
    "avgScore": 39,
    "lbN": 11,
-   "caN": 1
+   "caN": 9
   },
   {
    "key": "nm0000454",
@@ -5801,7 +5891,7 @@
    "criticsVsAudience": 2.5,
    "avgScore": 51,
    "lbN": 11,
-   "caN": 2
+   "caN": 10
   },
   {
    "key": "nm1580671",
@@ -5821,7 +5911,7 @@
    "criticsVsAudience": -17.5,
    "avgScore": 58,
    "lbN": 5,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0304541",
@@ -5851,7 +5941,7 @@
    "criticsVsAudience": -42,
    "avgScore": 48,
    "lbN": 6,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0167195",
@@ -5871,7 +5961,7 @@
    "criticsVsAudience": -13.5,
    "avgScore": 53,
    "lbN": 16,
-   "caN": 2
+   "caN": 12
   },
   {
    "key": "nm0464846",
@@ -5901,7 +5991,7 @@
    "criticsVsAudience": -34,
    "avgScore": 25,
    "lbN": 6,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0001425",
@@ -5911,7 +6001,7 @@
    "criticsVsAudience": -0.5,
    "avgScore": 96,
    "lbN": 6,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0382956",
@@ -5921,7 +6011,7 @@
    "criticsVsAudience": -48,
    "avgScore": 56,
    "lbN": 6,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm1437189",
@@ -5961,7 +6051,7 @@
    "criticsVsAudience": -3,
    "avgScore": 74,
    "lbN": 12,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0003593",
@@ -5971,7 +6061,17 @@
    "criticsVsAudience": -4,
    "avgScore": 77,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
+  },
+  {
+   "key": "nm0000783",
+   "label": "Dario Argento",
+   "count": 7,
+   "lbVsImdb": 14.7,
+   "criticsVsAudience": 0.7,
+   "avgScore": 73,
+   "lbN": 7,
+   "caN": 7
   },
   {
    "key": "nm0000783",
@@ -6001,7 +6101,7 @@
    "criticsVsAudience": -4,
    "avgScore": 71,
    "lbN": 10,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm1041597",
@@ -6021,7 +6121,7 @@
    "criticsVsAudience": 0,
    "avgScore": 1,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0783536",
@@ -6031,7 +6131,7 @@
    "criticsVsAudience": 0,
    "avgScore": 1,
    "lbN": 6,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0742819",
@@ -6051,7 +6151,7 @@
    "criticsVsAudience": -14,
    "avgScore": 58,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0380705",
@@ -6091,7 +6191,7 @@
    "criticsVsAudience": -3,
    "avgScore": 63,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0723704",
@@ -6111,7 +6211,7 @@
    "criticsVsAudience": -30,
    "avgScore": 78,
    "lbN": 10,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0001408",
@@ -6161,7 +6261,7 @@
    "criticsVsAudience": -16,
    "avgScore": 18,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0422484",
@@ -6171,7 +6271,7 @@
    "criticsVsAudience": -22,
    "avgScore": 69,
    "lbN": 10,
-   "caN": 1
+   "caN": 9
   },
   {
    "key": "nm0959774",
@@ -6191,7 +6291,7 @@
    "criticsVsAudience": -21,
    "avgScore": 65,
    "lbN": 7,
-   "caN": 3
+   "caN": 7
   },
   {
    "key": "nm0858525",
@@ -6201,7 +6301,7 @@
    "criticsVsAudience": -13.5,
    "avgScore": 32,
    "lbN": 7,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0384722",
@@ -6211,7 +6311,17 @@
    "criticsVsAudience": -11,
    "avgScore": 29,
    "lbN": 6,
-   "caN": 1
+   "caN": 6
+  },
+  {
+   "key": "nm0000406",
+   "label": "John Ford",
+   "count": 12,
+   "lbVsImdb": -2.5,
+   "criticsVsAudience": 6.2,
+   "avgScore": 84,
+   "lbN": 12,
+   "caN": 10
   },
   {
    "key": "nm0000406",
@@ -6251,7 +6361,7 @@
    "criticsVsAudience": -10,
    "avgScore": 81,
    "lbN": 8,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0620378",
@@ -6291,7 +6401,7 @@
    "criticsVsAudience": -9.5,
    "avgScore": 56,
    "lbN": 6,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm3464186",
@@ -6311,7 +6421,7 @@
    "criticsVsAudience": -14,
    "avgScore": 42,
    "lbN": 8,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0005421",
@@ -6321,7 +6431,7 @@
    "criticsVsAudience": -21,
    "avgScore": 41,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0003458",
@@ -6361,7 +6471,7 @@
    "criticsVsAudience": -27,
    "avgScore": 90,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0000265",
@@ -6371,7 +6481,7 @@
    "criticsVsAudience": 1,
    "avgScore": 56,
    "lbN": 12,
-   "caN": 1
+   "caN": 9
   },
   {
    "key": "nm0911061",
@@ -6381,7 +6491,7 @@
    "criticsVsAudience": -10,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0006889",
@@ -6391,7 +6501,7 @@
    "criticsVsAudience": -49,
    "avgScore": 62,
    "lbN": 7,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0019242",
@@ -6421,7 +6531,7 @@
    "criticsVsAudience": 0.5,
    "avgScore": 62,
    "lbN": 10,
-   "caN": 2
+   "caN": 7
   },
   {
    "key": "nm0382072",
@@ -6431,7 +6541,7 @@
    "criticsVsAudience": -11,
    "avgScore": 28,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0429963",
@@ -6451,7 +6561,7 @@
    "criticsVsAudience": -23.5,
    "avgScore": 30,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0586281",
@@ -6461,7 +6571,7 @@
    "criticsVsAudience": -23,
    "avgScore": 62,
    "lbN": 8,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0192845",
@@ -6541,7 +6651,7 @@
    "criticsVsAudience": -33,
    "avgScore": 70,
    "lbN": 6,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0000559",
@@ -6581,7 +6691,7 @@
    "criticsVsAudience": -31.5,
    "avgScore": 45,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0774325",
@@ -6601,7 +6711,7 @@
    "criticsVsAudience": 1,
    "avgScore": 70,
    "lbN": 9,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0222043",
@@ -6611,7 +6721,7 @@
    "criticsVsAudience": -25,
    "avgScore": 47,
    "lbN": 7,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm3228270",
@@ -6641,7 +6751,7 @@
    "criticsVsAudience": -2,
    "avgScore": 76,
    "lbN": 16,
-   "caN": 1
+   "caN": 10
   },
   {
    "key": "nm0001603",
@@ -6651,7 +6761,7 @@
    "criticsVsAudience": -6,
    "avgScore": 71,
    "lbN": 9,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm0236226",
@@ -6661,7 +6771,7 @@
    "criticsVsAudience": -8,
    "avgScore": 49,
    "lbN": 8,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0796124",
@@ -6671,7 +6781,7 @@
    "criticsVsAudience": -30,
    "avgScore": 42,
    "lbN": 5,
-   "caN": 1
+   "caN": 5
   },
   {
    "key": "nm0196860",
@@ -6711,7 +6821,7 @@
    "criticsVsAudience": null,
    "avgScore": 64,
    "lbN": 6,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0164187",
@@ -6731,7 +6841,7 @@
    "criticsVsAudience": -2,
    "avgScore": 60,
    "lbN": 7,
-   "caN": 1
+   "caN": 7
   },
   {
    "key": "nm7992231",
@@ -6741,7 +6851,7 @@
    "criticsVsAudience": null,
    "avgScore": 73,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0193508",
@@ -6751,7 +6861,7 @@
    "criticsVsAudience": null,
    "avgScore": 81,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm1104118",
@@ -6771,7 +6881,7 @@
    "criticsVsAudience": null,
    "avgScore": 26,
    "lbN": 5,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0281507",
@@ -6781,7 +6891,7 @@
    "criticsVsAudience": null,
    "avgScore": 58,
    "lbN": 7,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm2197777",
@@ -6791,7 +6901,7 @@
    "criticsVsAudience": -3,
    "avgScore": 49,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm0005367",
@@ -6801,7 +6911,7 @@
    "criticsVsAudience": null,
    "avgScore": 28,
    "lbN": 9,
-   "caN": 0
+   "caN": 8
   },
   {
    "key": "nm0744035",
@@ -6821,7 +6931,7 @@
    "criticsVsAudience": null,
    "avgScore": 37,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0264236",
@@ -6841,7 +6951,7 @@
    "criticsVsAudience": null,
    "avgScore": 38,
    "lbN": 7,
-   "caN": 0
+   "caN": 7
   },
   {
    "key": "nm0705535",
@@ -6871,7 +6981,7 @@
    "criticsVsAudience": null,
    "avgScore": 23,
    "lbN": 5,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0001843",
@@ -6891,7 +7001,7 @@
    "criticsVsAudience": null,
    "avgScore": 84,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm1888091",
@@ -6901,7 +7011,7 @@
    "criticsVsAudience": null,
    "avgScore": 84,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0002700",
@@ -6911,7 +7021,7 @@
    "criticsVsAudience": -32,
    "avgScore": 39,
    "lbN": 9,
-   "caN": 1
+   "caN": 6
   },
   {
    "key": "nm0097517",
@@ -6961,7 +7071,7 @@
    "criticsVsAudience": null,
    "avgScore": 68,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0346550",
@@ -6981,7 +7091,7 @@
    "criticsVsAudience": 32,
    "avgScore": 60,
    "lbN": 5,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm3109770",
@@ -6991,7 +7101,7 @@
    "criticsVsAudience": null,
    "avgScore": 69,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0779433",
@@ -7021,7 +7131,7 @@
    "criticsVsAudience": null,
    "avgScore": 74,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0007082",
@@ -7041,7 +7151,7 @@
    "criticsVsAudience": null,
    "avgScore": 41,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0596407",
@@ -7071,7 +7181,7 @@
    "criticsVsAudience": null,
    "avgScore": 73,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm1033517",
@@ -7101,7 +7211,7 @@
    "criticsVsAudience": null,
    "avgScore": 53,
    "lbN": 8,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0442241",
@@ -7141,7 +7251,17 @@
    "criticsVsAudience": -11,
    "avgScore": 55,
    "lbN": 10,
-   "caN": 1
+   "caN": 2
+  },
+  {
+   "key": "nm0108132",
+   "label": "Craig Brewer",
+   "count": 6,
+   "lbVsImdb": -5,
+   "criticsVsAudience": 1.5,
+   "avgScore": 54,
+   "lbN": 6,
+   "caN": 6
   },
   {
    "key": "nm0108132",
@@ -7171,7 +7291,7 @@
    "criticsVsAudience": null,
    "avgScore": 48,
    "lbN": 6,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0001355",
@@ -7181,7 +7301,7 @@
    "criticsVsAudience": null,
    "avgScore": 50,
    "lbN": 7,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm1460159",
@@ -7251,7 +7371,7 @@
    "criticsVsAudience": null,
    "avgScore": 92,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0875453",
@@ -7261,7 +7381,17 @@
    "criticsVsAudience": null,
    "avgScore": 89,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
+  },
+  {
+   "key": "nm0063357",
+   "label": "Anees Bazmee",
+   "count": 5,
+   "lbVsImdb": 7.6,
+   "criticsVsAudience": 9.3,
+   "avgScore": 32,
+   "lbN": 5,
+   "caN": 3
   },
   {
    "key": "nm0063357",
@@ -7301,7 +7431,7 @@
    "criticsVsAudience": null,
    "avgScore": 69,
    "lbN": 8,
-   "caN": 0
+   "caN": 8
   },
   {
    "key": "nm0037708",
@@ -7311,7 +7441,7 @@
    "criticsVsAudience": null,
    "avgScore": 38,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm3152327",
@@ -7331,7 +7461,7 @@
    "criticsVsAudience": null,
    "avgScore": 83,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0396074",
@@ -7341,7 +7471,7 @@
    "criticsVsAudience": null,
    "avgScore": 85,
    "lbN": 7,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0000801",
@@ -7361,7 +7491,7 @@
    "criticsVsAudience": null,
    "avgScore": 65,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0457565",
@@ -7391,7 +7521,7 @@
    "criticsVsAudience": null,
    "avgScore": 28,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0128883",
@@ -7421,7 +7551,7 @@
    "criticsVsAudience": null,
    "avgScore": 32,
    "lbN": 5,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0001281",
@@ -7441,7 +7571,7 @@
    "criticsVsAudience": null,
    "avgScore": 16,
    "lbN": 6,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0167241",
@@ -7481,7 +7611,7 @@
    "criticsVsAudience": null,
    "avgScore": 85,
    "lbN": 7,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm1436693",
@@ -7491,7 +7621,7 @@
    "criticsVsAudience": null,
    "avgScore": 62,
    "lbN": 9,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0587277",
@@ -7511,7 +7641,7 @@
    "criticsVsAudience": null,
    "avgScore": 42,
    "lbN": 8,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm4017355",
@@ -7611,7 +7741,7 @@
    "criticsVsAudience": null,
    "avgScore": 57,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0000691",
@@ -7751,7 +7881,7 @@
    "criticsVsAudience": null,
    "avgScore": 53,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0007181",
@@ -7801,7 +7931,7 @@
    "criticsVsAudience": null,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0243231",
@@ -7831,7 +7961,7 @@
    "criticsVsAudience": null,
    "avgScore": 76,
    "lbN": 8,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0027183",
@@ -7871,7 +8001,7 @@
    "criticsVsAudience": null,
    "avgScore": 84,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0667734",
@@ -7901,7 +8031,7 @@
    "criticsVsAudience": null,
    "avgScore": 23,
    "lbN": 6,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0115218",
@@ -7971,7 +8101,7 @@
    "criticsVsAudience": null,
    "avgScore": 43,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0624102",
@@ -8041,7 +8171,7 @@
    "criticsVsAudience": null,
    "avgScore": 63,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1804614",
@@ -8051,7 +8181,7 @@
    "criticsVsAudience": null,
    "avgScore": 35,
    "lbN": 6,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0467396",
@@ -8091,7 +8221,7 @@
    "criticsVsAudience": null,
    "avgScore": 44,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0317638",
@@ -8191,7 +8321,7 @@
    "criticsVsAudience": null,
    "avgScore": 45,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm1823264",
@@ -8661,7 +8791,7 @@
    "criticsVsAudience": null,
    "avgScore": 61,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm2572228",
@@ -8671,7 +8801,7 @@
    "criticsVsAudience": null,
    "avgScore": 61,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0937306",
@@ -8821,7 +8951,7 @@
    "criticsVsAudience": null,
    "avgScore": 63,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1119645",
@@ -9051,7 +9181,7 @@
    "criticsVsAudience": null,
    "avgScore": 81,
    "lbN": 6,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0696247",
@@ -9081,7 +9211,7 @@
    "criticsVsAudience": null,
    "avgScore": 72,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0284774",
@@ -9171,7 +9301,7 @@
    "criticsVsAudience": null,
    "avgScore": 61,
    "lbN": 7,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0451076",
@@ -9341,7 +9471,7 @@
    "criticsVsAudience": null,
    "avgScore": 64,
    "lbN": 7,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0719756",
@@ -9361,7 +9491,7 @@
    "criticsVsAudience": null,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 0
+   "caN": 6
   },
   {
    "key": "nm0541244",
@@ -9381,7 +9511,7 @@
    "criticsVsAudience": null,
    "avgScore": 60,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0070159",
@@ -9491,7 +9621,7 @@
    "criticsVsAudience": null,
    "avgScore": 85,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0567680",
@@ -9511,7 +9641,7 @@
    "criticsVsAudience": null,
    "avgScore": 69,
    "lbN": 9,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm1921345",
@@ -9541,7 +9671,7 @@
    "criticsVsAudience": null,
    "avgScore": 21,
    "lbN": 5,
-   "caN": 0
+   "caN": 4
   },
   {
    "key": "nm0000835",
@@ -9551,7 +9681,7 @@
    "criticsVsAudience": null,
    "avgScore": 47,
    "lbN": 5,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm2399862",
@@ -9561,7 +9691,7 @@
    "criticsVsAudience": null,
    "avgScore": 47,
    "lbN": 7,
-   "caN": 0
+   "caN": 5
   },
   {
    "key": "nm0041932",
@@ -9831,7 +9961,7 @@
    "criticsVsAudience": null,
    "avgScore": 60,
    "lbN": 10,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0002086",
@@ -9901,7 +10031,7 @@
    "criticsVsAudience": null,
    "avgScore": 41,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0240995",
@@ -9971,7 +10101,7 @@
    "criticsVsAudience": null,
    "avgScore": 52,
    "lbN": 6,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0004363",
@@ -9981,7 +10111,7 @@
    "criticsVsAudience": null,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0005033",
@@ -10211,7 +10341,7 @@
    "criticsVsAudience": -48,
    "avgScore": 59,
    "lbN": 5,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm2296528",
@@ -10221,7 +10351,7 @@
    "criticsVsAudience": -33,
    "avgScore": 60,
    "lbN": 6,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0003226",
@@ -10351,7 +10481,7 @@
    "criticsVsAudience": null,
    "avgScore": 57,
    "lbN": 5,
-   "caN": 0
+   "caN": 3
   },
   {
    "key": "nm0776271",
@@ -10511,7 +10641,7 @@
    "criticsVsAudience": null,
    "avgScore": 61,
    "lbN": 6,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0425364",
@@ -10821,7 +10951,7 @@
    "criticsVsAudience": null,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0604335",
