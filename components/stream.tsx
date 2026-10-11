@@ -78,6 +78,7 @@ function Hero({ ids }: { ids: string[] }) {
   }, [i, paused, go]);
 
   const f = films[ids[i]];
+  const heroMode = usePlayMode(f);
   return (
     <section
       className="stream-hero relative -mt-px h-[clamp(520px,80vh,840px)] overflow-hidden"
@@ -121,7 +122,7 @@ function Hero({ ids }: { ids: string[] }) {
           {f.overview && <p className="mt-4 line-clamp-2 text-[15px] leading-relaxed text-white/75 sm:line-clamp-3">{f.overview}</p>}
           <div className="mt-6 flex flex-wrap gap-3">
             <PlayButton film={f} primary />
-            <WatchButton film={f} primary={!f.ytMovie && !f.trailer} full />
+            <WatchButton film={f} primary={!heroMode} full />
             <button onClick={() => open(f.id)} className="stream-glass rounded-full px-6 py-3 text-[15px] font-semibold">
               Details
             </button>
@@ -303,6 +304,7 @@ function ScoreChip({ film }: { film: StreamFilm }) {
 
 function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) {
   const { play } = useStream();
+  const mode = usePlayMode(f);
   const sorted = useSorted(f.services);
   const close = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -334,10 +336,10 @@ function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={img(f.backdrop ?? f.poster, "w1280")} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e] via-[#1c1c1e]/30 to-transparent" />
-          {(f.ytMovie || f.trailer) && (
+          {mode && (
             <button
-              onClick={() => play(f.id, f.ytMovie ? "movie" : "trailer")}
-              aria-label={f.ytMovie ? "Play movie" : "Play trailer"}
+              onClick={() => play(f.id, mode)}
+              aria-label={mode === "movie" ? "Play movie" : "Play trailer"}
               className="stream-glass absolute left-1/2 top-[42%] flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-2xl transition hover:scale-105"
             >
               <span className="ml-1">▶</span>
@@ -361,8 +363,8 @@ function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) 
           <div>
             <div className="flex flex-wrap gap-3">
               <PlayButton film={f} primary />
-              {f.ytMovie && f.trailer && <PlayButton film={f} trailerOnly />}
-              <WatchButton film={f} primary={!f.ytMovie && !f.trailer} full />
+              {mode === "movie" && f.trailer && <PlayButton film={f} trailerOnly />}
+              <WatchButton film={f} primary={!mode} full />
               {sorted.slice(1, 4).map((sid) => (
                 <WatchButton key={sid} film={f} serviceId={sid} />
               ))}
@@ -432,10 +434,81 @@ function FreeNote({ film }: { film: StreamFilm }) {
 
 /* ---------------------------------------------------------------- player */
 
-/** Full movie when it's free on YouTube, otherwise the trailer. Nothing if neither. */
+// Most of YouTube's free movies refuse to play outside youtube.com, and its
+// Data API can't tell which. YouTube's own player can: it reports error 150
+// within a moment. So before offering "Play movie" we load the movie into a
+// hidden, muted player and see whether YouTube allows it. Results are cached
+// for the page's lifetime.
+const embedChecks = new Map<string, Promise<boolean>>();
+function checkEmbed(videoId: string) {
+  let check = embedChecks.get(videoId);
+  if (!check) {
+    check = loadYouTube().then(
+      (YT) =>
+        new Promise<boolean>((resolve) => {
+          const host = document.createElement("div");
+          host.style.cssText = "position:fixed;left:-10000px;top:0;width:256px;height:144px;pointer-events:none";
+          host.setAttribute("aria-hidden", "true");
+          document.body.appendChild(host);
+          const el = document.createElement("div");
+          host.appendChild(el);
+          let settled = false;
+          const finish = (ok: boolean) => {
+            if (settled) return;
+            settled = true;
+            try {
+              player.stopVideo?.();
+              player.destroy();
+            } catch {}
+            host.remove();
+            resolve(ok);
+          };
+          // Callbacks only fire after construction, so `player` is set by then.
+          const player: YTPlayer & { mute?: () => void; playVideo?: () => void; stopVideo?: () => void } = new YT.Player(el, {
+            videoId,
+            host: "https://www.youtube-nocookie.com",
+            playerVars: { autoplay: 0, mute: 1, controls: 0, playsinline: 1 },
+            events: {
+              onReady: () => {
+                player.mute?.();
+                player.playVideo?.();
+                // No refusal shortly after loading means YouTube allows it here.
+                setTimeout(() => finish(true), 2500);
+              },
+              onError: () => finish(false),
+              onStateChange: (e: { data: number }) => (e.data === 1 || e.data === 3) && finish(true),
+            },
+          });
+          // Never heard back: don't offer it.
+          setTimeout(() => finish(false), 10000);
+        }),
+    );
+    embedChecks.set(videoId, check);
+  }
+  return check;
+}
+
+/** "movie" once YouTube confirmed the full movie plays here, else "trailer", else null. */
+function usePlayMode(film: StreamFilm): "movie" | "trailer" | null {
+  const [movieOk, setMovieOk] = useState<{ id: string; ok: boolean } | null>(null);
+  useEffect(() => {
+    if (!film.ytMovie) return;
+    let live = true;
+    const id = film.ytMovie;
+    checkEmbed(id).then((ok) => live && setMovieOk({ id, ok }));
+    return () => {
+      live = false;
+    };
+  }, [film.ytMovie]);
+  if (film.ytMovie && movieOk?.id === film.ytMovie && movieOk.ok) return "movie";
+  return film.trailer ? "trailer" : null;
+}
+
+/** Full movie when YouTube allows it here, otherwise the trailer. Nothing if neither. */
 function PlayButton({ film, primary = false, trailerOnly = false }: { film: StreamFilm; primary?: boolean; trailerOnly?: boolean }) {
   const { play } = useStream();
-  const what = !trailerOnly && film.ytMovie ? "movie" : film.trailer ? "trailer" : null;
+  const mode = usePlayMode(film);
+  const what = trailerOnly ? (film.trailer ? "trailer" : null) : mode;
   if (!what) return null;
   return (
     <button
@@ -456,6 +529,7 @@ function PlayButton({ film, primary = false, trailerOnly = false }: { film: Stre
  */
 function Player({ film: f, what, onClose }: { film: StreamFilm; what: "trailer" | "movie"; onClose: () => void }) {
   const { play } = useStream();
+  const mode = usePlayMode(f);
   const id = what === "movie" ? f.ytMovie : f.trailer;
   const sorted = useSorted(f.services);
   const back = useRef<HTMLButtonElement>(null);
@@ -514,7 +588,7 @@ function Player({ film: f, what, onClose }: { film: StreamFilm; what: "trailer" 
         {what === "trailer" || failed ? (
           <>
             <span className="w-full text-center text-sm text-white/60 sm:w-auto">{failed ? "Watch it free on" : "Like what you see?"}</span>
-            {f.ytMovie && !failed && (
+            {mode === "movie" && what === "trailer" && !failed && (
               <button
                 onClick={() => play(f.id, "movie")}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-black"
@@ -522,7 +596,7 @@ function Player({ film: f, what, onClose }: { film: StreamFilm; what: "trailer" 
                 ▶ Play the movie here
               </button>
             )}
-            <WatchButton film={f} primary={!f.ytMovie} full />
+            <WatchButton film={f} primary={mode !== "movie" || failed} full />
             {sorted.slice(1, 3).map((sid) => (
               <WatchButton key={sid} film={f} serviceId={sid} />
             ))}
@@ -543,7 +617,7 @@ type YTNamespace = {
       videoId: string;
       host: string;
       playerVars: Record<string, number>;
-      events: { onError: () => void };
+      events: { onReady?: () => void; onError: () => void; onStateChange?: (e: { data: number }) => void };
     },
   ) => YTPlayer;
 };
