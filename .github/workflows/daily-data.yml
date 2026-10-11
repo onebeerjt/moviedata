@@ -1,0 +1,67 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # every day, 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Free streaming catalog (Tubi, Pluto, Plex, Roku...)
+        # Runs first so IMDb ingest picks up newly free films.
+        continue-on-error: true
+        run: npm run data:free
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+      - name: IMDb datasets
+        run: npm run data:imdb
+      - name: Direct watch links for free films
+        # New or changed free films only; capped so the job stays short.
+        continue-on-error: true
+        run: npm run data:free-links -- --limit 2000
+      - name: Tubi and Pluto links from their own catalogs
+        continue-on-error: true
+        run: npm run data:service-links
+      - name: Trailers and full movies on YouTube (play inside the site)
+        continue-on-error: true
+        run: npm run data:trailers
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      - name: TMDB (posters, now playing)
+        # A bad key or API hiccup shouldn't block the other sources.
+        continue-on-error: true
+        run: npm run data:tmdb
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+      - name: Letterboxd
+        # Datacenter IPs can get blocked; a failure here shouldn't stop the rest.
+        continue-on-error: true
+        run: npm run data:letterboxd -- --limit 1500
+      - name: OMDb (Rotten Tomatoes, Metacritic)
+        continue-on-error: true
+        run: npm run data:omdb
+        env:
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+      - name: Build site data
+        run: npm run data:build
+      - name: Commit
+        run: |
+          git config user.name "moviedata-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/site data/sources
+          git diff --cached --quiet || git commit -m "Daily data refresh $(date -u +%F)"
+          git push

@@ -26,6 +26,11 @@ export default function Home() {
     .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
     .slice(0, 16);
 
+  const freeTonight = films
+    .filter((f) => f.links && f.poster && isWellKnown(f))
+    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1))
+    .slice(0, 16);
+
   const known = films.filter((f) => isWellKnown(f));
   const lbGap = (f: Film) => (f.s.letterboxd && f.s.imdb ? f.s.letterboxd.p - f.s.imdb.p : 0);
   const lbLoves = [...known].sort((a, b) => lbGap(b) - lbGap(a)).filter((f) => lbGap(f) > 0).slice(0, 6);
@@ -61,6 +66,9 @@ export default function Home() {
       <div className="mx-auto max-w-6xl space-y-14 px-4">
         {nowPlaying.length > 0 && (
           <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
+        )}
+        {freeTonight.length > 0 && (
+          <Rail title="Free tonight" subtitle="Top-rated on Tubi, Pluto, Plex and more" films={freeTonight} href="/free" />
         )}
         {recent.length > 0 && <Rail title="Best of the last year" films={recent} />}
 
@@ -103,11 +111,19 @@ export default function Home() {
   );
 }
 
-function Rail({ title, subtitle, films }: { title: string; subtitle?: string; films: Film[] }) {
+function Rail({ title, subtitle, films, href }: { title: string; subtitle?: string; films: Film[]; href?: string }) {
   return (
     <section>
       <div className="mb-4 flex items-baseline justify-between gap-4">
-        <h2 className="font-display text-3xl">{title}</h2>
+        <h2 className="font-display text-3xl">
+          {href ? (
+            <Link href={href} className="group">
+              {title} <span className="inline-block text-2xl transition group-hover:translate-x-1">→</span>
+            </Link>
+          ) : (
+            title
+          )}
+        </h2>
         {subtitle && <span className="text-xs text-text-3">{subtitle}</span>}
       </div>
       <div className="scroller -mx-4 flex gap-4 overflow-x-auto px-4 pb-2">

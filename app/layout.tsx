@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 };
 
 const nav = [
+  { href: "/free", label: "Free movies" },
   { href: "/explore", label: "Explore" },
   { href: "/insights", label: "Insights" },
   { href: "/cult", label: "Cult" },

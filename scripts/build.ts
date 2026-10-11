@@ -10,18 +10,26 @@
 //  3. Average the audience percentiles and the critic percentiles separately,
 //     then weight the two groups equally. If only one group exists, use it.
 import { join } from "node:path";
-import { SITE, SOURCES, readJson, writeJson } from "./util.ts";
+import { SITE, SOURCES, readJson, usableLink, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 import type { LetterboxdEntry } from "./scrape-letterboxd.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
 import type { OmdbEntry } from "./enrich-omdb.ts";
-import type { Film, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
+import type { FreeFile } from "./free-catalog.ts";
+import type { FreeLinks } from "./free-links.ts";
+import type { ServiceLinks } from "./service-catalogs.ts";
+import type { Playable } from "./trailers.ts";
+import type { Film, FreeService, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
 
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
 const names = readJson<Record<string, string>>(join(SOURCES, "imdb-people.json"), {});
 const lb = readJson<Record<string, LetterboxdEntry>>(join(SOURCES, "letterboxd.json"), {});
 const tmdb = readJson<Record<string, TmdbEntry>>(join(SOURCES, "tmdb.json"), {});
 const omdb = readJson<Record<string, OmdbEntry>>(join(SOURCES, "omdb.json"), {});
+const free = readJson<FreeFile>(join(SOURCES, "free.json"), { updatedAt: "", services: {}, films: {}, checked: {} });
+const freeLinks = readJson<FreeLinks>(join(SOURCES, "free-links.json"), {});
+const playable = readJson<Record<string, Playable>>(join(SOURCES, "trailers.json"), {});
+const serviceLinks = readJson<ServiceLinks>(join(SOURCES, "service-links.json"), { updatedAt: "", links: {} }).links;
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
 const historyPath = join(SOURCES, "history.json");
 const history = readJson<Record<string, Film["h"]>>(historyPath, {});
@@ -48,26 +56,48 @@ for (const [id, f] of Object.entries(imdb)) {
   if (o?.metacritic !== undefined) raw.metacritic.set(id, { v: o.metacritic });
 }
 
-/** Percentile (0–100) of every film within one source, after vote-count shrinkage. */
+// Films with at least this many IMDb votes form the reference pool each
+// source's percentiles are measured against. Thousands of obscure titles
+// (mostly from the free catalog) would otherwise dilute the pool and push
+// every established film toward 100.
+const REFERENCE_VOTES = 5_000;
+const inReference = (id: string) => (imdb[id]?.votes ?? 0) >= REFERENCE_VOTES;
+
+/**
+ * Percentile (0–100) of every film within one source, after vote-count
+ * shrinkage, ranked against the reference pool.
+ */
 function percentiles(values: Map<string, Raw>): Map<string, number> {
   const entries = [...values];
-  if (!entries.length) return new Map();
-  const mean = entries.reduce((s, [, r]) => s + r.v, 0) / entries.length;
-  const counts = entries.map(([, r]) => r.n).filter((n): n is number => n !== undefined).sort((a, b) => a - b);
+  const ref = entries.filter(([id]) => inReference(id));
+  const pool = ref.length >= 50 ? ref : entries;
+  if (!pool.length) return new Map();
+  const mean = pool.reduce((s, [, r]) => s + r.v, 0) / pool.length;
+  const counts = pool.map(([, r]) => r.n).filter((n): n is number => n !== undefined).sort((a, b) => a - b);
   // Prior strength = the 25th-percentile vote count on this source. Strong enough
   // that a few thousand enthusiastic early votes can't push a film to the top.
   const m = counts.length ? counts[Math.floor(counts.length * 0.25)] : 0;
-  const adjusted = entries
-    .map(([id, r]) => [id, r.n === undefined || !m ? r.v : (r.n * r.v + m * mean) / (r.n + m)] as const)
-    .sort((a, b) => a[1] - b[1]);
+  const adjust = (r: Raw) => (r.n === undefined || !m ? r.v : (r.n * r.v + m * mean) / (r.n + m));
+  const sorted = pool.map(([, r]) => adjust(r)).sort((a, b) => a - b);
+  // Index of the first value >= x (lo) or > x (hi), by binary search.
+  const bound = (x: number, strict: boolean) => {
+    let lo = 0;
+    let hi = sorted.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (strict ? sorted[mid] <= x : sorted[mid] < x) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  };
   const out = new Map<string, number>();
-  // Ties share the midpoint rank so identical scores get identical percentiles.
-  for (let i = 0; i < adjusted.length; ) {
-    let j = i;
-    while (j + 1 < adjusted.length && adjusted[j + 1][1] === adjusted[i][1]) j++;
-    const pct = adjusted.length === 1 ? 50 : (((i + j) / 2) / (adjusted.length - 1)) * 100;
-    for (let k = i; k <= j; k++) out.set(adjusted[k][0], Math.round(pct * 10) / 10);
-    i = j + 1;
+  for (const [id, r] of entries) {
+    const v = adjust(r);
+    // Ties share the midpoint rank so identical scores get identical percentiles.
+    const below = bound(v, false);
+    const equal = bound(v, true) - below;
+    const pct = sorted.length === 1 ? 50 : ((below + equal / 2) / sorted.length) * 100;
+    out.set(id, Math.round(Math.min(100, Math.max(0, pct)) * 10) / 10);
   }
   return out;
 }
@@ -92,7 +122,12 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
   }
   const audience = mean(AUDIENCE.flatMap((k) => (s[k] ? [s[k]!.p] : [])));
   const critics = mean(CRITICS.flatMap((k) => (s[k] ? [s[k]!.p] : [])));
-  const score = audience !== null && critics !== null ? (audience + critics) / 2 : (audience ?? critics);
+  // A balanced score needs at least two sources. With only audiences or only
+  // critics it's eased 10% toward the middle, so a 100 takes both agreeing.
+  const sources = Object.keys(s).length;
+  const oneSided = audience ?? critics;
+  const score =
+    sources < 2 ? null : audience !== null && critics !== null ? (audience + critics) / 2 : oneSided === null ? null : 50 + (oneSided - 50) * 0.9;
   const ps = Object.values(s).map((x) => x.p);
   const t = tmdb[id];
 
@@ -121,6 +156,12 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     rated: omdb[id]?.rated,
     nowPlaying: nowPlaying.has(id) || undefined,
     letterboxdSlug: lb[id]?.slug,
+    free: freeServices(id),
+    watchLink: free.films[id]?.link,
+    links: directLinks(id),
+    trailer: playable[id]?.trailer,
+    // Only movies the YouTube Data API confirmed can play embedded (trailers.ts).
+    ytMovie: playable[id]?.movieCheckedAt ? playable[id].movie : undefined,
     s,
     audience: round(audience),
     critics: round(critics),
@@ -131,6 +172,27 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
 });
 
 films.sort((a, b) => (b.s.imdb?.n ?? 0) - (a.s.imdb?.n ?? 0));
+
+/** Free services: JustWatch's list plus anything Tubi or Pluto's own catalogs show. */
+function freeServices(id: string) {
+  const ids = new Set([...(free.films[id]?.services ?? []), ...Object.keys(serviceLinks[id] ?? {}).map(Number)]);
+  return ids.size ? [...ids] : undefined;
+}
+
+/**
+ * Direct links for the services the film is free on right now. Tubi and
+ * Pluto's own catalogs (service-catalogs.ts) win over JustWatch's links,
+ * which sometimes point at a dubbed copy.
+ */
+function directLinks(id: string) {
+  const services = free.films[id]?.services ?? [];
+  const jw = freeLinks[id]?.links ?? {};
+  const out: Record<number, string> = Object.fromEntries(
+    services.flatMap((sid) => (jw[sid] && usableLink(jw[sid]) ? [[sid, jw[sid]]] : [])),
+  );
+  Object.assign(out, serviceLinks[id]);
+  return Object.keys(out).length ? out : undefined;
+}
 
 // People
 const people: Record<string, Person> = {};
@@ -184,7 +246,15 @@ const insights: Insights = {
   directors,
 };
 
+// Free services, biggest catalog first.
+const serviceCounts = new Map<number, number>();
+for (const f of films) for (const sid of f.free ?? []) serviceCounts.set(sid, (serviceCounts.get(sid) ?? 0) + 1);
+const services: FreeService[] = [...serviceCounts]
+  .map(([sid, count]) => ({ ...free.services[sid], count }))
+  .sort((a, b) => b.count - a.count);
+
 writeJson(join(SITE, "films.json"), films);
+writeJson(join(SITE, "free.json"), { updatedAt: free.updatedAt, services }, true);
 writeJson(join(SITE, "people.json"), people);
 writeJson(join(SITE, "insights.json"), insights, true);
 writeJson(historyPath, history);
