@@ -19,6 +19,8 @@ export function SourceBars({ film }: { film: Film }) {
       {SOURCES.map((src) => {
         const s = film.s[src.key];
         const histIdx = HISTORY_INDEX[src.key as keyof typeof HISTORY_INDEX];
+        const ten = s ? `${src.toTen(s.v).toFixed(1)} / 10` : "";
+        const raw = s && src.format(s.v) !== ten ? src.format(s.v) : null;
         const trail = film.h && histIdx ? film.h.map((row) => row[histIdx]).filter((v): v is number => v !== null) : [];
         return (
           <div key={src.key} className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-1.5 rounded-lg px-2 py-2.5 sm:grid-cols-[13rem_1fr_3rem]">
@@ -42,7 +44,7 @@ export function SourceBars({ film }: { film: Film }) {
             <div className="col-span-2 sm:col-span-1">
               {s ? (
                 <div className="flex items-center gap-3">
-                  <div className="relative h-2 flex-1 rounded-full bg-surface-2" title={`${src.name}: ${src.format(s.v)}, better than ${Math.round(s.p)}% of films on ${src.name}`}>
+                  <div className="relative h-2 flex-1 rounded-full bg-surface-2" title={`${src.name}: ${ten}${raw ? ` (${raw})` : ""}, better than ${Math.round(s.p)}% of films on ${src.name}`}>
                     <div className="absolute inset-y-0 left-0 rounded-full opacity-35" style={{ width: `${s.p}%`, background: src.color }} />
                     <div
                       className="absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-[var(--surface)]"
@@ -53,7 +55,8 @@ export function SourceBars({ film }: { film: Film }) {
                     )}
                   </div>
                   <div className="w-24 shrink-0 text-right text-xs text-text-2 tabular">
-                    {src.format(s.v)}
+                    <span className="font-semibold text-text">{ten}</span>
+                    {raw && <span className="block text-text-3">{raw}</span>}
                     {s.n ? <span className="block text-text-3">{fmtCount(s.n)} ratings</span> : null}
                   </div>
                   {trail.length > 1 && <Sparkline values={trail} color={src.color} />}

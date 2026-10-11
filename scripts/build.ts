@@ -56,26 +56,48 @@ for (const [id, f] of Object.entries(imdb)) {
   if (o?.metacritic !== undefined) raw.metacritic.set(id, { v: o.metacritic });
 }
 
-/** Percentile (0–100) of every film within one source, after vote-count shrinkage. */
+// Films with at least this many IMDb votes form the reference pool each
+// source's percentiles are measured against. Thousands of obscure titles
+// (mostly from the free catalog) would otherwise dilute the pool and push
+// every established film toward 100.
+const REFERENCE_VOTES = 5_000;
+const inReference = (id: string) => (imdb[id]?.votes ?? 0) >= REFERENCE_VOTES;
+
+/**
+ * Percentile (0–100) of every film within one source, after vote-count
+ * shrinkage, ranked against the reference pool.
+ */
 function percentiles(values: Map<string, Raw>): Map<string, number> {
   const entries = [...values];
-  if (!entries.length) return new Map();
-  const mean = entries.reduce((s, [, r]) => s + r.v, 0) / entries.length;
-  const counts = entries.map(([, r]) => r.n).filter((n): n is number => n !== undefined).sort((a, b) => a - b);
+  const ref = entries.filter(([id]) => inReference(id));
+  const pool = ref.length >= 50 ? ref : entries;
+  if (!pool.length) return new Map();
+  const mean = pool.reduce((s, [, r]) => s + r.v, 0) / pool.length;
+  const counts = pool.map(([, r]) => r.n).filter((n): n is number => n !== undefined).sort((a, b) => a - b);
   // Prior strength = the 25th-percentile vote count on this source. Strong enough
   // that a few thousand enthusiastic early votes can't push a film to the top.
   const m = counts.length ? counts[Math.floor(counts.length * 0.25)] : 0;
-  const adjusted = entries
-    .map(([id, r]) => [id, r.n === undefined || !m ? r.v : (r.n * r.v + m * mean) / (r.n + m)] as const)
-    .sort((a, b) => a[1] - b[1]);
+  const adjust = (r: Raw) => (r.n === undefined || !m ? r.v : (r.n * r.v + m * mean) / (r.n + m));
+  const sorted = pool.map(([, r]) => adjust(r)).sort((a, b) => a - b);
+  // Index of the first value >= x (lo) or > x (hi), by binary search.
+  const bound = (x: number, strict: boolean) => {
+    let lo = 0;
+    let hi = sorted.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (strict ? sorted[mid] <= x : sorted[mid] < x) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  };
   const out = new Map<string, number>();
-  // Ties share the midpoint rank so identical scores get identical percentiles.
-  for (let i = 0; i < adjusted.length; ) {
-    let j = i;
-    while (j + 1 < adjusted.length && adjusted[j + 1][1] === adjusted[i][1]) j++;
-    const pct = adjusted.length === 1 ? 50 : (((i + j) / 2) / (adjusted.length - 1)) * 100;
-    for (let k = i; k <= j; k++) out.set(adjusted[k][0], Math.round(pct * 10) / 10);
-    i = j + 1;
+  for (const [id, r] of entries) {
+    const v = adjust(r);
+    // Ties share the midpoint rank so identical scores get identical percentiles.
+    const below = bound(v, false);
+    const equal = bound(v, true) - below;
+    const pct = sorted.length === 1 ? 50 : ((below + equal / 2) / sorted.length) * 100;
+    out.set(id, Math.round(Math.min(100, Math.max(0, pct)) * 10) / 10);
   }
   return out;
 }
@@ -100,7 +122,12 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
   }
   const audience = mean(AUDIENCE.flatMap((k) => (s[k] ? [s[k]!.p] : [])));
   const critics = mean(CRITICS.flatMap((k) => (s[k] ? [s[k]!.p] : [])));
-  const score = audience !== null && critics !== null ? (audience + critics) / 2 : (audience ?? critics);
+  // A balanced score needs at least two sources. With only audiences or only
+  // critics it's eased 10% toward the middle, so a 100 takes both agreeing.
+  const sources = Object.keys(s).length;
+  const oneSided = audience ?? critics;
+  const score =
+    sources < 2 ? null : audience !== null && critics !== null ? (audience + critics) / 2 : oneSided === null ? null : 50 + (oneSided - 50) * 0.9;
   const ps = Object.values(s).map((x) => x.p);
   const t = tmdb[id];
 
@@ -171,8 +198,8 @@ function directLinks(id: string) {
 const people: Record<string, Person> = {};
 const person = (pid: string) => (people[pid] ??= { id: pid, name: names[pid] ?? pid, directed: [], actedIn: [] });
 for (const f of films) {
-  f.directors.forEach((d) => person(d).directed.push(f.id));
-  f.cast.forEach((c) => person(c).actedIn.push(f.id));
+  (f.directors ?? []).forEach((d) => person(d).directed.push(f.id));
+  (f.cast ?? []).forEach((c) => person(c).actedIn.push(f.id));
 }
 
 // Insights: how each group of films leans between sources.
@@ -199,14 +226,14 @@ const groupBy = (fn: (f: Film) => string[]) => {
   return m;
 };
 
-const genres = [...groupBy((f) => f.genres)]
+const genres = [...groupBy((f) => f.genres ?? [])]
   .filter(([, g]) => g.length >= 50)
   .map(([k, g]) => stat(k, k, g));
 const decades = [...groupBy((f) => (f.year ? [`${Math.floor(f.year / 10) * 10}`] : []))]
   .filter(([, g]) => g.length >= 30)
   .sort(([a], [b]) => Number(a) - Number(b))
   .map(([k, g]) => stat(k, `${k}s`, g));
-const directors = [...groupBy((f) => f.directors)]
+const directors = [...groupBy((f) => f.directors ?? [])]
   .filter(([, g]) => g.length >= 5)
   .map(([k, g]) => stat(k, names[k] ?? k, g));
 

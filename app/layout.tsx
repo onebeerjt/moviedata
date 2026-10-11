@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Bebas_Neue, Geist, Geist_Mono, Instrument_Serif, Inter_Tight, Playfair_Display, Source_Serif_4, Space_Mono, VT323 } from "next/font/google";
 import { Search } from "@/components/search";
 import { ThemeTabs } from "@/components/theme-tabs";
+import { VersionProvider } from "@/components/version-context";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { DEFAULT_THEME, THEME_BOOT_SCRIPT } from "@/lib/themes";
 import "./globals.css";
@@ -33,6 +34,7 @@ const nav = [
   { href: "/free", label: "Free movies" },
   { href: "/explore", label: "Explore" },
   { href: "/insights", label: "Insights" },
+  { href: "/cult", label: "Cult" },
   { href: "/about", label: "How it works" },
 ];
 
@@ -44,39 +46,41 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
       </head>
       <body className="min-h-full flex flex-col">
-        <ThemeTabs />
-        <header className="site-header sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
-            <Link href="/" className="site-logo font-display text-2xl leading-none whitespace-nowrap">
-              {SITE_NAME}
-            </Link>
-            <div className="min-w-0 flex-1">
-              <Search />
+        <VersionProvider>
+          <ThemeTabs />
+          <header className="site-header sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
+              <Link href="/" className="site-logo font-display text-2xl leading-none whitespace-nowrap">
+                {SITE_NAME}
+              </Link>
+              <div className="min-w-0 flex-1">
+                <Search />
+              </div>
+              <nav className="hidden items-center gap-5 text-sm text-text-2 md:flex">
+                {nav.map((n) => (
+                  <Link key={n.href} href={n.href} className="hover:text-text">
+                    {n.label}
+                  </Link>
+                ))}
+              </nav>
             </div>
-            <nav className="hidden items-center gap-5 text-sm text-text-2 md:flex">
+            <nav className="scroller flex gap-5 overflow-x-auto px-4 pb-2 text-sm text-text-2 md:hidden">
               {nav.map((n) => (
-                <Link key={n.href} href={n.href} className="hover:text-text">
+                <Link key={n.href} href={n.href} className="whitespace-nowrap hover:text-text">
                   {n.label}
                 </Link>
               ))}
             </nav>
-          </div>
-          <nav className="scroller flex gap-5 overflow-x-auto px-4 pb-2 text-sm text-text-2 md:hidden">
-            {nav.map((n) => (
-              <Link key={n.href} href={n.href} className="whitespace-nowrap hover:text-text">
-                {n.label}
-              </Link>
-            ))}
-          </nav>
-        </header>
-        <main className="flex-1">{children}</main>
-        <footer className="mt-16 border-t border-line">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-xs leading-relaxed text-text-3">
-            Ratings data from IMDb (non-commercial datasets), Letterboxd, TMDB and OMDb (Rotten Tomatoes and Metacritic). This
-            product uses the TMDB API but is not endorsed or certified by TMDB. Scores belong to their respective sites;{" "}
-            {SITE_NAME} links to every source.
-          </div>
-        </footer>
+          </header>
+          <main className="flex-1">{children}</main>
+          <footer className="mt-16 border-t border-line">
+            <div className="mx-auto max-w-6xl px-4 py-8 text-xs leading-relaxed text-text-3">
+              Ratings data from IMDb (non-commercial datasets), Letterboxd, TMDB and OMDb (Rotten Tomatoes and Metacritic). This
+              product uses the TMDB API but is not endorsed or certified by TMDB. Scores belong to their respective sites;{" "}
+              {SITE_NAME} links to every source.
+            </div>
+          </footer>
+        </VersionProvider>
       </body>
     </html>
   );

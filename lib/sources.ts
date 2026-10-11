@@ -7,6 +7,8 @@ export type SourceMeta = {
   kind: "audience" | "critics";
   /** Format the raw value on the source's own scale. */
   format: (v: number) => string;
+  /** Convert the raw value to a 0–10 number, rounded to one decimal. */
+  toTen: (v: number) => number;
   /** CSS variable holding this source's identity color. */
   color: string;
   url: (film: { id: string; letterboxdSlug?: string; title: string }) => string;
@@ -21,6 +23,7 @@ export const SOURCES: SourceMeta[] = [
     short: "LB",
     kind: "audience",
     format: (v) => `${v.toFixed(2)} / 5`,
+    toTen: (v) => Math.round((v * 2) * 10) / 10,
     color: "var(--src-letterboxd)",
     url: (f) => (f.letterboxdSlug ? `https://letterboxd.com/film/${f.letterboxdSlug}/` : `https://letterboxd.com/imdb/${f.id}/`),
   },
@@ -30,6 +33,7 @@ export const SOURCES: SourceMeta[] = [
     short: "IMDb",
     kind: "audience",
     format: (v) => `${v.toFixed(1)} / 10`,
+    toTen: (v) => Math.round(v * 10) / 10,
     color: "var(--src-imdb)",
     url: (f) => `https://www.imdb.com/title/${f.id}/`,
   },
@@ -39,6 +43,7 @@ export const SOURCES: SourceMeta[] = [
     short: "TMDB",
     kind: "audience",
     format: (v) => `${v.toFixed(1)} / 10`,
+    toTen: (v) => Math.round(v * 10) / 10,
     color: "var(--src-tmdb)",
     url: (f) => `https://www.themoviedb.org/redirect?external_source=imdb_id&external_id=${f.id}`,
   },
@@ -48,6 +53,7 @@ export const SOURCES: SourceMeta[] = [
     short: "RT",
     kind: "critics",
     format: (v) => `${Math.round(v)}%`,
+    toTen: (v) => Math.round((v / 10) * 10) / 10,
     color: "var(--src-rt)",
     url: (f) => `https://www.rottentomatoes.com/search?search=${encodeURIComponent(f.title)}`,
   },
@@ -57,6 +63,7 @@ export const SOURCES: SourceMeta[] = [
     short: "MC",
     kind: "critics",
     format: (v) => `${Math.round(v)} / 100`,
+    toTen: (v) => Math.round((v / 10) * 10) / 10,
     color: "var(--src-metacritic)",
     url: (f) => `https://www.metacritic.com/search/${encodeURIComponent(f.title)}/`,
   },

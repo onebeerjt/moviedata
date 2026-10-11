@@ -1,13 +1,25 @@
 import Link from "next/link";
 import { FilmCard, SplitRow } from "@/components/film-bits";
 import { Search } from "@/components/search";
+import { TheatersRail } from "@/components/theaters-rail";
 import { allFilms, isWellKnown } from "@/lib/data";
 import { SITE_TAGLINE } from "@/lib/site";
 import type { Film } from "@/lib/types";
 
 export default function Home() {
   const films = allFilms();
-  const nowPlaying = films.filter((f) => f.nowPlaying).sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
+  const ninetyDaysAgo = new Date();
+  ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
+  const cutoff = ninetyDaysAgo.toISOString().slice(0, 10);
+  const nowPlaying = films
+    .filter(
+      (f) =>
+        f.nowPlaying &&
+        (f.releaseDate ?? "") >= cutoff &&
+        f.score !== null &&
+        Object.keys(f.s).length >= 2
+    )
+    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
   const year = new Date().getFullYear();
   const recent = films
     .filter((f) => !f.nowPlaying && (f.year ?? 0) >= year - 1 && f.score !== null && (f.s.imdb?.n ?? 0) >= 20_000)
@@ -52,7 +64,9 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4">
-        {nowPlaying.length > 0 && <Rail title="In theaters now" subtitle="Refreshed daily" films={nowPlaying} />}
+        {nowPlaying.length > 0 && (
+          <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
+        )}
         {freeTonight.length > 0 && (
           <Rail title="Free tonight" subtitle="Top-rated on Tubi, Pluto, Plex and more" films={freeTonight} href="/free" />
         )}

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Poster, ScoreBadge } from "@/components/film-bits";
+import { Poster } from "@/components/film-bits";
+import { ScoreDial } from "@/components/score-dial";
 import { SourceBars } from "@/components/source-bars";
 import { freeInfo, getFilm, personName, posterUrl } from "@/lib/data";
 import { serviceName } from "@/lib/free";
-import { agreement, notes, scoreLabel } from "@/lib/verdict";
+import { notes } from "@/lib/verdict";
 
 export async function generateMetadata({ params }: PageProps<"/film/[id]">): Promise<Metadata> {
   const film = getFilm((await params).id);
@@ -19,7 +20,6 @@ export async function generateMetadata({ params }: PageProps<"/film/[id]">): Pro
 export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
   const film = getFilm((await params).id);
   if (!film) notFound();
-  const agree = agreement(film.spread);
   const filmNotes = notes(film);
   const backdrop = posterUrl(film.backdrop, "w1280");
 
@@ -56,19 +56,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
                 ))}
               </div>
             )}
-            <div className="mt-6 flex items-center gap-4 sm:mt-8">
-              <ScoreBadge score={film.score} size="lg" />
-              <div>
-                <div className="text-[11px] uppercase tracking-wider text-text-3">Balanced score</div>
-                <div className="text-xl">{scoreLabel(film.score)}</div>
-                <div
-                  className={`mt-1 text-sm ${agree.tone === "split" ? "text-[var(--src-rt)]" : agree.tone === "mixed" ? "text-text-2" : "text-text-2"}`}
-                >
-                  {agree.label}
-                  {film.spread !== null && <span className="text-text-3"> · {film.spread} pt spread</span>}
-                </div>
-              </div>
-            </div>
+            <ScoreDial film={film} />
           </div>
         </div>
       </section>
