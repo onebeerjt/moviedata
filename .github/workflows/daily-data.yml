@@ -33,6 +33,13 @@ jobs:
       - name: Tubi and Pluto links from their own catalogs
         continue-on-error: true
         run: npm run data:service-links
+      - name: Trailers and full movies on YouTube (play inside the site)
+        continue-on-error: true
+        run: npm run data:trailers
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: TMDB (posters, now playing)
         # A bad key or API hiccup shouldn't block the other sources.
         continue-on-error: true

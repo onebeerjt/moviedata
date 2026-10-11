@@ -30,6 +30,10 @@ export type Film = {
   watchLink?: string;
   /** Direct link to the film on each free service, by service id. */
   links?: Record<number, string>;
+  /** YouTube id of the official trailer (embeddable). */
+  trailer?: string;
+  /** YouTube id of the full movie, when it's free on YouTube and embeddable. */
+  ytMovie?: string;
   s: Partial<Record<SourceKey, SourceScore>>;
   /** Mean percentile of audience sources (Letterboxd, IMDb, TMDB). */
   audience: number | null;

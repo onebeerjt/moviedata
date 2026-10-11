@@ -18,6 +18,7 @@ import type { OmdbEntry } from "./enrich-omdb.ts";
 import type { FreeFile } from "./free-catalog.ts";
 import type { FreeLinks } from "./free-links.ts";
 import type { ServiceLinks } from "./service-catalogs.ts";
+import type { Playable } from "./trailers.ts";
 import type { Film, FreeService, GroupStat, Insights, Person, SourceKey } from "../lib/types.ts";
 
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
@@ -27,6 +28,7 @@ const tmdb = readJson<Record<string, TmdbEntry>>(join(SOURCES, "tmdb.json"), {})
 const omdb = readJson<Record<string, OmdbEntry>>(join(SOURCES, "omdb.json"), {});
 const free = readJson<FreeFile>(join(SOURCES, "free.json"), { updatedAt: "", services: {}, films: {}, checked: {} });
 const freeLinks = readJson<FreeLinks>(join(SOURCES, "free-links.json"), {});
+const playable = readJson<Record<string, Playable>>(join(SOURCES, "trailers.json"), {});
 const serviceLinks = readJson<ServiceLinks>(join(SOURCES, "service-links.json"), { updatedAt: "", links: {} }).links;
 const nowPlaying = new Set(readJson<{ ids: string[] }>(join(SOURCES, "now-playing.json"), { ids: [] }).ids);
 const historyPath = join(SOURCES, "history.json");
@@ -130,6 +132,9 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     free: freeServices(id),
     watchLink: free.films[id]?.link,
     links: directLinks(id),
+    trailer: playable[id]?.trailer,
+    // Only movies the YouTube Data API confirmed can play embedded (trailers.ts).
+    ytMovie: playable[id]?.movieCheckedAt ? playable[id].movie : undefined,
     s,
     audience: round(audience),
     critics: round(critics),

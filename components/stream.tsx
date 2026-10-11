@@ -19,6 +19,8 @@ type Ctx = {
   /** The service tab being browsed, if any: it leads every Watch button. */
   preferred: number | null;
   open: (id: string) => void;
+  /** Play the trailer or (when free on YouTube) the full movie in the site's own player. */
+  play: (id: string, what: "trailer" | "movie") => void;
 };
 const StreamCtx = createContext<Ctx | null>(null);
 const useStream = () => useContext(StreamCtx)!;
@@ -41,8 +43,10 @@ export function Stream({
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const open = useCallback((id: string) => setOpenId(id), []);
+  const [playing, setPlaying] = useState<{ id: string; what: "trailer" | "movie" } | null>(null);
+  const play = useCallback((id: string, what: "trailer" | "movie") => setPlaying({ id, what }), []);
   return (
-    <StreamCtx.Provider value={{ films, services, preferred, open }}>
+    <StreamCtx.Provider value={{ films, services, preferred, open, play }}>
       {hero.length > 0 && <Hero ids={hero} />}
       <div className={`relative z-20 ${hero.length ? "-mt-8 sm:-mt-10" : "pt-4"}`}>{toolbar}</div>
       <div className="relative z-10 mt-4 space-y-10 pb-16 sm:space-y-12">
@@ -51,6 +55,7 @@ export function Stream({
         ))}
       </div>
       {openId && films[openId] && <Sheet film={films[openId]} onClose={() => setOpenId(null)} />}
+      {playing && films[playing.id] && <Player film={films[playing.id]} what={playing.what} onClose={() => setPlaying(null)} />}
     </StreamCtx.Provider>
   );
 }
@@ -115,7 +120,8 @@ function Hero({ ids }: { ids: string[] }) {
           </div>
           {f.overview && <p className="mt-4 line-clamp-2 text-[15px] leading-relaxed text-white/75 sm:line-clamp-3">{f.overview}</p>}
           <div className="mt-6 flex flex-wrap gap-3">
-            <WatchButton film={f} primary />
+            <PlayButton film={f} primary />
+            <WatchButton film={f} primary={!f.ytMovie && !f.trailer} full />
             <button onClick={() => open(f.id)} className="stream-glass rounded-full px-6 py-3 text-[15px] font-semibold">
               Details
             </button>
@@ -296,6 +302,7 @@ function ScoreChip({ film }: { film: StreamFilm }) {
 /* ----------------------------------------------------------------- sheet */
 
 function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) {
+  const { play } = useStream();
   const sorted = useSorted(f.services);
   const close = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -327,6 +334,15 @@ function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={img(f.backdrop ?? f.poster, "w1280")} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e] via-[#1c1c1e]/30 to-transparent" />
+          {(f.ytMovie || f.trailer) && (
+            <button
+              onClick={() => play(f.id, f.ytMovie ? "movie" : "trailer")}
+              aria-label={f.ytMovie ? "Play movie" : "Play trailer"}
+              className="stream-glass absolute left-1/2 top-[42%] flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-2xl transition hover:scale-105"
+            >
+              <span className="ml-1">▶</span>
+            </button>
+          )}
           <button
             ref={close}
             onClick={onClose}
@@ -344,7 +360,9 @@ function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) 
         <div className="grid gap-8 px-6 pb-8 pt-5 sm:grid-cols-[1fr_17rem] sm:px-10 sm:pb-10">
           <div>
             <div className="flex flex-wrap gap-3">
-              <WatchButton film={f} primary />
+              <PlayButton film={f} primary />
+              {f.ytMovie && f.trailer && <PlayButton film={f} trailerOnly />}
+              <WatchButton film={f} primary={!f.ytMovie && !f.trailer} full />
               {sorted.slice(1, 4).map((sid) => (
                 <WatchButton key={sid} film={f} serviceId={sid} />
               ))}
@@ -412,9 +430,189 @@ function FreeNote({ film }: { film: StreamFilm }) {
   );
 }
 
+/* ---------------------------------------------------------------- player */
+
+/** Full movie when it's free on YouTube, otherwise the trailer. Nothing if neither. */
+function PlayButton({ film, primary = false, trailerOnly = false }: { film: StreamFilm; primary?: boolean; trailerOnly?: boolean }) {
+  const { play } = useStream();
+  const what = !trailerOnly && film.ytMovie ? "movie" : film.trailer ? "trailer" : null;
+  if (!what) return null;
+  return (
+    <button
+      onClick={() => play(film.id, what)}
+      className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-[15px] font-semibold transition active:scale-[0.97] ${
+        primary ? "bg-white text-black hover:bg-white/90" : "stream-glass"
+      }`}
+    >
+      <span aria-hidden>▶</span> {what === "movie" ? "Play movie" : "Trailer"}
+    </button>
+  );
+}
+
+/**
+ * The site's own player. Trailers and YouTube's free movies play here (both
+ * embeddable); Watch buttons underneath go on to the free services, which
+ * don't allow embedding.
+ */
+function Player({ film: f, what, onClose }: { film: StreamFilm; what: "trailer" | "movie"; onClose: () => void }) {
+  const { play } = useStream();
+  const id = what === "movie" ? f.ytMovie : f.trailer;
+  const sorted = useSorted(f.services);
+  const back = useRef<HTMLButtonElement>(null);
+  // Set when YouTube refuses to play the video here (removed, restricted...).
+  const [failedId, setFailedId] = useState<string | null>(null);
+  const failed = failedId === id;
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    back.current?.focus();
+    // Capture phase so Escape closes only the player, not the sheet under it.
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      e.stopPropagation();
+      onClose();
+    };
+    window.addEventListener("keydown", onKey, true);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey, true);
+    };
+  }, [onClose]);
+  if (!id) return null;
+
+  return (
+    <div role="dialog" aria-modal="true" aria-label={`${f.title} ${what}`} className="stream-fade fixed inset-0 z-[60] flex flex-col bg-black">
+      <div className="flex items-center gap-3 px-4 py-3 sm:px-6">
+        <button
+          ref={back}
+          onClick={onClose}
+          aria-label="Close player"
+          className="stream-glass flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg"
+        >
+          ×
+        </button>
+        <div className="min-w-0">
+          <div className="truncate text-[15px] font-semibold">{f.title}</div>
+          <div className="text-xs text-white/55">{what === "movie" ? "Full movie · free on YouTube" : "Official trailer"}</div>
+        </div>
+      </div>
+
+      <div className="flex min-h-0 flex-1 items-center justify-center px-0 sm:px-6">
+        <div className="aspect-video w-full max-w-[min(100%,calc((100vh-12rem)*16/9))] overflow-hidden bg-black sm:rounded-2xl">
+          {failed ? (
+            <div className="flex h-full flex-col items-center justify-center gap-2 bg-[#111] px-6 text-center">
+              <div className="text-lg font-semibold">This {what === "movie" ? "movie" : "trailer"} can&apos;t play here</div>
+              <p className="max-w-sm text-sm text-white/55">YouTube only allows it on youtube.com. You can still watch it free below.</p>
+            </div>
+          ) : (
+            <YouTube key={id} id={id} title={`${f.title} ${what}`} onError={() => setFailedId(id)} />
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-3 px-4 py-5 sm:py-6">
+        {what === "trailer" || failed ? (
+          <>
+            <span className="w-full text-center text-sm text-white/60 sm:w-auto">{failed ? "Watch it free on" : "Like what you see?"}</span>
+            {f.ytMovie && !failed && (
+              <button
+                onClick={() => play(f.id, "movie")}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-black"
+              >
+                ▶ Play the movie here
+              </button>
+            )}
+            <WatchButton film={f} primary={!f.ytMovie} full />
+            {sorted.slice(1, 3).map((sid) => (
+              <WatchButton key={sid} film={f} serviceId={sid} />
+            ))}
+          </>
+        ) : (
+          <span className="text-sm text-white/55">Streaming from YouTube, free with ads.</span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+type YTPlayer = { destroy: () => void };
+type YTNamespace = {
+  Player: new (
+    el: HTMLElement,
+    opts: {
+      videoId: string;
+      host: string;
+      playerVars: Record<string, number>;
+      events: { onError: () => void };
+    },
+  ) => YTPlayer;
+};
+declare global {
+  interface Window {
+    YT?: YTNamespace;
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
+
+let ytApi: Promise<YTNamespace> | null = null;
+/** YouTube's IFrame API, loaded once. It reports when a video refuses to play. */
+function loadYouTube() {
+  ytApi ??= new Promise((resolve) => {
+    if (window.YT?.Player) return resolve(window.YT);
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      prev?.();
+      resolve(window.YT!);
+    };
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+  });
+  return ytApi;
+}
+
+function YouTube({ id, title, onError }: { id: string; title: string; onError: () => void }) {
+  const box = useRef<HTMLDivElement>(null);
+  const onErrorRef = useRef(onError);
+  useEffect(() => {
+    onErrorRef.current = onError;
+  });
+  useEffect(() => {
+    let player: YTPlayer | undefined;
+    let cancelled = false;
+    loadYouTube().then((YT) => {
+      if (cancelled || !box.current) return;
+      const el = document.createElement("div");
+      box.current.appendChild(el);
+      player = new YT.Player(el, {
+        videoId: id,
+        host: "https://www.youtube-nocookie.com",
+        playerVars: { autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 },
+        events: { onError: () => onErrorRef.current() },
+      });
+    });
+    return () => {
+      cancelled = true;
+      player?.destroy();
+    };
+  }, [id]);
+  return <div ref={box} title={title} className="stream-yt h-full w-full" />;
+}
+
 /* ---------------------------------------------------------------- shared */
 
-function WatchButton({ film, serviceId, primary = false }: { film: StreamFilm; serviceId?: number; primary?: boolean }) {
+function WatchButton({
+  film,
+  serviceId,
+  primary = false,
+  full = false,
+}: {
+  film: StreamFilm;
+  serviceId?: number;
+  primary?: boolean;
+  /** "Watch free on Tubi" rather than just "Tubi". */
+  full?: boolean;
+}) {
   const { services } = useStream();
   const sorted = useSorted(film.services);
   const sid = serviceId ?? sorted[0] ?? film.services[0];
@@ -437,7 +635,7 @@ function WatchButton({ film, serviceId, primary = false }: { film: StreamFilm; s
       ) : (
         <span className="pl-2">▶</span>
       )}
-      {primary ? `Watch free${s ? ` on ${s.short}` : ""}` : s?.short ?? "Watch"}
+      {primary || full ? `Watch free${s ? ` on ${s.short}` : ""}` : s?.short ?? "Watch"}
     </a>
   );
 }

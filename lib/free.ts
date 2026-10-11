@@ -24,6 +24,8 @@ export type StreamFilm = {
   s: Partial<Record<SourceKey, number>>;
   services: number[];
   links: Record<number, string>;
+  trailer?: string;
+  ytMovie?: string;
   directors: string[];
   cast: string[];
 };
@@ -187,6 +189,8 @@ function toStream(f: Film): StreamFilm {
     // Only services with a direct link: those are the ones we can show.
     services: Object.keys(f.links ?? {}).map(Number),
     links: f.links ?? {},
+    trailer: f.trailer,
+    ytMovie: f.ytMovie,
     directors: f.directors.slice(0, 2).map(personName),
     cast: f.cast.slice(0, 4).map(personName),
   };
