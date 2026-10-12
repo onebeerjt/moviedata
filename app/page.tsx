@@ -4,6 +4,7 @@ import { Search } from "@/components/search";
 import { TheatersRail } from "@/components/theaters-rail";
 import { allFilms, isWellKnown } from "@/lib/data";
 import { SITE_TAGLINE } from "@/lib/site";
+import { SUBSCRIPTIONS } from "@/lib/subscriptions";
 import type { Film } from "@/lib/types";
 
 export default function Home() {
@@ -64,11 +65,12 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4">
+        <WatchBanner />
         {nowPlaying.length > 0 && (
           <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
         )}
         {freeTonight.length > 0 && (
-          <Rail title="Free tonight" subtitle="Top-rated on Tubi, Pluto, Plex and more" films={freeTonight} href="/free" />
+          <Rail title="Free tonight" subtitle="Top-rated on Tubi, Pluto, Plex and more" films={freeTonight} href="/watch" />
         )}
         {recent.length > 0 && <Rail title="Best of the last year" films={recent} />}
 
@@ -155,6 +157,39 @@ function SplitSection({ title, subtitle, left, right }: { title: string; subtitl
         ))}
       </div>
     </section>
+  );
+}
+
+/** The way into /watch: free movies plus the viewer's own services. */
+function WatchBanner() {
+  const logos = [...SUBSCRIPTIONS.slice(0, 7).map((s) => ({ name: s.name, logo: s.logo })), { name: "Tubi", logo: "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png" }, { name: "Pluto TV", logo: "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png" }];
+  return (
+    <Link
+      href="/watch"
+      className="group relative block overflow-hidden rounded-3xl border border-line bg-surface p-6 transition hover:bg-surface-2 sm:p-8"
+    >
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="max-w-xl">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-text-3">New · Find a movie</div>
+          <h2 className="font-display mt-1 text-3xl sm:text-4xl">What should I watch tonight?</h2>
+          <p className="mt-2 text-text-2">
+            Tell us which services you have. We&apos;ll show every movie you can watch right now, free or on your
+            subscriptions, ranked by the balanced score, with one tap to play.
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-col items-start gap-4 sm:items-end">
+          <div className="flex -space-x-2">
+            {logos.map((l) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={l.name} src={`https://image.tmdb.org/t/p/w92${l.logo}`} alt={l.name} title={l.name} className="h-10 w-10 rounded-full ring-2 ring-[var(--surface)]" />
+            ))}
+          </div>
+          <span className="rounded-full bg-text px-5 py-2.5 text-sm font-semibold text-bg">
+            Pick your services <span className="inline-block transition group-hover:translate-x-1">→</span>
+          </span>
+        </div>
+      </div>
+    </Link>
   );
 }
 

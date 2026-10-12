@@ -30,6 +30,8 @@ export function Stream({
   services,
   hero,
   rows,
+  header,
+  intro,
   toolbar,
   preferred = null,
 }: {
@@ -37,7 +39,11 @@ export function Stream({
   services: Record<number, StreamService & { short: string }>;
   hero: string[];
   rows: StreamRow[];
-  /** Service tabs, laid over the bottom edge of the hero. */
+  /** Page title, above the hero. */
+  header?: React.ReactNode;
+  /** The "What do you have?" services bar, laid over the bottom edge of the hero. */
+  intro?: React.ReactNode;
+  /** Filter tabs, under the services bar. */
   toolbar: React.ReactNode;
   preferred?: number | null;
 }) {
@@ -47,9 +53,11 @@ export function Stream({
   const play = useCallback((id: string, what: "trailer" | "movie") => setPlaying({ id, what }), []);
   return (
     <StreamCtx.Provider value={{ films, services, preferred, open, play }}>
+      {header}
       {hero.length > 0 && <Hero ids={hero} />}
-      <div className={`relative z-20 ${hero.length ? "-mt-8 sm:-mt-10" : "pt-4"}`}>{toolbar}</div>
-      <div className="relative z-10 mt-4 space-y-10 pb-16 sm:space-y-12">
+      <div className={`relative z-20 ${hero.length ? "-mt-10 sm:-mt-12" : "pt-4"}`}>{intro}</div>
+      <div className="relative z-20 mt-1">{toolbar}</div>
+      <div className="relative z-10 mt-2 space-y-10 pb-16 sm:space-y-12">
         {rows.map((r) => (
           <Row key={r.key} row={r} />
         ))}
@@ -81,7 +89,7 @@ function Hero({ ids }: { ids: string[] }) {
   const heroMode = usePlayMode(f);
   return (
     <section
-      className="stream-hero relative -mt-px h-[clamp(520px,80vh,840px)] overflow-hidden"
+      className="stream-hero relative -mt-px h-[clamp(340px,52vh,540px)] overflow-hidden sm:mx-6 sm:rounded-3xl lg:mx-8"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
@@ -107,10 +115,10 @@ function Hero({ ids }: { ids: string[] }) {
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/30" />
 
-      <div className="absolute inset-x-0 bottom-0 px-5 pb-20 sm:px-10 sm:pb-24 lg:px-14">
+      <div className="absolute inset-x-0 bottom-0 px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10">
         <div key={f.id} className="stream-rise max-w-xl">
           <ServiceTag ids={f.services} />
-          <h1 className="mt-3 text-4xl font-bold leading-[1.02] tracking-tight sm:text-6xl">{f.title}</h1>
+          <h2 className="mt-2 text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl">{f.title}</h2>
           <Meta f={f} className="mt-3" />
           <div className="mt-4 flex items-center gap-3">
             <Ring score={f.score} size={46} />
@@ -119,8 +127,8 @@ function Hero({ ids }: { ids: string[] }) {
               <div className="text-white/60">{f.agree}</div>
             </div>
           </div>
-          {f.overview && <p className="mt-4 line-clamp-2 text-[15px] leading-relaxed text-white/75 sm:line-clamp-3">{f.overview}</p>}
-          <div className="mt-6 flex flex-wrap gap-3">
+          {f.overview && <p className="mt-3 hidden text-[15px] leading-relaxed text-white/75 sm:line-clamp-2">{f.overview}</p>}
+          <div className="mt-4 flex flex-wrap gap-2.5">
             <PlayButton film={f} primary />
             <WatchButton film={f} primary={!heroMode} full />
             <button onClick={() => open(f.id)} className="stream-glass rounded-full px-6 py-3 text-[15px] font-semibold">
@@ -130,7 +138,7 @@ function Hero({ ids }: { ids: string[] }) {
         </div>
       </div>
 
-      <div className="absolute bottom-14 right-5 flex gap-1.5 sm:right-10 lg:right-14">
+      <div className="absolute bottom-16 right-5 flex gap-1.5 sm:bottom-20 sm:right-8 lg:right-10">
         {ids.map((id, n) => (
           <button
             key={id}
@@ -296,7 +304,9 @@ function TopCard({ film, rank }: { film: StreamFilm; rank: number }) {
 function ScoreChip({ film }: { film: StreamFilm }) {
   if (film.score === null) return null;
   return (
-    <span className="stream-glass absolute bottom-2 left-2 rounded-full px-2 py-0.5 text-xs font-bold tabular-nums">{film.score}</span>
+    <span className="absolute bottom-2 left-2 rounded-full bg-black/45 backdrop-blur-sm">
+      <Ring score={film.score} size={36} />
+    </span>
   );
 }
 

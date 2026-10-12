@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/*": ["./data/site/**/*"],
   },
+  // The Free page grew into "Find a movie" (free + your services) at /watch.
+  async redirects() {
+    return [{ source: "/free", destination: "/watch", permanent: true }];
+  },
 };
 
 export default nextConfig;
