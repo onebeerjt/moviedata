@@ -60,8 +60,10 @@ jobs:
         run: npm run data:build
       - name: Commit
         run: |
-          git config user.name "moviedata-bot"
-          git config user.email "actions@users.noreply.github.com"
+          # Signed as the repo owner so Vercel's Hobby plan deploys the commit
+          # (it blocks commits from authors it doesn't recognize).
+          git config user.name "onebeerjt"
+          git config user.email "258927197+onebeerjt@users.noreply.github.com"
           git add data/site data/sources
           git diff --cached --quiet || git commit -m "Daily data refresh $(date -u +%F)"
           git push
