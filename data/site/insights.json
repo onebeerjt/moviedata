@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-12T16:29:11.779Z",
+ "generatedAt": "2026-10-12T19:40:41.509Z",
  "filmCount": 35120,
  "sourceCounts": {
   "letterboxd": 33514,
@@ -12,21 +12,21 @@
   {
    "key": "Drama",
    "label": "Drama",
-   "count": 18567,
+   "count": 18566,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -4.4,
+   "criticsVsAudience": -4.5,
    "avgScore": 50,
-   "lbN": 17877,
-   "caN": 5614
+   "lbN": 17876,
+   "caN": 5615
   },
   {
    "key": "Crime",
    "label": "Crime",
-   "count": 5911,
+   "count": 5910,
    "lbVsImdb": 2,
    "criticsVsAudience": -4.5,
    "avgScore": 47,
-   "lbN": 5706,
+   "lbN": 5705,
    "caN": 2033
   },
   {
@@ -37,7 +37,7 @@
    "criticsVsAudience": -0.4,
    "avgScore": 40,
    "lbN": 5598,
-   "caN": 1736
+   "caN": 1735
   },
   {
    "key": "Adventure",
@@ -72,21 +72,21 @@
   {
    "key": "Action",
    "label": "Action",
-   "count": 6837,
+   "count": 6838,
    "lbVsImdb": 1.7,
    "criticsVsAudience": -3.5,
    "avgScore": 41,
-   "lbN": 6481,
+   "lbN": 6482,
    "caN": 2439
   },
   {
    "key": "Fantasy",
    "label": "Fantasy",
-   "count": 2113,
+   "count": 2114,
    "lbVsImdb": 3.3,
    "criticsVsAudience": -1.7,
    "avgScore": 42,
-   "lbN": 2052,
+   "lbN": 2053,
    "caN": 749
   },
   {
@@ -142,12 +142,12 @@
   {
    "key": "Horror",
    "label": "Horror",
-   "count": 6119,
+   "count": 6116,
    "lbVsImdb": 5.1,
    "criticsVsAudience": 7,
    "avgScore": 35,
-   "lbN": 5901,
-   "caN": 1368
+   "lbN": 5898,
+   "caN": 1367
   },
   {
    "key": "History",
@@ -1737,8 +1737,8 @@
    "key": "nm1732981",
    "label": "Martin McDonagh",
    "count": 5,
-   "lbVsImdb": 6,
-   "criticsVsAudience": -7.4,
+   "lbVsImdb": 7.2,
+   "criticsVsAudience": -8,
    "avgScore": 83,
    "lbN": 5,
    "caN": 5
