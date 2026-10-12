@@ -6,6 +6,7 @@ import { ScoreDial } from "@/components/score-dial";
 import { SourceBars } from "@/components/source-bars";
 import { freeInfo, getFilm, personName, posterUrl } from "@/lib/data";
 import { serviceName } from "@/lib/free";
+import { SUBSCRIPTIONS } from "@/lib/subscriptions";
 import { notes } from "@/lib/verdict";
 
 export async function generateMetadata({ params }: PageProps<"/film/[id]">): Promise<Metadata> {
@@ -74,6 +75,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
         </section>
 
         <aside className="space-y-6">
+          {film.links && <StreamingOn links={film.links} />}
           {film.links && <WatchFree links={film.links} />}
           {filmNotes.length > 0 && (
             <div className="rounded-2xl border border-line bg-surface p-5">
@@ -136,6 +138,33 @@ function WatchFree({ links }: { links: Record<number, string> }) {
         Free with ads{services.some((s) => s.library) ? " (Kanopy and Hoopla need a library card)" : ""}. Streaming data from
         JustWatch. <Link href="/free" className="underline underline-offset-2">Browse all free movies →</Link>
       </p>
+    </div>
+  );
+}
+
+/** Subscription services with a direct link to the film. */
+function StreamingOn({ links }: { links: Record<number, string> }) {
+  const subs = SUBSCRIPTIONS.filter((s) => links[s.id]);
+  if (!subs.length) return null;
+  return (
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-3">Streaming on</h2>
+      <div className="flex flex-wrap gap-2">
+        {subs.map((s) => (
+          <a
+            key={s.id}
+            href={links[s.id]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-line py-1 pl-1 pr-3 text-sm hover:bg-surface-2"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={posterUrl(s.logo, "w92")} alt="" className="h-6 w-6 rounded-full" />
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p className="mt-3 text-xs text-text-3">With a subscription. Streaming data from JustWatch.</p>
     </div>
   );
 }
