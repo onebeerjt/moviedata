@@ -1,0 +1,7 @@
+# Deploys only need the app and data/site; never upload keys or raw downloads.
+.env*
+!.env.example
+data/raw
+data/sources
+node_modules
+.next
