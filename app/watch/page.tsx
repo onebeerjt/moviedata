@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Link from "next/link";
-import { ServicesPicker } from "@/components/services-picker";
+import { ServicesBar } from "@/components/services-bar";
 import { Stream, type StreamService } from "@/components/stream";
 import { buildStream, parseSubs, serviceName, streamServices } from "@/lib/free";
 import { SUBSCRIPTIONS, SUBS_COOKIE } from "@/lib/subscriptions";
 
 export const metadata: Metadata = {
-  title: "Free movies",
+  title: "Find a movie",
   description:
     "Every movie streaming free on Tubi, Pluto TV, Plex, The Roku Channel and more, plus your Netflix, Max, Hulu and other services, ranked by one balanced score.",
 };
 
-export default async function FreePage({ searchParams }: PageProps<"/free">) {
+export default async function WatchPage({ searchParams }: PageProps<"/watch">) {
   const { service } = await searchParams;
   const subs = parseSubs((await cookies()).get(SUBS_COOKIE)?.value);
   const mySubs = SUBSCRIPTIONS.filter((s) => subs.includes(s.id));
@@ -35,13 +35,21 @@ export default async function FreePage({ searchParams }: PageProps<"/free">) {
         hero={hero}
         rows={rows}
         preferred={active?.id ?? null}
+        header={
+          <header className="px-5 pb-4 pt-6 sm:px-10 sm:pt-8 lg:px-14">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Find something to watch</h1>
+            <p className="mt-1 text-sm text-white/60 sm:text-base">
+              Every free movie, plus what&apos;s on the services you have, ranked by one balanced score.
+            </p>
+          </header>
+        }
+        intro={<ServicesBar selected={subs} />}
         toolbar={
-          <nav aria-label="Streaming services" className="scroller flex items-center gap-2 overflow-x-auto px-5 py-3 sm:px-10 lg:px-14">
-            <ServicesPicker selected={subs} />
-            <span aria-hidden className="mx-1 h-6 w-px shrink-0 bg-white/15" />
-            <ServiceLink href="/free" label={subs.length ? "All" : "All free"} active={!active} count={total} />
+          <nav aria-label="Filter by service" className="scroller flex items-center gap-2 overflow-x-auto px-5 py-3 sm:px-10 lg:px-14">
+            <span className="shrink-0 pr-1 text-xs font-semibold uppercase tracking-wider text-white/40">Browse</span>
+            <ServiceLink href="/watch" label={subs.length ? "All" : "All free"} active={!active} count={total} />
             {tabs.map((t) => (
-              <ServiceLink key={t.id} href={`/free?service=${t.id}`} label={t.label} logo={t.logo} active={active?.id === t.id} />
+              <ServiceLink key={t.id} href={`/watch?service=${t.id}`} label={t.label} logo={t.logo} active={active?.id === t.id} />
             ))}
           </nav>
         }

@@ -136,7 +136,7 @@ function WatchFree({ links }: { links: Record<number, string> }) {
       </div>
       <p className="mt-3 text-xs text-text-3">
         Free with ads{services.some((s) => s.library) ? " (Kanopy and Hoopla need a library card)" : ""}. Streaming data from
-        JustWatch. <Link href="/free" className="underline underline-offset-2">Browse all free movies →</Link>
+        JustWatch. <Link href="/watch" className="underline underline-offset-2">Find more to watch →</Link>
       </p>
     </div>
   );
