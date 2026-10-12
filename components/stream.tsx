@@ -43,8 +43,8 @@ export function Stream({
   header?: React.ReactNode;
   /** The "What do you have?" services bar, laid over the bottom edge of the hero. */
   intro?: React.ReactNode;
-  /** Filter tabs, under the services bar. */
-  toolbar: React.ReactNode;
+  /** Anything else under the services bar. */
+  toolbar?: React.ReactNode;
   preferred?: number | null;
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -56,7 +56,7 @@ export function Stream({
       {header}
       {hero.length > 0 && <Hero ids={hero} />}
       <div className={`relative z-20 ${hero.length ? "-mt-10 sm:-mt-12" : "pt-4"}`}>{intro}</div>
-      <div className="relative z-20 mt-1">{toolbar}</div>
+      {toolbar && <div className="relative z-20 mt-1">{toolbar}</div>}
       <div className="relative z-10 mt-2 space-y-10 pb-16 sm:space-y-12">
         {rows.map((r) => (
           <Row key={r.key} row={r} />
@@ -89,7 +89,7 @@ function Hero({ ids }: { ids: string[] }) {
   const heroMode = usePlayMode(f);
   return (
     <section
-      className="stream-hero relative -mt-px h-[clamp(340px,52vh,540px)] overflow-hidden sm:mx-6 sm:rounded-3xl lg:mx-8"
+      className="stream-hero relative -mt-px h-[440px] overflow-hidden sm:mx-6 sm:h-[clamp(300px,42vh,460px)] sm:rounded-3xl lg:mx-8"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
@@ -118,7 +118,12 @@ function Hero({ ids }: { ids: string[] }) {
       <div className="absolute inset-x-0 bottom-0 px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10">
         <div key={f.id} className="stream-rise max-w-xl">
           <ServiceTag ids={f.services} />
-          <h2 className="mt-2 text-3xl font-bold leading-[1.02] tracking-tight sm:text-5xl">{f.title}</h2>
+          <h2 className="mt-2 text-3xl font-bold leading-[1.02] tracking-tight sm:text-[44px]">
+            {/* On phones there's no Details button, so the title opens the details. */}
+            <button onClick={() => open(f.id)} className="text-left hover:underline sm:no-underline sm:pointer-events-none">
+              {f.title}
+            </button>
+          </h2>
           <Meta f={f} className="mt-3" />
           <div className="mt-4 flex items-center gap-3">
             <Ring score={f.score} size={46} />
@@ -127,11 +132,11 @@ function Hero({ ids }: { ids: string[] }) {
               <div className="text-white/60">{f.agree}</div>
             </div>
           </div>
-          {f.overview && <p className="mt-3 hidden text-[15px] leading-relaxed text-white/75 sm:line-clamp-2">{f.overview}</p>}
+          {f.overview && <p className="mt-2 hidden text-sm leading-relaxed text-white/70 xl:line-clamp-2">{f.overview}</p>}
           <div className="mt-4 flex flex-wrap gap-2.5">
             <PlayButton film={f} primary />
             <WatchButton film={f} primary={!heroMode} full />
-            <button onClick={() => open(f.id)} className="stream-glass rounded-full px-6 py-3 text-[15px] font-semibold">
+            <button onClick={() => open(f.id)} className="stream-glass hidden rounded-full px-6 py-3 text-[15px] font-semibold sm:inline-block">
               Details
             </button>
           </div>
