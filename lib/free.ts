@@ -1,6 +1,8 @@
-// Shapes the free-streaming catalog into the rows of the /free page.
-// Everything here runs on the server; the page ships only the cards it shows.
+// Shapes the free-streaming catalog, plus the subscription services a viewer
+// has added, into the rows of the /free page. Everything here runs on the
+// server; the page ships only the cards it shows.
 import { allFilms, freeInfo, personName } from "./data";
+import { SUBSCRIPTIONS } from "./subscriptions";
 import type { Film, FreeService, SourceKey } from "./types";
 import { agreement, scoreLabel } from "./verdict";
 
@@ -74,9 +76,20 @@ const votes = (f: Film) => f.s.imdb?.n ?? 0;
 const byScore = (a: Film, b: Film) => (b.score ?? -1) - (a.score ?? -1) || votes(b) - votes(a);
 const hasArt = (f: Film) => !!f.poster;
 
-export function buildStream(serviceId: number | null) {
-  // Only films we can send straight to the movie on at least one service.
-  const linked = (f: Film) => Object.keys(f.links ?? {}).map(Number);
+const SUB_IDS = new Set(SUBSCRIPTIONS.map((s) => s.id));
+export const isSubscription = (id: number) => SUB_IDS.has(id);
+
+/** The viewer's added services, from the cookie value ("8-1899-15"). */
+export function parseSubs(value: string | undefined) {
+  return [...new Set((value ?? "").split("-").map(Number).filter((id) => SUB_IDS.has(id)))];
+}
+
+export function buildStream(serviceId: number | null, subs: number[] = []) {
+  // Only films we can send straight to the movie on a service the viewer can
+  // use: any free one, or a subscription they've added.
+  const mine = new Set(subs);
+  const usable = (id: number) => !SUB_IDS.has(id) || mine.has(id);
+  const linked = (f: Film) => Object.keys(f.links ?? {}).map(Number).filter(usable);
   const pool = allFilms().filter((f) => {
     const ids = linked(f);
     return ids.length && hasArt(f) && (serviceId === null || ids.includes(serviceId));
@@ -102,7 +115,19 @@ export function buildStream(serviceId: number | null) {
     6,
   );
 
-  add({ key: "top10", title: "Top 10 free right now", subtitle: "Highest balanced scores", style: "top10" }, [...familiar].sort(byScore), 10, 5);
+  add(
+    { key: "top10", title: subs.length ? "Top 10 for you right now" : "Top 10 free right now", subtitle: "Highest balanced scores", style: "top10" },
+    [...familiar].sort(byScore),
+    10,
+    5,
+  );
+  // One row per added service, unless the page is already filtered to one.
+  if (serviceId === null)
+    for (const sub of SUBSCRIPTIONS.filter((s) => mine.has(s.id)))
+      add(
+        { key: `sub-${sub.id}`, title: `Top on ${sub.name}`, subtitle: "Best balanced scores on your subscription", style: "poster" },
+        scored.filter((f) => f.links?.[sub.id]).sort(byScore),
+      );
   add(
     { key: "agree", title: "Everyone agrees", subtitle: "Critics and audiences both love these", style: "wide" },
     familiar.filter((f) => f.backdrop && f.critics !== null && f.audience !== null && Math.abs(f.critics - f.audience) <= 8).sort(byScore),
@@ -154,7 +179,7 @@ export function buildStream(serviceId: number | null) {
     if (ids.length >= 6) rows.push({ key: `g-${genre}`, title, style: "poster", ids });
   }
   add(
-    { key: "classic", title: "Before 1970", subtitle: "Classic cinema, free", style: "poster" },
+    { key: "classic", title: "Before 1970", subtitle: subs.length ? "Classic cinema" : "Classic cinema, free", style: "poster" },
     scored.filter((f) => (f.year ?? 9999) < 1970).sort(byScore),
     24,
     6,
@@ -164,12 +189,13 @@ export function buildStream(serviceId: number | null) {
   // Ship each film once, however many rows it appears in.
   const ids = new Set([...hero, ...rows.flatMap((r) => r.ids)]);
   const films: Record<string, StreamFilm> = {};
-  for (const f of pool) if (ids.has(f.id)) films[f.id] = toStream(f);
+  for (const f of pool) if (ids.has(f.id)) films[f.id] = toStream(f, usable);
 
   return { hero, rows, films, total: pool.length };
 }
 
-function toStream(f: Film): StreamFilm {
+function toStream(f: Film, usable: (id: number) => boolean): StreamFilm {
+  const links = Object.fromEntries(Object.entries(f.links ?? {}).filter(([id]) => usable(Number(id))));
   return {
     id: f.id,
     title: f.title,
@@ -186,9 +212,9 @@ function toStream(f: Film): StreamFilm {
     critics: f.critics,
     audience: f.audience,
     s: Object.fromEntries(Object.entries(f.s).map(([k, v]) => [k, Math.round(v.p)])),
-    // Only services with a direct link: those are the ones we can show.
-    services: Object.keys(f.links ?? {}).map(Number),
-    links: f.links ?? {},
+    // Only services with a direct link that the viewer can use.
+    services: Object.keys(links).map(Number),
+    links,
     trailer: f.trailer,
     ytMovie: f.ytMovie,
     directors: f.directors.slice(0, 2).map(personName),

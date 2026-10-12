@@ -8,7 +8,7 @@ import { SOURCES } from "@/lib/sources";
 // The /free page: a streaming-service front end over the free catalog.
 // Server code (lib/free.ts) picks the rows; everything here is presentation.
 
-export type StreamService = { id: number; name: string; logo?: string; library?: boolean };
+export type StreamService = { id: number; name: string; logo?: string; library?: boolean; /** A paid subscription the viewer added. */ sub?: boolean };
 
 const img = (path: string | undefined, size: string) => (path ? `https://image.tmdb.org/t/p/${size}${path}` : undefined);
 
@@ -425,11 +425,14 @@ function Sheet({ film: f, onClose }: { film: StreamFilm; onClose: () => void }) 
 function FreeNote({ film }: { film: StreamFilm }) {
   const { services } = useStream();
   const library = film.services.filter((sid) => services[sid]?.library).map((sid) => services[sid].short);
-  return (
-    <p className="mt-2 text-xs text-white/40">
-      Free with ads{library.length ? `; ${library.join(" and ")} free with a library card` : ""}. Availability changes daily.
-    </p>
-  );
+  const mine = film.services.filter((sid) => services[sid]?.sub).map((sid) => services[sid].short);
+  const free = film.services.some((sid) => !services[sid]?.sub);
+  const parts = [
+    mine.length ? `Included with your ${mine.join(" and ")}` : "",
+    free ? `free with ads${library.length ? ` (${library.join(" and ")} need a library card)` : ""}` : "",
+  ].filter(Boolean);
+  const text = parts.join("; ");
+  return <p className="mt-2 text-xs text-white/40">{text.charAt(0).toUpperCase() + text.slice(1)}. Availability changes daily.</p>;
 }
 
 /* ---------------------------------------------------------------- player */
@@ -709,13 +712,14 @@ function WatchButton({
       ) : (
         <span className="pl-2">▶</span>
       )}
-      {primary || full ? `Watch free${s ? ` on ${s.short}` : ""}` : s?.short ?? "Watch"}
+      {primary || full ? (s?.sub ? `Watch on ${s.short}` : `Watch free${s ? ` on ${s.short}` : ""}`) : s?.short ?? "Watch"}
     </a>
   );
 }
 
-// Which service to lead with when a film is free on several: the big
-// ad-supported apps first, library services last.
+// Which service to lead with when a film is on several: the viewer's own
+// subscriptions first (no ads), then the big ad-supported apps, library
+// services last.
 const PREFERRED = [
   "Tubi TV",
   "Pluto TV",
@@ -729,6 +733,7 @@ const PREFERRED = [
 ];
 const rank = (s: StreamService | undefined) => {
   if (!s) return 99;
+  if (s.sub) return -1;
   const i = PREFERRED.indexOf(s.name);
   return i > -1 ? i : s.library ? 50 : 20;
 };
@@ -755,7 +760,7 @@ function ServiceTag({ ids }: { ids: number[] }) {
         )}
       </div>
       <span className="text-[13px] font-medium uppercase tracking-wider text-white/75">
-        Free on {services[known[0]].short}
+        {services[known[0]].sub ? "On" : "Free on"} {services[known[0]].short}
         {known.length > 1 ? ` + ${known.length - 1} more` : ""}
       </span>
     </div>

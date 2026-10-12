@@ -1,21 +1,35 @@
 // Which films stream free (with ads, or free with a library card) in the US,
-// and on which services. Source: TMDB's watch-provider data, which comes from
+// and which are on the subscription services people can add on the Free page
+// (lib/subscriptions.ts). Source: TMDB's watch-provider data, which comes from
 // JustWatch (the site must credit JustWatch wherever it shows this).
 //
-// 1. Discover every film TMDB lists as free/ads in the US. The discover
-//    filter can't say *which* service is free, so this is just the candidate list.
+// 1. Discover every film TMDB lists as free/ads in the US, plus each
+//    subscription service's catalog. The discover filters can't say *which*
+//    service offers what, so this is just the candidate list.
 // 2. For each candidate, fetch its details + watch providers in one call and
-//    keep only the services listed under "ads" or "free".
+//    keep the services listed under "ads"/"free", and the subscription
+//    services listed under "flatrate".
 // Films land in free.json keyed by IMDb id; ingest-imdb.ts adds them to the
 // tracked set so they get scored like everything else.
 // Usage: node scripts/free-catalog.ts [--min-votes 20] [--refresh-days 3]
 import { join } from "node:path";
 import { SOURCES, arg, isStale, readJson, sleep, writeJson } from "./util.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
+import { SUBSCRIPTIONS, SUBSCRIPTION_OF } from "../lib/subscriptions.ts";
 
 export type FreeService = { id: number; name: string; logo?: string; library?: boolean };
-export type FreeEntry = { tmdbId: number; services: number[]; link?: string; checkedAt: string };
+export type FreeEntry = {
+  tmdbId: number;
+  /** Free (ads or library card) services. */
+  services: number[];
+  /** Subscription services (lib/subscriptions.ts ids). */
+  subs?: number[];
+  link?: string;
+  checkedAt: string;
+};
 export type FreeFile = {
+  /** Bumped when what's recorded per film changes, forcing a full re-check. */
+  version?: number;
   updatedAt: string;
   services: Record<number, FreeService>;
   films: Record<string, FreeEntry>;
@@ -33,6 +47,7 @@ if (!KEY && !TOKEN) {
 const MIN_VOTES = arg("min-votes", "20")!;
 const REFRESH_DAYS = Number(arg("refresh-days", "3"));
 const OUT = join(SOURCES, "free.json");
+const VERSION = 2; // 2: subscription services recorded too
 const TMDB_OUT = join(SOURCES, "tmdb.json");
 // Free with a library card rather than with ads. Labeled as such on the site.
 const LIBRARY = new Set(["Kanopy", "Hoopla"]);
@@ -63,19 +78,21 @@ type Details = {
   release_date: string;
   vote_average: number;
   vote_count: number;
-  "watch/providers"?: { results: { US?: { link?: string; ads?: Provider[]; free?: Provider[] } } };
+  "watch/providers"?: { results: { US?: { link?: string; ads?: Provider[]; free?: Provider[]; flatrate?: Provider[] } } };
 };
 
-const prev = readJson<FreeFile>(OUT, { updatedAt: "", services: {}, films: {}, checked: {} });
+const stored = readJson<FreeFile>(OUT, { updatedAt: "", services: {}, films: {}, checked: {} });
+// An older file didn't record subscriptions: keep its service names but check every film again.
+const prev: FreeFile = stored.version === VERSION ? stored : { ...stored, films: {}, checked: {} };
 const tmdbCache = readJson<Record<string, TmdbEntry>>(TMDB_OUT, {});
 
 // 1. Candidates. Discover stops at page 500, so walk it in year bands narrow
 // enough to stay under that.
 const candidates = new Set<number>();
-async function sweep(from: string, to: string) {
+async function sweep(from: string, to: string, filter: Record<string, string>) {
   const base = {
     watch_region: "US",
-    with_watch_monetization_types: "free|ads",
+    ...filter,
     "vote_count.gte": MIN_VOTES,
     "primary_release_date.gte": from,
     "primary_release_date.lte": to,
@@ -89,8 +106,8 @@ async function sweep(from: string, to: string) {
     if (b - a > 864e5) {
       const mid = new Date((a + b) / 2).toISOString().slice(0, 10);
       const next = new Date(new Date(mid).getTime() + 864e5).toISOString().slice(0, 10);
-      await sweep(from, mid);
-      await sweep(next, to);
+      await sweep(from, mid, filter);
+      await sweep(next, to, filter);
       return;
     }
   }
@@ -103,8 +120,12 @@ async function sweep(from: string, to: string) {
 const thisYear = new Date().getFullYear();
 const bands: [string, string][] = [["1880-01-01", "1949-12-31"]];
 for (let y = 1950; y <= thisYear; y += 10) bands.push([`${y}-01-01`, `${Math.min(y + 9, thisYear + 1)}-12-31`]);
-for (const [from, to] of bands) await sweep(from, to);
-console.log(`Free catalog: ${candidates.size} candidate films`);
+for (const [from, to] of bands) await sweep(from, to, { with_watch_monetization_types: "free|ads" });
+const freeCount = candidates.size;
+for (const sub of SUBSCRIPTIONS)
+  for (const [from, to] of bands)
+    await sweep(from, to, { with_watch_monetization_types: "flatrate", with_watch_providers: sub.providerIds.join("|") });
+console.log(`Free catalog: ${candidates.size} candidate films (${freeCount} free, the rest on subscriptions)`);
 
 // 2. Details + providers for new candidates and ones not checked recently.
 const services: FreeFile["services"] = { ...prev.services };
@@ -130,7 +151,8 @@ for (const id of candidates) {
     fetched++;
     const us = d["watch/providers"]?.results.US;
     const free = [...(us?.ads ?? []), ...(us?.free ?? [])];
-    if (d.imdb_id && free.length) {
+    const subs = [...new Set((us?.flatrate ?? []).flatMap((p) => (SUBSCRIPTION_OF[p.provider_id] ? [SUBSCRIPTION_OF[p.provider_id]] : [])))];
+    if (d.imdb_id && (free.length || subs.length)) {
       for (const p of free)
         services[p.provider_id] ??= {
           id: p.provider_id,
@@ -138,7 +160,13 @@ for (const id of candidates) {
           logo: p.logo_path,
           library: LIBRARY.has(p.provider_name.trim()) || undefined,
         };
-      films[d.imdb_id] = { tmdbId: d.id, services: [...new Set(free.map((p) => p.provider_id))], link: us?.link, checkedAt: now };
+      films[d.imdb_id] = {
+        tmdbId: d.id,
+        services: [...new Set(free.map((p) => p.provider_id))],
+        subs,
+        link: us?.link,
+        checkedAt: now,
+      };
       // We already have everything enrich-tmdb would fetch, so save it a call.
       if (!tmdbCache[d.imdb_id]?.tmdbId)
         tmdbCache[d.imdb_id] = {
@@ -159,6 +187,9 @@ for (const id of candidates) {
   await sleep(20);
 }
 
-writeJson(OUT, { updatedAt: new Date().toISOString(), services, films, checked } satisfies FreeFile);
+writeJson(OUT, { version: VERSION, updatedAt: new Date().toISOString(), services, films, checked } satisfies FreeFile);
 writeJson(TMDB_OUT, tmdbCache);
-console.log(`Free catalog: ${Object.keys(films).length} free films (${fetched} fetched fresh)`);
+const all = Object.values(films);
+console.log(
+  `Free catalog: ${all.filter((f) => f.services.length).length} free films, ${all.filter((f) => f.subs?.length).length} on subscriptions (${fetched} fetched fresh)`,
+);

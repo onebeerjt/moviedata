@@ -157,6 +157,7 @@ const films: Film[] = Object.entries(imdb).map(([id, f]) => {
     nowPlaying: nowPlaying.has(id) || undefined,
     letterboxdSlug: lb[id]?.slug,
     free: freeServices(id),
+    subs: free.films[id]?.subs?.length ? free.films[id].subs : undefined,
     watchLink: free.films[id]?.link,
     links: directLinks(id),
     trailer: playable[id]?.trailer,
@@ -185,7 +186,8 @@ function freeServices(id: string) {
  * which sometimes point at a dubbed copy.
  */
 function directLinks(id: string) {
-  const services = free.films[id]?.services ?? [];
+  // Free services and subscription services (keyed by lib/subscriptions.ts id).
+  const services = [...(free.films[id]?.services ?? []), ...(free.films[id]?.subs ?? [])];
   const jw = freeLinks[id]?.links ?? {};
   const out: Record<number, string> = Object.fromEntries(
     services.flatMap((sid) => (jw[sid] && usableLink(jw[sid]) ? [[sid, jw[sid]]] : [])),

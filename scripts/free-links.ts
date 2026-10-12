@@ -1,5 +1,7 @@
 // Direct "watch" links for every free film: the URL of the film on Tubi,
 // Pluto, YouTube and so on, so the site's Watch buttons open the movie itself.
+// Also the film's page on the subscription services (lib/subscriptions.ts),
+// stored under the service's id whichever plan JustWatch listed.
 //
 // TMDB's API only gives one link per film (its own where-to-watch page). That
 // page carries JustWatch click-out links whose `r` parameter is the service's
@@ -12,6 +14,7 @@ import { join } from "node:path";
 import { SOURCES, arg, isStale, readJson, sleep, usableLink, writeJson } from "./util.ts";
 import type { FreeFile } from "./free-catalog.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
+import { SUBSCRIPTION_OF } from "../lib/subscriptions.ts";
 
 export type FreeLinks = Record<string, { links: Record<number, string>; services: number[]; fetchedAt: string }>;
 
@@ -29,13 +32,14 @@ const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
 
 // Only films the site tracks (ingest-imdb.ts), most-voted first so the films
 // people actually see get links soonest. Refetch when the film is new, its
-// free services changed, or the links are old.
+// free or subscription services changed, or the links are old.
 const sameServices = (a: number[], b: number[]) => a.length === b.length && a.every((x) => b.includes(x));
+const wanted = (f: FreeFile["films"][string]) => [...f.services, ...(f.subs ?? [])];
 const queue = Object.entries(free.films)
   .filter(([id, f]) => {
     if (!imdb[id]) return false;
     const c = cache[id];
-    return !c || !sameServices(c.services, f.services) || isStale(c.fetchedAt, REFRESH_DAYS);
+    return !c || !sameServices(c.services, wanted(f)) || isStale(c.fetchedAt, REFRESH_DAYS);
   })
   .sort(([a], [b]) => imdb[b].votes - imdb[a].votes)
   .slice(0, LIMIT);
@@ -73,8 +77,9 @@ async function fetchLinks(tmdbId: number): Promise<Record<number, string>> {
         data: { data: { providerId?: number; monetizationType?: string } }[];
       };
       const { providerId, monetizationType } = ctx.data[0]?.data ?? {};
-      if (providerId && (monetizationType === "ads" || monetizationType === "free") && usableLink(target))
-        links[providerId] ??= clean(target);
+      if (!providerId || !usableLink(target)) continue;
+      if (monetizationType === "ads" || monetizationType === "free") links[providerId] ??= clean(target);
+      else if (monetizationType === "flatrate" && SUBSCRIPTION_OF[providerId]) links[SUBSCRIPTION_OF[providerId]] ??= clean(target);
     } catch {}
   }
   return links;
@@ -86,7 +91,7 @@ async function worker() {
   while (queue.length) {
     const [id, f] = queue.shift()!;
     try {
-      cache[id] = { links: await fetchLinks(f.tmdbId), services: f.services, fetchedAt: new Date().toISOString() };
+      cache[id] = { links: await fetchLinks(f.tmdbId), services: wanted(f), fetchedAt: new Date().toISOString() };
     } catch (e) {
       const retryAfter = (e as { retryAfter?: number }).retryAfter;
       if (retryAfter) {

@@ -28,7 +28,9 @@ export type Film = {
   free?: number[];
   /** TMDB's "where to watch" page for the film (JustWatch links to each service). */
   watchLink?: string;
-  /** Direct link to the film on each free service, by service id. */
+  /** Subscription services it streams on (lib/subscriptions.ts ids). */
+  subs?: number[];
+  /** Direct link to the film on each free or subscription service, by service id. */
   links?: Record<number, string>;
   /** YouTube id of the official trailer (embeddable). */
   trailer?: string;
