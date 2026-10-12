@@ -9,7 +9,7 @@ export const SUBSCRIPTIONS: Subscription[] = [
   { id: 8, key: "netflix", name: "Netflix", logo: "/rK1KljqmbvO9HQa1PBFLILWah72.png", providerIds: [8, 1796] },
   { id: 1899, key: "max", name: "Max", logo: "/skypuy7SXuugIQeYg0IglmzoKaS.png", providerIds: [1899] },
   { id: 15, key: "hulu", name: "Hulu", logo: "/44uAnmSqvA4yBOdbPWN8YgQHjWm.png", providerIds: [15] },
-  { id: 337, key: "disney", name: "Disney+", logo: "/5eZ872CghnHFLB1j8grszbrx0dx.png", providerIds: [337] },
+  { id: 337, key: "disney", name: "Disney+", logo: "/5eZ872CghnHFLB1j8grszbrx0dx.png", providerIds: [337, 2706] },
   { id: 9, key: "prime", name: "Prime Video", logo: "/gMZdpavHmxFNnLpMHwVxfqeux2g.png", providerIds: [9] },
   { id: 350, key: "apple", name: "Apple TV+", logo: "/9icYBfYFcwgCbky5VdGUIKJ4C5i.png", providerIds: [350] },
   { id: 386, key: "peacock", name: "Peacock", logo: "/a1UIdq5BrkcAxnxcUhFsNbXnxeu.png", providerIds: [386, 387] },

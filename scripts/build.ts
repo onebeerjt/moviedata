@@ -10,7 +10,7 @@
 //  3. Average the audience percentiles and the critic percentiles separately,
 //     then weight the two groups equally. If only one group exists, use it.
 import { join } from "node:path";
-import { SITE, SOURCES, readJson, usableLink, writeJson } from "./util.ts";
+import { SITE, SOURCES, readJson, unwrapAffiliate, usableLink, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 import type { LetterboxdEntry } from "./scrape-letterboxd.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
@@ -190,7 +190,7 @@ function directLinks(id: string) {
   const services = [...(free.films[id]?.services ?? []), ...(free.films[id]?.subs ?? [])];
   const jw = freeLinks[id]?.links ?? {};
   const out: Record<number, string> = Object.fromEntries(
-    services.flatMap((sid) => (jw[sid] && usableLink(jw[sid]) ? [[sid, jw[sid]]] : [])),
+    services.flatMap((sid) => (jw[sid] && usableLink(jw[sid]) ? [[sid, unwrapAffiliate(jw[sid])]] : [])),
   );
   Object.assign(out, serviceLinks[id]);
   return Object.keys(out).length ? out : undefined;

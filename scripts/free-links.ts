@@ -11,7 +11,7 @@
 // concurrency, fine for a personal project.
 // Usage: node scripts/free-links.ts [--limit 30000] [--concurrency 2]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, usableLink, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, readJson, sleep, unwrapAffiliate, usableLink, writeJson } from "./util.ts";
 import type { FreeFile } from "./free-catalog.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 import { SUBSCRIPTION_OF } from "../lib/subscriptions.ts";
@@ -48,7 +48,7 @@ console.log(`Free links: ${queue.length} films to fetch`);
 /** Strip tracking parameters added for JustWatch; keep everything else. */
 function clean(url: string) {
   try {
-    const u = new URL(url);
+    const u = new URL(unwrapAffiliate(url));
     for (const k of [...u.searchParams.keys()]) if (k.startsWith("utm_")) u.searchParams.delete(k);
     return u.toString();
   } catch {

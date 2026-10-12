@@ -429,7 +429,7 @@ function FreeNote({ film }: { film: StreamFilm }) {
   const free = film.services.some((sid) => !services[sid]?.sub);
   const parts = [
     mine.length ? `Included with your ${mine.join(" and ")}` : "",
-    free ? `free with ads${library.length ? ` (${library.join(" and ")} need a library card)` : ""}` : "",
+    free ? `free with ads${library.length ? ` (${library.join(" and ")} ${library.length > 1 ? "need" : "needs"} a library card)` : ""}` : "",
   ].filter(Boolean);
   const text = parts.join("; ");
   return <p className="mt-2 text-xs text-white/40">{text.charAt(0).toUpperCase() + text.slice(1)}. Availability changes daily.</p>;

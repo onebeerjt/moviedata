@@ -85,3 +85,16 @@ export function usableLink(url: string) {
     return false;
   }
 }
+
+/**
+ * Some services' JustWatch links go through an affiliate redirect
+ * (disneyplus.bn5x.net/...?u=https://www.disneyplus.com/...). Use the
+ * service's own URL inside it, so Watch opens the service directly.
+ */
+export function unwrapAffiliate(url: string) {
+  try {
+    const inner = new URL(url).searchParams.get("u");
+    if (inner && /^https:\/\//.test(inner)) return new URL(inner).toString();
+  } catch {}
+  return url;
+}
