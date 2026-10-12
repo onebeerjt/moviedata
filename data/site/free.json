@@ -37,7 +37,7 @@
    "name": "Kanopy",
    "logo": "/cltb8XKan9ierp23ItPmCOcVLRa.png",
    "library": true,
-   "count": 6909
+   "count": 6908
   },
   {
    "id": 207,
@@ -103,7 +103,10 @@
    "id": 2383,
    "name": "Philo",
    "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png",
-   "count": 1000
+   "count": 999
+  },
+  {
+   "count": 981
   },
   {
    "id": 439,
@@ -142,6 +145,9 @@
    "count": 487
   },
   {
+   "count": 412
+  },
+  {
    "id": 638,
    "name": "Public Domain Movies",
    "logo": "/pDodO7jgdP0eYO1vP2Dwu9YjeVJ.png",
@@ -152,6 +158,9 @@
    "name": "DistroTV",
    "logo": "/theOpF1b4doC39xCrPT5IOEsClp.png",
    "count": 338
+  },
+  {
+   "count": 317
   },
   {
    "id": 2667,
