@@ -1,233 +1,233 @@
 {
- "generatedAt": "2026-10-12T16:29:11.779Z",
- "filmCount": 35120,
+ "generatedAt": "2026-10-12T19:44:03.729Z",
+ "filmCount": 35125,
  "sourceCounts": {
-  "letterboxd": 33514,
-  "imdb": 35120,
-  "tmdb": 33611,
-  "rt": 9852,
-  "metacritic": 8678
+  "letterboxd": 33519,
+  "imdb": 35125,
+  "tmdb": 33616,
+  "rt": 10605,
+  "metacritic": 9217
  },
  "genres": [
   {
    "key": "Drama",
    "label": "Drama",
-   "count": 18567,
+   "count": 18569,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -4.4,
+   "criticsVsAudience": -3.8,
    "avgScore": 50,
-   "lbN": 17877,
-   "caN": 5614
+   "lbN": 17879,
+   "caN": 6065
   },
   {
    "key": "Crime",
    "label": "Crime",
-   "count": 5911,
+   "count": 5910,
    "lbVsImdb": 2,
-   "criticsVsAudience": -4.5,
+   "criticsVsAudience": -4,
    "avgScore": 47,
-   "lbN": 5706,
-   "caN": 2033
+   "lbN": 5705,
+   "caN": 2183
   },
   {
    "key": "Thriller",
    "label": "Thriller",
-   "count": 6004,
+   "count": 6006,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": -0.4,
+   "criticsVsAudience": 0.1,
    "avgScore": 40,
-   "lbN": 5598,
-   "caN": 1736
+   "lbN": 5600,
+   "caN": 1861
   },
   {
    "key": "Adventure",
    "label": "Adventure",
    "count": 4266,
    "lbVsImdb": 0.8,
-   "criticsVsAudience": -3.5,
+   "criticsVsAudience": -3,
    "avgScore": 45,
    "lbN": 4158,
-   "caN": 1796
+   "caN": 1886
   },
   {
    "key": "Sci-Fi",
    "label": "Sci-Fi",
    "count": 2168,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": 1,
+   "criticsVsAudience": 1.4,
    "avgScore": 37,
    "lbN": 2037,
-   "caN": 733
+   "caN": 767
   },
   {
    "key": "Romance",
    "label": "Romance",
    "count": 5074,
    "lbVsImdb": 1.1,
-   "criticsVsAudience": -4.3,
+   "criticsVsAudience": -3.6,
    "avgScore": 47,
    "lbN": 4904,
-   "caN": 1589
+   "caN": 1742
   },
   {
    "key": "Action",
    "label": "Action",
-   "count": 6837,
+   "count": 6838,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": -3.5,
+   "criticsVsAudience": -3.2,
    "avgScore": 41,
-   "lbN": 6481,
-   "caN": 2439
+   "lbN": 6482,
+   "caN": 2577
   },
   {
    "key": "Fantasy",
    "label": "Fantasy",
-   "count": 2113,
+   "count": 2114,
    "lbVsImdb": 3.3,
-   "criticsVsAudience": -1.7,
+   "criticsVsAudience": -1.4,
    "avgScore": 42,
-   "lbN": 2052,
-   "caN": 749
+   "lbN": 2053,
+   "caN": 799
   },
   {
    "key": "Mystery",
    "label": "Mystery",
    "count": 3343,
    "lbVsImdb": 3,
-   "criticsVsAudience": 0.3,
+   "criticsVsAudience": 1,
    "avgScore": 41,
    "lbN": 3227,
-   "caN": 1155
+   "caN": 1232
   },
   {
    "key": "Western",
    "label": "Western",
    "count": 530,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": -4.3,
+   "criticsVsAudience": -3.8,
    "avgScore": 50,
    "lbN": 501,
-   "caN": 101
+   "caN": 109
   },
   {
    "key": "Biography",
    "label": "Biography",
    "count": 1978,
    "lbVsImdb": -0.2,
-   "criticsVsAudience": -8.1,
+   "criticsVsAudience": -7.7,
    "avgScore": 57,
    "lbN": 1953,
-   "caN": 778
+   "caN": 829
   },
   {
    "key": "Comedy",
    "label": "Comedy",
-   "count": 10451,
+   "count": 10452,
    "lbVsImdb": 2.1,
-   "criticsVsAudience": -1.9,
+   "criticsVsAudience": -1.5,
    "avgScore": 44,
-   "lbN": 10201,
-   "caN": 3542
+   "lbN": 10202,
+   "caN": 3799
   },
   {
    "key": "War",
    "label": "War",
    "count": 794,
    "lbVsImdb": 1,
-   "criticsVsAudience": -6.5,
+   "criticsVsAudience": -5.9,
    "avgScore": 56,
    "lbN": 752,
-   "caN": 210
+   "caN": 231
   },
   {
    "key": "Horror",
    "label": "Horror",
-   "count": 6119,
+   "count": 6118,
    "lbVsImdb": 5.1,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.6,
    "avgScore": 35,
-   "lbN": 5901,
-   "caN": 1368
+   "lbN": 5900,
+   "caN": 1478
   },
   {
    "key": "History",
    "label": "History",
    "count": 1369,
    "lbVsImdb": 1.4,
-   "criticsVsAudience": -6.3,
+   "criticsVsAudience": -5.9,
    "avgScore": 56,
    "lbN": 1326,
-   "caN": 385
+   "caN": 415
   },
   {
    "key": "Animation",
    "label": "Animation",
-   "count": 1302,
+   "count": 1303,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": -5.2,
+   "criticsVsAudience": -5,
    "avgScore": 55,
-   "lbN": 1280,
-   "caN": 515
+   "lbN": 1281,
+   "caN": 534
   },
   {
    "key": "Family",
    "label": "Family",
-   "count": 1580,
+   "count": 1581,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": -3.9,
+   "criticsVsAudience": -3.7,
    "avgScore": 45,
-   "lbN": 1486,
-   "caN": 481
+   "lbN": 1487,
+   "caN": 515
   },
   {
    "key": "Music",
    "label": "Music",
    "count": 1007,
    "lbVsImdb": 4.9,
-   "criticsVsAudience": -4.9,
+   "criticsVsAudience": -4.3,
    "avgScore": 54,
    "lbN": 993,
-   "caN": 311
+   "caN": 343
   },
   {
    "key": "Sport",
    "label": "Sport",
    "count": 672,
-   "lbVsImdb": 0.2,
-   "criticsVsAudience": -12.3,
+   "lbVsImdb": 0.3,
+   "criticsVsAudience": -11.6,
    "avgScore": 49,
    "lbN": 654,
-   "caN": 213
+   "caN": 230
   },
   {
    "key": "Musical",
    "label": "Musical",
    "count": 432,
    "lbVsImdb": 2.5,
-   "criticsVsAudience": -2.3,
-   "avgScore": 51,
+   "criticsVsAudience": -2,
+   "avgScore": 52,
    "lbN": 424,
-   "caN": 125
+   "caN": 133
   },
   {
    "key": "Film-Noir",
    "label": "Film-Noir",
    "count": 234,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": 0.9,
+   "criticsVsAudience": 2.2,
    "avgScore": 59,
    "lbN": 233,
-   "caN": 47
+   "caN": 52
   },
   {
    "key": "Documentary",
    "label": "Documentary",
    "count": 2125,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 5.8,
+   "criticsVsAudience": 5.5,
    "avgScore": 58,
    "lbN": 2088,
-   "caN": 245
+   "caN": 289
   }
  ],
  "decades": [
@@ -246,110 +246,110 @@
    "label": "1920s",
    "count": 239,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": -0.2,
+   "criticsVsAudience": 2.7,
    "avgScore": 58,
    "lbN": 239,
-   "caN": 22
+   "caN": 28
   },
   {
    "key": "1930",
    "label": "1930s",
    "count": 431,
    "lbVsImdb": 1.4,
-   "criticsVsAudience": 7.2,
+   "criticsVsAudience": 7.8,
    "avgScore": 56,
    "lbN": 431,
-   "caN": 64
+   "caN": 73
   },
   {
    "key": "1940",
    "label": "1940s",
    "count": 574,
    "lbVsImdb": 0.2,
-   "criticsVsAudience": 3.8,
+   "criticsVsAudience": 4.7,
    "avgScore": 58,
    "lbN": 572,
-   "caN": 109
+   "caN": 123
   },
   {
    "key": "1950",
    "label": "1950s",
    "count": 968,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": -0.1,
+   "criticsVsAudience": 1.1,
    "avgScore": 56,
    "lbN": 964,
-   "caN": 166
+   "caN": 195
   },
   {
    "key": "1960",
    "label": "1960s",
-   "count": 1366,
+   "count": 1367,
    "lbVsImdb": 5,
-   "criticsVsAudience": -4.3,
+   "criticsVsAudience": -3.9,
    "avgScore": 54,
-   "lbN": 1361,
-   "caN": 243
+   "lbN": 1362,
+   "caN": 270
   },
   {
    "key": "1970",
    "label": "1970s",
    "count": 1847,
    "lbVsImdb": 5.5,
-   "criticsVsAudience": -6.2,
+   "criticsVsAudience": -5.5,
    "avgScore": 50,
    "lbN": 1841,
-   "caN": 342
+   "caN": 383
   },
   {
    "key": "1980",
    "label": "1980s",
    "count": 2221,
-   "lbVsImdb": 5.4,
-   "criticsVsAudience": -7.2,
+   "lbVsImdb": 5.5,
+   "criticsVsAudience": -6.7,
    "avgScore": 46,
    "lbN": 2217,
-   "caN": 713
+   "caN": 778
   },
   {
    "key": "1990",
    "label": "1990s",
    "count": 2713,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": -9.6,
-   "avgScore": 47,
+   "criticsVsAudience": -9.2,
+   "avgScore": 46,
    "lbN": 2693,
-   "caN": 1234
+   "caN": 1312
   },
   {
    "key": "2000",
    "label": "2000s",
-   "count": 4879,
+   "count": 4880,
    "lbVsImdb": 2.8,
-   "criticsVsAudience": -7.5,
+   "criticsVsAudience": -7,
    "avgScore": 44,
-   "lbN": 4723,
-   "caN": 2169
+   "lbN": 4724,
+   "caN": 2294
   },
   {
    "key": "2010",
    "label": "2010s",
-   "count": 11024,
+   "count": 11026,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -1,
+   "criticsVsAudience": -0.5,
    "avgScore": 43,
-   "lbN": 10486,
-   "caN": 2853
+   "lbN": 10488,
+   "caN": 3080
   },
   {
    "key": "2020",
    "label": "2020s",
-   "count": 8807,
+   "count": 8808,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": 5.5,
+   "criticsVsAudience": 5.9,
    "avgScore": 45,
-   "lbN": 7936,
-   "caN": 2180
+   "lbN": 7937,
+   "caN": 2324
   }
  ],
  "directors": [
@@ -378,7 +378,7 @@
    "label": "Robert Zemeckis",
    "count": 21,
    "lbVsImdb": -5.2,
-   "criticsVsAudience": -13.9,
+   "criticsVsAudience": -13.7,
    "avgScore": 58,
    "lbN": 21,
    "caN": 21
@@ -388,8 +388,8 @@
    "label": "Quentin Tarantino",
    "count": 12,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": -18.8,
-   "avgScore": 85,
+   "criticsVsAudience": -18.6,
+   "avgScore": 86,
    "lbN": 12,
    "caN": 12
   },
@@ -398,7 +398,7 @@
    "label": "Lana Wachowski",
    "count": 8,
    "lbVsImdb": 2.1,
-   "criticsVsAudience": -16.6,
+   "criticsVsAudience": -16.4,
    "avgScore": 51,
    "lbN": 8,
    "caN": 8
@@ -408,7 +408,7 @@
    "label": "Lilly Wachowski",
    "count": 7,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -23.9,
+   "criticsVsAudience": -23.6,
    "avgScore": 54,
    "lbN": 7,
    "caN": 7
@@ -418,17 +418,17 @@
    "label": "Francis Ford Coppola",
    "count": 27,
    "lbVsImdb": 5.4,
-   "criticsVsAudience": -6.2,
+   "criticsVsAudience": -5.1,
    "avgScore": 52,
    "lbN": 27,
-   "caN": 17
+   "caN": 19
   },
   {
    "key": "nm0001392",
    "label": "Peter Jackson",
    "count": 14,
    "lbVsImdb": -1.8,
-   "criticsVsAudience": -17.2,
+   "criticsVsAudience": -16.9,
    "avgScore": 73,
    "lbN": 14,
    "caN": 14
@@ -438,27 +438,27 @@
    "label": "Ridley Scott",
    "count": 30,
    "lbVsImdb": -7.9,
-   "criticsVsAudience": -9.8,
+   "criticsVsAudience": -8.8,
    "avgScore": 55,
    "lbN": 30,
-   "caN": 29
+   "caN": 30
   },
   {
    "key": "nm0000217",
    "label": "Martin Scorsese",
    "count": 32,
    "lbVsImdb": 3.2,
-   "criticsVsAudience": -8.1,
-   "avgScore": 77,
+   "criticsVsAudience": -6.2,
+   "avgScore": 78,
    "lbN": 32,
-   "caN": 26
+   "caN": 28
   },
   {
    "key": "nm0001129",
    "label": "Jonathan Demme",
    "count": 15,
-   "lbVsImdb": 8.2,
-   "criticsVsAudience": 9.4,
+   "lbVsImdb": 8.1,
+   "criticsVsAudience": 9.5,
    "avgScore": 58,
    "lbN": 15,
    "caN": 8
@@ -468,7 +468,7 @@
    "label": "Todd Phillips",
    "count": 12,
    "lbVsImdb": -9.9,
-   "criticsVsAudience": -10.8,
+   "criticsVsAudience": -10.6,
    "avgScore": 41,
    "lbN": 12,
    "caN": 11
@@ -478,7 +478,7 @@
    "label": "Steven Spielberg",
    "count": 34,
    "lbVsImdb": -5.1,
-   "criticsVsAudience": -8.3,
+   "criticsVsAudience": -8.2,
    "avgScore": 73,
    "lbN": 34,
    "caN": 34
@@ -488,7 +488,7 @@
    "label": "George Lucas",
    "count": 6,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": -6.7,
+   "criticsVsAudience": -6.5,
    "avgScore": 69,
    "lbN": 6,
    "caN": 6
@@ -498,17 +498,17 @@
    "label": "Irvin Kershner",
    "count": 6,
    "lbVsImdb": 2.7,
-   "criticsVsAudience": 9,
-   "avgScore": 46,
+   "criticsVsAudience": 6.8,
+   "avgScore": 45,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0000116",
    "label": "James Cameron",
    "count": 12,
    "lbVsImdb": -1.2,
-   "criticsVsAudience": -20.3,
+   "criticsVsAudience": -20.1,
    "avgScore": 72,
    "lbN": 12,
    "caN": 10
@@ -518,7 +518,7 @@
    "label": "Anthony Russo",
    "count": 9,
    "lbVsImdb": -10.8,
-   "criticsVsAudience": -13.3,
+   "criticsVsAudience": -13,
    "avgScore": 55,
    "lbN": 9,
    "caN": 9
@@ -528,7 +528,7 @@
    "label": "Joe Russo",
    "count": 9,
    "lbVsImdb": -10.8,
-   "criticsVsAudience": -13.3,
+   "criticsVsAudience": -13,
    "avgScore": 55,
    "lbN": 9,
    "caN": 9
@@ -538,10 +538,10 @@
    "label": "Peter Weir",
    "count": 13,
    "lbVsImdb": 3,
-   "criticsVsAudience": -5.5,
-   "avgScore": 70,
+   "criticsVsAudience": -3.8,
+   "avgScore": 71,
    "lbN": 13,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0348181",
@@ -558,17 +558,17 @@
    "label": "Luc Besson",
    "count": 19,
    "lbVsImdb": -5.5,
-   "criticsVsAudience": -20.9,
-   "avgScore": 45,
+   "criticsVsAudience": -19.6,
+   "avgScore": 44,
    "lbN": 19,
-   "caN": 15
+   "caN": 16
   },
   {
    "key": "nm0893659",
    "label": "Gore Verbinski",
    "count": 11,
    "lbVsImdb": -3.4,
-   "criticsVsAudience": -20.2,
+   "criticsVsAudience": -20.1,
    "avgScore": 52,
    "lbN": 11,
    "caN": 11
@@ -577,7 +577,7 @@
    "key": "nm0004056",
    "label": "Andrew Stanton",
    "count": 7,
-   "lbVsImdb": -15,
+   "lbVsImdb": -14.9,
    "criticsVsAudience": -1.1,
    "avgScore": 71,
    "lbN": 7,
@@ -598,7 +598,7 @@
    "label": "Rob Minkoff",
    "count": 8,
    "lbVsImdb": -2.8,
-   "criticsVsAudience": 5.1,
+   "criticsVsAudience": 5.6,
    "avgScore": 42,
    "lbN": 8,
    "caN": 7
@@ -608,7 +608,7 @@
    "label": "James McTeigue",
    "count": 5,
    "lbVsImdb": -9.2,
-   "criticsVsAudience": -18.8,
+   "criticsVsAudience": -18.6,
    "avgScore": 30,
    "lbN": 5,
    "caN": 5
@@ -618,7 +618,7 @@
    "label": "Bryan Singer",
    "count": 10,
    "lbVsImdb": -20.2,
-   "criticsVsAudience": -10.6,
+   "criticsVsAudience": -10.4,
    "avgScore": 59,
    "lbN": 10,
    "caN": 10
@@ -628,7 +628,7 @@
    "label": "Jon Favreau",
    "count": 10,
    "lbVsImdb": -16,
-   "criticsVsAudience": -0.6,
+   "criticsVsAudience": -0.2,
    "avgScore": 58,
    "lbN": 10,
    "caN": 10
@@ -637,9 +637,9 @@
    "key": "nm0000040",
    "label": "Stanley Kubrick",
    "count": 13,
-   "lbVsImdb": -3.1,
+   "lbVsImdb": -3,
    "criticsVsAudience": -5.5,
-   "avgScore": 82,
+   "avgScore": 83,
    "lbN": 13,
    "caN": 13
   },
@@ -648,7 +648,7 @@
    "label": "Gus Van Sant",
    "count": 16,
    "lbVsImdb": 8.5,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.6,
    "avgScore": 58,
    "lbN": 16,
    "caN": 16
@@ -668,7 +668,7 @@
    "label": "George Miller",
    "count": 12,
    "lbVsImdb": 0.3,
-   "criticsVsAudience": 8.8,
+   "criticsVsAudience": 8.9,
    "avgScore": 62,
    "lbN": 12,
    "caN": 12
@@ -678,7 +678,7 @@
    "label": "Ethan Coen",
    "count": 20,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -2.2,
+   "criticsVsAudience": -2.1,
    "avgScore": 71,
    "lbN": 20,
    "caN": 20
@@ -688,7 +688,7 @@
    "label": "Joel Coen",
    "count": 19,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": -4.5,
+   "criticsVsAudience": -4.3,
    "avgScore": 77,
    "lbN": 19,
    "caN": 19
@@ -711,24 +711,24 @@
    "criticsVsAudience": -2.1,
    "avgScore": 82,
    "lbN": 9,
-   "caN": 7
+   "caN": 9
   },
   {
    "key": "nm0327273",
    "label": "Michel Gondry",
    "count": 10,
    "lbVsImdb": 8.6,
-   "criticsVsAudience": -4.7,
+   "criticsVsAudience": -5.4,
    "avgScore": 52,
    "lbN": 10,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000154",
    "label": "Mel Gibson",
    "count": 6,
    "lbVsImdb": -4.3,
-   "criticsVsAudience": -25.8,
+   "criticsVsAudience": -25.7,
    "avgScore": 60,
    "lbN": 6,
    "caN": 6
@@ -738,10 +738,10 @@
    "label": "Miloš Forman",
    "count": 10,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": -19.3,
-   "avgScore": 70,
+   "criticsVsAudience": -15.9,
+   "avgScore": 71,
    "lbN": 10,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0796117",
@@ -768,7 +768,7 @@
    "label": "Denis Villeneuve",
    "count": 11,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -15.9,
    "avgScore": 78,
    "lbN": 11,
    "caN": 9
@@ -777,8 +777,8 @@
    "key": "nm1218281",
    "label": "Jon Watts",
    "count": 6,
-   "lbVsImdb": -6.8,
-   "criticsVsAudience": 2.5,
+   "lbVsImdb": -6.7,
+   "criticsVsAudience": 2.7,
    "avgScore": 61,
    "lbN": 6,
    "caN": 6
@@ -788,7 +788,7 @@
    "label": "Ron Howard",
    "count": 30,
    "lbVsImdb": -6.7,
-   "criticsVsAudience": -9.7,
+   "criticsVsAudience": -9.4,
    "avgScore": 54,
    "lbN": 30,
    "caN": 27
@@ -798,7 +798,7 @@
    "label": "David Yates",
    "count": 9,
    "lbVsImdb": -19.2,
-   "criticsVsAudience": -15.2,
+   "criticsVsAudience": -15,
    "avgScore": 57,
    "lbN": 9,
    "caN": 9
@@ -808,7 +808,7 @@
    "label": "John McTiernan",
    "count": 11,
    "lbVsImdb": -2.5,
-   "criticsVsAudience": -24.3,
+   "criticsVsAudience": -24.1,
    "avgScore": 46,
    "lbN": 11,
    "caN": 10
@@ -818,7 +818,7 @@
    "label": "Brian De Palma",
    "count": 26,
    "lbVsImdb": 10.8,
-   "criticsVsAudience": -7.4,
+   "criticsVsAudience": -7.3,
    "avgScore": 50,
    "lbN": 26,
    "caN": 19
@@ -838,7 +838,7 @@
    "label": "Roman Polanski",
    "count": 20,
    "lbVsImdb": -1.2,
-   "criticsVsAudience": -8.6,
+   "criticsVsAudience": -8.5,
    "avgScore": 72,
    "lbN": 20,
    "caN": 19
@@ -858,7 +858,7 @@
    "label": "Sam Raimi",
    "count": 16,
    "lbVsImdb": -2.3,
-   "criticsVsAudience": -4.1,
+   "criticsVsAudience": -4,
    "avgScore": 61,
    "lbN": 16,
    "caN": 15
@@ -868,7 +868,7 @@
    "label": "Joe Johnston",
    "count": 9,
    "lbVsImdb": 0.4,
-   "criticsVsAudience": -10.4,
+   "criticsVsAudience": -10.3,
    "avgScore": 46,
    "lbN": 9,
    "caN": 9
@@ -878,7 +878,7 @@
    "label": "Wes Anderson",
    "count": 12,
    "lbVsImdb": 7.7,
-   "criticsVsAudience": -9.6,
+   "criticsVsAudience": -9.5,
    "avgScore": 80,
    "lbN": 12,
    "caN": 12
@@ -908,7 +908,7 @@
    "label": "Darren Aronofsky",
    "count": 9,
    "lbVsImdb": 0.4,
-   "criticsVsAudience": -11.6,
+   "criticsVsAudience": -11.3,
    "avgScore": 71,
    "lbN": 9,
    "caN": 9
@@ -928,17 +928,17 @@
    "label": "Kenneth Branagh",
    "count": 18,
    "lbVsImdb": -9.6,
-   "criticsVsAudience": 3.1,
+   "criticsVsAudience": 1.9,
    "avgScore": 50,
    "lbN": 18,
-   "caN": 14
+   "caN": 15
   },
   {
    "key": "nm0001060",
    "label": "Chris Columbus",
    "count": 15,
    "lbVsImdb": -2.5,
-   "criticsVsAudience": -21,
+   "criticsVsAudience": -20.7,
    "avgScore": 46,
    "lbN": 15,
    "caN": 15
@@ -958,7 +958,7 @@
    "label": "Alejandro G. Iñárritu",
    "count": 8,
    "lbVsImdb": 1.9,
-   "criticsVsAudience": -26,
+   "criticsVsAudience": -25.9,
    "avgScore": 75,
    "lbN": 8,
    "caN": 8
@@ -978,7 +978,7 @@
    "label": "James Mangold",
    "count": 12,
    "lbVsImdb": -8.6,
-   "criticsVsAudience": -13.7,
+   "criticsVsAudience": -13.6,
    "avgScore": 65,
    "lbN": 12,
    "caN": 12
@@ -998,7 +998,7 @@
    "label": "Zack Snyder",
    "count": 12,
    "lbVsImdb": -18.2,
-   "criticsVsAudience": -15,
+   "criticsVsAudience": -14.8,
    "avgScore": 39,
    "lbN": 12,
    "caN": 12
@@ -1008,7 +1008,7 @@
    "label": "Danny Boyle",
    "count": 14,
    "lbVsImdb": -5.9,
-   "criticsVsAudience": -7.3,
+   "criticsVsAudience": -7.1,
    "avgScore": 67,
    "lbN": 14,
    "caN": 14
@@ -1048,8 +1048,8 @@
    "label": "Joseph Kosinski",
    "count": 6,
    "lbVsImdb": -9.5,
-   "criticsVsAudience": -12.8,
-   "avgScore": 61,
+   "criticsVsAudience": -12.7,
+   "avgScore": 62,
    "lbN": 6,
    "caN": 6
   },
@@ -1088,7 +1088,7 @@
    "label": "Rian Johnson",
    "count": 7,
    "lbVsImdb": -8.7,
-   "criticsVsAudience": 3.6,
+   "criticsVsAudience": 3.7,
    "avgScore": 77,
    "lbN": 7,
    "caN": 7
@@ -1098,7 +1098,7 @@
    "label": "Francis Lawrence",
    "count": 10,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": -20.4,
+   "criticsVsAudience": -20.3,
    "avgScore": 59,
    "lbN": 10,
    "caN": 10
@@ -1118,7 +1118,7 @@
    "label": "Clint Eastwood",
    "count": 38,
    "lbVsImdb": -4.3,
-   "criticsVsAudience": -7,
+   "criticsVsAudience": -6.9,
    "avgScore": 62,
    "lbN": 38,
    "caN": 36
@@ -1128,7 +1128,7 @@
    "label": "Jean-Pierre Jeunet",
    "count": 8,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": -11.4,
+   "criticsVsAudience": -11.3,
    "avgScore": 62,
    "lbN": 8,
    "caN": 7
@@ -1138,7 +1138,7 @@
    "label": "Robert Rodriguez",
    "count": 24,
    "lbVsImdb": -2.3,
-   "criticsVsAudience": 2.5,
+   "criticsVsAudience": 2.7,
    "avgScore": 41,
    "lbN": 24,
    "caN": 20
@@ -1148,7 +1148,7 @@
    "label": "Andrew Adamson",
    "count": 6,
    "lbVsImdb": 2.7,
-   "criticsVsAudience": -10.7,
+   "criticsVsAudience": -10.5,
    "avgScore": 69,
    "lbN": 6,
    "caN": 4
@@ -1158,7 +1158,7 @@
    "label": "Michael Mann",
    "count": 12,
    "lbVsImdb": 7,
-   "criticsVsAudience": -3.9,
+   "criticsVsAudience": -3.8,
    "avgScore": 63,
    "lbN": 12,
    "caN": 12
@@ -1168,8 +1168,8 @@
    "label": "Doug Liman",
    "count": 12,
    "lbVsImdb": -7.3,
-   "criticsVsAudience": -5.2,
-   "avgScore": 53,
+   "criticsVsAudience": -5,
+   "avgScore": 54,
    "lbN": 12,
    "caN": 12
   },
@@ -1178,7 +1178,7 @@
    "label": "Peyton Reed",
    "count": 7,
    "lbVsImdb": -8.3,
-   "criticsVsAudience": -2,
+   "criticsVsAudience": -1.6,
    "avgScore": 42,
    "lbN": 7,
    "caN": 7
@@ -1188,7 +1188,7 @@
    "label": "Marc Forster",
    "count": 12,
    "lbVsImdb": -11,
-   "criticsVsAudience": -21.5,
+   "criticsVsAudience": -21.4,
    "avgScore": 57,
    "lbN": 12,
    "caN": 11
@@ -1198,10 +1198,10 @@
    "label": "Alfred Hitchcock",
    "count": 51,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": 2.1,
+   "criticsVsAudience": 3.7,
    "avgScore": 66,
    "lbN": 51,
-   "caN": 32
+   "caN": 36
   },
   {
    "key": "nm2588606",
@@ -1218,7 +1218,7 @@
    "label": "Marc Webb",
    "count": 6,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": -12.5,
+   "criticsVsAudience": -12.3,
    "avgScore": 51,
    "lbN": 6,
    "caN": 6
@@ -1238,7 +1238,7 @@
    "label": "Louis Leterrier",
    "count": 9,
    "lbVsImdb": -15.3,
-   "criticsVsAudience": -4.4,
+   "criticsVsAudience": -4,
    "avgScore": 34,
    "lbN": 9,
    "caN": 8
@@ -1258,7 +1258,7 @@
    "label": "Nicolas Winding Refn",
    "count": 10,
    "lbVsImdb": 10.3,
-   "criticsVsAudience": 0.1,
+   "criticsVsAudience": 0.3,
    "avgScore": 56,
    "lbN": 10,
    "caN": 9
@@ -1267,8 +1267,8 @@
    "key": "nm0043742",
    "label": "David Ayer",
    "count": 11,
-   "lbVsImdb": -14.5,
-   "criticsVsAudience": -8.1,
+   "lbVsImdb": -14.4,
+   "criticsVsAudience": -8,
    "avgScore": 39,
    "lbN": 11,
    "caN": 11
@@ -1277,7 +1277,7 @@
    "key": "nm1757929",
    "label": "Gareth Edwards",
    "count": 5,
-   "lbVsImdb": -0.8,
+   "lbVsImdb": -0.9,
    "criticsVsAudience": 2.4,
    "avgScore": 51,
    "lbN": 5,
@@ -1288,7 +1288,7 @@
    "label": "Mike Newell",
    "count": 12,
    "lbVsImdb": -3.3,
-   "criticsVsAudience": -13,
+   "criticsVsAudience": -12.6,
    "avgScore": 52,
    "lbN": 12,
    "caN": 8
@@ -1297,7 +1297,7 @@
    "key": "nm0500610",
    "label": "David Leitch",
    "count": 5,
-   "lbVsImdb": -10.6,
+   "lbVsImdb": -10.7,
    "criticsVsAudience": -12.8,
    "avgScore": 62,
    "lbN": 5,
@@ -1307,8 +1307,8 @@
    "key": "nm0088955",
    "label": "Neill Blomkamp",
    "count": 5,
-   "lbVsImdb": -15.4,
-   "criticsVsAudience": -24.5,
+   "lbVsImdb": -15.3,
+   "criticsVsAudience": -23.7,
    "avgScore": 47,
    "lbN": 5,
    "caN": 4
@@ -1318,7 +1318,7 @@
    "label": "Martin Campbell",
    "count": 17,
    "lbVsImdb": -3.5,
-   "criticsVsAudience": -6.4,
+   "criticsVsAudience": -6.1,
    "avgScore": 38,
    "lbN": 17,
    "caN": 14
@@ -1328,7 +1328,7 @@
    "label": "Guillermo del Toro",
    "count": 14,
    "lbVsImdb": 5.5,
-   "criticsVsAudience": -5.1,
+   "criticsVsAudience": -5.2,
    "avgScore": 70,
    "lbN": 14,
    "caN": 13
@@ -1338,7 +1338,7 @@
    "label": "Harold Ramis",
    "count": 11,
    "lbVsImdb": -1.4,
-   "criticsVsAudience": -2.1,
+   "criticsVsAudience": -2,
    "avgScore": 41,
    "lbN": 11,
    "caN": 9
@@ -1358,7 +1358,7 @@
    "label": "Spike Jonze",
    "count": 5,
    "lbVsImdb": 6.2,
-   "criticsVsAudience": -2.5,
+   "criticsVsAudience": -2.2,
    "avgScore": 84,
    "lbN": 5,
    "caN": 4
@@ -1378,7 +1378,7 @@
    "label": "Michael Bay",
    "count": 15,
    "lbVsImdb": -9.9,
-   "criticsVsAudience": -20.5,
+   "criticsVsAudience": -20.2,
    "avgScore": 35,
    "lbN": 15,
    "caN": 15
@@ -1388,7 +1388,7 @@
    "label": "Chris Buck",
    "count": 5,
    "lbVsImdb": -1,
-   "criticsVsAudience": -2,
+   "criticsVsAudience": -1.8,
    "avgScore": 63,
    "lbN": 5,
    "caN": 5
@@ -1408,7 +1408,7 @@
    "label": "Peter Farrelly",
    "count": 16,
    "lbVsImdb": -10.6,
-   "criticsVsAudience": -2.5,
+   "criticsVsAudience": -2.2,
    "avgScore": 35,
    "lbN": 16,
    "caN": 16
@@ -1418,7 +1418,7 @@
    "label": "Ang Lee",
    "count": 14,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": -2.8,
+   "criticsVsAudience": -2.6,
    "avgScore": 65,
    "lbN": 14,
    "caN": 13
@@ -1438,7 +1438,7 @@
    "label": "Nick Cassavetes",
    "count": 9,
    "lbVsImdb": -2.9,
-   "criticsVsAudience": -44.8,
+   "criticsVsAudience": -44.4,
    "avgScore": 42,
    "lbN": 9,
    "caN": 5
@@ -1448,7 +1448,7 @@
    "label": "John G. Avildsen",
    "count": 14,
    "lbVsImdb": 4.9,
-   "criticsVsAudience": -10.5,
+   "criticsVsAudience": -10.3,
    "avgScore": 47,
    "lbN": 14,
    "caN": 6
@@ -1468,7 +1468,7 @@
    "label": "Edgar Wright",
    "count": 7,
    "lbVsImdb": 0.8,
-   "criticsVsAudience": -9.3,
+   "criticsVsAudience": -9,
    "avgScore": 78,
    "lbN": 7,
    "caN": 7
@@ -1488,17 +1488,17 @@
    "label": "Steven Soderbergh",
    "count": 30,
    "lbVsImdb": 6.3,
-   "criticsVsAudience": 15,
-   "avgScore": 59,
+   "criticsVsAudience": 16.1,
+   "avgScore": 60,
    "lbN": 30,
-   "caN": 28
+   "caN": 29
   },
   {
    "key": "nm0000416",
    "label": "Terry Gilliam",
    "count": 13,
    "lbVsImdb": 2.7,
-   "criticsVsAudience": -8.2,
+   "criticsVsAudience": -8,
    "avgScore": 60,
    "lbN": 13,
    "caN": 13
@@ -1508,7 +1508,7 @@
    "label": "Adam McKay",
    "count": 8,
    "lbVsImdb": -8.3,
-   "criticsVsAudience": -11.1,
+   "criticsVsAudience": -10.7,
    "avgScore": 58,
    "lbN": 8,
    "caN": 8
@@ -1518,17 +1518,17 @@
    "label": "Pierre Morel",
    "count": 8,
    "lbVsImdb": -12.5,
-   "criticsVsAudience": -20.3,
-   "avgScore": 34,
+   "criticsVsAudience": -19.3,
+   "avgScore": 32,
    "lbN": 8,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0281508",
    "label": "Ruben Fleischer",
    "count": 7,
-   "lbVsImdb": -20.5,
-   "criticsVsAudience": -10.1,
+   "lbVsImdb": -20.4,
+   "criticsVsAudience": -10,
    "avgScore": 39,
    "lbN": 7,
    "caN": 7
@@ -1568,7 +1568,7 @@
    "label": "Barry Sonnenfeld",
    "count": 11,
    "lbVsImdb": 1.2,
-   "criticsVsAudience": -7.5,
+   "criticsVsAudience": -7.1,
    "avgScore": 41,
    "lbN": 11,
    "caN": 11
@@ -1578,7 +1578,7 @@
    "label": "Curtis Hanson",
    "count": 12,
    "lbVsImdb": 2.5,
-   "criticsVsAudience": -9.1,
+   "criticsVsAudience": -8.7,
    "avgScore": 54,
    "lbN": 12,
    "caN": 8
@@ -1588,10 +1588,10 @@
    "label": "Michael Curtiz",
    "count": 33,
    "lbVsImdb": -2.4,
-   "criticsVsAudience": 1.4,
+   "criticsVsAudience": -3.2,
    "avgScore": 59,
    "lbN": 33,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0520488",
@@ -1618,7 +1618,7 @@
    "label": "Neil Burger",
    "count": 8,
    "lbVsImdb": -13.6,
-   "criticsVsAudience": -17.2,
+   "criticsVsAudience": -17,
    "avgScore": 43,
    "lbN": 8,
    "caN": 8
@@ -1628,7 +1628,7 @@
    "label": "Roland Emmerich",
    "count": 15,
    "lbVsImdb": -11.6,
-   "criticsVsAudience": -9.8,
+   "criticsVsAudience": -9.5,
    "avgScore": 30,
    "lbN": 15,
    "caN": 13
@@ -1638,16 +1638,16 @@
    "label": "Wolfgang Petersen",
    "count": 10,
    "lbVsImdb": -3.6,
-   "criticsVsAudience": -9.1,
-   "avgScore": 58,
+   "criticsVsAudience": -9.9,
+   "avgScore": 57,
    "lbN": 10,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0397174",
    "label": "Byron Howard",
    "count": 5,
-   "lbVsImdb": -6.5,
+   "lbVsImdb": -6.4,
    "criticsVsAudience": -4,
    "avgScore": 82,
    "lbN": 5,
@@ -1698,7 +1698,7 @@
    "label": "James Wan",
    "count": 11,
    "lbVsImdb": -14.9,
-   "criticsVsAudience": -22.2,
+   "criticsVsAudience": -22.1,
    "avgScore": 49,
    "lbN": 11,
    "caN": 11
@@ -1708,7 +1708,7 @@
    "label": "Gabriele Muccino",
    "count": 6,
    "lbVsImdb": -9,
-   "criticsVsAudience": -46.7,
+   "criticsVsAudience": -46.5,
    "avgScore": 43,
    "lbN": 6,
    "caN": 4
@@ -1718,7 +1718,7 @@
    "label": "Edward Zwick",
    "count": 13,
    "lbVsImdb": -7.7,
-   "criticsVsAudience": -17.4,
+   "criticsVsAudience": -17.2,
    "avgScore": 56,
    "lbN": 13,
    "caN": 12
@@ -1728,7 +1728,7 @@
    "label": "Alex Proyas",
    "count": 7,
    "lbVsImdb": -6,
-   "criticsVsAudience": -13.4,
+   "criticsVsAudience": -13.2,
    "avgScore": 47,
    "lbN": 7,
    "caN": 5
@@ -1737,9 +1737,9 @@
    "key": "nm1732981",
    "label": "Martin McDonagh",
    "count": 5,
-   "lbVsImdb": 6,
-   "criticsVsAudience": -7.4,
-   "avgScore": 83,
+   "lbVsImdb": 7.2,
+   "criticsVsAudience": -6.8,
+   "avgScore": 84,
    "lbN": 5,
    "caN": 5
   },
@@ -1747,9 +1747,9 @@
    "key": "nm0551128",
    "label": "Rob Marshall",
    "count": 7,
-   "lbVsImdb": -14.7,
-   "criticsVsAudience": -1,
-   "avgScore": 47,
+   "lbVsImdb": -14.8,
+   "criticsVsAudience": -0.4,
+   "avgScore": 48,
    "lbN": 7,
    "caN": 7
   },
@@ -1758,7 +1758,7 @@
    "label": "Rupert Wyatt",
    "count": 5,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": 1.5,
+   "criticsVsAudience": 2,
    "avgScore": 40,
    "lbN": 5,
    "caN": 4
@@ -1778,7 +1778,7 @@
    "label": "Shawn Levy",
    "count": 14,
    "lbVsImdb": -6,
-   "criticsVsAudience": -11.4,
+   "criticsVsAudience": -11,
    "avgScore": 36,
    "lbN": 14,
    "caN": 14
@@ -1788,17 +1788,17 @@
    "label": "Barry Levinson",
    "count": 22,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": -0.5,
+   "criticsVsAudience": -0.9,
    "avgScore": 45,
    "lbN": 22,
-   "caN": 17
+   "caN": 18
   },
   {
    "key": "nm0711840",
    "label": "Brett Ratner",
    "count": 11,
-   "lbVsImdb": -7.7,
-   "criticsVsAudience": -13.2,
+   "lbVsImdb": -7.8,
+   "criticsVsAudience": -13.1,
    "avgScore": 35,
    "lbN": 11,
    "caN": 11
@@ -1808,7 +1808,7 @@
    "label": "Tim Burton",
    "count": 20,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": -11.5,
+   "criticsVsAudience": -11.4,
    "avgScore": 63,
    "lbN": 20,
    "caN": 20
@@ -1828,7 +1828,7 @@
    "label": "Jason Reitman",
    "count": 10,
    "lbVsImdb": -9.9,
-   "criticsVsAudience": -4.9,
+   "criticsVsAudience": -4.8,
    "avgScore": 59,
    "lbN": 10,
    "caN": 10
@@ -1838,17 +1838,17 @@
    "label": "David Frankel",
    "count": 9,
    "lbVsImdb": -7.6,
-   "criticsVsAudience": -15.9,
-   "avgScore": 48,
+   "criticsVsAudience": -15.1,
+   "avgScore": 47,
    "lbN": 9,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0757858",
    "label": "Carlos Saldanha",
    "count": 8,
    "lbVsImdb": -8.5,
-   "criticsVsAudience": -16.9,
+   "criticsVsAudience": -16.6,
    "avgScore": 50,
    "lbN": 8,
    "caN": 7
@@ -1878,7 +1878,7 @@
    "label": "Don Hall",
    "count": 5,
    "lbVsImdb": -8.1,
-   "criticsVsAudience": 5.8,
+   "criticsVsAudience": 6.4,
    "avgScore": 75,
    "lbN": 5,
    "caN": 5
@@ -1888,7 +1888,7 @@
    "label": "Tony Scott",
    "count": 16,
    "lbVsImdb": 1.1,
-   "criticsVsAudience": -22.1,
+   "criticsVsAudience": -21.9,
    "avgScore": 51,
    "lbN": 16,
    "caN": 16
@@ -1908,7 +1908,7 @@
    "label": "Jean-Marc Vallée",
    "count": 6,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": -18.3,
+   "criticsVsAudience": -18.2,
    "avgScore": 74,
    "lbN": 6,
    "caN": 6
@@ -1918,7 +1918,7 @@
    "label": "Peter Berg",
    "count": 11,
    "lbVsImdb": -15.6,
-   "criticsVsAudience": -9.4,
+   "criticsVsAudience": -9.3,
    "avgScore": 45,
    "lbN": 11,
    "caN": 11
@@ -1927,8 +1927,8 @@
    "key": "nm0565336",
    "label": "Tom McCarthy",
    "count": 6,
-   "lbVsImdb": -5.3,
-   "criticsVsAudience": 0.5,
+   "lbVsImdb": -5.2,
+   "criticsVsAudience": 0.3,
    "avgScore": 68,
    "lbN": 6,
    "caN": 6
@@ -1938,7 +1938,7 @@
    "label": "John Carpenter",
    "count": 18,
    "lbVsImdb": 5,
-   "criticsVsAudience": -10.3,
+   "criticsVsAudience": -9.8,
    "avgScore": 51,
    "lbN": 18,
    "caN": 18
@@ -1948,10 +1948,10 @@
    "label": "Catherine Hardwicke",
    "count": 10,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": -10.4,
-   "avgScore": 37,
+   "criticsVsAudience": -9.4,
+   "avgScore": 36,
    "lbN": 10,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0001068",
@@ -1959,7 +1959,7 @@
    "count": 8,
    "lbVsImdb": 18.8,
    "criticsVsAudience": 14.8,
-   "avgScore": 61,
+   "avgScore": 62,
    "lbN": 8,
    "caN": 8
   },
@@ -1978,7 +1978,7 @@
    "label": "Tate Taylor",
    "count": 7,
    "lbVsImdb": -6,
-   "criticsVsAudience": -3,
+   "criticsVsAudience": -2.6,
    "avgScore": 38,
    "lbN": 7,
    "caN": 5
@@ -1989,7 +1989,7 @@
    "count": 6,
    "lbVsImdb": -12.3,
    "criticsVsAudience": -6.6,
-   "avgScore": 35,
+   "avgScore": 36,
    "lbN": 6,
    "caN": 5
   },
@@ -1998,17 +1998,17 @@
    "label": "Antoine Fuqua",
    "count": 17,
    "lbVsImdb": -11.2,
-   "criticsVsAudience": -24,
+   "criticsVsAudience": -22.9,
    "avgScore": 44,
    "lbN": 17,
-   "caN": 16
+   "caN": 17
   },
   {
    "key": "nm0440458",
    "label": "Jake Kasdan",
    "count": 9,
    "lbVsImdb": -8.4,
-   "criticsVsAudience": -3.1,
+   "criticsVsAudience": -3,
    "avgScore": 38,
    "lbN": 9,
    "caN": 8
@@ -2018,17 +2018,17 @@
    "label": "James Marsh",
    "count": 8,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": -2.3,
-   "avgScore": 52,
+   "criticsVsAudience": 7.5,
+   "avgScore": 54,
    "lbN": 8,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0814085",
    "label": "Stephen Sommers",
    "count": 8,
    "lbVsImdb": -4.8,
-   "criticsVsAudience": -11,
+   "criticsVsAudience": -10.7,
    "avgScore": 34,
    "lbN": 8,
    "caN": 7
@@ -2038,7 +2038,7 @@
    "label": "Judd Apatow",
    "count": 7,
    "lbVsImdb": -14.6,
-   "criticsVsAudience": 21.9,
+   "criticsVsAudience": 22,
    "avgScore": 46,
    "lbN": 7,
    "caN": 7
@@ -2048,7 +2048,7 @@
    "label": "Ron Clements",
    "count": 7,
    "lbVsImdb": 2.2,
-   "criticsVsAudience": -12.7,
+   "criticsVsAudience": -12.6,
    "avgScore": 83,
    "lbN": 7,
    "caN": 7
@@ -2058,7 +2058,7 @@
    "label": "John Musker",
    "count": 6,
    "lbVsImdb": 1.8,
-   "criticsVsAudience": -13.2,
+   "criticsVsAudience": -13,
    "avgScore": 85,
    "lbN": 6,
    "caN": 6
@@ -2068,7 +2068,7 @@
    "label": "William Friedkin",
    "count": 17,
    "lbVsImdb": 10.8,
-   "criticsVsAudience": -10.9,
+   "criticsVsAudience": -10.7,
    "avgScore": 50,
    "lbN": 17,
    "caN": 11
@@ -2088,7 +2088,7 @@
    "label": "Kathryn Bigelow",
    "count": 10,
    "lbVsImdb": -0.9,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.6,
    "avgScore": 64,
    "lbN": 10,
    "caN": 9
@@ -2098,7 +2098,7 @@
    "label": "Ben Stiller",
    "count": 7,
    "lbVsImdb": 9,
-   "criticsVsAudience": -1.9,
+   "criticsVsAudience": -1.7,
    "avgScore": 50,
    "lbN": 7,
    "caN": 7
@@ -2118,17 +2118,17 @@
    "label": "Rob Reiner",
    "count": 22,
    "lbVsImdb": -4.2,
-   "criticsVsAudience": -15.3,
+   "criticsVsAudience": -15,
    "avgScore": 52,
    "lbN": 22,
-   "caN": 16
+   "caN": 18
   },
   {
    "key": "nm0914132",
    "label": "Mark Waters",
    "count": 13,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": -2.3,
+   "criticsVsAudience": -2.1,
    "avgScore": 33,
    "lbN": 13,
    "caN": 12
@@ -2138,7 +2138,7 @@
    "label": "Seth Gordon",
    "count": 7,
    "lbVsImdb": -8.2,
-   "criticsVsAudience": -0.3,
+   "criticsVsAudience": -0.2,
    "avgScore": 34,
    "lbN": 7,
    "caN": 6
@@ -2148,7 +2148,7 @@
    "label": "Ivan Reitman",
    "count": 15,
    "lbVsImdb": -3.6,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.2,
    "avgScore": 38,
    "lbN": 15,
    "caN": 14
@@ -2158,7 +2158,7 @@
    "label": "Rajkumar Hirani",
    "count": 6,
    "lbVsImdb": -15.6,
-   "criticsVsAudience": -28.5,
+   "criticsVsAudience": -28.2,
    "avgScore": 69,
    "lbN": 6,
    "caN": 4
@@ -2169,7 +2169,7 @@
    "count": 7,
    "lbVsImdb": -11.1,
    "criticsVsAudience": -9.3,
-   "avgScore": 42,
+   "avgScore": 43,
    "lbN": 7,
    "caN": 7
   },
@@ -2208,7 +2208,7 @@
    "label": "Chuck Russell",
    "count": 9,
    "lbVsImdb": 5,
-   "criticsVsAudience": -7.9,
+   "criticsVsAudience": -7.7,
    "avgScore": 31,
    "lbN": 9,
    "caN": 7
@@ -2218,17 +2218,17 @@
    "label": "John Hughes",
    "count": 8,
    "lbVsImdb": -8.6,
-   "criticsVsAudience": -20,
+   "criticsVsAudience": -18.1,
    "avgScore": 56,
    "lbN": 8,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0000231",
    "label": "Oliver Stone",
    "count": 22,
    "lbVsImdb": -4,
-   "criticsVsAudience": -10.6,
+   "criticsVsAudience": -10.5,
    "avgScore": 55,
    "lbN": 22,
    "caN": 18
@@ -2238,7 +2238,7 @@
    "label": "Tom Shadyac",
    "count": 8,
    "lbVsImdb": -6.2,
-   "criticsVsAudience": -18.1,
+   "criticsVsAudience": -17.7,
    "avgScore": 40,
    "lbN": 8,
    "caN": 7
@@ -2248,17 +2248,17 @@
    "label": "Woody Allen",
    "count": 50,
    "lbVsImdb": -4.7,
-   "criticsVsAudience": -5.1,
+   "criticsVsAudience": -4.3,
    "avgScore": 60,
    "lbN": 50,
-   "caN": 47
+   "caN": 48
   },
   {
    "key": "nm0919369",
    "label": "Paul Weitz",
    "count": 13,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": 5.2,
+   "criticsVsAudience": 5.4,
    "avgScore": 36,
    "lbN": 13,
    "caN": 11
@@ -2268,20 +2268,20 @@
    "label": "Victor Fleming",
    "count": 9,
    "lbVsImdb": -2.4,
-   "criticsVsAudience": -2.5,
+   "criticsVsAudience": 1.3,
    "avgScore": 65,
    "lbN": 9,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0002030",
    "label": "George Cukor",
    "count": 16,
    "lbVsImdb": -0.7,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.8,
    "avgScore": 73,
    "lbN": 16,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0851537",
@@ -2308,10 +2308,10 @@
    "label": "Wes Craven",
    "count": 20,
    "lbVsImdb": 7.3,
-   "criticsVsAudience": 7.6,
-   "avgScore": 38,
+   "criticsVsAudience": 6.7,
+   "avgScore": 37,
    "lbN": 20,
-   "caN": 16
+   "caN": 17
   },
   {
    "key": "nm0000431",
@@ -2328,8 +2328,8 @@
    "label": "Christopher McQuarrie",
    "count": 6,
    "lbVsImdb": -6,
-   "criticsVsAudience": -11.2,
-   "avgScore": 72,
+   "criticsVsAudience": -10.8,
+   "avgScore": 73,
    "lbN": 6,
    "caN": 6
   },
@@ -2348,7 +2348,7 @@
    "label": "Brad Anderson",
    "count": 12,
    "lbVsImdb": -2.4,
-   "criticsVsAudience": -1.4,
+   "criticsVsAudience": -1.3,
    "avgScore": 43,
    "lbN": 12,
    "caN": 9
@@ -2369,7 +2369,7 @@
    "count": 5,
    "lbVsImdb": -6.1,
    "criticsVsAudience": 6.8,
-   "avgScore": 42,
+   "avgScore": 43,
    "lbN": 5,
    "caN": 4
   },
@@ -2388,7 +2388,7 @@
    "label": "Len Wiseman",
    "count": 5,
    "lbVsImdb": -31.9,
-   "criticsVsAudience": -17.8,
+   "criticsVsAudience": -17.6,
    "avgScore": 41,
    "lbN": 5,
    "caN": 5
@@ -2398,7 +2398,7 @@
    "label": "David Lynch",
    "count": 11,
    "lbVsImdb": 6.3,
-   "criticsVsAudience": -22.8,
+   "criticsVsAudience": -22.7,
    "avgScore": 74,
    "lbN": 11,
    "caN": 10
@@ -2418,17 +2418,17 @@
    "label": "John Woo",
    "count": 20,
    "lbVsImdb": 1.8,
-   "criticsVsAudience": 8.2,
-   "avgScore": 58,
+   "criticsVsAudience": 4.7,
+   "avgScore": 57,
    "lbN": 20,
-   "caN": 12
+   "caN": 14
   },
   {
    "key": "nm0067457",
    "label": "Timur Bekmambetov",
    "count": 7,
-   "lbVsImdb": -10.3,
-   "criticsVsAudience": 0.2,
+   "lbVsImdb": -10.4,
+   "criticsVsAudience": 0.5,
    "avgScore": 34,
    "lbN": 7,
    "caN": 6
@@ -2438,7 +2438,7 @@
    "label": "Spike Lee",
    "count": 20,
    "lbVsImdb": 9.7,
-   "criticsVsAudience": 3.2,
+   "criticsVsAudience": 3.3,
    "avgScore": 62,
    "lbN": 20,
    "caN": 15
@@ -2458,7 +2458,7 @@
    "label": "Susanne Bier",
    "count": 9,
    "lbVsImdb": -12.6,
-   "criticsVsAudience": -5.9,
+   "criticsVsAudience": -5.7,
    "avgScore": 51,
    "lbN": 9,
    "caN": 7
@@ -2478,16 +2478,16 @@
    "label": "Peter Segal",
    "count": 12,
    "lbVsImdb": -10.8,
-   "criticsVsAudience": -10.8,
-   "avgScore": 33,
+   "criticsVsAudience": -10.9,
+   "avgScore": 32,
    "lbN": 12,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0899121",
    "label": "Thomas Vinterberg",
    "count": 8,
-   "lbVsImdb": 1.6,
+   "lbVsImdb": 1.5,
    "criticsVsAudience": -9.4,
    "avgScore": 70,
    "lbN": 8,
@@ -2498,7 +2498,7 @@
    "label": "David F. Sandberg",
    "count": 5,
    "lbVsImdb": -22.6,
-   "criticsVsAudience": 14.4,
+   "criticsVsAudience": 14.6,
    "avgScore": 41,
    "lbN": 5,
    "caN": 5
@@ -2518,17 +2518,17 @@
    "label": "Garry Marshall",
    "count": 15,
    "lbVsImdb": 10,
-   "criticsVsAudience": -21.8,
-   "avgScore": 33,
+   "criticsVsAudience": -22.3,
+   "avgScore": 32,
    "lbN": 15,
-   "caN": 12
+   "caN": 13
   },
   {
    "key": "nm0336620",
    "label": "F. Gary Gray",
    "count": 11,
    "lbVsImdb": -8.5,
-   "criticsVsAudience": -18.3,
+   "criticsVsAudience": -18.1,
    "avgScore": 45,
    "lbN": 11,
    "caN": 11
@@ -2538,17 +2538,17 @@
    "label": "Renny Harlin",
    "count": 24,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": 0.5,
+   "criticsVsAudience": 0.1,
    "avgScore": 21,
    "lbN": 24,
-   "caN": 22
+   "caN": 23
   },
   {
    "key": "nm1396121",
    "label": "Makoto Shinkai",
    "count": 7,
-   "lbVsImdb": -8.3,
-   "criticsVsAudience": -6.7,
+   "lbVsImdb": -8.4,
+   "criticsVsAudience": -7,
    "avgScore": 79,
    "lbN": 7,
    "caN": 4
@@ -2568,7 +2568,7 @@
    "label": "Anne Fletcher",
    "count": 7,
    "lbVsImdb": 4,
-   "criticsVsAudience": -12.3,
+   "criticsVsAudience": -12,
    "avgScore": 35,
    "lbN": 7,
    "caN": 7
@@ -2577,18 +2577,18 @@
    "key": "nm0386570",
    "label": "Oliver Hirschbiegel",
    "count": 5,
-   "lbVsImdb": -2.7,
-   "criticsVsAudience": -14.7,
-   "avgScore": 46,
+   "lbVsImdb": -2.8,
+   "criticsVsAudience": -9,
+   "avgScore": 48,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0229694",
    "label": "David Dobkin",
    "count": 6,
    "lbVsImdb": -19.9,
-   "criticsVsAudience": -5.7,
+   "criticsVsAudience": -5.3,
    "avgScore": 36,
    "lbN": 6,
    "caN": 6
@@ -2608,7 +2608,7 @@
    "label": "McG",
    "count": 11,
    "lbVsImdb": -8.2,
-   "criticsVsAudience": -0.5,
+   "criticsVsAudience": -0.3,
    "avgScore": 23,
    "lbN": 11,
    "caN": 10
@@ -2618,7 +2618,7 @@
    "label": "Frank Coraci",
    "count": 9,
    "lbVsImdb": -5.7,
-   "criticsVsAudience": -11.2,
+   "criticsVsAudience": -10.6,
    "avgScore": 26,
    "lbN": 9,
    "caN": 8
@@ -2628,7 +2628,7 @@
    "label": "John Lee Hancock",
    "count": 8,
    "lbVsImdb": -16.5,
-   "criticsVsAudience": -9.2,
+   "criticsVsAudience": -9,
    "avgScore": 52,
    "lbN": 8,
    "caN": 8
@@ -2638,7 +2638,7 @@
    "label": "Joachim Rønning",
    "count": 7,
    "lbVsImdb": -12.6,
-   "criticsVsAudience": -12.7,
+   "criticsVsAudience": -12.4,
    "avgScore": 48,
    "lbN": 7,
    "caN": 7
@@ -2648,7 +2648,7 @@
    "label": "Espen Sandberg",
    "count": 5,
    "lbVsImdb": -9.4,
-   "criticsVsAudience": -9.2,
+   "criticsVsAudience": -8.7,
    "avgScore": 45,
    "lbN": 5,
    "caN": 4
@@ -2658,10 +2658,10 @@
    "label": "Roger Michell",
    "count": 10,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": 12.8,
-   "avgScore": 54,
+   "criticsVsAudience": 15,
+   "avgScore": 55,
    "lbN": 10,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0001047",
@@ -2678,8 +2678,8 @@
    "label": "Tom Tykwer",
    "count": 8,
    "lbVsImdb": -9.3,
-   "criticsVsAudience": -13.4,
-   "avgScore": 53,
+   "criticsVsAudience": -13.2,
+   "avgScore": 54,
    "lbN": 8,
    "caN": 8
   },
@@ -2688,8 +2688,8 @@
    "label": "J.A. Bayona",
    "count": 5,
    "lbVsImdb": -6.2,
-   "criticsVsAudience": -11.4,
-   "avgScore": 72,
+   "criticsVsAudience": -11,
+   "avgScore": 73,
    "lbN": 5,
    "caN": 5
   },
@@ -2698,8 +2698,8 @@
    "label": "Paul Verhoeven",
    "count": 12,
    "lbVsImdb": 8.3,
-   "criticsVsAudience": -17.3,
-   "avgScore": 56,
+   "criticsVsAudience": -17.1,
+   "avgScore": 57,
    "lbN": 12,
    "caN": 10
   },
@@ -2708,17 +2708,17 @@
    "label": "Richard Linklater",
    "count": 22,
    "lbVsImdb": 3.4,
-   "criticsVsAudience": 4.2,
+   "criticsVsAudience": 4.9,
    "avgScore": 71,
    "lbN": 22,
-   "caN": 19
+   "caN": 21
   },
   {
    "key": "nm0942504",
    "label": "Joe Wright",
    "count": 9,
    "lbVsImdb": -0.6,
-   "criticsVsAudience": -4.2,
+   "criticsVsAudience": -4.1,
    "avgScore": 56,
    "lbN": 9,
    "caN": 9
@@ -2728,7 +2728,7 @@
    "label": "Sylvester Stallone",
    "count": 7,
    "lbVsImdb": -3,
-   "criticsVsAudience": -28.1,
+   "criticsVsAudience": -28,
    "avgScore": 46,
    "lbN": 7,
    "caN": 7
@@ -2738,7 +2738,7 @@
    "label": "Jay Roach",
    "count": 11,
    "lbVsImdb": -7.3,
-   "criticsVsAudience": -4.4,
+   "criticsVsAudience": -4.1,
    "avgScore": 45,
    "lbN": 11,
    "caN": 11
@@ -2748,8 +2748,8 @@
    "label": "Jon Turteltaub",
    "count": 11,
    "lbVsImdb": -6.5,
-   "criticsVsAudience": -13.4,
-   "avgScore": 36,
+   "criticsVsAudience": -13.3,
+   "avgScore": 37,
    "lbN": 11,
    "caN": 11
   },
@@ -2757,18 +2757,18 @@
    "key": "nm0001403",
    "label": "Neil Jordan",
    "count": 16,
-   "lbVsImdb": 0.1,
-   "criticsVsAudience": -2.9,
-   "avgScore": 52,
+   "lbVsImdb": 0.2,
+   "criticsVsAudience": -2.6,
+   "avgScore": 51,
    "lbN": 16,
-   "caN": 13
+   "caN": 14
   },
   {
    "key": "nm1103162",
    "label": "Tim Story",
    "count": 16,
    "lbVsImdb": -4.4,
-   "criticsVsAudience": -1.1,
+   "criticsVsAudience": -0.6,
    "avgScore": 26,
    "lbN": 16,
    "caN": 13
@@ -2798,7 +2798,7 @@
    "label": "David Gordon Green",
    "count": 15,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": 9.9,
+   "criticsVsAudience": 10.2,
    "avgScore": 37,
    "lbN": 15,
    "caN": 11
@@ -2808,7 +2808,7 @@
    "label": "Nancy Meyers",
    "count": 6,
    "lbVsImdb": -5.5,
-   "criticsVsAudience": -19.2,
+   "criticsVsAudience": -18.8,
    "avgScore": 54,
    "lbN": 6,
    "caN": 6
@@ -2818,7 +2818,7 @@
    "label": "Jon M. Chu",
    "count": 10,
    "lbVsImdb": 11.2,
-   "criticsVsAudience": -4.9,
+   "criticsVsAudience": -4.6,
    "avgScore": 47,
    "lbN": 10,
    "caN": 10
@@ -2828,7 +2828,7 @@
    "label": "Luca Guadagnino",
    "count": 8,
    "lbVsImdb": 16.5,
-   "criticsVsAudience": 5.4,
+   "criticsVsAudience": 5.5,
    "avgScore": 66,
    "lbN": 8,
    "caN": 8
@@ -2838,7 +2838,7 @@
    "label": "Albert Hughes",
    "count": 5,
    "lbVsImdb": -7.9,
-   "criticsVsAudience": -16.8,
+   "criticsVsAudience": -16.6,
    "avgScore": 56,
    "lbN": 5,
    "caN": 5
@@ -2848,7 +2848,7 @@
    "label": "Allen Hughes",
    "count": 5,
    "lbVsImdb": -5.6,
-   "criticsVsAudience": -19,
+   "criticsVsAudience": -18.8,
    "avgScore": 49,
    "lbN": 5,
    "caN": 5
@@ -2858,7 +2858,7 @@
    "label": "Bill Condon",
    "count": 12,
    "lbVsImdb": -0.1,
-   "criticsVsAudience": 5.9,
+   "criticsVsAudience": 6.1,
    "avgScore": 47,
    "lbN": 12,
    "caN": 11
@@ -2868,7 +2868,7 @@
    "label": "Jonathan Levine",
    "count": 7,
    "lbVsImdb": -10.1,
-   "criticsVsAudience": 8.4,
+   "criticsVsAudience": 8.7,
    "avgScore": 46,
    "lbN": 7,
    "caN": 7
@@ -2888,7 +2888,7 @@
    "label": "Andy Tennant",
    "count": 11,
    "lbVsImdb": -1.8,
-   "criticsVsAudience": -16.4,
+   "criticsVsAudience": -16.2,
    "avgScore": 34,
    "lbN": 11,
    "caN": 9
@@ -2898,7 +2898,7 @@
    "label": "Bobby Farrelly",
    "count": 14,
    "lbVsImdb": -10.9,
-   "criticsVsAudience": 3.3,
+   "criticsVsAudience": 3.6,
    "avgScore": 31,
    "lbN": 14,
    "caN": 14
@@ -2908,17 +2908,17 @@
    "label": "Andrew Davis",
    "count": 11,
    "lbVsImdb": -1.4,
-   "criticsVsAudience": -5.7,
+   "criticsVsAudience": -4.2,
    "avgScore": 41,
    "lbN": 11,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0831557",
    "label": "Nicholas Stoller",
    "count": 8,
    "lbVsImdb": -17.8,
-   "criticsVsAudience": 24.9,
+   "criticsVsAudience": 25,
    "avgScore": 42,
    "lbN": 8,
    "caN": 8
@@ -2928,7 +2928,7 @@
    "label": "Lasse Hallström",
    "count": 18,
    "lbVsImdb": -10.4,
-   "criticsVsAudience": -17.7,
+   "criticsVsAudience": -17.5,
    "avgScore": 51,
    "lbN": 18,
    "caN": 17
@@ -2948,7 +2948,7 @@
    "label": "Phillip Noyce",
    "count": 14,
    "lbVsImdb": -8.6,
-   "criticsVsAudience": 1.9,
+   "criticsVsAudience": 2,
    "avgScore": 43,
    "lbN": 14,
    "caN": 12
@@ -2958,7 +2958,7 @@
    "label": "Simon West",
    "count": 13,
    "lbVsImdb": -4.2,
-   "criticsVsAudience": -5.4,
+   "criticsVsAudience": -5.3,
    "avgScore": 22,
    "lbN": 13,
    "caN": 9
@@ -2968,7 +2968,7 @@
    "label": "Paul McGuigan",
    "count": 7,
    "lbVsImdb": -5.5,
-   "criticsVsAudience": -14.2,
+   "criticsVsAudience": -14,
    "avgScore": 43,
    "lbN": 7,
    "caN": 5
@@ -2978,20 +2978,20 @@
    "label": "Michael Spierig",
    "count": 6,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": -0.8,
+   "criticsVsAudience": -0.7,
    "avgScore": 32,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm1294962",
    "label": "Peter Spierig",
    "count": 6,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": -0.8,
+   "criticsVsAudience": -0.7,
    "avgScore": 32,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0477035",
@@ -3008,7 +3008,7 @@
    "label": "Robert Schwentke",
    "count": 10,
    "lbVsImdb": -12,
-   "criticsVsAudience": -10.6,
+   "criticsVsAudience": -10.5,
    "avgScore": 35,
    "lbN": 9,
    "caN": 8
@@ -3018,7 +3018,7 @@
    "label": "James L. Brooks",
    "count": 7,
    "lbVsImdb": -4.6,
-   "criticsVsAudience": 0.7,
+   "criticsVsAudience": 0.8,
    "avgScore": 48,
    "lbN": 7,
    "caN": 6
@@ -3028,10 +3028,10 @@
    "label": "Olivier Megaton",
    "count": 5,
    "lbVsImdb": -12.2,
-   "criticsVsAudience": -9,
-   "avgScore": 21,
+   "criticsVsAudience": -10.2,
+   "avgScore": 19,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0005540",
@@ -3048,17 +3048,17 @@
    "label": "Donald Petrie",
    "count": 12,
    "lbVsImdb": 8.6,
-   "criticsVsAudience": -15.8,
-   "avgScore": 29,
+   "criticsVsAudience": -14.5,
+   "avgScore": 28,
    "lbN": 12,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0001149",
    "label": "Richard Donner",
    "count": 21,
    "lbVsImdb": -5.2,
-   "criticsVsAudience": -18.1,
+   "criticsVsAudience": -18,
    "avgScore": 54,
    "lbN": 21,
    "caN": 17
@@ -3068,7 +3068,7 @@
    "label": "John Singleton",
    "count": 9,
    "lbVsImdb": 9.2,
-   "criticsVsAudience": -13,
+   "criticsVsAudience": -12.9,
    "avgScore": 44,
    "lbN": 9,
    "caN": 8
@@ -3088,7 +3088,7 @@
    "label": "Paul Feig",
    "count": 11,
    "lbVsImdb": -20.4,
-   "criticsVsAudience": 6.7,
+   "criticsVsAudience": 7,
    "avgScore": 47,
    "lbN": 11,
    "caN": 10
@@ -3098,7 +3098,7 @@
    "label": "Chris Weitz",
    "count": 7,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": 0.9,
+   "criticsVsAudience": 1,
    "avgScore": 36,
    "lbN": 7,
    "caN": 7
@@ -3108,27 +3108,27 @@
    "label": "Eduardo Sánchez",
    "count": 5,
    "lbVsImdb": 10,
-   "criticsVsAudience": 34,
-   "avgScore": 30,
+   "criticsVsAudience": 17,
+   "avgScore": 29,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0868153",
    "label": "Giuseppe Tornatore",
    "count": 9,
    "lbVsImdb": -3.5,
-   "criticsVsAudience": -41.6,
+   "criticsVsAudience": -37.3,
    "avgScore": 70,
    "lbN": 9,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0240797",
    "label": "Dennis Dugan",
    "count": 14,
    "lbVsImdb": 5.6,
-   "criticsVsAudience": -15.5,
+   "criticsVsAudience": -15.2,
    "avgScore": 18,
    "lbN": 14,
    "caN": 13
@@ -3138,7 +3138,7 @@
    "label": "Paul W.S. Anderson",
    "count": 14,
    "lbVsImdb": -5,
-   "criticsVsAudience": -2.4,
+   "criticsVsAudience": -2.1,
    "avgScore": 20,
    "lbN": 14,
    "caN": 13
@@ -3158,27 +3158,27 @@
    "label": "Mikael Håfström",
    "count": 9,
    "lbVsImdb": -10.5,
-   "criticsVsAudience": -13.3,
+   "criticsVsAudience": -10.6,
    "avgScore": 37,
    "lbN": 9,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm3613566",
    "label": "Yeon Sang-ho",
    "count": 9,
    "lbVsImdb": 1.2,
-   "criticsVsAudience": -3.8,
-   "avgScore": 45,
+   "criticsVsAudience": 0,
+   "avgScore": 46,
    "lbN": 9,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0784061",
    "label": "Dominic Sena",
    "count": 5,
    "lbVsImdb": -10.4,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -15.8,
    "avgScore": 21,
    "lbN": 5,
    "caN": 5
@@ -3199,7 +3199,7 @@
    "count": 12,
    "lbVsImdb": -18.1,
    "criticsVsAudience": -0.4,
-   "avgScore": 37,
+   "avgScore": 38,
    "lbN": 12,
    "caN": 12
   },
@@ -3211,7 +3211,7 @@
    "criticsVsAudience": -7.4,
    "avgScore": 79,
    "lbN": 19,
-   "caN": 16
+   "caN": 17
   },
   {
    "key": "nm0001351",
@@ -3228,47 +3228,47 @@
    "label": "Ted Kotcheff",
    "count": 10,
    "lbVsImdb": 4.4,
-   "criticsVsAudience": -16.3,
-   "avgScore": 51,
+   "criticsVsAudience": -16.2,
+   "avgScore": 50,
    "lbN": 10,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0001566",
    "label": "Mike Nichols",
    "count": 18,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": -0.5,
+   "criticsVsAudience": -0.7,
    "avgScore": 58,
    "lbN": 18,
-   "caN": 14
+   "caN": 15
   },
   {
    "key": "nm0001708",
    "label": "Joel Schumacher",
    "count": 21,
    "lbVsImdb": -2.1,
-   "criticsVsAudience": -19.1,
+   "criticsVsAudience": -16.9,
    "avgScore": 37,
    "lbN": 21,
-   "caN": 18
+   "caN": 20
   },
   {
    "key": "nm0905592",
    "label": "Jeff Wadlow",
    "count": 9,
    "lbVsImdb": -9.7,
-   "criticsVsAudience": -7,
-   "avgScore": 17,
+   "criticsVsAudience": -6.1,
+   "avgScore": 16,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0318916",
    "label": "Craig Gillespie",
    "count": 9,
    "lbVsImdb": -6.9,
-   "criticsVsAudience": -5.3,
+   "criticsVsAudience": -5.2,
    "avgScore": 54,
    "lbN": 9,
    "caN": 9
@@ -3278,7 +3278,7 @@
    "label": "Darren Lynn Bousman",
    "count": 14,
    "lbVsImdb": 1.5,
-   "criticsVsAudience": -6.6,
+   "criticsVsAudience": -6,
    "avgScore": 25,
    "lbN": 14,
    "caN": 7
@@ -3287,7 +3287,7 @@
    "key": "nm0387706",
    "label": "Gregory Hoblit",
    "count": 6,
-   "lbVsImdb": -10.5,
+   "lbVsImdb": -10.6,
    "criticsVsAudience": -26.3,
    "avgScore": 52,
    "lbN": 6,
@@ -3298,17 +3298,17 @@
    "label": "Jean-Jacques Annaud",
    "count": 10,
    "lbVsImdb": -8.2,
-   "criticsVsAudience": -27,
-   "avgScore": 59,
+   "criticsVsAudience": -28.5,
+   "avgScore": 57,
    "lbN": 10,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0936404",
    "label": "Robert Wise",
    "count": 16,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": -9.1,
+   "criticsVsAudience": -8.8,
    "avgScore": 66,
    "lbN": 16,
    "caN": 9
@@ -3318,7 +3318,7 @@
    "label": "Robert Luketic",
    "count": 8,
    "lbVsImdb": -3.1,
-   "criticsVsAudience": -10.9,
+   "criticsVsAudience": -10.6,
    "avgScore": 25,
    "lbN": 8,
    "caN": 7
@@ -3338,7 +3338,7 @@
    "label": "David Zucker",
    "count": 11,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": -1.6,
+   "criticsVsAudience": -1.5,
    "avgScore": 42,
    "lbN": 11,
    "caN": 10
@@ -3347,8 +3347,8 @@
    "key": "nm0958387",
    "label": "Jerry Zucker",
    "count": 6,
-   "lbVsImdb": -1,
-   "criticsVsAudience": -5,
+   "lbVsImdb": -0.9,
+   "criticsVsAudience": -4.8,
    "avgScore": 61,
    "lbN": 6,
    "caN": 6
@@ -3398,17 +3398,17 @@
    "label": "Stanley Donen",
    "count": 16,
    "lbVsImdb": 3.2,
-   "criticsVsAudience": 0.2,
+   "criticsVsAudience": -2.3,
    "avgScore": 59,
    "lbN": 16,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0336695",
    "label": "James Gray",
    "count": 9,
    "lbVsImdb": 17.3,
-   "criticsVsAudience": 11.6,
+   "criticsVsAudience": 11.8,
    "avgScore": 61,
    "lbN": 9,
    "caN": 8
@@ -3418,30 +3418,30 @@
    "label": "Emile Ardolino",
    "count": 5,
    "lbVsImdb": 11.5,
-   "criticsVsAudience": -13.7,
-   "avgScore": 48,
+   "criticsVsAudience": -8.7,
+   "avgScore": 49,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0002132",
    "label": "Amy Heckerling",
    "count": 9,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 0.8,
-   "avgScore": 34,
+   "criticsVsAudience": 3.6,
+   "avgScore": 35,
    "lbN": 9,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0533284",
    "label": "David Mackenzie",
    "count": 10,
    "lbVsImdb": -4.5,
-   "criticsVsAudience": -1.9,
+   "criticsVsAudience": -1.8,
    "avgScore": 56,
    "lbN": 10,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm1410815",
@@ -3458,7 +3458,7 @@
    "label": "Daniel Espinosa",
    "count": 5,
    "lbVsImdb": -15.7,
-   "criticsVsAudience": 0.6,
+   "criticsVsAudience": 1,
    "avgScore": 35,
    "lbN": 5,
    "caN": 5
@@ -3468,10 +3468,10 @@
    "label": "John Sturges",
    "count": 15,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": -3.5,
+   "criticsVsAudience": -5.3,
    "avgScore": 58,
    "lbN": 15,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000343",
@@ -3487,8 +3487,8 @@
    "key": "nm0004410",
    "label": "Mark Neveldine",
    "count": 6,
-   "lbVsImdb": 0.3,
-   "criticsVsAudience": 0.8,
+   "lbVsImdb": 0.2,
+   "criticsVsAudience": 1,
    "avgScore": 20,
    "lbN": 6,
    "caN": 5
@@ -3498,7 +3498,7 @@
    "label": "Brian Taylor",
    "count": 6,
    "lbVsImdb": -2.7,
-   "criticsVsAudience": 9.8,
+   "criticsVsAudience": 10,
    "avgScore": 23,
    "lbN": 6,
    "caN": 6
@@ -3508,7 +3508,7 @@
    "label": "Brad Peyton",
    "count": 6,
    "lbVsImdb": -8.8,
-   "criticsVsAudience": 0.5,
+   "criticsVsAudience": 0.7,
    "avgScore": 16,
    "lbN": 6,
    "caN": 6
@@ -3528,7 +3528,7 @@
    "label": "Joe Carnahan",
    "count": 10,
    "lbVsImdb": -13.6,
-   "criticsVsAudience": 2.8,
+   "criticsVsAudience": 3,
    "avgScore": 47,
    "lbN": 10,
    "caN": 10
@@ -3538,10 +3538,10 @@
    "label": "Joe Dante",
    "count": 17,
    "lbVsImdb": 9.7,
-   "criticsVsAudience": 2.4,
-   "avgScore": 46,
+   "criticsVsAudience": 4.9,
+   "avgScore": 47,
    "lbN": 17,
-   "caN": 11
+   "caN": 14
   },
   {
    "key": "nm0551076",
@@ -3558,7 +3558,7 @@
    "label": "D.J. Caruso",
    "count": 10,
    "lbVsImdb": -14.8,
-   "criticsVsAudience": -16.1,
+   "criticsVsAudience": -15.7,
    "avgScore": 27,
    "lbN": 10,
    "caN": 8
@@ -3568,7 +3568,7 @@
    "label": "Anthony Minghella",
    "count": 5,
    "lbVsImdb": -3.2,
-   "criticsVsAudience": -9.2,
+   "criticsVsAudience": -9,
    "avgScore": 62,
    "lbN": 5,
    "caN": 4
@@ -3578,7 +3578,7 @@
    "label": "Stephen Daldry",
    "count": 6,
    "lbVsImdb": -6.4,
-   "criticsVsAudience": -30.2,
+   "criticsVsAudience": -30,
    "avgScore": 62,
    "lbN": 6,
    "caN": 5
@@ -3598,7 +3598,7 @@
    "label": "Mark Steven Johnson",
    "count": 9,
    "lbVsImdb": -6.2,
-   "criticsVsAudience": 2.6,
+   "criticsVsAudience": 3,
    "avgScore": 21,
    "lbN": 9,
    "caN": 8
@@ -3608,7 +3608,7 @@
    "label": "William Wyler",
    "count": 26,
    "lbVsImdb": -2.3,
-   "criticsVsAudience": -0.1,
+   "criticsVsAudience": -0.2,
    "avgScore": 72,
    "lbN": 26,
    "caN": 12
@@ -3618,7 +3618,7 @@
    "label": "Brad Furman",
    "count": 6,
    "lbVsImdb": -4.4,
-   "criticsVsAudience": -10.4,
+   "criticsVsAudience": -10.2,
    "avgScore": 36,
    "lbN": 6,
    "caN": 5
@@ -3628,7 +3628,7 @@
    "label": "Adam Wingard",
    "count": 8,
    "lbVsImdb": -2.8,
-   "criticsVsAudience": 12.3,
+   "criticsVsAudience": 12.6,
    "avgScore": 39,
    "lbN": 8,
    "caN": 7
@@ -3638,7 +3638,7 @@
    "label": "Matt Bettinelli-Olpin",
    "count": 8,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": 7.3,
+   "criticsVsAudience": 7.5,
    "avgScore": 46,
    "lbN": 8,
    "caN": 8
@@ -3648,7 +3648,7 @@
    "label": "Tyler Gillett",
    "count": 7,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": 3.4,
+   "criticsVsAudience": 3.7,
    "avgScore": 47,
    "lbN": 7,
    "caN": 7
@@ -3658,7 +3658,7 @@
    "label": "Luke Greenfield",
    "count": 6,
    "lbVsImdb": -16.3,
-   "criticsVsAudience": -8.2,
+   "criticsVsAudience": -8,
    "avgScore": 24,
    "lbN": 6,
    "caN": 5
@@ -3697,7 +3697,7 @@
    "key": "nm0218621",
    "label": "James DeMonaco",
    "count": 5,
-   "lbVsImdb": -6,
+   "lbVsImdb": -6.1,
    "criticsVsAudience": 0.3,
    "avgScore": 30,
    "lbN": 5,
@@ -3728,17 +3728,17 @@
    "label": "Jared Hess",
    "count": 7,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": -4.2,
-   "avgScore": 34,
+   "criticsVsAudience": -9.4,
+   "avgScore": 32,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0371890",
    "label": "Michel Hazanavicius",
    "count": 5,
    "lbVsImdb": 9.4,
-   "criticsVsAudience": -14.7,
+   "criticsVsAudience": -14.3,
    "avgScore": 65,
    "lbN": 5,
    "caN": 3
@@ -3748,7 +3748,7 @@
    "label": "Boaz Yakin",
    "count": 8,
    "lbVsImdb": 0.9,
-   "criticsVsAudience": -28.2,
+   "criticsVsAudience": -27.8,
    "avgScore": 47,
    "lbN": 7,
    "caN": 5
@@ -3757,7 +3757,7 @@
    "key": "nm0935095",
    "label": "Gary Winick",
    "count": 5,
-   "lbVsImdb": 14.1,
+   "lbVsImdb": 14.2,
    "criticsVsAudience": -9.7,
    "avgScore": 40,
    "lbN": 5,
@@ -3768,8 +3768,8 @@
    "label": "David Wain",
    "count": 7,
    "lbVsImdb": 9,
-   "criticsVsAudience": 8.4,
-   "avgScore": 38,
+   "criticsVsAudience": 8.6,
+   "avgScore": 39,
    "lbN": 7,
    "caN": 7
   },
@@ -3797,7 +3797,7 @@
    "key": "nm0154819",
    "label": "Jeremiah S. Chechik",
    "count": 6,
-   "lbVsImdb": -0.7,
+   "lbVsImdb": -0.8,
    "criticsVsAudience": -18.2,
    "avgScore": 35,
    "lbN": 6,
@@ -3808,7 +3808,7 @@
    "label": "Nora Ephron",
    "count": 7,
    "lbVsImdb": 5.4,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -4.7,
    "avgScore": 38,
    "lbN": 7,
    "caN": 6
@@ -3818,7 +3818,7 @@
    "label": "Mike Flanagan",
    "count": 8,
    "lbVsImdb": -6.5,
-   "criticsVsAudience": 17.1,
+   "criticsVsAudience": 17.3,
    "avgScore": 58,
    "lbN": 8,
    "caN": 8
@@ -3828,10 +3828,10 @@
    "label": "Richard Attenborough",
    "count": 12,
    "lbVsImdb": -1.1,
-   "criticsVsAudience": -16.8,
+   "criticsVsAudience": -16.3,
    "avgScore": 56,
    "lbN": 12,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0002728",
@@ -3839,7 +3839,7 @@
    "count": 5,
    "lbVsImdb": 3.4,
    "criticsVsAudience": -16.5,
-   "avgScore": 68,
+   "avgScore": 69,
    "lbN": 5,
    "caN": 2
   },
@@ -3848,17 +3848,17 @@
    "label": "Wilson Yip",
    "count": 8,
    "lbVsImdb": -4.9,
-   "criticsVsAudience": -17.5,
-   "avgScore": 64,
+   "criticsVsAudience": -19.2,
+   "avgScore": 61,
    "lbN": 8,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0001005",
    "label": "Jane Campion",
    "count": 7,
    "lbVsImdb": 18.3,
-   "criticsVsAudience": 7.8,
+   "criticsVsAudience": 8,
    "avgScore": 60,
    "lbN": 7,
    "caN": 5
@@ -3878,7 +3878,7 @@
    "label": "John Madden",
    "count": 11,
    "lbVsImdb": -8.5,
-   "criticsVsAudience": 0.7,
+   "criticsVsAudience": 0.9,
    "avgScore": 52,
    "lbN": 11,
    "caN": 10
@@ -3888,7 +3888,7 @@
    "label": "Kevin Smith",
    "count": 14,
    "lbVsImdb": -8.9,
-   "criticsVsAudience": -2.1,
+   "criticsVsAudience": -2,
    "avgScore": 40,
    "lbN": 14,
    "caN": 14
@@ -3899,16 +3899,16 @@
    "count": 16,
    "lbVsImdb": -0.5,
    "criticsVsAudience": -15.1,
-   "avgScore": 43,
+   "avgScore": 42,
    "lbN": 16,
-   "caN": 14
+   "caN": 15
   },
   {
    "key": "nm0848414",
    "label": "Lee Tamahori",
    "count": 10,
    "lbVsImdb": -8.5,
-   "criticsVsAudience": -5.5,
+   "criticsVsAudience": -5.2,
    "avgScore": 40,
    "lbN": 10,
    "caN": 8
@@ -3948,7 +3948,7 @@
    "label": "Gareth Evans",
    "count": 6,
    "lbVsImdb": -0.1,
-   "criticsVsAudience": 4.6,
+   "criticsVsAudience": 4.8,
    "avgScore": 55,
    "lbN": 6,
    "caN": 5
@@ -3958,7 +3958,7 @@
    "label": "Adam Shankman",
    "count": 11,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": -2.3,
+   "criticsVsAudience": -2.2,
    "avgScore": 28,
    "lbN": 11,
    "caN": 11
@@ -3967,7 +3967,7 @@
    "key": "nm0797869",
    "label": "Brad Silberling",
    "count": 7,
-   "lbVsImdb": 0.9,
+   "lbVsImdb": 0.8,
    "criticsVsAudience": -4.5,
    "avgScore": 40,
    "lbN": 7,
@@ -3997,7 +3997,7 @@
    "key": "nm0945724",
    "label": "Takashi Yamazaki",
    "count": 7,
-   "lbVsImdb": 1.5,
+   "lbVsImdb": 1.6,
    "criticsVsAudience": 19,
    "avgScore": 68,
    "lbN": 7,
@@ -4008,7 +4008,7 @@
    "label": "Jonathan Liebesman",
    "count": 6,
    "lbVsImdb": -1.8,
-   "criticsVsAudience": 4.3,
+   "criticsVsAudience": 4.5,
    "avgScore": 14,
    "lbN": 6,
    "caN": 6
@@ -4038,17 +4038,17 @@
    "label": "Mel Brooks",
    "count": 10,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": -13.4,
+   "criticsVsAudience": -11.9,
    "avgScore": 56,
    "lbN": 10,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm2482088",
    "label": "Tommy Wirkola",
    "count": 7,
    "lbVsImdb": -14.5,
-   "criticsVsAudience": -0.6,
+   "criticsVsAudience": -0.4,
    "avgScore": 42,
    "lbN": 7,
    "caN": 7
@@ -4068,10 +4068,10 @@
    "label": "Brian Helgeland",
    "count": 6,
    "lbVsImdb": -4.7,
-   "criticsVsAudience": -28.6,
-   "avgScore": 48,
+   "criticsVsAudience": -27,
+   "avgScore": 46,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0721817",
@@ -4079,7 +4079,7 @@
    "count": 8,
    "lbVsImdb": -7.3,
    "criticsVsAudience": -21.8,
-   "avgScore": 49,
+   "avgScore": 50,
    "lbN": 8,
    "caN": 6
   },
@@ -4088,7 +4088,7 @@
    "label": "Richard LaGravenese",
    "count": 5,
    "lbVsImdb": -5.3,
-   "criticsVsAudience": -16.5,
+   "criticsVsAudience": -16.2,
    "avgScore": 38,
    "lbN": 5,
    "caN": 4
@@ -4097,8 +4097,8 @@
    "key": "nm0601382",
    "label": "John Moore",
    "count": 6,
-   "lbVsImdb": -1.9,
-   "criticsVsAudience": -1.7,
+   "lbVsImdb": -2,
+   "criticsVsAudience": -1.2,
    "avgScore": 14,
    "lbN": 6,
    "caN": 6
@@ -4118,7 +4118,7 @@
    "label": "Roger Kumble",
    "count": 11,
    "lbVsImdb": -4.2,
-   "criticsVsAudience": -1.4,
+   "criticsVsAudience": -1.2,
    "avgScore": 19,
    "lbN": 11,
    "caN": 8
@@ -4128,7 +4128,7 @@
    "label": "Michael Apted",
    "count": 17,
    "lbVsImdb": -3,
-   "criticsVsAudience": -4.8,
+   "criticsVsAudience": -4.7,
    "avgScore": 47,
    "lbN": 17,
    "caN": 13
@@ -4138,7 +4138,7 @@
    "label": "David R. Ellis",
    "count": 7,
    "lbVsImdb": -1.2,
-   "criticsVsAudience": 9,
+   "criticsVsAudience": 9.2,
    "avgScore": 23,
    "lbN": 7,
    "caN": 6
@@ -4148,10 +4148,10 @@
    "label": "Justin Kurzel",
    "count": 6,
    "lbVsImdb": 12.3,
-   "criticsVsAudience": 14,
-   "avgScore": 51,
+   "criticsVsAudience": 18.2,
+   "avgScore": 55,
    "lbN": 6,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm1128037",
@@ -4168,7 +4168,7 @@
    "label": "Jaume Balagueró",
    "count": 8,
    "lbVsImdb": -4.7,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.3,
    "avgScore": 42,
    "lbN": 8,
    "caN": 6
@@ -4178,7 +4178,7 @@
    "label": "Paco Plaza",
    "count": 8,
    "lbVsImdb": 0.5,
-   "criticsVsAudience": 12.8,
+   "criticsVsAudience": 13.3,
    "avgScore": 43,
    "lbN": 8,
    "caN": 4
@@ -4188,7 +4188,7 @@
    "label": "Guy Hamilton",
    "count": 14,
    "lbVsImdb": -6.4,
-   "criticsVsAudience": -9.4,
+   "criticsVsAudience": -9.1,
    "avgScore": 51,
    "lbN": 14,
    "caN": 8
@@ -4198,10 +4198,10 @@
    "label": "Russell Mulcahy",
    "count": 12,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": -9,
-   "avgScore": 31,
+   "criticsVsAudience": -11,
+   "avgScore": 30,
    "lbN": 12,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0000005",
@@ -4217,8 +4217,8 @@
    "key": "nm0006854",
    "label": "Roger Spottiswoode",
    "count": 13,
-   "lbVsImdb": -0.8,
-   "criticsVsAudience": -4.5,
+   "lbVsImdb": -0.9,
+   "criticsVsAudience": -4.2,
    "avgScore": 38,
    "lbN": 13,
    "caN": 8
@@ -4228,17 +4228,17 @@
    "label": "Tobe Hooper",
    "count": 13,
    "lbVsImdb": 9.9,
-   "criticsVsAudience": 5,
-   "avgScore": 35,
+   "criticsVsAudience": 6.7,
+   "avgScore": 36,
    "lbN": 13,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm1224299",
    "label": "Rob Letterman",
    "count": 6,
    "lbVsImdb": -3.9,
-   "criticsVsAudience": 6.8,
+   "criticsVsAudience": 7,
    "avgScore": 32,
    "lbN": 6,
    "caN": 6
@@ -4258,7 +4258,7 @@
    "label": "Terrence Malick",
    "count": 9,
    "lbVsImdb": 18.4,
-   "criticsVsAudience": 1.3,
+   "criticsVsAudience": 1.6,
    "avgScore": 65,
    "lbN": 9,
    "caN": 9
@@ -4278,7 +4278,7 @@
    "label": "Franklin J. Schaffner",
    "count": 7,
    "lbVsImdb": -4.4,
-   "criticsVsAudience": -24,
+   "criticsVsAudience": -23.5,
    "avgScore": 67,
    "lbN": 7,
    "caN": 4
@@ -4288,27 +4288,27 @@
    "label": "John Frankenheimer",
    "count": 19,
    "lbVsImdb": 2.2,
-   "criticsVsAudience": -4.1,
+   "criticsVsAudience": -3.4,
    "avgScore": 55,
    "lbN": 19,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0001885",
    "label": "Lars von Trier",
    "count": 15,
    "lbVsImdb": 6.1,
-   "criticsVsAudience": -26.4,
-   "avgScore": 61,
+   "criticsVsAudience": -20.5,
+   "avgScore": 62,
    "lbN": 15,
-   "caN": 11
+   "caN": 13
   },
   {
    "key": "nm0297935",
    "label": "Kinji Fukasaku",
    "count": 14,
    "lbVsImdb": 6.5,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -15.3,
    "avgScore": 51,
    "lbN": 14,
    "caN": 3
@@ -4318,7 +4318,7 @@
    "label": "Mimi Leder",
    "count": 5,
    "lbVsImdb": -8.3,
-   "criticsVsAudience": -21,
+   "criticsVsAudience": -20.6,
    "avgScore": 35,
    "lbN": 5,
    "caN": 5
@@ -4327,8 +4327,8 @@
    "key": "nm0531817",
    "label": "Kevin Macdonald",
    "count": 13,
-   "lbVsImdb": -6.9,
-   "criticsVsAudience": -6.7,
+   "lbVsImdb": -6.8,
+   "criticsVsAudience": -6.6,
    "avgScore": 61,
    "lbN": 13,
    "caN": 10
@@ -4338,7 +4338,7 @@
    "label": "Eli Roth",
    "count": 11,
    "lbVsImdb": -6.5,
-   "criticsVsAudience": 13.5,
+   "criticsVsAudience": 14,
    "avgScore": 26,
    "lbN": 11,
    "caN": 11
@@ -4358,17 +4358,17 @@
    "label": "Blake Edwards",
    "count": 27,
    "lbVsImdb": 2.2,
-   "criticsVsAudience": -4.5,
+   "criticsVsAudience": -3.6,
    "avgScore": 50,
    "lbN": 27,
-   "caN": 13
+   "caN": 14
   },
   {
    "key": "nm0006487",
    "label": "Jim Sheridan",
    "count": 8,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": -11.7,
+   "criticsVsAudience": -11.6,
    "avgScore": 63,
    "lbN": 8,
    "caN": 7
@@ -4378,7 +4378,7 @@
    "label": "Stephen Hopkins",
    "count": 11,
    "lbVsImdb": -5.1,
-   "criticsVsAudience": -8.9,
+   "criticsVsAudience": -8.8,
    "avgScore": 33,
    "lbN": 11,
    "caN": 10
@@ -4388,17 +4388,17 @@
    "label": "Iain Softley",
    "count": 7,
    "lbVsImdb": -0.9,
-   "criticsVsAudience": -25,
-   "avgScore": 38,
+   "criticsVsAudience": -14,
+   "avgScore": 39,
    "lbN": 7,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0178376",
    "label": "Scott Cooper",
    "count": 7,
    "lbVsImdb": -8.1,
-   "criticsVsAudience": -1.4,
+   "criticsVsAudience": -1,
    "avgScore": 55,
    "lbN": 7,
    "caN": 7
@@ -4418,7 +4418,7 @@
    "label": "Jeff Nichols",
    "count": 5,
    "lbVsImdb": 4.2,
-   "criticsVsAudience": 10.6,
+   "criticsVsAudience": 10.8,
    "avgScore": 75,
    "lbN": 5,
    "caN": 5
@@ -4428,17 +4428,17 @@
    "label": "Stephen Frears",
    "count": 22,
    "lbVsImdb": -2.7,
-   "criticsVsAudience": 7.5,
+   "criticsVsAudience": 7.3,
    "avgScore": 57,
    "lbN": 22,
-   "caN": 14
+   "caN": 16
   },
   {
    "key": "nm0829038",
    "label": "Robert Stevenson",
    "count": 15,
    "lbVsImdb": -2,
-   "criticsVsAudience": -2.2,
+   "criticsVsAudience": -2,
    "avgScore": 54,
    "lbN": 15,
    "caN": 4
@@ -4468,7 +4468,7 @@
    "label": "John R. Leonetti",
    "count": 6,
    "lbVsImdb": -2.8,
-   "criticsVsAudience": 3,
+   "criticsVsAudience": 3.3,
    "avgScore": 9,
    "lbN": 6,
    "caN": 4
@@ -4478,7 +4478,7 @@
    "label": "Danny DeVito",
    "count": 6,
    "lbVsImdb": 6.7,
-   "criticsVsAudience": -2.7,
+   "criticsVsAudience": -2.3,
    "avgScore": 48,
    "lbN": 6,
    "caN": 6
@@ -4488,7 +4488,7 @@
    "label": "Clyde Geronimi",
    "count": 10,
    "lbVsImdb": -6,
-   "criticsVsAudience": 4.1,
+   "criticsVsAudience": 4.2,
    "avgScore": 71,
    "lbN": 10,
    "caN": 9
@@ -4508,7 +4508,7 @@
    "label": "George P. Cosmatos",
    "count": 7,
    "lbVsImdb": 6.3,
-   "criticsVsAudience": -22.7,
+   "criticsVsAudience": -22.5,
    "avgScore": 34,
    "lbN": 7,
    "caN": 4
@@ -4528,7 +4528,7 @@
    "label": "Tom Vaughan",
    "count": 5,
    "lbVsImdb": -3.7,
-   "criticsVsAudience": -5.4,
+   "criticsVsAudience": -5.2,
    "avgScore": 25,
    "lbN": 5,
    "caN": 5
@@ -4538,10 +4538,10 @@
    "label": "Terence Young",
    "count": 13,
    "lbVsImdb": -0.4,
-   "criticsVsAudience": 6.8,
-   "avgScore": 55,
+   "criticsVsAudience": -1.6,
+   "avgScore": 53,
    "lbN": 13,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0477129",
@@ -4558,7 +4558,7 @@
    "label": "Alexandre Aja",
    "count": 9,
    "lbVsImdb": -9.8,
-   "criticsVsAudience": 5.3,
+   "criticsVsAudience": 5.4,
    "avgScore": 34,
    "lbN": 9,
    "caN": 9
@@ -4568,10 +4568,10 @@
    "label": "Carol Reed",
    "count": 11,
    "lbVsImdb": -1.4,
-   "criticsVsAudience": -11,
-   "avgScore": 64,
+   "criticsVsAudience": -4,
+   "avgScore": 65,
    "lbN": 11,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0742341",
@@ -4588,7 +4588,7 @@
    "label": "Andy Fickman",
    "count": 9,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": -11.9,
+   "criticsVsAudience": -11.7,
    "avgScore": 20,
    "lbN": 9,
    "caN": 7
@@ -4598,7 +4598,7 @@
    "label": "Thomas Carter",
    "count": 5,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -24.4,
+   "criticsVsAudience": -24.2,
    "avgScore": 39,
    "lbN": 5,
    "caN": 5
@@ -4608,7 +4608,7 @@
    "label": "Sean Anders",
    "count": 7,
    "lbVsImdb": -17.9,
-   "criticsVsAudience": -9.7,
+   "criticsVsAudience": -9.6,
    "avgScore": 31,
    "lbN": 7,
    "caN": 7
@@ -4628,7 +4628,7 @@
    "label": "Paul Michael Glaser",
    "count": 5,
    "lbVsImdb": 0,
-   "criticsVsAudience": -16.7,
+   "criticsVsAudience": -16.3,
    "avgScore": 34,
    "lbN": 5,
    "caN": 3
@@ -4638,7 +4638,7 @@
    "label": "Dean Parisot",
    "count": 5,
    "lbVsImdb": -7,
-   "criticsVsAudience": 4.8,
+   "criticsVsAudience": 5,
    "avgScore": 40,
    "lbN": 5,
    "caN": 4
@@ -4648,37 +4648,37 @@
    "label": "Vittorio De Sica",
    "count": 17,
    "lbVsImdb": 4.4,
-   "criticsVsAudience": -0.5,
+   "criticsVsAudience": -5.7,
    "avgScore": 68,
    "lbN": 17,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0939182",
    "label": "Wong Kar-Wai",
    "count": 11,
    "lbVsImdb": 9.9,
-   "criticsVsAudience": -9,
+   "criticsVsAudience": -8.4,
    "avgScore": 76,
    "lbN": 11,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0504495",
    "label": "Mark L. Lester",
    "count": 15,
    "lbVsImdb": 9.2,
-   "criticsVsAudience": -12.5,
-   "avgScore": 34,
+   "criticsVsAudience": -14,
+   "avgScore": 33,
    "lbN": 13,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0484907",
    "label": "Christopher Landon",
    "count": 8,
    "lbVsImdb": -11.2,
-   "criticsVsAudience": 13.7,
+   "criticsVsAudience": 13.9,
    "avgScore": 36,
    "lbN": 8,
    "caN": 7
@@ -4688,7 +4688,7 @@
    "label": "Scott Waugh",
    "count": 6,
    "lbVsImdb": -12.1,
-   "criticsVsAudience": -14.8,
+   "criticsVsAudience": -14.6,
    "avgScore": 25,
    "lbN": 6,
    "caN": 5
@@ -4698,7 +4698,7 @@
    "label": "Xavier Gens",
    "count": 7,
    "lbVsImdb": -1.9,
-   "criticsVsAudience": 4.8,
+   "criticsVsAudience": 5,
    "avgScore": 26,
    "lbN": 7,
    "caN": 5
@@ -4718,7 +4718,7 @@
    "label": "Tarsem Singh",
    "count": 5,
    "lbVsImdb": -1.2,
-   "criticsVsAudience": -13.6,
+   "criticsVsAudience": -13,
    "avgScore": 35,
    "lbN": 5,
    "caN": 5
@@ -4728,17 +4728,17 @@
    "label": "Lynne Ramsay",
    "count": 5,
    "lbVsImdb": 18.2,
-   "criticsVsAudience": 8.7,
-   "avgScore": 69,
+   "criticsVsAudience": 6.6,
+   "avgScore": 70,
    "lbN": 5,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0790715",
    "label": "Penelope Spheeris",
    "count": 12,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": -19.4,
+   "criticsVsAudience": -19.2,
    "avgScore": 44,
    "lbN": 11,
    "caN": 5
@@ -4768,7 +4768,7 @@
    "label": "Pedro Almodóvar",
    "count": 18,
    "lbVsImdb": 5.1,
-   "criticsVsAudience": -2.2,
+   "criticsVsAudience": -2,
    "avgScore": 74,
    "lbN": 18,
    "caN": 18
@@ -4778,7 +4778,7 @@
    "label": "Prabhu Deva",
    "count": 5,
    "lbVsImdb": -4.7,
-   "criticsVsAudience": 4,
+   "criticsVsAudience": 4.5,
    "avgScore": 30,
    "lbN": 5,
    "caN": 2
@@ -4788,10 +4788,10 @@
    "label": "Lone Scherfig",
    "count": 6,
    "lbVsImdb": -6,
-   "criticsVsAudience": 1,
-   "avgScore": 57,
+   "criticsVsAudience": 5,
+   "avgScore": 58,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0001415",
@@ -4818,17 +4818,17 @@
    "label": "Karyn Kusama",
    "count": 6,
    "lbVsImdb": 12.9,
-   "criticsVsAudience": 13.8,
-   "avgScore": 34,
+   "criticsVsAudience": 21,
+   "avgScore": 38,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0138809",
    "label": "John Carney",
    "count": 5,
    "lbVsImdb": -3.3,
-   "criticsVsAudience": 0.4,
+   "criticsVsAudience": 0.6,
    "avgScore": 80,
    "lbN": 5,
    "caN": 5
@@ -4837,7 +4837,7 @@
    "key": "nm0192446",
    "label": "Sean S. Cunningham",
    "count": 5,
-   "lbVsImdb": 3.5,
+   "lbVsImdb": 3.6,
    "criticsVsAudience": -10.5,
    "avgScore": 27,
    "lbN": 5,
@@ -4857,7 +4857,7 @@
    "key": "nm0651900",
    "label": "Mamoru Oshii",
    "count": 5,
-   "lbVsImdb": 1.3,
+   "lbVsImdb": 1.4,
    "criticsVsAudience": -8.3,
    "avgScore": 72,
    "lbN": 5,
@@ -4888,7 +4888,7 @@
    "label": "John Huston",
    "count": 25,
    "lbVsImdb": 1.1,
-   "criticsVsAudience": 2.2,
+   "criticsVsAudience": 2.3,
    "avgScore": 62,
    "lbN": 25,
    "caN": 12
@@ -4898,7 +4898,7 @@
    "label": "John Dahl",
    "count": 8,
    "lbVsImdb": 0.2,
-   "criticsVsAudience": 2.5,
+   "criticsVsAudience": 2.7,
    "avgScore": 55,
    "lbN": 8,
    "caN": 6
@@ -4918,7 +4918,7 @@
    "label": "Walter Salles",
    "count": 6,
    "lbVsImdb": 1.9,
-   "criticsVsAudience": 1.2,
+   "criticsVsAudience": 1.4,
    "avgScore": 66,
    "lbN": 6,
    "caN": 5
@@ -4928,7 +4928,7 @@
    "label": "Nia DaCosta",
    "count": 5,
    "lbVsImdb": 12,
-   "criticsVsAudience": 30,
+   "criticsVsAudience": 30.5,
    "avgScore": 50,
    "lbN": 5,
    "caN": 4
@@ -4948,7 +4948,7 @@
    "label": "James Ponsoldt",
    "count": 5,
    "lbVsImdb": -5.3,
-   "criticsVsAudience": 14.5,
+   "criticsVsAudience": 14.8,
    "avgScore": 53,
    "lbN": 5,
    "caN": 4
@@ -4998,17 +4998,17 @@
    "label": "Robert Benton",
    "count": 9,
    "lbVsImdb": -1.1,
-   "criticsVsAudience": 0.6,
+   "criticsVsAudience": 1,
    "avgScore": 51,
    "lbN": 9,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0235719",
    "label": "John Erick Dowdle",
    "count": 5,
    "lbVsImdb": -10.8,
-   "criticsVsAudience": -8.8,
+   "criticsVsAudience": -8.6,
    "avgScore": 31,
    "lbN": 5,
    "caN": 5
@@ -5018,17 +5018,17 @@
    "label": "Siddharth Anand",
    "count": 8,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": 5.8,
+   "criticsVsAudience": 6.4,
    "avgScore": 36,
    "lbN": 8,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0019282",
    "label": "James Algar",
    "count": 8,
    "lbVsImdb": -1.9,
-   "criticsVsAudience": 3,
+   "criticsVsAudience": 3.3,
    "avgScore": 65,
    "lbN": 8,
    "caN": 4
@@ -5048,7 +5048,7 @@
    "label": "Gaspar Noé",
    "count": 7,
    "lbVsImdb": 11.8,
-   "criticsVsAudience": -20.2,
+   "criticsVsAudience": -20,
    "avgScore": 63,
    "lbN": 7,
    "caN": 5
@@ -5058,7 +5058,7 @@
    "label": "Steven Brill",
    "count": 10,
    "lbVsImdb": -3,
-   "criticsVsAudience": -0.6,
+   "criticsVsAudience": -0.4,
    "avgScore": 13,
    "lbN": 10,
    "caN": 10
@@ -5078,7 +5078,7 @@
    "label": "Sydney Pollack",
    "count": 16,
    "lbVsImdb": 2,
-   "criticsVsAudience": -6.9,
+   "criticsVsAudience": -7,
    "avgScore": 61,
    "lbN": 16,
    "caN": 12
@@ -5088,7 +5088,7 @@
    "label": "Simon Wells",
    "count": 6,
    "lbVsImdb": 0.8,
-   "criticsVsAudience": -13.7,
+   "criticsVsAudience": -13.5,
    "avgScore": 40,
    "lbN": 6,
    "caN": 6
@@ -5098,7 +5098,7 @@
    "label": "Marcus Nispel",
    "count": 5,
    "lbVsImdb": 4.7,
-   "criticsVsAudience": -2.2,
+   "criticsVsAudience": -2,
    "avgScore": 13,
    "lbN": 5,
    "caN": 4
@@ -5108,7 +5108,7 @@
    "label": "Jonathan Lynn",
    "count": 8,
    "lbVsImdb": 1,
-   "criticsVsAudience": -23.3,
+   "criticsVsAudience": -23,
    "avgScore": 39,
    "lbN": 8,
    "caN": 7
@@ -5118,7 +5118,7 @@
    "label": "Mick Jackson",
    "count": 6,
    "lbVsImdb": 7.2,
-   "criticsVsAudience": 0.5,
+   "criticsVsAudience": 0.8,
    "avgScore": 45,
    "lbN": 6,
    "caN": 4
@@ -5127,7 +5127,7 @@
    "key": "nm0205157",
    "label": "Michael Davis",
    "count": 5,
-   "lbVsImdb": 2.9,
+   "lbVsImdb": 3,
    "criticsVsAudience": 6,
    "avgScore": 34,
    "lbN": 5,
@@ -5138,17 +5138,17 @@
    "label": "Takashi Shimizu",
    "count": 12,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": 10.3,
-   "avgScore": 34,
+   "criticsVsAudience": 5.8,
+   "avgScore": 33,
    "lbN": 12,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm1259871",
    "label": "John Crowley",
    "count": 6,
    "lbVsImdb": 0.8,
-   "criticsVsAudience": -10.3,
+   "criticsVsAudience": -10.2,
    "avgScore": 60,
    "lbN": 6,
    "caN": 6
@@ -5169,7 +5169,7 @@
    "count": 5,
    "lbVsImdb": -10.7,
    "criticsVsAudience": 5.4,
-   "avgScore": 39,
+   "avgScore": 40,
    "lbN": 5,
    "caN": 5
   },
@@ -5178,7 +5178,7 @@
    "label": "Andrei Tarkovsky",
    "count": 8,
    "lbVsImdb": 3.9,
-   "criticsVsAudience": -5.7,
+   "criticsVsAudience": -5.6,
    "avgScore": 91,
    "lbN": 8,
    "caN": 7
@@ -5188,10 +5188,10 @@
    "label": "Jeremy Saulnier",
    "count": 5,
    "lbVsImdb": 8.3,
-   "criticsVsAudience": 20,
-   "avgScore": 59,
+   "criticsVsAudience": 31,
+   "avgScore": 66,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0005101",
@@ -5208,7 +5208,7 @@
    "label": "Todd Haynes",
    "count": 10,
    "lbVsImdb": 16.7,
-   "criticsVsAudience": -1.7,
+   "criticsVsAudience": -1.6,
    "avgScore": 71,
    "lbN": 10,
    "caN": 7
@@ -5218,17 +5218,17 @@
    "label": "Steven Quale",
    "count": 5,
    "lbVsImdb": -2.2,
-   "criticsVsAudience": 15.7,
-   "avgScore": 29,
+   "criticsVsAudience": 8.8,
+   "avgScore": 27,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm1247462",
    "label": "Christopher Smith",
    "count": 9,
    "lbVsImdb": -3.2,
-   "criticsVsAudience": 10.8,
+   "criticsVsAudience": 11.3,
    "avgScore": 36,
    "lbN": 9,
    "caN": 4
@@ -5248,7 +5248,7 @@
    "label": "Michael Moore",
    "count": 8,
    "lbVsImdb": -6.4,
-   "criticsVsAudience": -12.7,
+   "criticsVsAudience": -12.6,
    "avgScore": 70,
    "lbN": 8,
    "caN": 8
@@ -5258,7 +5258,7 @@
    "label": "Wash Westmoreland",
    "count": 5,
    "lbVsImdb": -2.7,
-   "criticsVsAudience": 5,
+   "criticsVsAudience": 5.3,
    "avgScore": 60,
    "lbN": 5,
    "caN": 4
@@ -5268,7 +5268,7 @@
    "label": "Michael Showalter",
    "count": 8,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": 10.7,
+   "criticsVsAudience": 10.8,
    "avgScore": 50,
    "lbN": 8,
    "caN": 6
@@ -5278,17 +5278,17 @@
    "label": "David Bowers",
    "count": 5,
    "lbVsImdb": 6.6,
-   "criticsVsAudience": -5.7,
+   "criticsVsAudience": -2.4,
    "avgScore": 38,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0378893",
    "label": "Stephen Herek",
    "count": 15,
    "lbVsImdb": -1.8,
-   "criticsVsAudience": -11.2,
+   "criticsVsAudience": -10.6,
    "avgScore": 32,
    "lbN": 15,
    "caN": 12
@@ -5308,10 +5308,10 @@
    "label": "Joseph L. Mankiewicz",
    "count": 13,
    "lbVsImdb": -0.4,
-   "criticsVsAudience": -8.5,
-   "avgScore": 67,
+   "criticsVsAudience": -0.9,
+   "avgScore": 69,
    "lbN": 13,
-   "caN": 6
+   "caN": 8
   },
   {
    "key": "nm0662529",
@@ -5327,7 +5327,7 @@
    "key": "nm0352524",
    "label": "David Hackl",
    "count": 5,
-   "lbVsImdb": 6.9,
+   "lbVsImdb": 6.8,
    "criticsVsAudience": -13,
    "avgScore": 17,
    "lbN": 5,
@@ -5338,7 +5338,7 @@
    "label": "David Bruckner",
    "count": 7,
    "lbVsImdb": 4.7,
-   "criticsVsAudience": 20.3,
+   "criticsVsAudience": 20.5,
    "avgScore": 37,
    "lbN": 7,
    "caN": 6
@@ -5348,7 +5348,7 @@
    "label": "Henry Joost",
    "count": 7,
    "lbVsImdb": -6.1,
-   "criticsVsAudience": 9.4,
+   "criticsVsAudience": 9.6,
    "avgScore": 33,
    "lbN": 7,
    "caN": 5
@@ -5358,7 +5358,7 @@
    "label": "Ariel Schulman",
    "count": 7,
    "lbVsImdb": -6.1,
-   "criticsVsAudience": 9.4,
+   "criticsVsAudience": 9.6,
    "avgScore": 33,
    "lbN": 7,
    "caN": 5
@@ -5368,7 +5368,7 @@
    "label": "Don Bluth",
    "count": 9,
    "lbVsImdb": 4.1,
-   "criticsVsAudience": -26.9,
+   "criticsVsAudience": -26.6,
    "avgScore": 52,
    "lbN": 9,
    "caN": 7
@@ -5378,7 +5378,7 @@
    "label": "Gary Goldman",
    "count": 6,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": -28.5,
+   "criticsVsAudience": -28,
    "avgScore": 43,
    "lbN": 6,
    "caN": 4
@@ -5388,7 +5388,7 @@
    "label": "Mike Figgis",
    "count": 9,
    "lbVsImdb": 7.3,
-   "criticsVsAudience": 10,
+   "criticsVsAudience": 10.3,
    "avgScore": 46,
    "lbN": 9,
    "caN": 4
@@ -5398,7 +5398,7 @@
    "label": "Frank Oz",
    "count": 13,
    "lbVsImdb": 6.5,
-   "criticsVsAudience": -0.8,
+   "criticsVsAudience": -0.7,
    "avgScore": 60,
    "lbN": 13,
    "caN": 12
@@ -5418,7 +5418,7 @@
    "label": "Gary Fleder",
    "count": 7,
    "lbVsImdb": -13.1,
-   "criticsVsAudience": -23,
+   "criticsVsAudience": -22.6,
    "avgScore": 38,
    "lbN": 7,
    "caN": 7
@@ -5428,7 +5428,7 @@
    "label": "Raja Gosnell",
    "count": 10,
    "lbVsImdb": 13.3,
-   "criticsVsAudience": 2.3,
+   "criticsVsAudience": 2.4,
    "avgScore": 15,
    "lbN": 10,
    "caN": 9
@@ -5438,17 +5438,17 @@
    "label": "Tom Dey",
    "count": 5,
    "lbVsImdb": -6.8,
-   "criticsVsAudience": 10.5,
-   "avgScore": 25,
+   "criticsVsAudience": 13.2,
+   "avgScore": 27,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000934",
    "label": "Bernardo Bertolucci",
    "count": 9,
    "lbVsImdb": -0.4,
-   "criticsVsAudience": -12.5,
+   "criticsVsAudience": -12.4,
    "avgScore": 63,
    "lbN": 9,
    "caN": 8
@@ -5458,7 +5458,7 @@
    "label": "John McNaughton",
    "count": 5,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": 13.3,
+   "criticsVsAudience": 13.7,
    "avgScore": 47,
    "lbN": 5,
    "caN": 3
@@ -5467,7 +5467,7 @@
    "key": "nm0524190",
    "label": "Jon Lucas",
    "count": 5,
-   "lbVsImdb": -10.9,
+   "lbVsImdb": -10.8,
    "criticsVsAudience": -4.2,
    "avgScore": 22,
    "lbN": 5,
@@ -5477,7 +5477,7 @@
    "key": "nm0601859",
    "label": "Scott Moore",
    "count": 5,
-   "lbVsImdb": -10.9,
+   "lbVsImdb": -10.8,
    "criticsVsAudience": -4.2,
    "avgScore": 22,
    "lbN": 5,
@@ -5488,7 +5488,7 @@
    "label": "Rob Zombie",
    "count": 7,
    "lbVsImdb": 6,
-   "criticsVsAudience": 3,
+   "criticsVsAudience": 3.4,
    "avgScore": 23,
    "lbN": 7,
    "caN": 7
@@ -5498,7 +5498,7 @@
    "label": "Alan J. Pakula",
    "count": 11,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": -6.4,
+   "criticsVsAudience": -6.1,
    "avgScore": 57,
    "lbN": 11,
    "caN": 7
@@ -5508,7 +5508,7 @@
    "label": "Wai Keung Lau",
    "count": 13,
    "lbVsImdb": 5.4,
-   "criticsVsAudience": -17.5,
+   "criticsVsAudience": -17,
    "avgScore": 48,
    "lbN": 12,
    "caN": 2
@@ -5518,7 +5518,7 @@
    "label": "Alan Mak",
    "count": 9,
    "lbVsImdb": 0.3,
-   "criticsVsAudience": -17.5,
+   "criticsVsAudience": -17,
    "avgScore": 56,
    "lbN": 9,
    "caN": 2
@@ -5528,7 +5528,7 @@
    "label": "Akiva Schaffer",
    "count": 5,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": -0.8,
+   "criticsVsAudience": -0.4,
    "avgScore": 48,
    "lbN": 5,
    "caN": 5
@@ -5538,7 +5538,7 @@
    "label": "Ronny Yu",
    "count": 8,
    "lbVsImdb": 4.9,
-   "criticsVsAudience": -10.7,
+   "criticsVsAudience": -10.5,
    "avgScore": 39,
    "lbN": 8,
    "caN": 4
@@ -5578,7 +5578,7 @@
    "label": "Marc Lawrence",
    "count": 5,
    "lbVsImdb": -5.8,
-   "criticsVsAudience": -0.4,
+   "criticsVsAudience": -0.2,
    "avgScore": 29,
    "lbN": 5,
    "caN": 5
@@ -5588,17 +5588,17 @@
    "label": "Jacques Audiard",
    "count": 9,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": 10.3,
-   "avgScore": 72,
+   "criticsVsAudience": 9.6,
+   "avgScore": 73,
    "lbN": 9,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm1108007",
    "label": "David Lowery",
    "count": 7,
    "lbVsImdb": 10.5,
-   "criticsVsAudience": 27.9,
+   "criticsVsAudience": 28,
    "avgScore": 57,
    "lbN": 7,
    "caN": 7
@@ -5608,7 +5608,7 @@
    "label": "Tom Holland",
    "count": 5,
    "lbVsImdb": 3,
-   "criticsVsAudience": -14.3,
+   "criticsVsAudience": -13.7,
    "avgScore": 39,
    "lbN": 5,
    "caN": 3
@@ -5618,7 +5618,7 @@
    "label": "Federico Fellini",
    "count": 17,
    "lbVsImdb": 5.5,
-   "criticsVsAudience": -7.9,
+   "criticsVsAudience": -8,
    "avgScore": 75,
    "lbN": 17,
    "caN": 9
@@ -5627,18 +5627,18 @@
    "key": "nm0000570",
    "label": "Alan Parker",
    "count": 13,
-   "lbVsImdb": -0.6,
-   "criticsVsAudience": -23.7,
+   "lbVsImdb": -0.7,
+   "criticsVsAudience": -21.6,
    "avgScore": 60,
    "lbN": 13,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm1258686",
    "label": "Joachim Trier",
    "count": 6,
    "lbVsImdb": 9.7,
-   "criticsVsAudience": 3.3,
+   "criticsVsAudience": 3.5,
    "avgScore": 83,
    "lbN": 6,
    "caN": 6
@@ -5648,7 +5648,7 @@
    "label": "Peter Chelsom",
    "count": 10,
    "lbVsImdb": 3.2,
-   "criticsVsAudience": -27,
+   "criticsVsAudience": -26.8,
    "avgScore": 37,
    "lbN": 10,
    "caN": 6
@@ -5658,17 +5658,17 @@
    "label": "John Schlesinger",
    "count": 13,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": -16.5,
-   "avgScore": 54,
+   "criticsVsAudience": -10.2,
+   "avgScore": 55,
    "lbN": 13,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0001994",
    "label": "Michael Caton-Jones",
    "count": 9,
    "lbVsImdb": -0.2,
-   "criticsVsAudience": -9.7,
+   "criticsVsAudience": -9.3,
    "avgScore": 40,
    "lbN": 9,
    "caN": 7
@@ -5688,18 +5688,18 @@
    "label": "George Tillman Jr.",
    "count": 8,
    "lbVsImdb": -11.6,
-   "criticsVsAudience": -27.2,
-   "avgScore": 57,
+   "criticsVsAudience": -28.7,
+   "avgScore": 55,
    "lbN": 8,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0001490",
    "label": "Adrian Lyne",
    "count": 8,
-   "lbVsImdb": -3.3,
-   "criticsVsAudience": -9.9,
-   "avgScore": 42,
+   "lbVsImdb": -3.2,
+   "criticsVsAudience": -9.7,
+   "avgScore": 43,
    "lbN": 8,
    "caN": 8
   },
@@ -5708,7 +5708,7 @@
    "label": "Brian Levant",
    "count": 9,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": -1.6,
+   "criticsVsAudience": -1.4,
    "avgScore": 13,
    "lbN": 9,
    "caN": 8
@@ -5717,8 +5717,8 @@
    "key": "nm0000750",
    "label": "Jon Amiel",
    "count": 7,
-   "lbVsImdb": -1,
-   "criticsVsAudience": -2,
+   "lbVsImdb": -0.9,
+   "criticsVsAudience": -1.7,
    "avgScore": 36,
    "lbN": 7,
    "caN": 6
@@ -5728,7 +5728,7 @@
    "label": "Céline Sciamma",
    "count": 5,
    "lbVsImdb": 14.3,
-   "criticsVsAudience": 4.5,
+   "criticsVsAudience": 4.3,
    "avgScore": 80,
    "lbN": 5,
    "caN": 4
@@ -5768,17 +5768,17 @@
    "label": "Arthur Penn",
    "count": 9,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -6.8,
+   "criticsVsAudience": -3.8,
    "avgScore": 63,
    "lbN": 9,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0499724",
    "label": "Michael Lehmann",
    "count": 8,
    "lbVsImdb": 6.9,
-   "criticsVsAudience": 3.2,
+   "criticsVsAudience": 3.3,
    "avgScore": 32,
    "lbN": 8,
    "caN": 6
@@ -5788,7 +5788,7 @@
    "label": "Luis Llosa",
    "count": 5,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": -0.3,
+   "criticsVsAudience": 0,
    "avgScore": 19,
    "lbN": 5,
    "caN": 3
@@ -5798,37 +5798,37 @@
    "label": "James Foley",
    "count": 11,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -4.4,
+   "criticsVsAudience": -4.2,
    "avgScore": 35,
    "lbN": 11,
-   "caN": 9
+   "caN": 10
   },
   {
    "key": "nm0139867",
    "label": "Steve Carr",
    "count": 9,
-   "lbVsImdb": 1.7,
-   "criticsVsAudience": 4.4,
-   "avgScore": 18,
+   "lbVsImdb": 1.6,
+   "criticsVsAudience": 3.3,
+   "avgScore": 17,
    "lbN": 9,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0005116",
    "label": "Mary Lambert",
    "count": 5,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 2.3,
-   "avgScore": 22,
+   "criticsVsAudience": 4.8,
+   "avgScore": 23,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0005647",
    "label": "Andrzej Bartkowiak",
    "count": 7,
    "lbVsImdb": 7.2,
-   "criticsVsAudience": -0.4,
+   "criticsVsAudience": 0,
    "avgScore": 19,
    "lbN": 7,
    "caN": 5
@@ -5848,20 +5848,20 @@
    "label": "Richard Lester",
    "count": 14,
    "lbVsImdb": 1.2,
-   "criticsVsAudience": 9.6,
+   "criticsVsAudience": 9.4,
    "avgScore": 56,
    "lbN": 14,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0000915",
    "label": "Bruce Beresford",
    "count": 24,
    "lbVsImdb": -1,
-   "criticsVsAudience": -21.8,
-   "avgScore": 46,
+   "criticsVsAudience": -17.5,
+   "avgScore": 47,
    "lbN": 24,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0003638",
@@ -5878,7 +5878,7 @@
    "label": "Lee Daniels",
    "count": 5,
    "lbVsImdb": -5.8,
-   "criticsVsAudience": -1.2,
+   "criticsVsAudience": -1,
    "avgScore": 45,
    "lbN": 5,
    "caN": 5
@@ -5888,10 +5888,10 @@
    "label": "Karan Johar",
    "count": 9,
    "lbVsImdb": 5.1,
-   "criticsVsAudience": -7,
-   "avgScore": 49,
+   "criticsVsAudience": 1.4,
+   "avgScore": 52,
    "lbN": 9,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0149446",
@@ -5908,10 +5908,10 @@
    "label": "Peter Hyams",
    "count": 16,
    "lbVsImdb": 6.9,
-   "criticsVsAudience": -4.3,
-   "avgScore": 31,
+   "criticsVsAudience": -6.1,
+   "avgScore": 29,
    "lbN": 16,
-   "caN": 11
+   "caN": 13
   },
   {
    "key": "nm0000454",
@@ -5928,10 +5928,10 @@
    "label": "John Badham",
    "count": 14,
    "lbVsImdb": 1.8,
-   "criticsVsAudience": 4.7,
+   "criticsVsAudience": 5.1,
    "avgScore": 44,
    "lbN": 14,
-   "caN": 11
+   "caN": 12
   },
   {
    "key": "nm0662530",
@@ -5968,8 +5968,8 @@
    "label": "John Glen",
    "count": 7,
    "lbVsImdb": -2.2,
-   "criticsVsAudience": -2.2,
-   "avgScore": 39,
+   "criticsVsAudience": -2,
+   "avgScore": 40,
    "lbN": 7,
    "caN": 5
   },
@@ -5978,17 +5978,17 @@
    "label": "Andrew Fleming",
    "count": 7,
    "lbVsImdb": 10.7,
-   "criticsVsAudience": -7,
+   "criticsVsAudience": -4.9,
    "avgScore": 38,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0167195",
    "label": "Robert Clouse",
    "count": 5,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": -10.5,
+   "criticsVsAudience": -10,
    "avgScore": 46,
    "lbN": 5,
    "caN": 2
@@ -5998,7 +5998,7 @@
    "label": "Walter Hill",
    "count": 19,
    "lbVsImdb": 2.5,
-   "criticsVsAudience": -7.7,
+   "criticsVsAudience": -7.5,
    "avgScore": 43,
    "lbN": 19,
    "caN": 16
@@ -6018,10 +6018,10 @@
    "label": "Peter Cattaneo",
    "count": 6,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": 4.5,
-   "avgScore": 53,
+   "criticsVsAudience": -4.3,
+   "avgScore": 52,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0151540",
@@ -6038,10 +6038,10 @@
    "label": "Krzysztof Kieślowski",
    "count": 10,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": -3.7,
-   "avgScore": 84,
+   "criticsVsAudience": -7.6,
+   "avgScore": 82,
    "lbN": 10,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0382956",
@@ -6068,10 +6068,10 @@
    "label": "David Mickey Evans",
    "count": 6,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": -45.5,
+   "criticsVsAudience": -29.7,
    "avgScore": 40,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0734319",
@@ -6088,37 +6088,37 @@
    "label": "Werner Herzog",
    "count": 39,
    "lbVsImdb": 8.6,
-   "criticsVsAudience": 2.1,
+   "criticsVsAudience": 1.3,
    "avgScore": 65,
    "lbN": 39,
-   "caN": 12
+   "caN": 15
   },
   {
    "key": "nm0003593",
    "label": "Fred Zinnemann",
    "count": 14,
    "lbVsImdb": -2.1,
-   "criticsVsAudience": -0.4,
+   "criticsVsAudience": 0.3,
    "avgScore": 67,
    "lbN": 14,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0000783",
    "label": "Dario Argento",
    "count": 19,
    "lbVsImdb": 10.2,
-   "criticsVsAudience": -2.3,
-   "avgScore": 46,
+   "criticsVsAudience": -1.2,
+   "avgScore": 47,
    "lbN": 19,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0000464",
    "label": "Jim Jarmusch",
    "count": 15,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": -6.2,
+   "criticsVsAudience": -6.1,
    "avgScore": 68,
    "lbN": 15,
    "caN": 13
@@ -6138,7 +6138,7 @@
    "label": "Morgan Spurlock",
    "count": 5,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": 0.3,
+   "criticsVsAudience": 0.7,
    "avgScore": 56,
    "lbN": 5,
    "caN": 3
@@ -6178,17 +6178,17 @@
    "label": "Kabir Khan",
    "count": 7,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": 8.5,
-   "avgScore": 55,
+   "criticsVsAudience": 2.2,
+   "avgScore": 54,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0380705",
    "label": "Rowdy Herrington",
    "count": 7,
    "lbVsImdb": 1,
-   "criticsVsAudience": -26,
+   "criticsVsAudience": -25.5,
    "avgScore": 39,
    "lbN": 7,
    "caN": 2
@@ -6198,7 +6198,7 @@
    "label": "Joe Berlinger",
    "count": 9,
    "lbVsImdb": -4.8,
-   "criticsVsAudience": -4.2,
+   "criticsVsAudience": -3.7,
    "avgScore": 59,
    "lbN": 9,
    "caN": 4
@@ -6218,7 +6218,7 @@
    "label": "Julian Schnabel",
    "count": 6,
    "lbVsImdb": 3.7,
-   "criticsVsAudience": -1.2,
+   "criticsVsAudience": -1,
    "avgScore": 60,
    "lbN": 6,
    "caN": 5
@@ -6238,7 +6238,7 @@
    "label": "Richard Rich",
    "count": 7,
    "lbVsImdb": 2,
-   "criticsVsAudience": -8,
+   "criticsVsAudience": -7.7,
    "avgScore": 42,
    "lbN": 7,
    "caN": 3
@@ -6248,20 +6248,20 @@
    "label": "Michael Haneke",
    "count": 12,
    "lbVsImdb": 11.2,
-   "criticsVsAudience": -13.1,
-   "avgScore": 71,
+   "criticsVsAudience": -10.6,
+   "avgScore": 72,
    "lbN": 12,
-   "caN": 10
+   "caN": 11
   },
   {
    "key": "nm0001408",
    "label": "Shekhar Kapur",
    "count": 7,
    "lbVsImdb": -13,
-   "criticsVsAudience": -24,
-   "avgScore": 54,
+   "criticsVsAudience": -12.5,
+   "avgScore": 56,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0741262",
@@ -6298,7 +6298,7 @@
    "label": "William Brent Bell",
    "count": 7,
    "lbVsImdb": -5.5,
-   "criticsVsAudience": 3.2,
+   "criticsVsAudience": 3.4,
    "avgScore": 14,
    "lbN": 7,
    "caN": 5
@@ -6308,10 +6308,10 @@
    "label": "Norman Jewison",
    "count": 16,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -15.2,
+   "criticsVsAudience": -13.2,
    "avgScore": 60,
    "lbN": 16,
-   "caN": 10
+   "caN": 11
   },
   {
    "key": "nm0959774",
@@ -6328,7 +6328,7 @@
    "label": "Tim Hill",
    "count": 7,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 2.3,
+   "criticsVsAudience": 2.8,
    "avgScore": 23,
    "lbN": 7,
    "caN": 6
@@ -6338,7 +6338,7 @@
    "label": "Jeff Tremaine",
    "count": 7,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": -14.6,
+   "criticsVsAudience": -14.4,
    "avgScore": 53,
    "lbN": 7,
    "caN": 7
@@ -6358,10 +6358,10 @@
    "label": "John Ford",
    "count": 37,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": 2.1,
+   "criticsVsAudience": 1.9,
    "avgScore": 64,
    "lbN": 37,
-   "caN": 12
+   "caN": 13
   },
   {
    "key": "nm0527261",
@@ -6388,7 +6388,7 @@
    "label": "Paolo Sorrentino",
    "count": 11,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": -12.9,
+   "criticsVsAudience": -12.6,
    "avgScore": 69,
    "lbN": 11,
    "caN": 8
@@ -6397,7 +6397,7 @@
    "key": "nm0620378",
    "label": "Hideo Nakata",
    "count": 7,
-   "lbVsImdb": 1.8,
+   "lbVsImdb": 1.9,
    "criticsVsAudience": 2.5,
    "avgScore": 39,
    "lbN": 7,
@@ -6408,10 +6408,10 @@
    "label": "Buster Keaton",
    "count": 12,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": -6.5,
-   "avgScore": 74,
+   "criticsVsAudience": 1.3,
+   "avgScore": 77,
    "lbN": 12,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0082802",
@@ -6428,7 +6428,7 @@
    "label": "Jean-François Richet",
    "count": 8,
    "lbVsImdb": -13,
-   "criticsVsAudience": 4.5,
+   "criticsVsAudience": 4.7,
    "avgScore": 49,
    "lbN": 8,
    "caN": 6
@@ -6448,20 +6448,20 @@
    "label": "Ben Wheatley",
    "count": 10,
    "lbVsImdb": 7.8,
-   "criticsVsAudience": 19,
-   "avgScore": 41,
+   "criticsVsAudience": 22.1,
+   "avgScore": 43,
    "lbN": 10,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0005421",
    "label": "Ron Shelton",
    "count": 8,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": 8,
-   "avgScore": 40,
+   "criticsVsAudience": 4.5,
+   "avgScore": 39,
    "lbN": 8,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0003458",
@@ -6488,7 +6488,7 @@
    "label": "Mark Rosman",
    "count": 6,
    "lbVsImdb": 13.1,
-   "criticsVsAudience": -29.5,
+   "criticsVsAudience": -29,
    "avgScore": 29,
    "lbN": 6,
    "caN": 2
@@ -6517,18 +6517,18 @@
    "key": "nm0911061",
    "label": "Wayne Wang",
    "count": 11,
-   "lbVsImdb": 10.5,
-   "criticsVsAudience": -5.8,
+   "lbVsImdb": 10.6,
+   "criticsVsAudience": -6.7,
    "avgScore": 50,
    "lbN": 11,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0006889",
    "label": "Herbert Ross",
    "count": 14,
    "lbVsImdb": 4.3,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -15.9,
    "avgScore": 51,
    "lbN": 14,
    "caN": 7
@@ -6537,8 +6537,8 @@
    "key": "nm0019242",
    "label": "Daniel Alfredson",
    "count": 7,
-   "lbVsImdb": 0.8,
-   "criticsVsAudience": -25.3,
+   "lbVsImdb": 0.7,
+   "criticsVsAudience": -24.7,
    "avgScore": 41,
    "lbN": 6,
    "caN": 3
@@ -6558,7 +6558,7 @@
    "label": "Lawrence Kasdan",
    "count": 12,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": -6.7,
+   "criticsVsAudience": -6.6,
    "avgScore": 51,
    "lbN": 12,
    "caN": 10
@@ -6568,17 +6568,17 @@
    "label": "Peter Hewitt",
    "count": 6,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": 6.8,
-   "avgScore": 23,
+   "criticsVsAudience": 5,
+   "avgScore": 22,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0429963",
    "label": "Gregor Jordan",
    "count": 5,
    "lbVsImdb": -4.4,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.3,
    "avgScore": 39,
    "lbN": 5,
    "caN": 3
@@ -6588,20 +6588,20 @@
    "label": "Les Mayfield",
    "count": 7,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": -13.5,
-   "avgScore": 21,
+   "criticsVsAudience": -12.1,
+   "avgScore": 20,
    "lbN": 7,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0586281",
    "label": "Takashi Miike",
    "count": 23,
    "lbVsImdb": 9.9,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -6.2,
    "avgScore": 54,
    "lbN": 23,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0192845",
@@ -6618,10 +6618,10 @@
    "label": "Mark Pellington",
    "count": 8,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": -12.5,
-   "avgScore": 42,
+   "criticsVsAudience": -12.7,
+   "avgScore": 40,
    "lbN": 8,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0640466",
@@ -6648,7 +6648,7 @@
    "label": "Howard Zieff",
    "count": 6,
    "lbVsImdb": 9,
-   "criticsVsAudience": -6.2,
+   "criticsVsAudience": -6,
    "avgScore": 40,
    "lbN": 6,
    "caN": 4
@@ -6658,10 +6658,10 @@
    "label": "Timo Vuorensola",
    "count": 5,
    "lbVsImdb": 4.2,
-   "criticsVsAudience": -0.3,
+   "criticsVsAudience": 1.8,
    "avgScore": 11,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm2093171",
@@ -6678,7 +6678,7 @@
    "label": "Stanley Kramer",
    "count": 12,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": -21.3,
+   "criticsVsAudience": -21,
    "avgScore": 60,
    "lbN": 12,
    "caN": 6
@@ -6688,8 +6688,8 @@
    "label": "Leonard Nimoy",
    "count": 5,
    "lbVsImdb": 6.2,
-   "criticsVsAudience": -1,
-   "avgScore": 50,
+   "criticsVsAudience": -0.7,
+   "avgScore": 51,
    "lbN": 5,
    "caN": 3
   },
@@ -6698,17 +6698,17 @@
    "label": "Zoya Akhtar",
    "count": 7,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": -3.2,
-   "avgScore": 54,
+   "criticsVsAudience": 9.2,
+   "avgScore": 58,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm1714255",
    "label": "Elliott Lester",
    "count": 5,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": 6.5,
+   "criticsVsAudience": 7,
    "avgScore": 32,
    "lbN": 5,
    "caN": 2
@@ -6728,10 +6728,10 @@
    "label": "Hirokazu Koreeda",
    "count": 16,
    "lbVsImdb": 10.5,
-   "criticsVsAudience": -3.2,
+   "criticsVsAudience": -2.1,
    "avgScore": 77,
    "lbN": 16,
-   "caN": 10
+   "caN": 11
   },
   {
    "key": "nm0000816",
@@ -6749,7 +6749,7 @@
    "count": 5,
    "lbVsImdb": -2.2,
    "criticsVsAudience": 18,
-   "avgScore": 66,
+   "avgScore": 65,
    "lbN": 5,
    "caN": 2
   },
@@ -6758,7 +6758,7 @@
    "label": "Jean-Luc Godard",
    "count": 24,
    "lbVsImdb": 15.2,
-   "criticsVsAudience": 2.1,
+   "criticsVsAudience": 2.2,
    "avgScore": 63,
    "lbN": 24,
    "caN": 9
@@ -6768,7 +6768,7 @@
    "label": "Howard Deutch",
    "count": 10,
    "lbVsImdb": -3.6,
-   "criticsVsAudience": -20.4,
+   "criticsVsAudience": -20.3,
    "avgScore": 33,
    "lbN": 10,
    "caN": 7
@@ -6818,7 +6818,7 @@
    "label": "Michael Dowse",
    "count": 10,
    "lbVsImdb": -9.6,
-   "criticsVsAudience": 0.1,
+   "criticsVsAudience": 0.5,
    "avgScore": 41,
    "lbN": 10,
    "caN": 8
@@ -6828,10 +6828,10 @@
    "label": "Charles Shyer",
    "count": 6,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": 4.6,
-   "avgScore": 36,
+   "criticsVsAudience": 2.8,
+   "avgScore": 35,
    "lbN": 6,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0462030",
@@ -6848,7 +6848,7 @@
    "label": "Olivier Dahan",
    "count": 5,
    "lbVsImdb": 9,
-   "criticsVsAudience": -29,
+   "criticsVsAudience": -28.5,
    "avgScore": 44,
    "lbN": 5,
    "caN": 2
@@ -6868,7 +6868,7 @@
    "label": "Jeannot Szwarc",
    "count": 6,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": -13,
+   "criticsVsAudience": -12.7,
    "avgScore": 29,
    "lbN": 6,
    "caN": 4
@@ -6878,7 +6878,7 @@
    "label": "Kirk Jones",
    "count": 6,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": -12.7,
+   "criticsVsAudience": -12.5,
    "avgScore": 50,
    "lbN": 6,
    "caN": 6
@@ -6887,7 +6887,7 @@
    "key": "nm0164187",
    "label": "Larry Clark",
    "count": 6,
-   "lbVsImdb": 1.5,
+   "lbVsImdb": 1.6,
    "criticsVsAudience": -15.7,
    "avgScore": 41,
    "lbN": 6,
@@ -6918,7 +6918,7 @@
    "label": "Simon Curtis",
    "count": 6,
    "lbVsImdb": -11.5,
-   "criticsVsAudience": -25.7,
+   "criticsVsAudience": -25.5,
    "avgScore": 64,
    "lbN": 6,
    "caN": 6
@@ -6927,18 +6927,18 @@
    "key": "nm1104118",
    "label": "Kim Ki-duk",
    "count": 16,
-   "lbVsImdb": 2.4,
-   "criticsVsAudience": -11.7,
+   "lbVsImdb": 2.5,
+   "criticsVsAudience": -6,
    "avgScore": 59,
    "lbN": 16,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0918873",
    "label": "Sam Weisman",
    "count": 5,
    "lbVsImdb": 9.3,
-   "criticsVsAudience": -3.4,
+   "criticsVsAudience": -3.2,
    "avgScore": 17,
    "lbN": 5,
    "caN": 5
@@ -6948,7 +6948,7 @@
    "label": "Richard Fleischer",
    "count": 19,
    "lbVsImdb": 2.5,
-   "criticsVsAudience": -5.1,
+   "criticsVsAudience": -5,
    "avgScore": 50,
    "lbN": 19,
    "caN": 7
@@ -6958,7 +6958,7 @@
    "label": "Tom Harper",
    "count": 5,
    "lbVsImdb": -4.6,
-   "criticsVsAudience": 5.2,
+   "criticsVsAudience": 5.4,
    "avgScore": 45,
    "lbN": 5,
    "caN": 5
@@ -6968,7 +6968,7 @@
    "label": "Brian Robbins",
    "count": 9,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": -5.2,
+   "criticsVsAudience": -5,
    "avgScore": 17,
    "lbN": 9,
    "caN": 9
@@ -6989,7 +6989,7 @@
    "count": 12,
    "lbVsImdb": 4.1,
    "criticsVsAudience": 2.2,
-   "avgScore": 33,
+   "avgScore": 34,
    "lbN": 12,
    "caN": 6
   },
@@ -6998,17 +6998,17 @@
    "label": "Richard Eyre",
    "count": 5,
    "lbVsImdb": -5.5,
-   "criticsVsAudience": 4.3,
-   "avgScore": 55,
+   "criticsVsAudience": 1,
+   "avgScore": 53,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0591171",
    "label": "Steve Miner",
    "count": 10,
    "lbVsImdb": 1.2,
-   "criticsVsAudience": -2,
+   "criticsVsAudience": -1.9,
    "avgScore": 28,
    "lbN": 10,
    "caN": 7
@@ -7028,7 +7028,7 @@
    "label": "Hany Abu-Assad",
    "count": 6,
    "lbVsImdb": -0.1,
-   "criticsVsAudience": -4,
+   "criticsVsAudience": -3.7,
    "avgScore": 51,
    "lbN": 6,
    "caN": 3
@@ -7078,17 +7078,17 @@
    "label": "Malcolm D. Lee",
    "count": 11,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": 9.2,
-   "avgScore": 35,
+   "criticsVsAudience": 6.4,
+   "avgScore": 34,
    "lbN": 11,
-   "caN": 9
+   "caN": 11
   },
   {
    "key": "nm0097517",
    "label": "Derrick Borte",
    "count": 5,
    "lbVsImdb": -7.1,
-   "criticsVsAudience": 2.7,
+   "criticsVsAudience": 3,
    "avgScore": 36,
    "lbN": 5,
    "caN": 3
@@ -7099,7 +7099,7 @@
    "count": 7,
    "lbVsImdb": -1.2,
    "criticsVsAudience": 18.3,
-   "avgScore": 27,
+   "avgScore": 28,
    "lbN": 7,
    "caN": 3
   },
@@ -7108,7 +7108,7 @@
    "label": "Patrick Brice",
    "count": 5,
    "lbVsImdb": 12.4,
-   "criticsVsAudience": 34,
+   "criticsVsAudience": 34.3,
    "avgScore": 42,
    "lbN": 5,
    "caN": 4
@@ -7118,40 +7118,40 @@
    "label": "Lee Chang-dong",
    "count": 6,
    "lbVsImdb": 10.6,
-   "criticsVsAudience": 4.5,
-   "avgScore": 82,
+   "criticsVsAudience": -1.3,
+   "avgScore": 81,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm1883257",
    "label": "Pablo Larraín",
    "count": 10,
    "lbVsImdb": 14.6,
-   "criticsVsAudience": 15.2,
+   "criticsVsAudience": 13.7,
    "avgScore": 62,
    "lbN": 10,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0346550",
    "label": "Davis Guggenheim",
    "count": 7,
    "lbVsImdb": -1.5,
-   "criticsVsAudience": 4.8,
+   "criticsVsAudience": 1.8,
    "avgScore": 64,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000777",
    "label": "Gregg Araki",
    "count": 10,
    "lbVsImdb": 32.7,
-   "criticsVsAudience": 2.4,
-   "avgScore": 54,
+   "criticsVsAudience": -0.6,
+   "avgScore": 53,
    "lbN": 10,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm3109770",
@@ -7159,7 +7159,7 @@
    "count": 6,
    "lbVsImdb": -17.3,
    "criticsVsAudience": -9.2,
-   "avgScore": 60,
+   "avgScore": 59,
    "lbN": 6,
    "caN": 4
   },
@@ -7168,7 +7168,7 @@
    "label": "Ken Scott",
    "count": 5,
    "lbVsImdb": -3.2,
-   "criticsVsAudience": -13,
+   "criticsVsAudience": -12.7,
    "avgScore": 41,
    "lbN": 5,
    "caN": 3
@@ -7178,7 +7178,7 @@
    "label": "Cecil B. DeMille",
    "count": 15,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -4.5,
    "avgScore": 50,
    "lbN": 15,
    "caN": 2
@@ -7198,17 +7198,17 @@
    "label": "John Stockwell",
    "count": 11,
    "lbVsImdb": 6.1,
-   "criticsVsAudience": 4.5,
+   "criticsVsAudience": 4.2,
    "avgScore": 25,
    "lbN": 11,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0572562",
    "label": "Greg McLean",
    "count": 6,
    "lbVsImdb": -4.9,
-   "criticsVsAudience": 2.7,
+   "criticsVsAudience": 2.8,
    "avgScore": 32,
    "lbN": 6,
    "caN": 6
@@ -7238,16 +7238,16 @@
    "label": "Robert Aldrich",
    "count": 14,
    "lbVsImdb": 0.4,
-   "criticsVsAudience": -9.3,
-   "avgScore": 63,
+   "criticsVsAudience": -4.7,
+   "avgScore": 64,
    "lbN": 14,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm1033517",
    "label": "Ariel Vromen",
    "count": 5,
-   "lbVsImdb": -8.8,
+   "lbVsImdb": -8.7,
    "criticsVsAudience": -6.7,
    "avgScore": 39,
    "lbN": 5,
@@ -7257,7 +7257,7 @@
    "key": "nm0438090",
    "label": "Asif Kapadia",
    "count": 9,
-   "lbVsImdb": 1.9,
+   "lbVsImdb": 2,
    "criticsVsAudience": 6.3,
    "avgScore": 65,
    "lbN": 9,
@@ -7268,17 +7268,17 @@
    "label": "David S. Ward",
    "count": 5,
    "lbVsImdb": -2.1,
-   "criticsVsAudience": -13,
-   "avgScore": 32,
+   "criticsVsAudience": -13.2,
+   "avgScore": 30,
    "lbN": 5,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000382",
    "label": "Atom Egoyan",
    "count": 14,
    "lbVsImdb": 3.4,
-   "criticsVsAudience": -2.9,
+   "criticsVsAudience": -2.7,
    "avgScore": 47,
    "lbN": 14,
    "caN": 8
@@ -7291,17 +7291,17 @@
    "criticsVsAudience": -1.9,
    "avgScore": 58,
    "lbN": 9,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0031342",
    "label": "Predrag Antonijevic",
    "count": 5,
    "lbVsImdb": -1.9,
-   "criticsVsAudience": -42,
-   "avgScore": 44,
+   "criticsVsAudience": -33,
+   "avgScore": 42,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1272773",
@@ -7318,7 +7318,7 @@
    "label": "Priyadarshan",
    "count": 14,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": -26.5,
+   "criticsVsAudience": -26.2,
    "avgScore": 46,
    "lbN": 14,
    "caN": 4
@@ -7338,17 +7338,17 @@
    "label": "Peter Yates",
    "count": 11,
    "lbVsImdb": 1.1,
-   "criticsVsAudience": -1.2,
+   "criticsVsAudience": -2.4,
    "avgScore": 49,
    "lbN": 11,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0000887",
    "label": "Harold Becker",
    "count": 9,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": -4.8,
+   "criticsVsAudience": -4.7,
    "avgScore": 39,
    "lbN": 9,
    "caN": 6
@@ -7357,7 +7357,7 @@
    "key": "nm0001355",
    "label": "Michael Hoffman",
    "count": 12,
-   "lbVsImdb": 0.2,
+   "lbVsImdb": 0.1,
    "criticsVsAudience": -10.9,
    "avgScore": 42,
    "lbN": 12,
@@ -7378,10 +7378,10 @@
    "label": "Rohit Shetty",
    "count": 13,
    "lbVsImdb": 2.4,
-   "criticsVsAudience": -5.6,
+   "criticsVsAudience": -2.1,
    "avgScore": 28,
    "lbN": 13,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm0354091",
@@ -7398,57 +7398,57 @@
    "label": "MJ Bassett",
    "count": 7,
    "lbVsImdb": 3.8,
-   "criticsVsAudience": 7.7,
-   "avgScore": 21,
+   "criticsVsAudience": 2.8,
+   "avgScore": 20,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0001754",
    "label": "Todd Solondz",
    "count": 7,
    "lbVsImdb": 10.6,
-   "criticsVsAudience": -10.3,
-   "avgScore": 54,
+   "criticsVsAudience": -13,
+   "avgScore": 53,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0005563",
    "label": "Irwin Winkler",
    "count": 6,
    "lbVsImdb": 0,
-   "criticsVsAudience": -17.7,
-   "avgScore": 37,
+   "criticsVsAudience": -15.5,
+   "avgScore": 36,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm2586324",
    "label": "Trish Sie",
    "count": 5,
    "lbVsImdb": -1,
-   "criticsVsAudience": -10,
-   "avgScore": 31,
+   "criticsVsAudience": 2.8,
+   "avgScore": 33,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0002340",
    "label": "Stuart Gordon",
    "count": 11,
    "lbVsImdb": 10.7,
-   "criticsVsAudience": 2.5,
+   "criticsVsAudience": 1.7,
    "avgScore": 41,
    "lbN": 11,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0030417",
    "label": "Hideaki Anno",
    "count": 8,
    "lbVsImdb": 17.9,
-   "criticsVsAudience": -27.5,
+   "criticsVsAudience": -27.2,
    "avgScore": 73,
    "lbN": 8,
    "caN": 4
@@ -7458,7 +7458,7 @@
    "label": "Kazuya Tsurumaki",
    "count": 6,
    "lbVsImdb": 7.4,
-   "criticsVsAudience": -30.4,
+   "criticsVsAudience": -30,
    "avgScore": 73,
    "lbN": 6,
    "caN": 5
@@ -7468,7 +7468,7 @@
    "label": "Anees Bazmee",
    "count": 8,
    "lbVsImdb": 7,
-   "criticsVsAudience": 11.3,
+   "criticsVsAudience": 12,
    "avgScore": 32,
    "lbN": 8,
    "caN": 3
@@ -7478,20 +7478,20 @@
    "label": "Yasujirō Ozu",
    "count": 31,
    "lbVsImdb": 7.8,
-   "criticsVsAudience": 1.5,
+   "criticsVsAudience": 1.3,
    "avgScore": 67,
    "lbN": 31,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0695937",
    "label": "Otto Preminger",
    "count": 10,
    "lbVsImdb": 0.7,
-   "criticsVsAudience": 3,
-   "avgScore": 66,
+   "criticsVsAudience": -3,
+   "avgScore": 65,
    "lbN": 10,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0000602",
@@ -7508,7 +7508,7 @@
    "label": "Miguel Arteta",
    "count": 8,
    "lbVsImdb": -8,
-   "criticsVsAudience": 19.5,
+   "criticsVsAudience": 19.8,
    "avgScore": 33,
    "lbN": 8,
    "caN": 6
@@ -7518,17 +7518,17 @@
    "label": "Ryūsuke Hamaguchi",
    "count": 6,
    "lbVsImdb": 21.1,
-   "criticsVsAudience": 10.5,
-   "avgScore": 75,
+   "criticsVsAudience": 11.7,
+   "avgScore": 77,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0421314",
    "label": "Anders Thomas Jensen",
    "count": 6,
    "lbVsImdb": 0.5,
-   "criticsVsAudience": -18.5,
+   "criticsVsAudience": -18.2,
    "avgScore": 69,
    "lbN": 6,
    "caN": 6
@@ -7538,8 +7538,8 @@
    "label": "Mamoru Hosoda",
    "count": 7,
    "lbVsImdb": 1.8,
-   "criticsVsAudience": -9,
-   "avgScore": 77,
+   "criticsVsAudience": -8.9,
+   "avgScore": 78,
    "lbN": 7,
    "caN": 7
   },
@@ -7548,17 +7548,17 @@
    "label": "Olivier Assayas",
    "count": 13,
    "lbVsImdb": 12.5,
-   "criticsVsAudience": 14.3,
+   "criticsVsAudience": 12.8,
    "avgScore": 49,
    "lbN": 13,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0001302",
    "label": "Christopher Guest",
    "count": 6,
    "lbVsImdb": 2.7,
-   "criticsVsAudience": 0.8,
+   "criticsVsAudience": 1,
    "avgScore": 54,
    "lbN": 6,
    "caN": 5
@@ -7588,7 +7588,7 @@
    "label": "Neil LaBute",
    "count": 10,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": 16.6,
+   "criticsVsAudience": 16.8,
    "avgScore": 31,
    "lbN": 10,
    "caN": 5
@@ -7598,7 +7598,7 @@
    "label": "Elizabeth Allen Rosenbaum",
    "count": 5,
    "lbVsImdb": -2.9,
-   "criticsVsAudience": -15.7,
+   "criticsVsAudience": -16,
    "avgScore": 34,
    "lbN": 5,
    "caN": 3
@@ -7608,10 +7608,10 @@
    "label": "Christopher Cain",
    "count": 6,
    "lbVsImdb": -2.3,
-   "criticsVsAudience": -12,
-   "avgScore": 35,
+   "criticsVsAudience": -15,
+   "avgScore": 33,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0223522",
@@ -7628,7 +7628,7 @@
    "label": "Sushma Sunam",
    "count": 6,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": 0,
+   "criticsVsAudience": 0.2,
    "avgScore": 29,
    "lbN": 6,
    "caN": 5
@@ -7638,17 +7638,17 @@
    "label": "Bobcat Goldthwait",
    "count": 5,
    "lbVsImdb": -1.9,
-   "criticsVsAudience": -5.5,
-   "avgScore": 47,
+   "criticsVsAudience": 14,
+   "avgScore": 51,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm1266897",
    "label": "Johannes Roberts",
    "count": 7,
    "lbVsImdb": 0.2,
-   "criticsVsAudience": 18,
+   "criticsVsAudience": 18.5,
    "avgScore": 18,
    "lbN": 7,
    "caN": 6
@@ -7678,17 +7678,17 @@
    "label": "Pier Paolo Pasolini",
    "count": 13,
    "lbVsImdb": 16,
-   "criticsVsAudience": 3,
+   "criticsVsAudience": -0.2,
    "avgScore": 64,
    "lbN": 13,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0170719",
    "label": "Nigel Cole",
    "count": 6,
    "lbVsImdb": 0.9,
-   "criticsVsAudience": -12.5,
+   "criticsVsAudience": -12.2,
    "avgScore": 49,
    "lbN": 6,
    "caN": 4
@@ -7718,7 +7718,7 @@
    "label": "A.R. Murugadoss",
    "count": 11,
    "lbVsImdb": -17.2,
-   "criticsVsAudience": -25,
+   "criticsVsAudience": -24.5,
    "avgScore": 50,
    "lbN": 11,
    "caN": 2
@@ -7728,17 +7728,17 @@
    "label": "Lewis Milestone",
    "count": 16,
    "lbVsImdb": -2.3,
-   "criticsVsAudience": -12.3,
-   "avgScore": 55,
+   "criticsVsAudience": -2,
+   "avgScore": 56,
    "lbN": 16,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0747849",
    "label": "Joseph Ruben",
    "count": 12,
    "lbVsImdb": -0.3,
-   "criticsVsAudience": -4.5,
+   "criticsVsAudience": -4.4,
    "avgScore": 35,
    "lbN": 12,
    "caN": 8
@@ -7748,7 +7748,7 @@
    "label": "Colin Minihan",
    "count": 5,
    "lbVsImdb": 1.3,
-   "criticsVsAudience": 7.7,
+   "criticsVsAudience": 8,
    "avgScore": 23,
    "lbN": 5,
    "caN": 3
@@ -7768,7 +7768,7 @@
    "label": "Ted Post",
    "count": 6,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": -8.7,
+   "criticsVsAudience": -8.3,
    "avgScore": 45,
    "lbN": 6,
    "caN": 3
@@ -7778,7 +7778,7 @@
    "label": "Carl Franklin",
    "count": 5,
    "lbVsImdb": 4.2,
-   "criticsVsAudience": 12,
+   "criticsVsAudience": 12.3,
    "avgScore": 57,
    "lbN": 5,
    "caN": 4
@@ -7788,10 +7788,10 @@
    "label": "Vikas Bahl",
    "count": 5,
    "lbVsImdb": -15,
-   "criticsVsAudience": -25.3,
-   "avgScore": 46,
+   "criticsVsAudience": -26,
+   "avgScore": 43,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0399853",
@@ -7809,7 +7809,7 @@
    "count": 5,
    "lbVsImdb": -0.9,
    "criticsVsAudience": 10,
-   "avgScore": 50,
+   "avgScore": 51,
    "lbN": 5,
    "caN": 3
   },
@@ -7818,7 +7818,7 @@
    "label": "Nicole Holofcener",
    "count": 5,
    "lbVsImdb": -0.9,
-   "criticsVsAudience": 37.7,
+   "criticsVsAudience": 38,
    "avgScore": 52,
    "lbN": 5,
    "caN": 3
@@ -7838,7 +7838,7 @@
    "label": "Nick Castle",
    "count": 6,
    "lbVsImdb": -1.1,
-   "criticsVsAudience": -3,
+   "criticsVsAudience": -2.3,
    "avgScore": 39,
    "lbN": 6,
    "caN": 3
@@ -7848,7 +7848,7 @@
    "label": "Daniel Roher",
    "count": 5,
    "lbVsImdb": 1,
-   "criticsVsAudience": 7.3,
+   "criticsVsAudience": 7.7,
    "avgScore": 69,
    "lbN": 5,
    "caN": 3
@@ -7868,7 +7868,7 @@
    "label": "Carl Reiner",
    "count": 9,
    "lbVsImdb": 1.5,
-   "criticsVsAudience": -6.2,
+   "criticsVsAudience": -6,
    "avgScore": 46,
    "lbN": 9,
    "caN": 6
@@ -7878,7 +7878,7 @@
    "label": "John Waters",
    "count": 7,
    "lbVsImdb": 29.3,
-   "criticsVsAudience": -2.3,
+   "criticsVsAudience": -2.2,
    "avgScore": 56,
    "lbN": 7,
    "caN": 6
@@ -7888,40 +7888,40 @@
    "label": "Carl Theodor Dreyer",
    "count": 7,
    "lbVsImdb": 6.1,
-   "criticsVsAudience": 5.3,
-   "avgScore": 79,
+   "criticsVsAudience": 6,
+   "avgScore": 80,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0516360",
    "label": "Ken Loach",
    "count": 20,
    "lbVsImdb": 2.7,
-   "criticsVsAudience": 0,
-   "avgScore": 68,
+   "criticsVsAudience": -2.1,
+   "avgScore": 67,
    "lbN": 20,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0036349",
    "label": "Andrea Arnold",
    "count": 6,
    "lbVsImdb": 15.2,
-   "criticsVsAudience": 1,
-   "avgScore": 64,
+   "criticsVsAudience": 9.4,
+   "avgScore": 68,
    "lbN": 6,
-   "caN": 2
+   "caN": 5
   },
   {
    "key": "nm0001707",
    "label": "Paul Schrader",
    "count": 19,
    "lbVsImdb": 11.8,
-   "criticsVsAudience": 10.1,
+   "criticsVsAudience": 9.7,
    "avgScore": 45,
    "lbN": 19,
-   "caN": 9
+   "caN": 12
   },
   {
    "key": "nm0518644",
@@ -7938,7 +7938,7 @@
    "label": "Shari Springer Berman",
    "count": 6,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": 2.3,
+   "criticsVsAudience": 2.5,
    "avgScore": 36,
    "lbN": 6,
    "caN": 4
@@ -7948,7 +7948,7 @@
    "label": "Robert Pulcini",
    "count": 6,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": 2.3,
+   "criticsVsAudience": 2.5,
    "avgScore": 36,
    "lbN": 6,
    "caN": 4
@@ -7959,7 +7959,7 @@
    "count": 6,
    "lbVsImdb": 3.8,
    "criticsVsAudience": 3,
-   "avgScore": 49,
+   "avgScore": 50,
    "lbN": 6,
    "caN": 4
   },
@@ -7968,7 +7968,7 @@
    "label": "Ruggero Deodato",
    "count": 9,
    "lbVsImdb": 5.7,
-   "criticsVsAudience": 6,
+   "criticsVsAudience": 7,
    "avgScore": 31,
    "lbN": 9,
    "caN": 1
@@ -7978,7 +7978,7 @@
    "label": "Sanjay Leela Bhansali",
    "count": 10,
    "lbVsImdb": -5.3,
-   "criticsVsAudience": -24.2,
+   "criticsVsAudience": -24,
    "avgScore": 61,
    "lbN": 10,
    "caN": 6
@@ -7987,28 +7987,28 @@
    "key": "nm0957263",
    "label": "Joseph Zito",
    "count": 5,
-   "lbVsImdb": 9.2,
-   "criticsVsAudience": -8,
+   "lbVsImdb": 9.1,
+   "criticsVsAudience": -2.7,
    "avgScore": 21,
    "lbN": 5,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0000907",
    "label": "Richard Benjamin",
    "count": 12,
    "lbVsImdb": 9.7,
-   "criticsVsAudience": -4,
-   "avgScore": 34,
+   "criticsVsAudience": -8.4,
+   "avgScore": 33,
    "lbN": 12,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0775447",
    "label": "Barbet Schroeder",
    "count": 15,
    "lbVsImdb": 2.8,
-   "criticsVsAudience": 7.3,
+   "criticsVsAudience": 7.5,
    "avgScore": 47,
    "lbN": 15,
    "caN": 6
@@ -8019,7 +8019,7 @@
    "count": 9,
    "lbVsImdb": -9.9,
    "criticsVsAudience": 4.7,
-   "avgScore": 64,
+   "avgScore": 63,
    "lbN": 9,
    "caN": 3
   },
@@ -8028,17 +8028,17 @@
    "label": "Jean-Pierre Melville",
    "count": 12,
    "lbVsImdb": 5.1,
-   "criticsVsAudience": -1.7,
-   "avgScore": 74,
+   "criticsVsAudience": 3.3,
+   "avgScore": 76,
    "lbN": 12,
-   "caN": 3
+   "caN": 6
   },
   {
    "key": "nm0175730",
    "label": "David Worth",
    "count": 7,
    "lbVsImdb": 12.1,
-   "criticsVsAudience": -41,
+   "criticsVsAudience": -40,
    "avgScore": 32,
    "lbN": 7,
    "caN": 1
@@ -8048,7 +8048,7 @@
    "label": "Mike Hodges",
    "count": 8,
    "lbVsImdb": 4.5,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.3,
    "avgScore": 48,
    "lbN": 8,
    "caN": 4
@@ -8078,17 +8078,17 @@
    "label": "Cristian Mungiu",
    "count": 6,
    "lbVsImdb": 3.9,
-   "criticsVsAudience": 10,
-   "avgScore": 78,
+   "criticsVsAudience": 9.3,
+   "avgScore": 79,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm1665004",
    "label": "Imtiaz Ali",
    "count": 10,
    "lbVsImdb": -5.7,
-   "criticsVsAudience": -12.8,
+   "criticsVsAudience": -12.5,
    "avgScore": 59,
    "lbN": 10,
    "caN": 6
@@ -8098,16 +8098,16 @@
    "label": "Michael Anderson",
    "count": 8,
    "lbVsImdb": -3.3,
-   "criticsVsAudience": -11.7,
-   "avgScore": 47,
+   "criticsVsAudience": -0.7,
+   "avgScore": 49,
    "lbN": 8,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0199722",
    "label": "Rod Daniel",
    "count": 5,
-   "lbVsImdb": 1.7,
+   "lbVsImdb": 1.6,
    "criticsVsAudience": -3.7,
    "avgScore": 22,
    "lbN": 5,
@@ -8118,7 +8118,7 @@
    "label": "Ole Bornedal",
    "count": 7,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": -10.7,
+   "criticsVsAudience": -10.3,
    "avgScore": 41,
    "lbN": 7,
    "caN": 3
@@ -8128,7 +8128,7 @@
    "label": "Xavier Dolan",
    "count": 8,
    "lbVsImdb": 10.2,
-   "criticsVsAudience": -18.8,
+   "criticsVsAudience": -18.3,
    "avgScore": 70,
    "lbN": 8,
    "caN": 6
@@ -8148,17 +8148,17 @@
    "label": "Sergei Eisenstein",
    "count": 8,
    "lbVsImdb": 7.2,
-   "criticsVsAudience": 5,
-   "avgScore": 74,
+   "criticsVsAudience": 6,
+   "avgScore": 75,
    "lbN": 8,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0514546",
    "label": "Dwight H. Little",
    "count": 8,
    "lbVsImdb": 2,
-   "criticsVsAudience": 3.3,
+   "criticsVsAudience": 3.5,
    "avgScore": 21,
    "lbN": 8,
    "caN": 6
@@ -8178,8 +8178,8 @@
    "label": "Drake Doremus",
    "count": 6,
    "lbVsImdb": -5,
-   "criticsVsAudience": 7.8,
-   "avgScore": 33,
+   "criticsVsAudience": 8,
+   "avgScore": 34,
    "lbN": 6,
    "caN": 4
   },
@@ -8218,20 +8218,20 @@
    "label": "David M. Rosenthal",
    "count": 7,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 8,
    "avgScore": 26,
    "lbN": 7,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0006916",
    "label": "Michael Ritchie",
    "count": 14,
    "lbVsImdb": 4.3,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -2.8,
    "avgScore": 40,
    "lbN": 14,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm2207625",
@@ -8288,7 +8288,7 @@
    "label": "Stephan Elliott",
    "count": 6,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": -7.7,
+   "criticsVsAudience": -7.3,
    "avgScore": 40,
    "lbN": 6,
    "caN": 3
@@ -8297,7 +8297,7 @@
    "key": "nm0470443",
    "label": "Gérard Krawczyk",
    "count": 5,
-   "lbVsImdb": 2.8,
+   "lbVsImdb": 2.9,
    "criticsVsAudience": -25,
    "avgScore": 32,
    "lbN": 5,
@@ -8307,11 +8307,11 @@
    "key": "nm0133899",
    "label": "Guillaume Canet",
    "count": 6,
-   "lbVsImdb": -4.6,
-   "criticsVsAudience": -19.3,
-   "avgScore": 40,
+   "lbVsImdb": -4.7,
+   "criticsVsAudience": -8.7,
+   "avgScore": 41,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0080235",
@@ -8328,8 +8328,8 @@
    "label": "Michael Tiddes",
    "count": 6,
    "lbVsImdb": -0.2,
-   "criticsVsAudience": -3.8,
-   "avgScore": 8,
+   "criticsVsAudience": -3.6,
+   "avgScore": 9,
    "lbN": 6,
    "caN": 5
   },
@@ -8358,26 +8358,26 @@
    "label": "Fatih Akin",
    "count": 13,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": -5.4,
+   "criticsVsAudience": -5.7,
    "avgScore": 63,
    "lbN": 13,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0496746",
    "label": "J. Lee Thompson",
    "count": 24,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": -2.6,
+   "criticsVsAudience": -4.9,
    "avgScore": 41,
    "lbN": 24,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0317638",
    "label": "Tony Giglio",
    "count": 6,
-   "lbVsImdb": 8,
+   "lbVsImdb": 8.1,
    "criticsVsAudience": null,
    "avgScore": 30,
    "lbN": 6,
@@ -8388,7 +8388,7 @@
    "label": "Andrey Zvyagintsev",
    "count": 6,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": 10.8,
+   "criticsVsAudience": 11.2,
    "avgScore": 86,
    "lbN": 6,
    "caN": 5
@@ -8398,20 +8398,20 @@
    "label": "Scott Speer",
    "count": 5,
    "lbVsImdb": -17.5,
-   "criticsVsAudience": -33,
-   "avgScore": 35,
+   "criticsVsAudience": -30,
+   "avgScore": 33,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm1887138",
    "label": "Mohit Suri",
    "count": 6,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": -26.7,
-   "avgScore": 41,
+   "criticsVsAudience": -24.7,
+   "avgScore": 40,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0018132",
@@ -8428,7 +8428,7 @@
    "label": "George Seaton",
    "count": 9,
    "lbVsImdb": -5.6,
-   "criticsVsAudience": -14.3,
+   "criticsVsAudience": -14,
    "avgScore": 57,
    "lbN": 9,
    "caN": 3
@@ -8438,7 +8438,7 @@
    "label": "Fisher Stevens",
    "count": 6,
    "lbVsImdb": -4.9,
-   "criticsVsAudience": -28.3,
+   "criticsVsAudience": -27.3,
    "avgScore": 52,
    "lbN": 6,
    "caN": 3
@@ -8448,7 +8448,7 @@
    "label": "Danny Pang",
    "count": 5,
    "lbVsImdb": 3.8,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.3,
    "avgScore": 26,
    "lbN": 5,
    "caN": 3
@@ -8457,8 +8457,8 @@
    "key": "nm0161152",
    "label": "Oxide Chun Pang",
    "count": 7,
-   "lbVsImdb": 4,
-   "criticsVsAudience": -0.7,
+   "lbVsImdb": 4.1,
+   "criticsVsAudience": -0.3,
    "avgScore": 30,
    "lbN": 7,
    "caN": 3
@@ -8478,10 +8478,10 @@
    "label": "David Moreau",
    "count": 5,
    "lbVsImdb": 4,
-   "criticsVsAudience": 8.5,
-   "avgScore": 35,
+   "criticsVsAudience": 17.7,
+   "avgScore": 38,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm1918140",
@@ -8508,10 +8508,10 @@
    "label": "Peter Bogdanovich",
    "count": 15,
    "lbVsImdb": 5.8,
-   "criticsVsAudience": -5.2,
+   "criticsVsAudience": -7.4,
    "avgScore": 60,
    "lbN": 15,
-   "caN": 5
+   "caN": 7
   },
   {
    "key": "nm0600546",
@@ -8538,7 +8538,7 @@
    "label": "Sidney J. Furie",
    "count": 16,
    "lbVsImdb": 10.5,
-   "criticsVsAudience": -7.5,
+   "criticsVsAudience": -7.2,
    "avgScore": 36,
    "lbN": 16,
    "caN": 4
@@ -8558,17 +8558,17 @@
    "label": "Richard Brooks",
    "count": 9,
    "lbVsImdb": -0.3,
-   "criticsVsAudience": -4.3,
-   "avgScore": 63,
+   "criticsVsAudience": -1,
+   "avgScore": 64,
    "lbN": 9,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm1229520",
    "label": "Ben Falcone",
    "count": 5,
    "lbVsImdb": -1.6,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.4,
    "avgScore": 12,
    "lbN": 5,
    "caN": 5
@@ -8588,26 +8588,26 @@
    "label": "Rouben Mamoulian",
    "count": 8,
    "lbVsImdb": 0,
-   "criticsVsAudience": -6.3,
-   "avgScore": 64,
+   "criticsVsAudience": -1.7,
+   "avgScore": 65,
    "lbN": 8,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0573732",
    "label": "Sean McNamara",
    "count": 17,
    "lbVsImdb": -3,
-   "criticsVsAudience": -15.5,
-   "avgScore": 37,
+   "criticsVsAudience": -16.1,
+   "avgScore": 35,
    "lbN": 15,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm18569426",
    "label": "Mohammed Nadim Bhati",
    "count": 5,
-   "lbVsImdb": -4.9,
+   "lbVsImdb": -4.8,
    "criticsVsAudience": -2,
    "avgScore": 42,
    "lbN": 4,
@@ -8627,7 +8627,7 @@
    "key": "nm0172772",
    "label": "Peter Collinson",
    "count": 7,
-   "lbVsImdb": 2.6,
+   "lbVsImdb": 2.5,
    "criticsVsAudience": -7,
    "avgScore": 46,
    "lbN": 7,
@@ -8638,7 +8638,7 @@
    "label": "Chris Smith",
    "count": 11,
    "lbVsImdb": -1.9,
-   "criticsVsAudience": 3.3,
+   "criticsVsAudience": 3.5,
    "avgScore": 62,
    "lbN": 11,
    "caN": 4
@@ -8648,27 +8648,27 @@
    "label": "Ronald Neame",
    "count": 10,
    "lbVsImdb": -2.1,
-   "criticsVsAudience": -8,
-   "avgScore": 55,
+   "criticsVsAudience": -11.7,
+   "avgScore": 54,
    "lbN": 10,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm1417640",
    "label": "Brett Haley",
    "count": 6,
-   "lbVsImdb": -1.6,
-   "criticsVsAudience": -6.5,
-   "avgScore": 53,
+   "lbVsImdb": -1.7,
+   "criticsVsAudience": -1,
+   "avgScore": 54,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0181741",
    "label": "Don Coscarelli",
    "count": 7,
    "lbVsImdb": 1.7,
-   "criticsVsAudience": -6.8,
+   "criticsVsAudience": -6.4,
    "avgScore": 36,
    "lbN": 7,
    "caN": 5
@@ -8678,7 +8678,7 @@
    "label": "Henry Hathaway",
    "count": 19,
    "lbVsImdb": -0.3,
-   "criticsVsAudience": -2.2,
+   "criticsVsAudience": -2,
    "avgScore": 54,
    "lbN": 19,
    "caN": 5
@@ -8708,17 +8708,17 @@
    "label": "Luis Buñuel",
    "count": 21,
    "lbVsImdb": 2.2,
-   "criticsVsAudience": -2,
-   "avgScore": 71,
+   "criticsVsAudience": 0.3,
+   "avgScore": 72,
    "lbN": 21,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0381273",
    "label": "John Herzfeld",
    "count": 5,
    "lbVsImdb": 3.4,
-   "criticsVsAudience": 1,
+   "criticsVsAudience": 1.3,
    "avgScore": 25,
    "lbN": 5,
    "caN": 3
@@ -8728,8 +8728,8 @@
    "label": "Geoff Murphy",
    "count": 7,
    "lbVsImdb": 7.6,
-   "criticsVsAudience": -4,
-   "avgScore": 35,
+   "criticsVsAudience": -3.5,
+   "avgScore": 36,
    "lbN": 7,
    "caN": 4
   },
@@ -8737,7 +8737,7 @@
    "key": "nm0267309",
    "label": "James Fargo",
    "count": 5,
-   "lbVsImdb": 2.3,
+   "lbVsImdb": 2.4,
    "criticsVsAudience": -10.5,
    "avgScore": 39,
    "lbN": 4,
@@ -8768,10 +8768,10 @@
    "label": "Takeshi Kitano",
    "count": 12,
    "lbVsImdb": 10.2,
-   "criticsVsAudience": -21,
+   "criticsVsAudience": -19.6,
    "avgScore": 68,
    "lbN": 12,
-   "caN": 7
+   "caN": 8
   },
   {
    "key": "nm1030706",
@@ -8788,17 +8788,17 @@
    "label": "Abel Ferrara",
    "count": 20,
    "lbVsImdb": 22.6,
-   "criticsVsAudience": -3.7,
+   "criticsVsAudience": -3,
    "avgScore": 41,
    "lbN": 20,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0765121",
    "label": "Joseph Sargent",
    "count": 5,
    "lbVsImdb": 6.1,
-   "criticsVsAudience": -4.5,
+   "criticsVsAudience": -4,
    "avgScore": 46,
    "lbN": 5,
    "caN": 2
@@ -8808,17 +8808,17 @@
    "label": "Anubhav Sinha",
    "count": 9,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": 18.2,
-   "avgScore": 54,
+   "criticsVsAudience": 19.9,
+   "avgScore": 55,
    "lbN": 9,
-   "caN": 6
+   "caN": 7
   },
   {
    "key": "nm0294505",
    "label": "Bart Freundlich",
    "count": 5,
    "lbVsImdb": 0,
-   "criticsVsAudience": -12,
+   "criticsVsAudience": -11,
    "avgScore": 35,
    "lbN": 5,
    "caN": 1
@@ -8858,16 +8858,16 @@
    "label": "Jackie Chan",
    "count": 13,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": -13.7,
+   "criticsVsAudience": -13.9,
    "avgScore": 63,
    "lbN": 13,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0654830",
    "label": "François Ozon",
    "count": 19,
-   "lbVsImdb": 7.3,
+   "lbVsImdb": 7.4,
    "criticsVsAudience": 3,
    "avgScore": 57,
    "lbN": 19,
@@ -8878,40 +8878,40 @@
    "label": "Leos Carax",
    "count": 5,
    "lbVsImdb": 17.9,
-   "criticsVsAudience": -1.3,
+   "criticsVsAudience": -3.5,
    "avgScore": 72,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0281869",
    "label": "Rodman Flender",
    "count": 5,
    "lbVsImdb": 6.4,
-   "criticsVsAudience": -32,
-   "avgScore": 33,
+   "criticsVsAudience": -17.5,
+   "avgScore": 31,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1999473",
    "label": "Shoojit Sircar",
    "count": 6,
    "lbVsImdb": -14.7,
-   "criticsVsAudience": 6.3,
-   "avgScore": 71,
+   "criticsVsAudience": 9.3,
+   "avgScore": 72,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0005139",
    "label": "Mike Leigh",
    "count": 13,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": 9.2,
-   "avgScore": 75,
+   "criticsVsAudience": 9.4,
+   "avgScore": 77,
    "lbN": 13,
-   "caN": 6
+   "caN": 9
   },
   {
    "key": "nm0093051",
@@ -8938,10 +8938,10 @@
    "label": "Sebastián Lelio",
    "count": 5,
    "lbVsImdb": 12.7,
-   "criticsVsAudience": 11.3,
-   "avgScore": 63,
+   "criticsVsAudience": 19.8,
+   "avgScore": 68,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0003939",
@@ -8958,37 +8958,37 @@
    "label": "Ernst Lubitsch",
    "count": 19,
    "lbVsImdb": 4.7,
-   "criticsVsAudience": -2.5,
+   "criticsVsAudience": -0.6,
    "avgScore": 63,
    "lbN": 19,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0867262",
    "label": "Stanley Tong",
    "count": 8,
    "lbVsImdb": 5.6,
-   "criticsVsAudience": -8.8,
-   "avgScore": 39,
+   "criticsVsAudience": -4.3,
+   "avgScore": 40,
    "lbN": 8,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0770961",
    "label": "Fred Schepisi",
    "count": 11,
    "lbVsImdb": 3.8,
-   "criticsVsAudience": 19.2,
-   "avgScore": 49,
+   "criticsVsAudience": 20.2,
+   "avgScore": 51,
    "lbN": 11,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0358327",
    "label": "Nick Hamm",
    "count": 5,
    "lbVsImdb": 0.2,
-   "criticsVsAudience": 0.5,
+   "criticsVsAudience": 1,
    "avgScore": 31,
    "lbN": 4,
    "caN": 2
@@ -9028,10 +9028,10 @@
    "label": "Bille Woodruff",
    "count": 5,
    "lbVsImdb": 21.9,
-   "criticsVsAudience": -16,
-   "avgScore": 29,
+   "criticsVsAudience": -13.3,
+   "avgScore": 28,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm8631915",
@@ -9058,7 +9058,7 @@
    "label": "Alexandre Bustillo",
    "count": 5,
    "lbVsImdb": -2,
-   "criticsVsAudience": 22,
+   "criticsVsAudience": 22.3,
    "avgScore": 37,
    "lbN": 5,
    "caN": 3
@@ -9068,7 +9068,7 @@
    "label": "Julien Maury",
    "count": 5,
    "lbVsImdb": -2,
-   "criticsVsAudience": 22,
+   "criticsVsAudience": 22.3,
    "avgScore": 37,
    "lbN": 5,
    "caN": 3
@@ -9078,30 +9078,30 @@
    "label": "John Flynn",
    "count": 7,
    "lbVsImdb": 6.8,
-   "criticsVsAudience": -15.7,
-   "avgScore": 44,
+   "criticsVsAudience": -17.7,
+   "avgScore": 42,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0935382",
    "label": "Michael Winner",
    "count": 15,
    "lbVsImdb": 3.6,
-   "criticsVsAudience": -27.5,
-   "avgScore": 39,
+   "criticsVsAudience": -27.4,
+   "avgScore": 38,
    "lbN": 15,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0752328",
    "label": "Stefan Ruzowitzky",
    "count": 8,
    "lbVsImdb": 0.8,
-   "criticsVsAudience": 1.5,
-   "avgScore": 38,
+   "criticsVsAudience": 0.3,
+   "avgScore": 37,
    "lbN": 8,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm2725627",
@@ -9118,17 +9118,17 @@
    "label": "John Carl Buechler",
    "count": 5,
    "lbVsImdb": 5.8,
-   "criticsVsAudience": 4,
-   "avgScore": 20,
+   "criticsVsAudience": 2.5,
+   "avgScore": 19,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0001282",
    "label": "Tony Goldwyn",
    "count": 5,
    "lbVsImdb": -8.5,
-   "criticsVsAudience": -8.7,
+   "criticsVsAudience": -8.3,
    "avgScore": 42,
    "lbN": 5,
    "caN": 3
@@ -9138,30 +9138,30 @@
    "label": "Yuen Woo-Ping",
    "count": 14,
    "lbVsImdb": 3.1,
-   "criticsVsAudience": -8.7,
-   "avgScore": 57,
+   "criticsVsAudience": -10,
+   "avgScore": 56,
    "lbN": 14,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0282708",
    "label": "Isaac Florentine",
    "count": 10,
    "lbVsImdb": 9.6,
-   "criticsVsAudience": 17,
-   "avgScore": 37,
+   "criticsVsAudience": 34,
+   "avgScore": 40,
    "lbN": 10,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0828419",
    "label": "George Stevens",
    "count": 13,
    "lbVsImdb": -2.6,
-   "criticsVsAudience": 3.5,
-   "avgScore": 69,
+   "criticsVsAudience": -1.1,
+   "avgScore": 68,
    "lbN": 13,
-   "caN": 4
+   "caN": 7
   },
   {
    "key": "nm0200702",
@@ -9178,7 +9178,7 @@
    "label": "Agnieszka Holland",
    "count": 10,
    "lbVsImdb": 3.5,
-   "criticsVsAudience": -0.6,
+   "criticsVsAudience": -0.2,
    "avgScore": 56,
    "lbN": 9,
    "caN": 5
@@ -9188,7 +9188,7 @@
    "label": "Lynn Shelton",
    "count": 6,
    "lbVsImdb": 8.2,
-   "criticsVsAudience": 17.5,
+   "criticsVsAudience": 18,
    "avgScore": 44,
    "lbN": 6,
    "caN": 2
@@ -9198,20 +9198,20 @@
    "label": "Harold Cronk",
    "count": 5,
    "lbVsImdb": 6,
-   "criticsVsAudience": -3,
-   "avgScore": 29,
+   "criticsVsAudience": -6,
+   "avgScore": 27,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0891554",
    "label": "Francis Veber",
    "count": 7,
    "lbVsImdb": 0.4,
-   "criticsVsAudience": -5.5,
-   "avgScore": 58,
+   "criticsVsAudience": -18.7,
+   "avgScore": 55,
    "lbN": 7,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0251027",
@@ -9228,7 +9228,7 @@
    "label": "Steve Rash",
    "count": 7,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": -27.5,
+   "criticsVsAudience": -27,
    "avgScore": 40,
    "lbN": 7,
    "caN": 2
@@ -9238,7 +9238,7 @@
    "label": "Gordon Chan",
    "count": 9,
    "lbVsImdb": 5.9,
-   "criticsVsAudience": 9.5,
+   "criticsVsAudience": 10,
    "avgScore": 45,
    "lbN": 9,
    "caN": 2
@@ -9258,10 +9258,10 @@
    "label": "Ishirō Honda",
    "count": 32,
    "lbVsImdb": 5.9,
-   "criticsVsAudience": -27,
+   "criticsVsAudience": -9.3,
    "avgScore": 47,
    "lbN": 32,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0007182",
@@ -9308,20 +9308,20 @@
    "label": "Peter Greenaway",
    "count": 12,
    "lbVsImdb": 12.4,
-   "criticsVsAudience": -25,
-   "avgScore": 57,
+   "criticsVsAudience": -1.3,
+   "avgScore": 58,
    "lbN": 12,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0452102",
    "label": "Abbas Kiarostami",
    "count": 10,
    "lbVsImdb": 10.8,
-   "criticsVsAudience": -5.7,
+   "criticsVsAudience": -6,
    "avgScore": 78,
    "lbN": 10,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0869664",
@@ -9338,7 +9338,7 @@
    "label": "Don Taylor",
    "count": 7,
    "lbVsImdb": 0.7,
-   "criticsVsAudience": -0.7,
+   "criticsVsAudience": -0.3,
    "avgScore": 42,
    "lbN": 7,
    "caN": 3
@@ -9348,40 +9348,40 @@
    "label": "Bob Rafelson",
    "count": 7,
    "lbVsImdb": 11.8,
-   "criticsVsAudience": 3.5,
+   "criticsVsAudience": 7,
    "avgScore": 48,
    "lbN": 7,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0506802",
    "label": "Ben Lewin",
    "count": 5,
    "lbVsImdb": -7.1,
-   "criticsVsAudience": -7,
-   "avgScore": 49,
+   "criticsVsAudience": -7.7,
+   "avgScore": 48,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0258531",
    "label": "Rob Epstein",
    "count": 6,
    "lbVsImdb": -1.1,
-   "criticsVsAudience": 8,
+   "criticsVsAudience": 5.5,
    "avgScore": 59,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0295243",
    "label": "Jeffrey Friedman",
    "count": 5,
    "lbVsImdb": -2.1,
-   "criticsVsAudience": 8,
+   "criticsVsAudience": 5.5,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm2204103",
@@ -9448,17 +9448,17 @@
    "label": "Anne Fontaine",
    "count": 9,
    "lbVsImdb": -3.2,
-   "criticsVsAudience": -5.5,
-   "avgScore": 38,
+   "criticsVsAudience": 0.3,
+   "avgScore": 39,
    "lbN": 9,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0004838",
    "label": "Martha Coolidge",
    "count": 10,
    "lbVsImdb": 1.4,
-   "criticsVsAudience": 6.3,
+   "criticsVsAudience": 6.5,
    "avgScore": 40,
    "lbN": 10,
    "caN": 4
@@ -9468,30 +9468,30 @@
    "label": "Tommy Chong",
    "count": 5,
    "lbVsImdb": 9.2,
-   "criticsVsAudience": -27,
-   "avgScore": 34,
+   "criticsVsAudience": 4,
+   "avgScore": 37,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1031246",
    "label": "Lucky McKee",
    "count": 8,
    "lbVsImdb": 8.7,
-   "criticsVsAudience": 4,
-   "avgScore": 34,
+   "criticsVsAudience": 9.5,
+   "avgScore": 36,
    "lbN": 8,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0053228",
    "label": "Ernie Barbarash",
    "count": 10,
    "lbVsImdb": 3.9,
-   "criticsVsAudience": -4,
+   "criticsVsAudience": 0.5,
    "avgScore": 28,
    "lbN": 10,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0438279",
@@ -9528,7 +9528,7 @@
    "label": "Nicholas Hytner",
    "count": 7,
    "lbVsImdb": -1.8,
-   "criticsVsAudience": 6,
+   "criticsVsAudience": 6.3,
    "avgScore": 55,
    "lbN": 7,
    "caN": 7
@@ -9538,7 +9538,7 @@
    "label": "Franck Khalfoun",
    "count": 6,
    "lbVsImdb": 5,
-   "criticsVsAudience": 1.3,
+   "criticsVsAudience": 1.7,
    "avgScore": 24,
    "lbN": 6,
    "caN": 3
@@ -9568,7 +9568,7 @@
    "label": "Brett Leonard",
    "count": 6,
    "lbVsImdb": 3.8,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 7.5,
    "avgScore": 18,
    "lbN": 6,
    "caN": 2
@@ -9599,7 +9599,7 @@
    "count": 19,
    "lbVsImdb": 3.9,
    "criticsVsAudience": -1,
-   "avgScore": 72,
+   "avgScore": 71,
    "lbN": 19,
    "caN": 3
   },
@@ -9638,7 +9638,7 @@
    "label": "Adam Rifkin",
    "count": 6,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": -21.5,
+   "criticsVsAudience": -21,
    "avgScore": 38,
    "lbN": 6,
    "caN": 2
@@ -9648,40 +9648,40 @@
    "label": "Uli Edel",
    "count": 6,
    "lbVsImdb": 4.3,
-   "criticsVsAudience": -11.2,
-   "avgScore": 43,
+   "criticsVsAudience": -12,
+   "avgScore": 42,
    "lbN": 6,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0006554",
    "label": "Rodrigo García",
    "count": 10,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": -8.3,
+   "criticsVsAudience": -5.7,
    "avgScore": 42,
    "lbN": 10,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0475905",
    "label": "Kiyoshi Kurosawa",
    "count": 13,
    "lbVsImdb": 20.1,
-   "criticsVsAudience": -8,
+   "criticsVsAudience": -5,
    "avgScore": 59,
    "lbN": 13,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0225416",
    "label": "Ernest Dickerson",
    "count": 7,
    "lbVsImdb": 6.1,
-   "criticsVsAudience": -21.7,
-   "avgScore": 34,
+   "criticsVsAudience": -14.8,
+   "avgScore": 33,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0410139",
@@ -9708,7 +9708,7 @@
    "label": "David Mamet",
    "count": 10,
    "lbVsImdb": 4,
-   "criticsVsAudience": 8.4,
+   "criticsVsAudience": 8.6,
    "avgScore": 57,
    "lbN": 10,
    "caN": 7
@@ -9738,7 +9738,7 @@
    "label": "Sirajuddin",
    "count": 5,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": 4.5,
+   "criticsVsAudience": 5,
    "avgScore": 51,
    "lbN": 5,
    "caN": 2
@@ -9748,7 +9748,7 @@
    "label": "Michael Winterbottom",
    "count": 19,
    "lbVsImdb": 7.1,
-   "criticsVsAudience": 13.7,
+   "criticsVsAudience": 13.9,
    "avgScore": 46,
    "lbN": 19,
    "caN": 7
@@ -9758,8 +9758,8 @@
    "label": "Julio Medem",
    "count": 5,
    "lbVsImdb": -5.8,
-   "criticsVsAudience": -9.7,
-   "avgScore": 49,
+   "criticsVsAudience": -9,
+   "avgScore": 50,
    "lbN": 5,
    "caN": 3
   },
@@ -9818,60 +9818,60 @@
    "label": "Vincente Minnelli",
    "count": 13,
    "lbVsImdb": 2,
-   "criticsVsAudience": 17,
-   "avgScore": 63,
+   "criticsVsAudience": 16.8,
+   "avgScore": 64,
    "lbN": 13,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0202088",
    "label": "Jules Dassin",
    "count": 7,
    "lbVsImdb": 0.9,
-   "criticsVsAudience": -8,
-   "avgScore": 71,
+   "criticsVsAudience": -3.7,
+   "avgScore": 72,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0409791",
    "label": "Indra Kumar",
    "count": 9,
-   "lbVsImdb": -3.5,
-   "criticsVsAudience": -24,
-   "avgScore": 36,
+   "lbVsImdb": -3.6,
+   "criticsVsAudience": -18,
+   "avgScore": 35,
    "lbN": 9,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0007139",
    "label": "Hark Tsui",
    "count": 24,
-   "lbVsImdb": 10.5,
-   "criticsVsAudience": 1.3,
+   "lbVsImdb": 10.6,
+   "criticsVsAudience": 0.4,
    "avgScore": 47,
    "lbN": 24,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0303032",
    "label": "George Gallo",
    "count": 10,
    "lbVsImdb": 2.8,
-   "criticsVsAudience": -10.7,
-   "avgScore": 26,
+   "criticsVsAudience": -9,
+   "avgScore": 25,
    "lbN": 10,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0000791",
    "label": "Jack Arnold",
    "count": 6,
    "lbVsImdb": 3.2,
-   "criticsVsAudience": -10,
-   "avgScore": 56,
+   "criticsVsAudience": 0,
+   "avgScore": 58,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0909825",
@@ -9888,10 +9888,10 @@
    "label": "Louis Malle",
    "count": 13,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 7,
-   "avgScore": 69,
+   "criticsVsAudience": 8,
+   "avgScore": 70,
    "lbN": 13,
-   "caN": 5
+   "caN": 6
   },
   {
    "key": "nm0567680",
@@ -9918,10 +9918,10 @@
    "label": "Steven C. Miller",
    "count": 12,
    "lbVsImdb": 8,
-   "criticsVsAudience": 1,
+   "criticsVsAudience": 0.3,
    "avgScore": 21,
    "lbN": 12,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0382776",
@@ -9938,7 +9938,7 @@
    "label": "Deon Taylor",
    "count": 9,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": -1,
+   "criticsVsAudience": -0.6,
    "avgScore": 22,
    "lbN": 9,
    "caN": 5
@@ -9958,17 +9958,17 @@
    "label": "Josh Greenbaum",
    "count": 7,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": 11,
-   "avgScore": 56,
+   "criticsVsAudience": 10,
+   "avgScore": 58,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm2399862",
    "label": "Aanand L. Rai",
    "count": 7,
    "lbVsImdb": -16.5,
-   "criticsVsAudience": -9.4,
+   "criticsVsAudience": -9.2,
    "avgScore": 37,
    "lbN": 7,
    "caN": 5
@@ -9988,7 +9988,7 @@
    "label": "Charles Stone III",
    "count": 7,
    "lbVsImdb": 4.8,
-   "criticsVsAudience": 1.8,
+   "criticsVsAudience": 2,
    "avgScore": 39,
    "lbN": 7,
    "caN": 4
@@ -9998,10 +9998,10 @@
    "label": "Stephen Cognetti",
    "count": 6,
    "lbVsImdb": -9.2,
-   "criticsVsAudience": 4,
-   "avgScore": 26,
+   "criticsVsAudience": 10,
+   "avgScore": 28,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0896533",
@@ -10028,10 +10028,10 @@
    "label": "Vetrimaaran",
    "count": 5,
    "lbVsImdb": -8.6,
-   "criticsVsAudience": null,
-   "avgScore": 79,
+   "criticsVsAudience": 16,
+   "avgScore": 82,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0155280",
@@ -10048,7 +10048,7 @@
    "label": "Wei Lo",
    "count": 9,
    "lbVsImdb": 4.5,
-   "criticsVsAudience": -20,
+   "criticsVsAudience": -19.5,
    "avgScore": 45,
    "lbN": 9,
    "caN": 2
@@ -10058,10 +10058,10 @@
    "label": "Aki Kaurismäki",
    "count": 12,
    "lbVsImdb": 10.3,
-   "criticsVsAudience": 10.3,
-   "avgScore": 75,
+   "criticsVsAudience": 11,
+   "avgScore": 76,
    "lbN": 12,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0089502",
@@ -10078,18 +10078,18 @@
    "label": "Kasi Lemmons",
    "count": 5,
    "lbVsImdb": -0.1,
-   "criticsVsAudience": -17.5,
-   "avgScore": 54,
+   "criticsVsAudience": -8.3,
+   "avgScore": 55,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0404882",
    "label": "John Hyams",
    "count": 5,
    "lbVsImdb": 16.2,
-   "criticsVsAudience": 31.5,
-   "avgScore": 35,
+   "criticsVsAudience": 31.8,
+   "avgScore": 36,
    "lbN": 5,
    "caN": 4
   },
@@ -10098,30 +10098,30 @@
    "label": "Sam Wood",
    "count": 9,
    "lbVsImdb": -6.5,
-   "criticsVsAudience": 10.5,
-   "avgScore": 62,
+   "criticsVsAudience": 12,
+   "avgScore": 63,
    "lbN": 9,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0332539",
    "label": "Edmund Goulding",
    "count": 5,
    "lbVsImdb": -4.1,
-   "criticsVsAudience": 1.7,
+   "criticsVsAudience": 0.8,
    "avgScore": 75,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0002338",
    "label": "Jack Clayton",
    "count": 5,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -10.5,
+   "criticsVsAudience": -6.3,
    "avgScore": 59,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0289576",
@@ -10137,8 +10137,8 @@
    "key": "nm0381230",
    "label": "Michael Herz",
    "count": 8,
-   "lbVsImdb": 8.2,
-   "criticsVsAudience": -6,
+   "lbVsImdb": 8.3,
+   "criticsVsAudience": -5,
    "avgScore": 30,
    "lbN": 8,
    "caN": 1
@@ -10147,8 +10147,8 @@
    "key": "nm0442207",
    "label": "Lloyd Kaufman",
    "count": 15,
-   "lbVsImdb": 8.1,
-   "criticsVsAudience": -6,
+   "lbVsImdb": 8.2,
+   "criticsVsAudience": -5,
    "avgScore": 32,
    "lbN": 15,
    "caN": 1
@@ -10168,7 +10168,7 @@
    "label": "Keith Scholey",
    "count": 5,
    "lbVsImdb": -0.9,
-   "criticsVsAudience": -0.5,
+   "criticsVsAudience": -1,
    "avgScore": 74,
    "lbN": 5,
    "caN": 2
@@ -10208,16 +10208,16 @@
    "label": "Jacques Demy",
    "count": 8,
    "lbVsImdb": 15.3,
-   "criticsVsAudience": 1,
+   "criticsVsAudience": 2.5,
    "avgScore": 68,
    "lbN": 8,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0886754",
    "label": "W.S. Van Dyke",
    "count": 6,
-   "lbVsImdb": -5.1,
+   "lbVsImdb": -5,
    "criticsVsAudience": 4,
    "avgScore": 63,
    "lbN": 6,
@@ -10248,10 +10248,10 @@
    "label": "Nick Love",
    "count": 7,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": -11.7,
+   "criticsVsAudience": -9,
    "avgScore": 29,
    "lbN": 7,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0899581",
@@ -10268,7 +10268,7 @@
    "label": "Sergio Corbucci",
    "count": 13,
    "lbVsImdb": 5.3,
-   "criticsVsAudience": 4.5,
+   "criticsVsAudience": 5,
    "avgScore": 57,
    "lbN": 13,
    "caN": 2
@@ -10277,11 +10277,11 @@
    "key": "nm0744023",
    "label": "Roberto Rossellini",
    "count": 12,
-   "lbVsImdb": 9.1,
-   "criticsVsAudience": 3,
-   "avgScore": 70,
+   "lbVsImdb": 9,
+   "criticsVsAudience": 7.7,
+   "avgScore": 71,
    "lbN": 12,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0137228",
@@ -10308,7 +10308,7 @@
    "label": "Pierre Salvadori",
    "count": 6,
    "lbVsImdb": 1.4,
-   "criticsVsAudience": -7.5,
+   "criticsVsAudience": -7,
    "avgScore": 48,
    "lbN": 6,
    "caN": 2
@@ -10318,10 +10318,10 @@
    "label": "John Cassavetes",
    "count": 8,
    "lbVsImdb": 9.2,
-   "criticsVsAudience": -12.5,
-   "avgScore": 72,
+   "criticsVsAudience": -0.8,
+   "avgScore": 75,
    "lbN": 8,
-   "caN": 2
+   "caN": 6
   },
   {
    "key": "nm0788171",
@@ -10338,17 +10338,17 @@
    "label": "Lucio Fulci",
    "count": 22,
    "lbVsImdb": 11.4,
-   "criticsVsAudience": -26.5,
+   "criticsVsAudience": -22.5,
    "avgScore": 40,
    "lbN": 22,
-   "caN": 4
+   "caN": 6
   },
   {
    "key": "nm0437526",
    "label": "Shūsuke Kaneko",
    "count": 7,
    "lbVsImdb": 5.4,
-   "criticsVsAudience": -5.5,
+   "criticsVsAudience": -5,
    "avgScore": 66,
    "lbN": 7,
    "caN": 2
@@ -10378,10 +10378,10 @@
    "label": "Tyler Perry",
    "count": 24,
    "lbVsImdb": -0.7,
-   "criticsVsAudience": -19.4,
+   "criticsVsAudience": -17.8,
    "avgScore": 31,
    "lbN": 24,
-   "caN": 8
+   "caN": 9
   },
   {
    "key": "nm0001627",
@@ -10408,7 +10408,7 @@
    "label": "Christian Duguay",
    "count": 10,
    "lbVsImdb": 4.3,
-   "criticsVsAudience": -14,
+   "criticsVsAudience": -13,
    "avgScore": 40,
    "lbN": 10,
    "caN": 2
@@ -10428,20 +10428,20 @@
    "label": "John Farrow",
    "count": 7,
    "lbVsImdb": -2.8,
-   "criticsVsAudience": 8,
-   "avgScore": 49,
+   "criticsVsAudience": 17.5,
+   "avgScore": 51,
    "lbN": 7,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0889513",
    "label": "Agnès Varda",
    "count": 17,
    "lbVsImdb": 19.7,
-   "criticsVsAudience": 3.5,
+   "criticsVsAudience": 1,
    "avgScore": 68,
    "lbN": 17,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0122216",
@@ -10488,10 +10488,10 @@
    "label": "Keishi Otomo",
    "count": 7,
    "lbVsImdb": 0.6,
-   "criticsVsAudience": null,
-   "avgScore": 73,
+   "criticsVsAudience": 20,
+   "avgScore": 75,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1777967",
@@ -10518,7 +10518,7 @@
    "label": "Sammo Kam-Bo Hung",
    "count": 13,
    "lbVsImdb": 6.4,
-   "criticsVsAudience": -17.5,
+   "criticsVsAudience": -17,
    "avgScore": 52,
    "lbN": 13,
    "caN": 2
@@ -10548,10 +10548,10 @@
    "label": "Robert Bresson",
    "count": 7,
    "lbVsImdb": 8.7,
-   "criticsVsAudience": 3.3,
-   "avgScore": 81,
+   "criticsVsAudience": 4.4,
+   "avgScore": 83,
    "lbN": 7,
-   "caN": 3
+   "caN": 5
   },
   {
    "key": "nm0542720",
@@ -10588,17 +10588,17 @@
    "label": "Bharat Nalluri",
    "count": 5,
    "lbVsImdb": -4.1,
-   "criticsVsAudience": -3.7,
-   "avgScore": 43,
+   "criticsVsAudience": -3,
+   "avgScore": 42,
    "lbN": 5,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm1362570",
    "label": "Joe Lynch",
    "count": 6,
    "lbVsImdb": 2.6,
-   "criticsVsAudience": 13,
+   "criticsVsAudience": 13.5,
    "avgScore": 26,
    "lbN": 6,
    "caN": 4
@@ -10607,7 +10607,7 @@
    "key": "nm0000853",
    "label": "Bruno Barreto",
    "count": 6,
-   "lbVsImdb": 11.5,
+   "lbVsImdb": 11.4,
    "criticsVsAudience": -5,
    "avgScore": 48,
    "lbN": 6,
@@ -10617,18 +10617,18 @@
    "key": "nm0279807",
    "label": "Terence Fisher",
    "count": 17,
-   "lbVsImdb": 2.1,
-   "criticsVsAudience": -8,
-   "avgScore": 48,
+   "lbVsImdb": 2,
+   "criticsVsAudience": 7.5,
+   "avgScore": 49,
    "lbN": 17,
-   "caN": 2
+   "caN": 4
   },
   {
    "key": "nm0004244",
    "label": "Jacques Tati",
    "count": 5,
    "lbVsImdb": 7.3,
-   "criticsVsAudience": 8,
+   "criticsVsAudience": 8.3,
    "avgScore": 82,
    "lbN": 5,
    "caN": 3
@@ -10638,10 +10638,10 @@
    "label": "Lamberto Bava",
    "count": 9,
    "lbVsImdb": 9.6,
-   "criticsVsAudience": -14,
-   "avgScore": 36,
+   "criticsVsAudience": 4.5,
+   "avgScore": 37,
    "lbN": 9,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0168413",
@@ -10649,9 +10649,9 @@
    "count": 5,
    "lbVsImdb": 10.7,
    "criticsVsAudience": 5,
-   "avgScore": 75,
+   "avgScore": 76,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0167496",
@@ -10667,7 +10667,7 @@
    "key": "nm1032754",
    "label": "Chris Sivertson",
    "count": 5,
-   "lbVsImdb": 3.1,
+   "lbVsImdb": 3.2,
    "criticsVsAudience": 0,
    "avgScore": 21,
    "lbN": 5,
@@ -10678,7 +10678,7 @@
    "label": "Shin'ya Tsukamoto",
    "count": 8,
    "lbVsImdb": 16.3,
-   "criticsVsAudience": -17,
+   "criticsVsAudience": -16,
    "avgScore": 53,
    "lbN": 8,
    "caN": 1
@@ -10737,7 +10737,7 @@
    "key": "nm4219902",
    "label": "Park Hoon-jung",
    "count": 7,
-   "lbVsImdb": 2.5,
+   "lbVsImdb": 2.6,
    "criticsVsAudience": -23.5,
    "avgScore": 64,
    "lbN": 6,
@@ -10788,7 +10788,7 @@
    "label": "Peter Ho-Sun Chan",
    "count": 5,
    "lbVsImdb": -0.8,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -4.5,
    "avgScore": 49,
    "lbN": 5,
    "caN": 2
@@ -10798,7 +10798,7 @@
    "label": "Andrew Erwin",
    "count": 7,
    "lbVsImdb": -13.1,
-   "criticsVsAudience": -25.4,
+   "criticsVsAudience": -25.2,
    "avgScore": 42,
    "lbN": 7,
    "caN": 5
@@ -10808,7 +10808,7 @@
    "label": "Jon Erwin",
    "count": 8,
    "lbVsImdb": -18.5,
-   "criticsVsAudience": -24.8,
+   "criticsVsAudience": -24.7,
    "avgScore": 43,
    "lbN": 8,
    "caN": 6
@@ -10858,10 +10858,10 @@
    "label": "Morgan Neville",
    "count": 11,
    "lbVsImdb": 7.4,
-   "criticsVsAudience": -1.2,
-   "avgScore": 67,
+   "criticsVsAudience": 2.4,
+   "avgScore": 68,
    "lbN": 11,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm2117510",
@@ -10878,30 +10878,30 @@
    "label": "Volker Schlöndorff",
    "count": 14,
    "lbVsImdb": 1.5,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -10.5,
    "avgScore": 50,
    "lbN": 14,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0001775",
    "label": "Whit Stillman",
    "count": 5,
    "lbVsImdb": 21.5,
-   "criticsVsAudience": 31.5,
-   "avgScore": 59,
+   "criticsVsAudience": 24.3,
+   "avgScore": 60,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm1113528",
    "label": "Martin Bourboulon",
    "count": 5,
    "lbVsImdb": 1,
-   "criticsVsAudience": 22,
-   "avgScore": 51,
+   "criticsVsAudience": 26.3,
+   "avgScore": 54,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0920074",
@@ -10928,10 +10928,10 @@
    "label": "Dibakar Banerjee",
    "count": 6,
    "lbVsImdb": -6.6,
-   "criticsVsAudience": -30,
-   "avgScore": 53,
+   "criticsVsAudience": 14.5,
+   "avgScore": 58,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0411631",
@@ -10948,7 +10948,7 @@
    "label": "Peter Sullivan",
    "count": 6,
    "lbVsImdb": -0.7,
-   "criticsVsAudience": 12,
+   "criticsVsAudience": 13,
    "avgScore": 24,
    "lbN": 6,
    "caN": 1
@@ -10968,40 +10968,40 @@
    "label": "Jean Negulesco",
    "count": 5,
    "lbVsImdb": -1,
-   "criticsVsAudience": -2,
-   "avgScore": 56,
+   "criticsVsAudience": -7,
+   "avgScore": 55,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0001747",
    "label": "Charles Martin Smith",
    "count": 6,
    "lbVsImdb": -10,
-   "criticsVsAudience": -0.3,
-   "avgScore": 48,
+   "criticsVsAudience": 2,
+   "avgScore": 49,
    "lbN": 6,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0170043",
    "label": "Isabel Coixet",
    "count": 8,
    "lbVsImdb": 3.4,
-   "criticsVsAudience": 4.8,
+   "criticsVsAudience": 1.8,
    "avgScore": 53,
    "lbN": 8,
-   "caN": 4
+   "caN": 5
   },
   {
    "key": "nm0842582",
    "label": "David Swift",
    "count": 5,
-   "lbVsImdb": -3.7,
-   "criticsVsAudience": 5,
+   "lbVsImdb": -3.6,
+   "criticsVsAudience": 1,
    "avgScore": 59,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1341941",
@@ -11028,20 +11028,20 @@
    "label": "John Schultz",
    "count": 8,
    "lbVsImdb": 10.1,
-   "criticsVsAudience": -3,
-   "avgScore": 26,
+   "criticsVsAudience": 1.3,
+   "avgScore": 27,
    "lbN": 8,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0802563",
    "label": "Robert Siodmak",
    "count": 8,
-   "lbVsImdb": 0.9,
-   "criticsVsAudience": 8,
-   "avgScore": 60,
+   "lbVsImdb": 1,
+   "criticsVsAudience": 4,
+   "avgScore": 61,
    "lbN": 8,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0001554",
@@ -11058,10 +11058,10 @@
    "label": "Martin Ritt",
    "count": 15,
    "lbVsImdb": 1,
-   "criticsVsAudience": -6.3,
-   "avgScore": 58,
+   "criticsVsAudience": -4.5,
+   "avgScore": 59,
    "lbN": 15,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0854697",
@@ -11078,10 +11078,10 @@
    "label": "Rainer Werner Fassbinder",
    "count": 18,
    "lbVsImdb": 9.9,
-   "criticsVsAudience": 2.5,
+   "criticsVsAudience": -2,
    "avgScore": 63,
    "lbN": 18,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm2765527",
@@ -11108,17 +11108,17 @@
    "label": "Ringo Lam",
    "count": 13,
    "lbVsImdb": 9.2,
-   "criticsVsAudience": 0,
-   "avgScore": 48,
+   "criticsVsAudience": -7,
+   "avgScore": 47,
    "lbN": 13,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0550892",
    "label": "George Marshall",
    "count": 10,
    "lbVsImdb": 0.4,
-   "criticsVsAudience": -14,
+   "criticsVsAudience": -13,
    "avgScore": 49,
    "lbN": 10,
    "caN": 1
@@ -11128,7 +11128,7 @@
    "label": "Alex Kendrick",
    "count": 6,
    "lbVsImdb": -25.7,
-   "criticsVsAudience": -41.5,
+   "criticsVsAudience": -40.5,
    "avgScore": 43,
    "lbN": 6,
    "caN": 4
@@ -11147,8 +11147,8 @@
    "key": "nm0651915",
    "label": "Nagisa Ōshima",
    "count": 15,
-   "lbVsImdb": 12.8,
-   "criticsVsAudience": -10,
+   "lbVsImdb": 12.7,
+   "criticsVsAudience": -9.5,
    "avgScore": 56,
    "lbN": 15,
    "caN": 2
@@ -11158,10 +11158,10 @@
    "label": "Brian Yuzna",
    "count": 7,
    "lbVsImdb": 12.5,
-   "criticsVsAudience": -10.3,
+   "criticsVsAudience": -3.7,
    "avgScore": 30,
    "lbN": 7,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0002199",
@@ -11208,10 +11208,10 @@
    "label": "Charles Walters",
    "count": 14,
    "lbVsImdb": -1.3,
-   "criticsVsAudience": 26,
-   "avgScore": 52,
+   "criticsVsAudience": 21.7,
+   "avgScore": 53,
    "lbN": 14,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0716980",
@@ -11228,10 +11228,10 @@
    "label": "Jesse V. Johnson",
    "count": 18,
    "lbVsImdb": 10.6,
-   "criticsVsAudience": 12.5,
-   "avgScore": 35,
+   "criticsVsAudience": 15.7,
+   "avgScore": 36,
    "lbN": 18,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0376963",
@@ -11288,10 +11288,10 @@
    "label": "Michael Polish",
    "count": 9,
    "lbVsImdb": 7.1,
-   "criticsVsAudience": -1.5,
-   "avgScore": 28,
+   "criticsVsAudience": -1,
+   "avgScore": 27,
    "lbN": 9,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0927296",
@@ -11308,20 +11308,20 @@
    "label": "Jon Gunn",
    "count": 6,
    "lbVsImdb": -7.3,
-   "criticsVsAudience": -26.5,
-   "avgScore": 49,
+   "criticsVsAudience": -23.3,
+   "avgScore": 48,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0542649",
    "label": "Anthony Mann",
    "count": 20,
    "lbVsImdb": 1.6,
-   "criticsVsAudience": 9.3,
-   "avgScore": 58,
+   "criticsVsAudience": 10.3,
+   "avgScore": 59,
    "lbN": 20,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0812546",
@@ -11337,18 +11337,18 @@
    "key": "nm0002087",
    "label": "Samuel Fuller",
    "count": 14,
-   "lbVsImdb": 7.7,
-   "criticsVsAudience": 6,
-   "avgScore": 58,
+   "lbVsImdb": 7.6,
+   "criticsVsAudience": 8,
+   "avgScore": 59,
    "lbN": 14,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0006845",
    "label": "Sally Potter",
    "count": 5,
    "lbVsImdb": 8,
-   "criticsVsAudience": 2.3,
+   "criticsVsAudience": 2.7,
    "avgScore": 47,
    "lbN": 5,
    "caN": 3
@@ -11358,7 +11358,7 @@
    "label": "Miguel Ángel Vivas",
    "count": 6,
    "lbVsImdb": 1.9,
-   "criticsVsAudience": -6,
+   "criticsVsAudience": -5,
    "avgScore": 32,
    "lbN": 6,
    "caN": 1
@@ -11379,7 +11379,7 @@
    "count": 6,
    "lbVsImdb": 5,
    "criticsVsAudience": 8.5,
-   "avgScore": 60,
+   "avgScore": 61,
    "lbN": 6,
    "caN": 2
   },
@@ -11427,8 +11427,8 @@
    "key": "nm0094080",
    "label": "Fedor Bondarchuk",
    "count": 5,
-   "lbVsImdb": 2.1,
-   "criticsVsAudience": -5.3,
+   "lbVsImdb": 2.2,
+   "criticsVsAudience": -5,
    "avgScore": 36,
    "lbN": 5,
    "caN": 3
@@ -11447,11 +11447,11 @@
    "key": "nm0678857",
    "label": "Christian Petzold",
    "count": 8,
-   "lbVsImdb": 18.6,
-   "criticsVsAudience": 21.3,
-   "avgScore": 68,
+   "lbVsImdb": 18.5,
+   "criticsVsAudience": 21,
+   "avgScore": 70,
    "lbN": 8,
-   "caN": 3
+   "caN": 4
   },
   {
    "key": "nm0880618",
@@ -11468,7 +11468,7 @@
    "label": "Jeff Burr",
    "count": 5,
    "lbVsImdb": 3.8,
-   "criticsVsAudience": 0,
+   "criticsVsAudience": 1,
    "avgScore": 24,
    "lbN": 5,
    "caN": 1
@@ -11487,7 +11487,7 @@
    "key": "nm0847749",
    "label": "Tibor Takács",
    "count": 7,
-   "lbVsImdb": 9.5,
+   "lbVsImdb": 9.6,
    "criticsVsAudience": -2,
    "avgScore": 32,
    "lbN": 7,
@@ -11497,7 +11497,7 @@
    "key": "nm0514662",
    "label": "Ryan Little",
    "count": 7,
-   "lbVsImdb": 9.8,
+   "lbVsImdb": 9.9,
    "criticsVsAudience": -1,
    "avgScore": 35,
    "lbN": 7,
@@ -11527,7 +11527,7 @@
    "key": "nm0468007",
    "label": "Jan Kounen",
    "count": 5,
-   "lbVsImdb": 1.4,
+   "lbVsImdb": 1.3,
    "criticsVsAudience": -5,
    "avgScore": 39,
    "lbN": 5,
@@ -11548,20 +11548,20 @@
    "label": "Béla Tarr",
    "count": 5,
    "lbVsImdb": 8.8,
-   "criticsVsAudience": -3.5,
-   "avgScore": 81,
+   "criticsVsAudience": -1.7,
+   "avgScore": 82,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0002240",
    "label": "Katt Shea",
    "count": 5,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": 14,
-   "avgScore": 34,
+   "criticsVsAudience": 12,
+   "avgScore": 36,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0552565",
@@ -11588,7 +11588,7 @@
    "label": "Roger Corman",
    "count": 38,
    "lbVsImdb": 9.1,
-   "criticsVsAudience": 19.2,
+   "criticsVsAudience": 19.4,
    "avgScore": 40,
    "lbN": 38,
    "caN": 5
@@ -11628,7 +11628,7 @@
    "label": "Bruce Sinofsky",
    "count": 5,
    "lbVsImdb": -3.7,
-   "criticsVsAudience": 2.5,
+   "criticsVsAudience": 3,
    "avgScore": 77,
    "lbN": 5,
    "caN": 2
@@ -11637,8 +11637,8 @@
    "key": "nm1362432",
    "label": "Jérôme Salle",
    "count": 5,
-   "lbVsImdb": -1.4,
-   "criticsVsAudience": -10,
+   "lbVsImdb": -1.5,
+   "criticsVsAudience": -9,
    "avgScore": 42,
    "lbN": 5,
    "caN": 1
@@ -11697,7 +11697,7 @@
    "key": "nm0608936",
    "label": "Craig Moss",
    "count": 7,
-   "lbVsImdb": 9.7,
+   "lbVsImdb": 9.8,
    "criticsVsAudience": -8,
    "avgScore": 27,
    "lbN": 7,
@@ -11748,17 +11748,17 @@
    "label": "Paul Mazursky",
    "count": 5,
    "lbVsImdb": 9.4,
-   "criticsVsAudience": 32,
-   "avgScore": 46,
+   "criticsVsAudience": 23.5,
+   "avgScore": 47,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0802862",
    "label": "Douglas Sirk",
    "count": 7,
    "lbVsImdb": 5.6,
-   "criticsVsAudience": -1.7,
+   "criticsVsAudience": -1.3,
    "avgScore": 64,
    "lbN": 7,
    "caN": 3
@@ -11788,17 +11788,17 @@
    "label": "Matt Eskandari",
    "count": 6,
    "lbVsImdb": 12.4,
-   "criticsVsAudience": -4,
-   "avgScore": 18,
+   "criticsVsAudience": -2,
+   "avgScore": 17,
    "lbN": 6,
-   "caN": 1
+   "caN": 3
   },
   {
    "key": "nm0503777",
    "label": "Mervyn LeRoy",
    "count": 12,
    "lbVsImdb": -5.2,
-   "criticsVsAudience": -1.7,
+   "criticsVsAudience": -1.5,
    "avgScore": 60,
    "lbN": 12,
    "caN": 6
@@ -11828,7 +11828,7 @@
    "label": "Danishka Esterhazy",
    "count": 5,
    "lbVsImdb": -4.8,
-   "criticsVsAudience": 6,
+   "criticsVsAudience": 7,
    "avgScore": 35,
    "lbN": 5,
    "caN": 1
@@ -11837,7 +11837,7 @@
    "key": "nm5366274",
    "label": "Karthik Subbaraj",
    "count": 7,
-   "lbVsImdb": -2.4,
+   "lbVsImdb": -2.3,
    "criticsVsAudience": -15,
    "avgScore": 61,
    "lbN": 7,
@@ -11888,10 +11888,10 @@
    "label": "Rebecca Miller",
    "count": 6,
    "lbVsImdb": -0.5,
-   "criticsVsAudience": 27,
+   "criticsVsAudience": 18.7,
    "avgScore": 42,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0491626",
@@ -11908,7 +11908,7 @@
    "label": "Fabrice du Welz",
    "count": 6,
    "lbVsImdb": 8.3,
-   "criticsVsAudience": -5,
+   "criticsVsAudience": -4.5,
    "avgScore": 38,
    "lbN": 6,
    "caN": 2
@@ -11918,16 +11918,16 @@
    "label": "Randall Miller",
    "count": 6,
    "lbVsImdb": -6.2,
-   "criticsVsAudience": -10,
-   "avgScore": 39,
+   "criticsVsAudience": -23.5,
+   "avgScore": 36,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1475479",
    "label": "Jim Strouse",
    "count": 5,
-   "lbVsImdb": -2.7,
+   "lbVsImdb": -2.6,
    "criticsVsAudience": -17,
    "avgScore": 43,
    "lbN": 5,
@@ -11937,7 +11937,7 @@
    "key": "nm0917405",
    "label": "Apichatpong Weerasethakul",
    "count": 5,
-   "lbVsImdb": 27.7,
+   "lbVsImdb": 27.8,
    "criticsVsAudience": 20,
    "avgScore": 63,
    "lbN": 5,
@@ -12008,10 +12008,10 @@
    "label": "Jim McBride",
    "count": 5,
    "lbVsImdb": 8.7,
-   "criticsVsAudience": 21,
+   "criticsVsAudience": 15,
    "avgScore": 45,
    "lbN": 5,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0106456",
@@ -12058,17 +12058,17 @@
    "label": "Andrew V. McLaglen",
    "count": 12,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": -7.5,
+   "criticsVsAudience": -2.3,
    "avgScore": 45,
    "lbN": 12,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0776317",
    "label": "Michael Schultz",
    "count": 8,
    "lbVsImdb": 4.3,
-   "criticsVsAudience": -16,
+   "criticsVsAudience": -15,
    "avgScore": 44,
    "lbN": 8,
    "caN": 1
@@ -12088,7 +12088,7 @@
    "label": "Andrzej Wajda",
    "count": 7,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": 14.5,
+   "criticsVsAudience": 15,
    "avgScore": 68,
    "lbN": 7,
    "caN": 2
@@ -12238,10 +12238,10 @@
    "label": "Chris Foggin",
    "count": 6,
    "lbVsImdb": -15.7,
-   "criticsVsAudience": 9.5,
-   "avgScore": 46,
+   "criticsVsAudience": -0.7,
+   "avgScore": 45,
    "lbN": 6,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0339254",
@@ -12258,17 +12258,17 @@
    "label": "Albert Maysles",
    "count": 5,
    "lbVsImdb": 8.7,
-   "criticsVsAudience": 6,
-   "avgScore": 72,
+   "criticsVsAudience": 5,
+   "avgScore": 73,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0718554",
    "label": "Karel Reisz",
    "count": 6,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": 4,
+   "criticsVsAudience": 5,
    "avgScore": 51,
    "lbN": 6,
    "caN": 1
@@ -12278,7 +12278,7 @@
    "label": "Joseph H. Lewis",
    "count": 6,
    "lbVsImdb": 5.3,
-   "criticsVsAudience": -6,
+   "criticsVsAudience": -5,
    "avgScore": 57,
    "lbN": 6,
    "caN": 1
@@ -12298,17 +12298,17 @@
    "label": "John Duigan",
    "count": 6,
    "lbVsImdb": 1.5,
-   "criticsVsAudience": -27,
-   "avgScore": 41,
+   "criticsVsAudience": 1,
+   "avgScore": 43,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0142587",
    "label": "Steve Carver",
    "count": 7,
    "lbVsImdb": 7.8,
-   "criticsVsAudience": 7,
+   "criticsVsAudience": 8,
    "avgScore": 36,
    "lbN": 7,
    "caN": 1
@@ -12317,7 +12317,7 @@
    "key": "nm1179457",
    "label": "Milap Zaveri",
    "count": 6,
-   "lbVsImdb": 24.4,
+   "lbVsImdb": 24.5,
    "criticsVsAudience": null,
    "avgScore": 29,
    "lbN": 6,
@@ -12328,7 +12328,7 @@
    "label": "April Mullen",
    "count": 5,
    "lbVsImdb": 6,
-   "criticsVsAudience": -14,
+   "criticsVsAudience": -13,
    "avgScore": 22,
    "lbN": 5,
    "caN": 1
@@ -12338,10 +12338,10 @@
    "label": "Éric Rohmer",
    "count": 17,
    "lbVsImdb": 14.7,
-   "criticsVsAudience": 2,
-   "avgScore": 69,
+   "criticsVsAudience": 6.3,
+   "avgScore": 71,
    "lbN": 17,
-   "caN": 1
+   "caN": 4
   },
   {
    "key": "nm4864836",
@@ -12428,10 +12428,10 @@
    "label": "Henry King",
    "count": 7,
    "lbVsImdb": -2.9,
-   "criticsVsAudience": 18,
-   "avgScore": 59,
+   "criticsVsAudience": 13.5,
+   "avgScore": 60,
    "lbN": 7,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0576548",
@@ -12459,7 +12459,7 @@
    "count": 6,
    "lbVsImdb": 0,
    "criticsVsAudience": 33,
-   "avgScore": 51,
+   "avgScore": 50,
    "lbN": 6,
    "caN": 1
   },
@@ -12468,10 +12468,10 @@
    "label": "Ralph Nelson",
    "count": 8,
    "lbVsImdb": -1,
-   "criticsVsAudience": -8,
+   "criticsVsAudience": -6.5,
    "avgScore": 55,
    "lbN": 8,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0724798",
@@ -12528,20 +12528,20 @@
    "label": "John Hough",
    "count": 9,
    "lbVsImdb": 5.8,
-   "criticsVsAudience": -7,
-   "avgScore": 38,
+   "criticsVsAudience": 7,
+   "avgScore": 40,
    "lbN": 8,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0843640",
    "label": "István Szabó",
    "count": 6,
    "lbVsImdb": -3.9,
-   "criticsVsAudience": 2,
-   "avgScore": 58,
+   "criticsVsAudience": -10,
+   "avgScore": 57,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0871086",
@@ -12568,10 +12568,10 @@
    "label": "Jack Hill",
    "count": 12,
    "lbVsImdb": 11.9,
-   "criticsVsAudience": -1,
-   "avgScore": 43,
+   "criticsVsAudience": -9,
+   "avgScore": 42,
    "lbN": 12,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0448311",
@@ -12588,10 +12588,10 @@
    "label": "Max Ophüls",
    "count": 7,
    "lbVsImdb": 9.1,
-   "criticsVsAudience": 9,
-   "avgScore": 73,
+   "criticsVsAudience": 8.5,
+   "avgScore": 74,
    "lbN": 7,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0703689",
@@ -12657,7 +12657,7 @@
    "key": "nm1394062",
    "label": "Jon Knautz",
    "count": 5,
-   "lbVsImdb": 4.6,
+   "lbVsImdb": 4.7,
    "criticsVsAudience": 51,
    "avgScore": 32,
    "lbN": 5,
@@ -12678,10 +12678,10 @@
    "label": "Burt Kennedy",
    "count": 13,
    "lbVsImdb": 2.3,
-   "criticsVsAudience": -15,
-   "avgScore": 43,
+   "criticsVsAudience": -8,
+   "avgScore": 42,
    "lbN": 13,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0728271",
@@ -12698,7 +12698,7 @@
    "label": "Juan Piquer Simón",
    "count": 6,
    "lbVsImdb": 12,
-   "criticsVsAudience": 14,
+   "criticsVsAudience": 15,
    "avgScore": 29,
    "lbN": 6,
    "caN": 1
@@ -12708,100 +12708,100 @@
    "label": "Rusty Cundieff",
    "count": 6,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": null,
-   "avgScore": 39,
+   "criticsVsAudience": -11,
+   "avgScore": 38,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0280904",
    "label": "Robert J. Flaherty",
    "count": 6,
    "lbVsImdb": -0.2,
-   "criticsVsAudience": null,
-   "avgScore": 54,
+   "criticsVsAudience": 23,
+   "avgScore": 57,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0414910",
    "label": "Rick Jacobson",
    "count": 7,
    "lbVsImdb": 8.5,
-   "criticsVsAudience": null,
-   "avgScore": 34,
+   "criticsVsAudience": -4,
+   "avgScore": 32,
    "lbN": 7,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0514822",
    "label": "Anatole Litvak",
    "count": 7,
    "lbVsImdb": -4.8,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 6,
    "avgScore": 54,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0198765",
    "label": "Damiano Damiani",
    "count": 8,
    "lbVsImdb": 8.5,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -8,
    "avgScore": 49,
    "lbN": 8,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1713913",
    "label": "Ryan White",
    "count": 7,
    "lbVsImdb": 5.5,
-   "criticsVsAudience": 24,
-   "avgScore": 64,
+   "criticsVsAudience": 13,
+   "avgScore": 65,
    "lbN": 7,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0005789",
    "label": "Rudolph Maté",
    "count": 6,
    "lbVsImdb": -1.3,
-   "criticsVsAudience": null,
-   "avgScore": 50,
+   "criticsVsAudience": 13,
+   "avgScore": 52,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0106924",
    "label": "Catherine Breillat",
    "count": 7,
    "lbVsImdb": 19.4,
-   "criticsVsAudience": null,
-   "avgScore": 41,
+   "criticsVsAudience": 16,
+   "avgScore": 43,
    "lbN": 7,
-   "caN": 0
+   "caN": 2
   },
   {
    "key": "nm0899501",
    "label": "Paolo Virzì",
    "count": 5,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": null,
-   "avgScore": 65,
+   "criticsVsAudience": -15,
+   "avgScore": 64,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0766263",
    "label": "Shinsuke Satô",
    "count": 5,
    "lbVsImdb": -1.2,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 11,
    "avgScore": 55,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0261840",
@@ -12818,40 +12818,40 @@
    "label": "Zhangke Jia",
    "count": 6,
    "lbVsImdb": 18.3,
-   "criticsVsAudience": null,
-   "avgScore": 64,
+   "criticsVsAudience": 8,
+   "avgScore": 65,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1475971",
    "label": "Mat Whitecross",
    "count": 5,
    "lbVsImdb": 5.5,
-   "criticsVsAudience": null,
-   "avgScore": 57,
+   "criticsVsAudience": -16,
+   "avgScore": 56,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1322135",
    "label": "Joko Anwar",
    "count": 9,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": 38,
-   "avgScore": 50,
+   "criticsVsAudience": 35,
+   "avgScore": 51,
    "lbN": 9,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0939147",
    "label": "Jing Wong",
    "count": 12,
    "lbVsImdb": 6.6,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -12,
    "avgScore": 46,
    "lbN": 12,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0402161",
@@ -12868,140 +12868,140 @@
    "label": "Paul Andrew Williams",
    "count": 6,
    "lbVsImdb": 4,
-   "criticsVsAudience": 23,
-   "avgScore": 47,
+   "criticsVsAudience": 21,
+   "avgScore": 48,
    "lbN": 6,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0596962",
    "label": "Dominik Moll",
    "count": 5,
    "lbVsImdb": 7.9,
-   "criticsVsAudience": 16,
-   "avgScore": 56,
+   "criticsVsAudience": 16.5,
+   "avgScore": 58,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm2099491",
    "label": "Paul Solet",
    "count": 5,
    "lbVsImdb": 6.6,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 3,
    "avgScore": 28,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0226189",
    "label": "William Dieterle",
    "count": 6,
    "lbVsImdb": -1,
-   "criticsVsAudience": null,
-   "avgScore": 51,
+   "criticsVsAudience": 7,
+   "avgScore": 53,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0596850",
    "label": "Édouard Molinaro",
    "count": 7,
    "lbVsImdb": 5.6,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -2,
    "avgScore": 53,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0655065",
    "label": "Georg Wilhelm Pabst",
    "count": 8,
    "lbVsImdb": 2.9,
-   "criticsVsAudience": null,
-   "avgScore": 60,
+   "criticsVsAudience": 3,
+   "avgScore": 61,
    "lbN": 8,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0299603",
    "label": "Claudio Fäh",
    "count": 5,
    "lbVsImdb": 0.1,
-   "criticsVsAudience": -12,
+   "criticsVsAudience": -1,
    "avgScore": 25,
    "lbN": 4,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm0349406",
    "label": "Sebastian Gutierrez",
    "count": 5,
    "lbVsImdb": 11.4,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 6,
    "avgScore": 29,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0844333",
    "label": "Malgorzata Szumowska",
    "count": 5,
    "lbVsImdb": 6.8,
-   "criticsVsAudience": null,
-   "avgScore": 33,
+   "criticsVsAudience": 26,
+   "avgScore": 35,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0155642",
    "label": "Siu-Tung Ching",
    "count": 10,
    "lbVsImdb": 7.2,
-   "criticsVsAudience": null,
-   "avgScore": 50,
+   "criticsVsAudience": -30,
+   "avgScore": 49,
    "lbN": 10,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0256542",
    "label": "Randall Emmett",
    "count": 5,
    "lbVsImdb": 3.2,
-   "criticsVsAudience": -20,
-   "avgScore": 25,
+   "criticsVsAudience": -12.5,
+   "avgScore": 23,
    "lbN": 5,
-   "caN": 1
+   "caN": 2
   },
   {
    "key": "nm1110912",
    "label": "Soi Cheang",
    "count": 9,
    "lbVsImdb": 12.6,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 9,
    "avgScore": 50,
    "lbN": 9,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0094274",
    "label": "Bertrand Bonello",
    "count": 7,
    "lbVsImdb": 20.7,
-   "criticsVsAudience": null,
-   "avgScore": 48,
+   "criticsVsAudience": 25,
+   "avgScore": 49,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0767022",
    "label": "Carlos Saura",
    "count": 9,
    "lbVsImdb": 7,
-   "criticsVsAudience": null,
-   "avgScore": 57,
+   "criticsVsAudience": 10,
+   "avgScore": 58,
    "lbN": 9,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1033668",
@@ -13018,10 +13018,10 @@
    "label": "Margarethe von Trotta",
    "count": 6,
    "lbVsImdb": 1.9,
-   "criticsVsAudience": null,
-   "avgScore": 55,
+   "criticsVsAudience": 7,
+   "avgScore": 56,
    "lbN": 6,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1045937",
@@ -13038,80 +13038,80 @@
    "label": "Chuan Lu",
    "count": 5,
    "lbVsImdb": -1.3,
-   "criticsVsAudience": null,
-   "avgScore": 58,
+   "criticsVsAudience": 7,
+   "avgScore": 59,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0245385",
    "label": "Allan Dwan",
    "count": 11,
-   "lbVsImdb": 3.4,
-   "criticsVsAudience": null,
-   "avgScore": 48,
+   "lbVsImdb": 3.5,
+   "criticsVsAudience": 35,
+   "avgScore": 49,
    "lbN": 11,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0864775",
    "label": "Johnnie To",
    "count": 16,
    "lbVsImdb": 12,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -2,
    "avgScore": 59,
    "lbN": 16,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0415333",
    "label": "Just Jaeckin",
    "count": 5,
    "lbVsImdb": 11.7,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 5,
    "avgScore": 35,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1569807",
    "label": "Choi Dong-hoon",
    "count": 5,
    "lbVsImdb": 6.8,
-   "criticsVsAudience": null,
-   "avgScore": 57,
+   "criticsVsAudience": 5,
+   "avgScore": 58,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1482702",
    "label": "Masaaki Yuasa",
    "count": 5,
    "lbVsImdb": 24.4,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -8,
    "avgScore": 75,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0124877",
    "label": "David Butler",
    "count": 7,
    "lbVsImdb": -1.7,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -1,
    "avgScore": 50,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0874096",
    "label": "Fernando Trueba",
    "count": 7,
    "lbVsImdb": 5.2,
-   "criticsVsAudience": null,
-   "avgScore": 51,
+   "criticsVsAudience": 27,
+   "avgScore": 53,
    "lbN": 7,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0442287",
@@ -13128,40 +13128,40 @@
    "label": "Gordon Hessler",
    "count": 8,
    "lbVsImdb": 4.2,
-   "criticsVsAudience": null,
+   "criticsVsAudience": 5,
    "avgScore": 39,
    "lbN": 8,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0593014",
    "label": "Kenji Misumi",
    "count": 14,
    "lbVsImdb": 4.6,
-   "criticsVsAudience": null,
+   "criticsVsAudience": -5,
    "avgScore": 61,
    "lbN": 14,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm0699693",
    "label": "Aleksandr Ptushko",
    "count": 5,
-   "lbVsImdb": 10.4,
-   "criticsVsAudience": null,
-   "avgScore": 47,
+   "lbVsImdb": 10.5,
+   "criticsVsAudience": 6,
+   "avgScore": 48,
    "lbN": 5,
-   "caN": 0
+   "caN": 1
   },
   {
    "key": "nm1257492",
    "label": "Radu Jude",
    "count": 8,
    "lbVsImdb": 11.9,
-   "criticsVsAudience": 18.5,
-   "avgScore": 59,
+   "criticsVsAudience": 21.7,
+   "avgScore": 61,
    "lbN": 8,
-   "caN": 2
+   "caN": 3
   },
   {
    "key": "nm0526946",
@@ -13257,7 +13257,7 @@
    "key": "nm1633015",
    "label": "Michel Franco",
    "count": 6,
-   "lbVsImdb": -1.7,
+   "lbVsImdb": -1.6,
    "criticsVsAudience": 16,
    "avgScore": 46,
    "lbN": 6,
@@ -13437,7 +13437,7 @@
    "key": "nm0002190",
    "label": "Anthony Asquith",
    "count": 10,
-   "lbVsImdb": -0.5,
+   "lbVsImdb": -0.4,
    "criticsVsAudience": null,
    "avgScore": 56,
    "lbN": 10,
@@ -13597,8 +13597,8 @@
    "key": "nm0935664",
    "label": "Alex Winter",
    "count": 7,
-   "lbVsImdb": 3.6,
-   "criticsVsAudience": 21,
+   "lbVsImdb": 3.7,
+   "criticsVsAudience": 22,
    "avgScore": 53,
    "lbN": 7,
    "caN": 1
@@ -13677,7 +13677,7 @@
    "key": "nm0002542",
    "label": "Terry O. Morse",
    "count": 5,
-   "lbVsImdb": 0.5,
+   "lbVsImdb": 0.6,
    "criticsVsAudience": null,
    "avgScore": 40,
    "lbN": 5,
@@ -13787,7 +13787,7 @@
    "key": "nm0297974",
    "label": "Jun Fukuda",
    "count": 8,
-   "lbVsImdb": 7.6,
+   "lbVsImdb": 7.5,
    "criticsVsAudience": null,
    "avgScore": 36,
    "lbN": 8,
@@ -14047,7 +14047,7 @@
    "key": "nm0750121",
    "label": "Simon Rumley",
    "count": 5,
-   "lbVsImdb": 13.3,
+   "lbVsImdb": 13.2,
    "criticsVsAudience": null,
    "avgScore": 34,
    "lbN": 5,
@@ -14287,7 +14287,7 @@
    "key": "nm0728048",
    "label": "Maria Ripoll",
    "count": 5,
-   "lbVsImdb": -1.7,
+   "lbVsImdb": -1.6,
    "criticsVsAudience": null,
    "avgScore": 48,
    "lbN": 5,
@@ -14327,7 +14327,7 @@
    "key": "nm0542702",
    "label": "Daniel Mann",
    "count": 5,
-   "lbVsImdb": -1.1,
+   "lbVsImdb": -1,
    "criticsVsAudience": null,
    "avgScore": 49,
    "lbN": 5,
@@ -14427,7 +14427,7 @@
    "key": "nm0158857",
    "label": "Tsai Ming-liang",
    "count": 5,
-   "lbVsImdb": 25.4,
+   "lbVsImdb": 25.3,
    "criticsVsAudience": null,
    "avgScore": 69,
    "lbN": 5,
@@ -14747,7 +14747,7 @@
    "key": "nm4097598",
    "label": "James Cullen Bressack",
    "count": 9,
-   "lbVsImdb": 18.3,
+   "lbVsImdb": 18.2,
    "criticsVsAudience": null,
    "avgScore": 25,
    "lbN": 9,
@@ -14769,7 +14769,7 @@
    "count": 5,
    "lbVsImdb": 10,
    "criticsVsAudience": 45,
-   "avgScore": 56,
+   "avgScore": 55,
    "lbN": 5,
    "caN": 1
   },
@@ -14847,7 +14847,7 @@
    "key": "nm1369800",
    "label": "Aaron Katz",
    "count": 5,
-   "lbVsImdb": 7,
+   "lbVsImdb": 7.1,
    "criticsVsAudience": null,
    "avgScore": 40,
    "lbN": 5,
@@ -15038,7 +15038,7 @@
    "label": "Hong Sang-soo",
    "count": 26,
    "lbVsImdb": 20.9,
-   "criticsVsAudience": 21,
+   "criticsVsAudience": 22,
    "avgScore": 56,
    "lbN": 26,
    "caN": 1
@@ -15064,6 +15064,16 @@
    "caN": 1
   },
   {
+   "key": "nm0787668",
+   "label": "Karen Shakhnazarov",
+   "count": 5,
+   "lbVsImdb": 4.9,
+   "criticsVsAudience": null,
+   "avgScore": 46,
+   "lbN": 5,
+   "caN": 0
+  },
+  {
    "key": "nm0136579",
    "label": "René Cardona",
    "count": 6,
@@ -15078,7 +15088,7 @@
    "label": "Scott Chambers",
    "count": 12,
    "lbVsImdb": 6.5,
-   "criticsVsAudience": 15,
+   "criticsVsAudience": 16,
    "avgScore": 35,
    "lbN": 10,
    "caN": 1
@@ -15187,7 +15197,7 @@
    "key": "nm0528963",
    "label": "Nick Lyon",
    "count": 9,
-   "lbVsImdb": 16.1,
+   "lbVsImdb": 16.2,
    "criticsVsAudience": null,
    "avgScore": 28,
    "lbN": 6,
@@ -15337,7 +15347,7 @@
    "key": "nm0210811",
    "label": "Jean Rollin",
    "count": 15,
-   "lbVsImdb": 14.4,
+   "lbVsImdb": 14.5,
    "criticsVsAudience": null,
    "avgScore": 40,
    "lbN": 15,
@@ -15507,7 +15517,7 @@
    "key": "nm4806266",
    "label": "Mickey Keating",
    "count": 5,
-   "lbVsImdb": 4.3,
+   "lbVsImdb": 4.4,
    "criticsVsAudience": null,
    "avgScore": 26,
    "lbN": 5,
@@ -15587,7 +15597,7 @@
    "key": "nm0697935",
    "label": "David A. Prior",
    "count": 7,
-   "lbVsImdb": 7,
+   "lbVsImdb": 7.1,
    "criticsVsAudience": null,
    "avgScore": 30,
    "lbN": 7,
@@ -15697,7 +15707,7 @@
    "key": "nm0280396",
    "label": "Thom Fitzgerald",
    "count": 5,
-   "lbVsImdb": -0.8,
+   "lbVsImdb": -0.7,
    "criticsVsAudience": null,
    "avgScore": 46,
    "lbN": 5,
@@ -15737,7 +15747,7 @@
    "key": "nm0846010",
    "label": "Carlos Enrique Taboada",
    "count": 5,
-   "lbVsImdb": 10.4,
+   "lbVsImdb": 10.5,
    "criticsVsAudience": null,
    "avgScore": 61,
    "lbN": 5,
@@ -15847,7 +15857,7 @@
    "key": "nm1243970",
    "label": "Mitchell Altieri",
    "count": 5,
-   "lbVsImdb": 4.3,
+   "lbVsImdb": 4.4,
    "criticsVsAudience": null,
    "avgScore": 36,
    "lbN": 5,
@@ -16197,7 +16207,7 @@
    "key": "nm0407061",
    "label": "Eloy de la Iglesia",
    "count": 5,
-   "lbVsImdb": 9.1,
+   "lbVsImdb": 9.2,
    "criticsVsAudience": null,
    "avgScore": 48,
    "lbN": 5,
@@ -16357,7 +16367,7 @@
    "key": "nm3456466",
    "label": "Louisa Warren",
    "count": 7,
-   "lbVsImdb": 7.4,
+   "lbVsImdb": 7.5,
    "criticsVsAudience": null,
    "avgScore": 36,
    "lbN": 4,
@@ -16397,7 +16407,7 @@
    "key": "nm1950018",
    "label": "R. Ellis Frazier",
    "count": 5,
-   "lbVsImdb": 7.9,
+   "lbVsImdb": 7.8,
    "criticsVsAudience": null,
    "avgScore": 35,
    "lbN": 3,
@@ -16497,7 +16507,7 @@
    "key": "nm0335093",
    "label": "Gilles Grangier",
    "count": 6,
-   "lbVsImdb": 3.2,
+   "lbVsImdb": 3.3,
    "criticsVsAudience": null,
    "avgScore": 47,
    "lbN": 6,
@@ -16527,7 +16537,7 @@
    "key": "nm0689789",
    "label": "Mark Polonia",
    "count": 6,
-   "lbVsImdb": 4.4,
+   "lbVsImdb": 4.5,
    "criticsVsAudience": null,
    "avgScore": 29,
    "lbN": 6,
