@@ -416,6 +416,8 @@ async function appletv(): Promise<Item[]> {
 type Loader = {
   sid: number;
   name: string;
+  /** Name used by the ONLY filter. */
+  key: string;
   load: (tracked: Set<string>) => Promise<Item[]>;
   /** Only link films free.json already lists on this service. */
   listedOnly?: boolean;
@@ -423,19 +425,29 @@ type Loader = {
   pace?: number;
 };
 const LOADERS: Loader[] = [
-  { sid: TUBI, name: "Tubi", load: tubi },
-  { sid: PLUTO, name: "Pluto TV", load: pluto },
-  { sid: STARZ, name: "Starz", load: starz, listedOnly: true },
-  { sid: MGMPLUS, name: "MGM+", load: mgmplus, listedOnly: true, pace: 1500 },
-  { sid: PEACOCK, name: "Peacock", load: peacock, listedOnly: true, pace: 2000 },
-  { sid: AMCPLUS, name: "AMC+", load: amcplus, listedOnly: true, pace: 1500 },
-  { sid: MUBI, name: "MUBI", load: mubi, listedOnly: true, pace: 1500 },
-  { sid: XUMO, name: "Xumo", load: xumo, listedOnly: true, pace: 1500 },
-  { sid: APPLETV, name: "Apple TV+", load: appletv, listedOnly: true, pace: 1500 },
+  { sid: TUBI, name: "Tubi", key: "tubi", load: tubi },
+  { sid: PLUTO, name: "Pluto TV", key: "pluto", load: pluto },
+  { sid: STARZ, name: "Starz", key: "starz", load: starz, listedOnly: true },
+  { sid: MGMPLUS, name: "MGM+", key: "mgmplus", load: mgmplus, listedOnly: true, pace: 1500 },
+  { sid: PEACOCK, name: "Peacock", key: "peacock", load: peacock, listedOnly: true, pace: 2000 },
+  { sid: AMCPLUS, name: "AMC+", key: "amcplus", load: amcplus, listedOnly: true, pace: 1500 },
+  { sid: MUBI, name: "MUBI", key: "mubi", load: mubi, listedOnly: true, pace: 1500 },
+  { sid: XUMO, name: "Xumo", key: "xumo", load: xumo, listedOnly: true, pace: 1500 },
+  { sid: APPLETV, name: "Apple TV+", key: "appletv", load: appletv, listedOnly: true, pace: 1500 },
 ];
 
+// ONLY=amcplus,mubi limits the run to those loaders (by key); every other service keeps its previous links untouched.
+const only = (process.env.ONLY ?? "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+const known = LOADERS.map((l) => l.key);
+const unknown = only.filter((k) => !known.includes(k));
+if (unknown.length) throw new Error(`ONLY: unknown loader(s) ${unknown.join(", ")}; known: ${known.join(", ")}`);
+
 const links: ServiceLinks["links"] = {};
-for (const { sid, name, load, listedOnly, pace = 1500 } of LOADERS) {
+for (const { sid, name, key, load, listedOnly, pace = 1500 } of LOADERS) {
+  if (only.length && !only.includes(key)) {
+    for (const [id, l] of Object.entries(prev.links)) if (l[sid]) (links[id] ??= {})[sid] ??= l[sid];
+    continue;
+  }
   const keepPrevious = () => {
     for (const [id, l] of Object.entries(prev.links))
       if (l[sid] && (!listedOnly || onService(id, sid))) (links[id] ??= {})[sid] ??= l[sid];
