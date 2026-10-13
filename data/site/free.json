@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-10-12T06:30:26.148Z",
+ "updatedAt": "2026-10-12T19:09:49.097Z",
  "services": [
   {
    "id": 73,
    "name": "Tubi TV",
    "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
-   "count": 14651
+   "count": 14648
   },
   {
    "id": 212,
@@ -106,6 +106,9 @@
    "count": 999
   },
   {
+   "count": 981
+  },
+  {
    "id": 439,
    "name": "Shout! Factory TV",
    "logo": "/ezTLm8lPMse9QRKTYInPOBD2jUM.png",
@@ -142,6 +145,9 @@
    "count": 487
   },
   {
+   "count": 412
+  },
+  {
    "id": 638,
    "name": "Public Domain Movies",
    "logo": "/pDodO7jgdP0eYO1vP2Dwu9YjeVJ.png",
@@ -154,6 +160,9 @@
    "count": 338
   },
   {
+   "count": 317
+  },
+  {
    "id": 2667,
    "name": "YOW.tv",
    "logo": "/oMEvAYpfx85D9HHQzXqFbHC0S6F.png",
@@ -164,6 +173,9 @@
    "name": "VIX",
    "logo": "/ieJ55scAVrvboTpeJcZa3JlLIrS.png",
    "count": 271
+  },
+  {
+   "count": 253
   },
   {
    "id": 2679,
@@ -200,6 +212,9 @@
    "name": "myfilmfriend",
    "logo": "/dJsyipsIt597fzdXUlr5sDifNRa.png",
    "count": 117
+  },
+  {
+   "count": 115
   },
   {
    "id": 344,
