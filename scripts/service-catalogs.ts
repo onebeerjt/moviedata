@@ -405,8 +405,16 @@ async function appletv(): Promise<Item[]> {
       url,
       enrich: async () => {
         const html = await page(url);
-        const m = html?.match(/"movieTitle":"((?:[^"\\]|\\.)*)"[^}]*?"releaseDate":(\d+)/);
-        return m ? { title: JSON.parse(`"${m[1]}"`), year: new Date(Number(m[2])).getUTCFullYear() } : null;
+        const t = html?.match(/<meta[^>]+property="og:title"[^>]+content="([^"]*)"/)?.[1] ?? html?.match(/<meta[^>]+content="([^"]*)"[^>]+property="og:title"/)?.[1];
+        const y = html?.match(/"datePublished":"(\d{4})-/)?.[1];
+        if (!t || !y) return null;
+        const title = t
+          .replace(/ /g, " ")
+          .replace(/ - Apple TV$/, "")
+          .replace(/&amp;/g, "&")
+          .replace(/&quot;/g, '"')
+          .replace(/&#x27;|&#39;|&apos;/g, "'");
+        return { title, year: Number(y) };
       },
     });
   }
