@@ -5,14 +5,14 @@
    "id": 73,
    "name": "Tubi TV",
    "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
-   "count": 14686
+   "count": 14700
   },
   {
    "id": 212,
    "name": "Hoopla",
    "logo": "/gtjNBzAoGgUtYzt0UKXmwG34WWL.png",
    "library": true,
-   "count": 8619
+   "count": 8621
   },
   {
    "id": 2077,
@@ -37,7 +37,7 @@
    "name": "Kanopy",
    "logo": "/cltb8XKan9ierp23ItPmCOcVLRa.png",
    "library": true,
-   "count": 6909
+   "count": 6910
   },
   {
    "id": 207,
@@ -55,7 +55,7 @@
    "id": 300,
    "name": "Pluto TV",
    "logo": "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png",
-   "count": 5162
+   "count": 5160
   },
   {
    "id": 332,
