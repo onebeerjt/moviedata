@@ -37,6 +37,7 @@ export default async function WatchPage({ searchParams }: PageProps<"/watch">) {
         hero={hero}
         rows={rows}
         preferred={active?.id ?? null}
+        chunkParams={`service=${active?.id ?? ""}&subs=${subs.join("-")}`}
         header={
           <header key="header" className="px-5 pb-3 pt-5 sm:px-10 lg:px-14">
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Find something to watch</h1>

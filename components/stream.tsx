@@ -18,6 +18,10 @@ type Ctx = {
   services: Record<number, StreamService & { short: string }>;
   /** The service tab being browsed, if any: it leads every Watch button. */
   preferred: number | null;
+  /** Query string identifying this view (service + subs) for /api/stream. */
+  chunkParams: string;
+  /** Merge card records fetched for later chunks of a row. */
+  addFilms: (more: Record<string, StreamFilm>) => void;
   open: (id: string) => void;
   /** Play the trailer or (when free on YouTube) the full movie in the site's own player. */
   play: (id: string, what: "trailer" | "movie") => void;
@@ -34,6 +38,7 @@ export function Stream({
   intro,
   toolbar,
   preferred = null,
+  chunkParams = "",
 }: {
   films: Record<string, StreamFilm>;
   services: Record<number, StreamService & { short: string }>;
@@ -46,13 +51,19 @@ export function Stream({
   /** Anything else under the services bar. */
   toolbar?: React.ReactNode;
   preferred?: number | null;
+  /** Identifies this view to /api/stream when a row loads more of its list. */
+  chunkParams?: string;
 }) {
+  const [filmMap, setFilmMap] = useState(films);
+  const addFilms = useCallback((more: Record<string, StreamFilm>) => {
+    setFilmMap((prev) => ({ ...prev, ...more }));
+  }, []);
   const [openId, setOpenId] = useState<string | null>(null);
   const open = useCallback((id: string) => setOpenId(id), []);
   const [playing, setPlaying] = useState<{ id: string; what: "trailer" | "movie" } | null>(null);
   const play = useCallback((id: string, what: "trailer" | "movie") => setPlaying({ id, what }), []);
   return (
-    <StreamCtx.Provider value={{ films, services, preferred, open, play }}>
+    <StreamCtx.Provider value={{ films: filmMap, services, preferred, chunkParams, addFilms, open, play }}>
       {header}
       {hero.length > 0 && <Hero ids={hero} />}
       <div className={`relative z-20 ${hero.length ? "-mt-10 sm:-mt-12" : "pt-4"}`}>{intro}</div>
@@ -62,8 +73,8 @@ export function Stream({
           <Row key={r.key} row={r} />
         ))}
       </div>
-      {openId && films[openId] && <Sheet film={films[openId]} onClose={() => setOpenId(null)} />}
-      {playing && films[playing.id] && <Player film={films[playing.id]} what={playing.what} onClose={() => setPlaying(null)} />}
+      {openId && filmMap[openId] && <Sheet film={filmMap[openId]} onClose={() => setOpenId(null)} />}
+      {playing && filmMap[playing.id] && <Player film={filmMap[playing.id]} what={playing.what} onClose={() => setPlaying(null)} />}
     </StreamCtx.Provider>
   );
 }
@@ -167,34 +178,73 @@ function Hero({ ids }: { ids: string[] }) {
 /* ------------------------------------------------------------------ rows */
 
 function Row({ row }: { row: StreamRow }) {
-  const { films } = useStream();
+  const { films, addFilms, chunkParams } = useStream();
   const scroller = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
+  // The row's full ranked list, grown chunk by chunk as the end nears.
+  const [ids, setIds] = useState(row.ids);
+  const [loading, setLoading] = useState(false);
+  const loadingRef = useRef(false);
+  const sentinel = useRef<HTMLDivElement>(null);
+  const done = ids.length >= row.total;
 
   const update = useCallback(() => {
     const el = scroller.current;
     if (!el) return;
     setEdges({ start: el.scrollLeft < 8, end: el.scrollLeft + el.clientWidth >= el.scrollWidth - 8 });
   }, []);
-  useEffect(update, [update]);
+  useEffect(update, [update, ids.length]);
 
   const page = (dir: 1 | -1) => {
     const el = scroller.current;
     if (el) el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: "smooth" });
   };
 
+  const loadMore = useCallback(async () => {
+    if (loadingRef.current) return;
+    loadingRef.current = true;
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/stream?row=${encodeURIComponent(row.key)}&offset=${ids.length}&limit=60&${chunkParams}`);
+      if (res.ok) {
+        const data = (await res.json()) as { ids: string[]; films: Record<string, StreamFilm> };
+        addFilms(data.films);
+        setIds((prev) => [...prev, ...data.ids.filter((id) => !prev.includes(id))]);
+      }
+    } catch {
+      /* the "show more" button stays put and retries on tap */
+    }
+    loadingRef.current = false;
+    setLoading(false);
+  }, [ids.length, row.key, addFilms, chunkParams]);
+
+  useEffect(() => {
+    const el = sentinel.current;
+    const root = scroller.current;
+    if (!el || !root || done) return;
+    const ob = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) void loadMore();
+      },
+      { root, rootMargin: "0px 900px 0px 900px" },
+    );
+    ob.observe(el);
+    return () => ob.disconnect();
+  }, [loadMore, done]);
+
   return (
     <section className="group/row relative">
       <div className="mb-3 flex items-baseline gap-3 px-5 sm:px-10 lg:px-14">
         <h2 className="text-xl font-bold tracking-tight sm:text-[22px]">{row.title}</h2>
         {row.subtitle && <span className="hidden text-sm text-white/50 sm:inline">{row.subtitle}</span>}
+        <span className="ml-auto text-xs text-white/35">{row.total.toLocaleString()} films</span>
       </div>
       <div
         ref={scroller}
         onScroll={update}
         className="scroller stream-row flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-5 px-5 py-4 sm:gap-4 sm:scroll-px-10 sm:px-10 lg:scroll-px-14 lg:px-14"
       >
-        {row.ids.map((id, n) =>
+        {ids.map((id, n) =>
           row.style === "wide" ? (
             <WideCard key={id} film={films[id]} />
           ) : row.style === "top10" ? (
@@ -202,6 +252,16 @@ function Row({ row }: { row: StreamRow }) {
           ) : (
             <PosterCard key={id} film={films[id]} />
           ),
+        )}
+        {!done && (
+          <div ref={sentinel} className="flex shrink-0 items-center px-2">
+            <button
+              onClick={() => void loadMore()}
+              className="stream-glass whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium text-white/80 transition hover:text-white"
+            >
+              {loading ? "Loading…" : `Show more · ${(row.total - ids.length).toLocaleString()} more`}
+            </button>
+          </div>
         )}
       </div>
       {!edges.start && <Arrow dir={-1} onClick={() => page(-1)} />}

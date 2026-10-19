@@ -37,7 +37,10 @@ export type StreamRow = {
   title: string;
   subtitle?: string;
   style: "poster" | "wide" | "top10";
+  /** The first chunk of the ranked list; the rest loads via /api/stream. */
   ids: string[];
+  /** How many films the full ranked list holds. */
+  total: number;
 };
 
 // Services shown as tabs, in this order, when they have films. Everything
@@ -84,11 +87,35 @@ export function parseSubs(value: string | undefined) {
   return [...new Set((value ?? "").split("-").map(Number).filter((id) => SUB_IDS.has(id)))];
 }
 
-export function buildStream(serviceId: number | null, subs: number[] = []) {
-  // Only films we can send straight to the movie on a service the viewer can
-  // use: any free one, or a subscription they've added.
+/** Films per row in the first server payload; scrolling loads the rest. */
+const INITIAL_CHUNK = 30;
+
+const usableFor = (subs: number[]) => {
   const mine = new Set(subs);
-  const usable = (id: number) => !SUB_IDS.has(id) || mine.has(id);
+  return (id: number) => !SUB_IDS.has(id) || mine.has(id);
+};
+
+type ComputedStream = {
+  hero: string[];
+  rows: StreamRow[];
+  byId: Map<string, Film>;
+  total: number;
+};
+
+const streamCache = new Map<string, ComputedStream>();
+
+/**
+ * Every category as its FULL ranked list (JT: the top 10/24 cut hid the good
+ * stuff). Rows are computed once per (service, subs) and cached; the page
+ * ships the first chunk of each and /api/stream serves the rest as the
+ * viewer scrolls, so the payload stays small while nothing is held back.
+ */
+function computeStream(serviceId: number | null, subs: number[] = []): ComputedStream {
+  const cacheKey = `${serviceId ?? "all"}|${subs.join("-")}`;
+  const hit = streamCache.get(cacheKey);
+  if (hit) return hit;
+
+  const usable = usableFor(subs);
   const linked = (f: Film) => Object.keys(f.links ?? {}).map(Number).filter(usable);
   const pool = allFilms().filter((f) => {
     const ids = linked(f);
@@ -96,34 +123,27 @@ export function buildStream(serviceId: number | null, subs: number[] = []) {
   });
   const scored = pool.filter((f) => f.score !== null);
   const familiar = scored.filter((f) => votes(f) >= MIN_VOTES_FAMILIAR);
-  const used = new Set<string>();
   const rows: StreamRow[] = [];
-
-  const take = (films: Film[], n: number, { fresh = true } = {}) => {
-    const out = films.filter((f) => !fresh || !used.has(f.id)).slice(0, n);
-    out.forEach((f) => used.add(f.id));
-    return out.map((f) => f.id);
-  };
-  const add = (row: Omit<StreamRow, "ids">, films: Film[], n = 24, min = 6, fresh = true) => {
-    const ids = take(films, n, { fresh });
-    if (ids.length >= min) rows.push({ ...row, ids });
+  const add = (row: Omit<StreamRow, "ids" | "total">, films: Film[], min = 6) => {
+    const ids = films.map((f) => f.id);
+    if (ids.length >= min) rows.push({ ...row, ids, total: ids.length });
   };
 
   // Hero: the best-loved familiar films with big backdrop art.
-  const hero = take(
-    [...familiar].filter((f) => f.backdrop && f.overview && votes(f) >= 80_000).sort(byScore),
-    6,
-  );
+  const hero = [...familiar]
+    .filter((f) => f.backdrop && f.overview && votes(f) >= 80_000)
+    .sort(byScore)
+    .slice(0, 6)
+    .map((f) => f.id);
 
   add(
-    { key: "top10", title: subs.length ? "Top 10 for you right now" : "Top 10 free right now", subtitle: "Highest balanced scores", style: "top10" },
+    { key: "top10", title: subs.length ? "Top for you right now" : "Top free right now", subtitle: "Every familiar favorite, ranked by balanced score", style: "top10" },
     [...familiar].sort(byScore),
-    10,
     5,
   );
   // One row per added service, unless the page is already filtered to one.
   if (serviceId === null)
-    for (const sub of SUBSCRIPTIONS.filter((s) => mine.has(s.id)))
+    for (const sub of SUBSCRIPTIONS.filter((s) => subs.includes(s.id)))
       add(
         { key: `sub-${sub.id}`, title: `Top on ${sub.name}`, subtitle: "Best balanced scores on your subscription", style: "poster" },
         scored.filter((f) => f.links?.[sub.id]).sort(byScore),
@@ -131,7 +151,6 @@ export function buildStream(serviceId: number | null, subs: number[] = []) {
   add(
     { key: "agree", title: "Everyone agrees", subtitle: "Critics and audiences both love these", style: "wide" },
     familiar.filter((f) => f.backdrop && f.critics !== null && f.audience !== null && Math.abs(f.critics - f.audience) <= 8).sort(byScore),
-    16,
   );
   add(
     { key: "critics", title: "Critics' favorites", subtitle: "Rated higher by critics than by the crowd", style: "poster" },
@@ -154,11 +173,9 @@ export function buildStream(serviceId: number | null, subs: number[] = []) {
   add(
     { key: "recent", title: "Recent releases", subtitle: `From ${thisYear - 3} on`, style: "wide" },
     scored.filter((f) => f.backdrop && (f.year ?? 0) >= thisYear - 3).sort(byScore),
-    16,
   );
 
-  // Genre rows: a film can appear in one genre row and again elsewhere, so
-  // these don't consume the "used" set.
+  // Genre rows: the whole genre, ranked.
   const GENRES: [string, string][] = [
     ["Comedy", "Comedy"],
     ["Horror", "Horror"],
@@ -175,23 +192,49 @@ export function buildStream(serviceId: number | null, subs: number[] = []) {
   ];
   for (const [genre, title] of GENRES) {
     const films = scored.filter((f) => f.genres.includes(genre)).sort(byScore);
-    const ids = films.slice(0, 24).map((f) => f.id);
-    if (ids.length >= 6) rows.push({ key: `g-${genre}`, title, style: "poster", ids });
+    if (films.length >= 6) {
+      const ids = films.map((f) => f.id);
+      rows.push({ key: `g-${genre}`, title, style: "poster", ids, total: ids.length });
+    }
   }
   add(
     { key: "classic", title: "Before 1970", subtitle: subs.length ? "Classic cinema" : "Classic cinema, free", style: "poster" },
     scored.filter((f) => (f.year ?? 9999) < 1970).sort(byScore),
-    24,
-    6,
-    false,
   );
 
-  // Ship each film once, however many rows it appears in.
-  const ids = new Set([...hero, ...rows.flatMap((r) => r.ids)]);
-  const films: Record<string, StreamFilm> = {};
-  for (const f of pool) if (ids.has(f.id)) films[f.id] = toStream(f, usable);
+  const out: ComputedStream = { hero, rows, byId: new Map(pool.map((f) => [f.id, f])), total: pool.length };
+  if (streamCache.size > 6) streamCache.clear();
+  streamCache.set(cacheKey, out);
+  return out;
+}
 
-  return { hero, rows, films, total: pool.length };
+export function buildStream(serviceId: number | null, subs: number[] = []) {
+  const { hero, rows, byId, total } = computeStream(serviceId, subs);
+  const usable = usableFor(subs);
+  // Ship each film once, and only the first chunk of every row.
+  const chunked = rows.map((r) => ({ ...r, ids: r.ids.slice(0, INITIAL_CHUNK) }));
+  const ids = new Set([...hero, ...chunked.flatMap((r) => r.ids)]);
+  const films: Record<string, StreamFilm> = {};
+  for (const id of ids) {
+    const f = byId.get(id);
+    if (f) films[id] = toStream(f, usable);
+  }
+  return { hero, rows: chunked, films, total };
+}
+
+/** One more chunk of one row's full ranked list, for /api/stream. */
+export function getStreamChunk(serviceId: number | null, subs: number[], rowKey: string, offset: number, limit: number) {
+  const { rows, byId } = computeStream(serviceId, subs);
+  const row = rows.find((r) => r.key === rowKey);
+  if (!row) return null;
+  const usable = usableFor(subs);
+  const ids = row.ids.slice(offset, offset + limit);
+  const films: Record<string, StreamFilm> = {};
+  for (const id of ids) {
+    const f = byId.get(id);
+    if (f) films[id] = toStream(f, usable);
+  }
+  return { ids, films, total: row.total };
 }
 
 function toStream(f: Film, usable: (id: number) => boolean): StreamFilm {
