@@ -80,20 +80,26 @@ for (let page = 1; page <= 3; page++) {
 writeJson(NOW_PLAYING, { updatedAt: new Date().toISOString(), ids: nowPlaying }, true);
 console.log(`TMDB: ${nowPlaying.length} films now playing`);
 
-// 2. Everything else we track, stale-first.
-const queue = Object.entries(imdb)
+// 2. Everything else we track. Never-fetched films go first (most votes first) so
+// refreshes can't starve them; stale refreshes use whatever limit is left.
+const stale = Object.entries(imdb)
   .filter(([id, f]) => isStale(cache[id]?.fetchedAt, staleAfterDays(f.year, cache[id]?.releaseDate)))
-  .sort(([, a], [, b]) => b.votes - a.votes)
-  .slice(0, LIMIT);
+  .sort(([, a], [, b]) => b.votes - a.votes);
+const queue = [...stale.filter(([id]) => !cache[id]), ...stale.filter(([id]) => cache[id])].slice(0, LIMIT);
+const newCount = queue.filter(([id]) => !cache[id]).length;
+console.log(`TMDB: queued ${newCount} new + ${queue.length - newCount} refresh`);
 
 let n = 0;
+let nNew = 0;
 for (const [id] of queue) {
+  const isNew = !cache[id];
   try {
     const { movie_results } = await tmdb<{ movie_results: TmdbMovie[] }>(`/find/${id}`, { external_source: "imdb_id" });
     cache[id] = movie_results[0] ? toEntry(movie_results[0]) : { fetchedAt: new Date().toISOString() };
   } catch (e) {
     console.warn(`  ${id}: ${(e as Error).message}`);
   }
+  if (isNew) nNew++;
   if (++n % 200 === 0) {
     writeJson(OUT, cache);
     console.log(`  ${n}/${queue.length}`);
@@ -101,4 +107,4 @@ for (const [id] of queue) {
   await sleep(30);
 }
 writeJson(OUT, cache);
-console.log(`TMDB: done (${n} refreshed)`);
+console.log(`TMDB: done (${nNew} new, ${n - nNew} refreshed)`);
