@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FilmCard, SplitRow } from "@/components/film-bits";
 import { Search } from "@/components/search";
 import { TheatersRail } from "@/components/theaters-rail";
+import { WeeklyRail, type WeekBucket } from "@/components/weekly-rail";
 import { allFilms, isWellKnown } from "@/lib/data";
 import { SITE_TAGLINE } from "@/lib/site";
 import { SUBSCRIPTIONS } from "@/lib/subscriptions";
@@ -46,6 +47,50 @@ export default function Home() {
     .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
     .slice(0, 16);
 
+  // "New this week": releases with a poster and a date, bucketed by
+  // Mon–Sun week. Weeks are anchored to the calendar; the freshest weeks
+  // fill in as the daily TMDB pass dates more new releases.
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+  const mondayOf = (iso: string) => {
+    const d = new Date(`${iso}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+    return d.toISOString().slice(0, 10);
+  };
+  const addDays = (iso: string, n: number) => {
+    const d = new Date(`${iso}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+  };
+  const currentMonday = mondayOf(today);
+  const byWeek = new Map<string, Film[]>();
+  for (const f of films) {
+    if (!f.poster || !f.releaseDate) continue;
+    const wk = mondayOf(f.releaseDate);
+    if (wk > currentMonday) continue;
+    const arr = byWeek.get(wk);
+    if (arr) arr.push(f);
+    else byWeek.set(wk, [f]);
+  }
+  const weeks: WeekBucket[] = [...byWeek.entries()]
+    .sort((a, b) => (a[0] < b[0] ? 1 : -1))
+    .slice(0, 12)
+    .map(([start, wkFilms]) => ({
+      start,
+      end: addDays(start, 6),
+      current: start === currentMonday,
+      films: wkFilms
+        .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (b.s.imdb?.n ?? 0) - (a.s.imdb?.n ?? 0))
+        .slice(0, 24)
+        .map((f) => ({
+          id: f.id,
+          title: f.title,
+          year: f.year,
+          poster: f.poster,
+          score: f.score,
+          releaseDate: f.releaseDate as string,
+        })),
+    }));
+
   return (
     <div>
       <section className="hero mx-auto max-w-3xl px-4 pb-10 pt-14 text-center sm:pt-20">
@@ -65,6 +110,7 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-14 px-4">
+        {weeks.length > 0 && <WeeklyRail weeks={weeks} />}
         <WatchBanner />
         {nowPlaying.length > 0 && (
           <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
