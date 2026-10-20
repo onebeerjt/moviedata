@@ -5,7 +5,7 @@
    "id": 73,
    "name": "Tubi TV",
    "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png",
-   "count": 14698
+   "count": 14718
   },
   {
    "id": 212,
@@ -55,7 +55,7 @@
    "id": 300,
    "name": "Pluto TV",
    "logo": "/fN4czqaMQNLeF6sSSIjGbAWzvwK.png",
-   "count": 5160
+   "count": 5157
   },
   {
    "id": 332,
@@ -145,7 +145,7 @@
    "count": 486
   },
   {
-   "count": 406
+   "count": 407
   },
   {
    "id": 638,
@@ -212,6 +212,9 @@
    "name": "myfilmfriend",
    "logo": "/dJsyipsIt597fzdXUlr5sDifNRa.png",
    "count": 117
+  },
+  {
+   "count": 115
   },
   {
    "id": 344,
