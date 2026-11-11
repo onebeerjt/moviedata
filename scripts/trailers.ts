@@ -11,9 +11,9 @@
 //   so; the YouTube Data API does. With YOUTUBE_API_KEY set, every movie (and
 //   trailer) is checked there, 50 per request. Without it, no full movies are
 //   offered, so the site never shows a player that can't play.
-// Usage: node scripts/trailers.ts [--limit 40000]
+// Usage: node scripts/trailers.ts [--limit 40000] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, writeJson } from "./util.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
 import type { FreeLinks } from "./free-links.ts";
 import type { FreeFile } from "./free-catalog.ts";
@@ -120,7 +120,7 @@ console.log(`Trailers: ${queue.length} films to check`);
 
 let done = 0;
 async function worker() {
-  while (queue.length) {
+  while (queue.length && !outOfTime()) {
     const id = queue.shift()!;
     try {
       const trailer = bestTrailer(await videos(tmdb[id].tmdbId!));

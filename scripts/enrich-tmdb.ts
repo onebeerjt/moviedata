@@ -1,8 +1,8 @@
 // Posters, overviews, release dates, TMDB user ratings and "now playing" from the TMDB API.
 // Needs TMDB_API_KEY (v3 key) or TMDB_READ_TOKEN (v4 bearer token) in .env.local.
-// Usage: node scripts/enrich-tmdb.ts [--limit 2000]
+// Usage: node scripts/enrich-tmdb.ts [--limit 2000] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 
 export type TmdbEntry = {
@@ -92,6 +92,10 @@ console.log(`TMDB: queued ${newCount} new + ${queue.length - newCount} refresh`)
 let n = 0;
 let nNew = 0;
 for (const [id] of queue) {
+  if (outOfTime()) {
+    console.log("TMDB: time budget used up, the rest wait for the next run");
+    break;
+  }
   const isNew = !cache[id];
   try {
     const { movie_results } = await tmdb<{ movie_results: TmdbMovie[] }>(`/find/${id}`, { external_source: "imdb_id" });

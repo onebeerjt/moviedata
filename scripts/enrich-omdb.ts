@@ -2,9 +2,9 @@
 // Needs OMDB_API_KEY in .env.local. Free keys allow 1,000 requests/day, so the
 // default limit stays under that. Films never queried come first (most IMDb votes
 // first); stale refreshes (newest films first) only get the budget left over.
-// Usage: node scripts/enrich-omdb.ts [--limit 900]
+// Usage: node scripts/enrich-omdb.ts [--limit 900] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 
 export type OmdbEntry = {
@@ -40,14 +40,24 @@ if (fresh.length) console.log(`OMDb: never-fetched films go first, so newly inge
 let n = 0;
 let nNew = 0;
 for (const [id] of queue) {
+  if (outOfTime()) {
+    console.log("OMDb: time budget used up, the rest wait for the next run");
+    break;
+  }
   const isNew = !cache[id];
-  const res = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${KEY}`);
-  const data = (await res.json()) as {
+  let data: {
     Response: string;
     Error?: string;
     Rated?: string;
     Ratings?: { Source: string; Value: string }[];
   };
+  try {
+    data = await (await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${KEY}`)).json();
+  } catch (e) {
+    // Save what we have; a dropped connection shouldn't cost the day's queries.
+    console.warn(`OMDb: ${(e as Error).message}, stopping early`);
+    break;
+  }
   if (data.Error?.includes("limit")) {
     console.log("OMDb: daily limit reached");
     break;

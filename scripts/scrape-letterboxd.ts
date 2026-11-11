@@ -1,9 +1,9 @@
 // Reads Letterboxd's public film pages (via the /imdb/<id>/ redirect) for the
 // average rating, rating count and TMDB id. Polite: low concurrency, a delay
 // between requests, and refresh cadence based on how recent the film is.
-// Usage: node scripts/scrape-letterboxd.ts [--limit 500] [--concurrency 2]
+// Usage: node scripts/scrape-letterboxd.ts [--limit 500] [--concurrency 2] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, staleAfterDays, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 
 export type LetterboxdEntry = {
@@ -57,7 +57,7 @@ async function fetchOne(id: string): Promise<LetterboxdEntry> {
 let done = 0;
 let failures = 0;
 async function worker() {
-  while (queue.length) {
+  while (queue.length && !outOfTime()) {
     const id = queue.shift()!;
     try {
       cache[id] = await fetchOne(id);

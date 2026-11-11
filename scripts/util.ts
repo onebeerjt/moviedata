@@ -59,6 +59,19 @@ export function arg(name: string, fallback?: string) {
   return i > -1 ? process.argv[i + 1] : fallback;
 }
 
+const startedAt = Date.now();
+const BUDGET_MS = Number(arg("budget", "0")) * 60_000;
+
+/**
+ * `--budget <minutes>`: a soft wall-clock limit, counted from script start. Loops over
+ * a queue check this and stop cleanly, so the script saves its progress and the rest
+ * waits for tomorrow's run. No flag, no limit (local runs). CI sets it on every slow
+ * step so a step ends on its own terms, well before the step's hard timeout.
+ */
+export function outOfTime() {
+  return BUDGET_MS > 0 && Date.now() - startedAt > BUDGET_MS;
+}
+
 /** How many days since the film's release year/date — used to decide refresh cadence. */
 export function staleAfterDays(year: number | null, releaseDate?: string | null) {
   const released = releaseDate ? new Date(releaseDate) : year ? new Date(`${year}-07-01`) : null;

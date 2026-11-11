@@ -9,9 +9,9 @@
 // read the page once per film, keep the free/ads offers, and cache them.
 // Like the Letterboxd scraper it reads a public web page: polite, low
 // concurrency, fine for a personal project.
-// Usage: node scripts/free-links.ts [--limit 30000] [--concurrency 2]
+// Usage: node scripts/free-links.ts [--limit 30000] [--concurrency 2] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, unwrapAffiliate, usableLink, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, unwrapAffiliate, usableLink, writeJson } from "./util.ts";
 import type { FreeFile } from "./free-catalog.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 import { SUBSCRIPTION_OF } from "../lib/subscriptions.ts";
@@ -87,15 +87,22 @@ async function fetchLinks(tmdbId: number): Promise<Record<number, string>> {
 
 let done = 0;
 let failures = 0;
+let rateLimited = 0;
 async function worker() {
-  while (queue.length) {
+  while (queue.length && !outOfTime()) {
     const [id, f] = queue.shift()!;
     try {
       cache[id] = { links: await fetchLinks(f.tmdbId), services: wanted(f), fetchedAt: new Date().toISOString() };
     } catch (e) {
       const retryAfter = (e as { retryAfter?: number }).retryAfter;
       if (retryAfter) {
-        // Rate limited: wait as asked and try the same film again.
+        // Rate limited: wait as asked and try the same film again. If they keep
+        // saying no, take a smaller bite today instead of waiting it out.
+        if (++rateLimited > 5) {
+          console.error("Free links: rate limited again and again, stopping for today");
+          queue.length = 0;
+          continue;
+        }
         queue.unshift([id, f]);
         console.warn(`  rate limited, waiting ${retryAfter}s`);
         await sleep(retryAfter * 1000);
