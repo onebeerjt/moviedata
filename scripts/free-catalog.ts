@@ -11,9 +11,9 @@
 //    services listed under "flatrate".
 // Films land in free.json keyed by IMDb id; ingest-imdb.ts adds them to the
 // tracked set so they get scored like everything else.
-// Usage: node scripts/free-catalog.ts [--min-votes 20] [--refresh-days 3]
+// Usage: node scripts/free-catalog.ts [--min-votes 20] [--refresh-days 3] [--max-details 4000] [--budget minutes]
 import { join } from "node:path";
-import { SOURCES, arg, isStale, readJson, sleep, writeJson } from "./util.ts";
+import { SOURCES, arg, isStale, outOfTime, readJson, sleep, writeJson } from "./util.ts";
 import type { TmdbEntry } from "./enrich-tmdb.ts";
 import { SUBSCRIPTIONS, SUBSCRIPTION_OF } from "../lib/subscriptions.ts";
 
@@ -46,6 +46,8 @@ if (!KEY && !TOKEN) {
 
 const MIN_VOTES = arg("min-votes", "20")!;
 const REFRESH_DAYS = Number(arg("refresh-days", "3"));
+// Most film details fetched per run (~0.15 s each). With the default, the whole catalog rolls over about every 9 days.
+const MAX_DETAILS = Number(arg("max-details", "4000"));
 const OUT = join(SOURCES, "free.json");
 const VERSION = 2; // 2: subscription services recorded too
 const TMDB_OUT = join(SOURCES, "tmdb.json");
@@ -133,22 +135,44 @@ const films: FreeFile["films"] = {};
 const checked: FreeFile["checked"] = {};
 const byTmdb = new Map(Object.entries(prev.films).map(([imdbId, f]) => [f.tmdbId, imdbId]));
 
-let n = 0;
-let fetched = 0;
+// Start from what we already knew; fetching below overwrites it. A film we don't
+// get to this run keeps its last answer instead of vanishing from the site.
 for (const id of candidates) {
   const last = prev.checked[id];
-  if (!isStale(last, REFRESH_DAYS)) {
-    // Recently checked: carry it over as-is.
-    checked[id] = last;
-    const imdbId = byTmdb.get(id);
-    if (imdbId) films[imdbId] = prev.films[imdbId];
-    continue;
+  if (!last) continue;
+  checked[id] = last;
+  const imdbId = byTmdb.get(id);
+  if (imdbId) films[imdbId] = prev.films[imdbId];
+}
+
+// A bounded bite per run: never-checked films first, then the longest-unchecked.
+// (An unbounded "everything older than 3 days" queue is what once put all 35k films
+// due on the same morning, ~2 hours of requests that were only saved at the very end.)
+const due = [...candidates]
+  .filter((id) => isStale(prev.checked[id], REFRESH_DAYS))
+  .sort((a, b) => (prev.checked[a] ?? "").localeCompare(prev.checked[b] ?? ""));
+const queue = due.slice(0, MAX_DETAILS);
+console.log(`Free catalog: ${due.length} films due a re-check, taking ${queue.length} this run`);
+
+function save() {
+  writeJson(OUT, { version: VERSION, updatedAt: new Date().toISOString(), services, films, checked } satisfies FreeFile);
+  writeJson(TMDB_OUT, tmdbCache);
+}
+
+let n = 0;
+let fetched = 0;
+for (const id of queue) {
+  if (outOfTime()) {
+    console.log(`Free catalog: time budget used up after ${fetched} films; the rest wait for the next run`);
+    break;
   }
   try {
     const d = await tmdb<Details>(`/movie/${id}`, { append_to_response: "watch/providers" });
     const now = new Date().toISOString();
     checked[id] = now;
     fetched++;
+    const was = byTmdb.get(id);
+    if (was) delete films[was];
     const us = d["watch/providers"]?.results.US;
     const free = [...(us?.ads ?? []), ...(us?.free ?? [])];
     const subs = [...new Set((us?.flatrate ?? []).flatMap((p) => (SUBSCRIPTION_OF[p.provider_id] ? [SUBSCRIPTION_OF[p.provider_id]] : [])))];
@@ -167,7 +191,6 @@ for (const id of candidates) {
         link: us?.link,
         checkedAt: now,
       };
-      // We already have everything enrich-tmdb would fetch, so save it a call.
       if (!tmdbCache[d.imdb_id]?.tmdbId)
         tmdbCache[d.imdb_id] = {
           tmdbId: d.id,
@@ -184,11 +207,11 @@ for (const id of candidates) {
     console.warn(`  ${id}: ${(e as Error).message}`);
   }
   if (++n % 500 === 0) console.log(`  ${n} checked`);
+  if (n % 1500 === 0) save();
   await sleep(20);
 }
 
-writeJson(OUT, { version: VERSION, updatedAt: new Date().toISOString(), services, films, checked } satisfies FreeFile);
-writeJson(TMDB_OUT, tmdbCache);
+save();
 const all = Object.values(films);
 console.log(
   `Free catalog: ${all.filter((f) => f.services.length).length} free films, ${all.filter((f) => f.subs?.length).length} on subscriptions (${fetched} fetched fresh)`,
