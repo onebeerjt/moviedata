@@ -12,11 +12,16 @@
 // Each title is matched to a film we track by normalized title, then
 // confirmed by runtime and/or year. Only unambiguous matches are kept, so a
 // remake or a same-named film never gets the wrong link.
-// Usage: node scripts/service-catalogs.ts
+//
+// Film pages (the slow part, paced 1.5-2 s apiece) are remembered in
+// service-pages.json, so a page is fetched once and re-read after PAGE_REFRESH_DAYS,
+// not every day. A run only fetches what --budget minutes allows; services with
+// pages left over keep their previous links and finish on the next run.
+// Usage: node scripts/service-catalogs.ts [--budget minutes]
 import { randomUUID } from "node:crypto";
 import { gunzipSync } from "node:zlib";
 import { join } from "node:path";
-import { SOURCES, readJson, sleep, writeJson } from "./util.ts";
+import { SOURCES, isStale, outOfTime, readJson, sleep, writeJson } from "./util.ts";
 import type { ImdbFilm } from "./ingest-imdb.ts";
 
 export const TUBI = 73;
@@ -33,6 +38,8 @@ export type ServiceLinks = { updatedAt: string; links: Record<string, Record<num
 
 const UA = "moviedata-bot/0.1 (+https://github.com/onebeerjt/moviedata)";
 const OUT = join(SOURCES, "service-links.json");
+const PAGES = join(SOURCES, "service-pages.json");
+const PAGE_REFRESH_DAYS = 60;
 const imdb = readJson<Record<string, ImdbFilm>>(join(SOURCES, "imdb.json"), {});
 
 /** "The Thing (1982)" and "Thing, The" both become "thing". */
@@ -201,6 +208,8 @@ async function pluto(): Promise<Item[]> {
 }
 
 const prev = readJson<ServiceLinks>(OUT, { updatedAt: "", links: {} });
+/** page url -> what its page told us (null: a stub or a 404), and when. */
+const pages = readJson<Record<string, { more: Partial<Pick<Item, "title" | "minutes" | "year">> | null; at: string }>>(PAGES, {});
 
 /** Pause between page fetches, a little jittered. */
 const pause = (ms: number) => sleep(ms + Math.random() * ms * 0.5);
@@ -471,6 +480,7 @@ for (const { sid, name, key, load, listedOnly, pace = 1500 } of LOADERS) {
   }
   let matched = 0;
   let fetched = 0;
+  let deferred = 0;
   let trouble = 0;
   let stopped = false;
   const taken = new Set<string>();
@@ -482,8 +492,18 @@ for (const { sid, name, key, load, listedOnly, pace = 1500 } of LOADERS) {
     if (item.enrich && (!item.lazy || !id) && (!listedOnly || plausible(item.title, sid))) {
       if (stopped) continue;
       try {
-        if (fetched++) await pause(pace);
-        const more = await item.enrich();
+        let more: Awaited<ReturnType<NonNullable<Item["enrich"]>>>;
+        const known = pages[item.url];
+        if (known && !isStale(known.at, PAGE_REFRESH_DAYS)) more = known.more;
+        else if (outOfTime()) {
+          deferred++;
+          continue;
+        } else {
+          if (fetched++) await pause(pace);
+          more = await item.enrich();
+          pages[item.url] = { more, at: new Date().toISOString() };
+          if (fetched % 100 === 0) writeJson(PAGES, pages);
+        }
         if (!more) continue;
         item = { ...item, ...more };
       } catch (e) {
@@ -499,13 +519,17 @@ for (const { sid, name, key, load, listedOnly, pace = 1500 } of LOADERS) {
     taken.add(item.url);
     matched++;
   }
-  // If pages failed or the service blocked us, don't lose links we couldn't re-check.
-  if (trouble) keepPrevious();
+  // If pages failed, we ran out of time, or the service blocked us, don't lose links we couldn't re-check.
+  if (trouble || deferred) keepPrevious();
   console.log(
     `${name}: ${items.length} movies in catalog, ${matched} matched to tracked films` +
       (fetched ? `, ${fetched} pages fetched` : "") +
+      (deferred ? `, ${deferred} pages left for the next run` : "") +
       (trouble ? `, ${trouble} fetch problems${stopped ? " (blocked, stopped early)" : ""}` : ""),
   );
 }
 
+// Forget pages not looked at for twice the refresh window (films that left the catalog).
+for (const [url, p] of Object.entries(pages)) if (isStale(p.at, PAGE_REFRESH_DAYS * 2)) delete pages[url];
+writeJson(PAGES, pages);
 writeJson(OUT, { updatedAt: new Date().toISOString(), links } satisfies ServiceLinks);
