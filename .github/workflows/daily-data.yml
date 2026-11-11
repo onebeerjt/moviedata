@@ -1,69 +1,115 @@
 name: Daily data refresh
 
+# Two jobs, each with its own timeout and its own commit, so no single slow step can
+# throw away the day's work:
+#   ratings: the scores and the free-film list (what the site is for). Lands first.
+#   links:   direct watch links and trailers (slower, politely paced, nice to have).
+# Every slow step also gets `--budget <minutes>`: the script stops its queue on its own
+# and saves; the rest waits for tomorrow. `timeout-minutes` on a step is only the
+# backstop for a hang, and a step that hits it fails (continue-on-error) instead of
+# cancelling the job. A normal day is ~1 hour for ratings and ~1 hour for links.
+
 on:
   schedule:
-    - cron: "17 9 * * *" # every day, 09:17 UTC
+    - cron: "17 9 * * *" # every day, 09:17 UTC (GitHub often starts it hours late)
   workflow_dispatch:
 
 permissions:
   contents: write
 
+# A late scheduled run and a manual one must not push over each other.
+concurrency:
+  group: daily-data
+  cancel-in-progress: false
+
 jobs:
-  refresh:
+  ratings:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
       - name: Free streaming catalog (Tubi, Pluto, Plex, Roku...)
-        # Runs first so IMDb ingest picks up newly free films.
+        # Runs first so IMDb ingest picks up newly free films. Re-checks at most
+        # 4000 films a run (oldest first) and saves as it goes.
         continue-on-error: true
-        run: npm run data:free
+        timeout-minutes: 35
+        run: npm run data:free -- --budget 25
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: IMDb datasets
+        # Writes only when finished, so a failure leaves yesterday's file intact.
+        continue-on-error: true
+        timeout-minutes: 20
         run: npm run data:imdb
-      - name: Direct watch links for free films
-        # New or changed free films only; capped so the job stays short.
-        continue-on-error: true
-        run: npm run data:free-links -- --limit 2000
-      - name: Tubi and Pluto links from their own catalogs
-        continue-on-error: true
-        run: npm run data:service-links
-      - name: Trailers and full movies on YouTube (play inside the site)
-        continue-on-error: true
-        run: npm run data:trailers
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: TMDB (posters, now playing)
         # A bad key or API hiccup shouldn't block the other sources.
         continue-on-error: true
-        run: npm run data:tmdb
+        timeout-minutes: 12
+        run: npm run data:tmdb -- --budget 8
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: Letterboxd
         # Datacenter IPs can get blocked; a failure here shouldn't stop the rest.
         continue-on-error: true
-        run: npm run data:letterboxd -- --limit 1500
+        timeout-minutes: 25
+        run: npm run data:letterboxd -- --limit 1500 --budget 20
       - name: OMDb (Rotten Tomatoes, Metacritic)
         continue-on-error: true
-        run: npm run data:omdb
+        timeout-minutes: 12
+        run: npm run data:omdb -- --budget 8
         env:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
       - name: Build site data
+        if: ${{ !cancelled() }}
+        timeout-minutes: 10
         run: npm run data:build
       - name: Commit
-        run: |
-          # Signed as the repo owner so Vercel's Hobby plan deploys the commit
-          # (it blocks commits from authors it doesn't recognize).
-          git config user.name "onebeerjt"
-          git config user.email "258927197+onebeerjt@users.noreply.github.com"
-          git add data/site data/sources
-          git diff --cached --quiet || git commit -m "Daily data refresh $(date -u +%F)"
-          git push
+        # Even if a step above failed: the sources it saved are worth keeping.
+        if: ${{ always() }}
+        run: .github/scripts/commit-data.sh ratings
+
+  links:
+    # Starts after ratings whether or not it succeeded, on the branch as ratings left it.
+    needs: ratings
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Direct watch links for free films
+        # New or changed free films only; at most 2000 a run (~30 min at the polite pace).
+        continue-on-error: true
+        timeout-minutes: 42
+        run: npm run data:free-links -- --limit 2000 --budget 35
+      - name: Tubi and Pluto links from their own catalogs
+        # Film pages are remembered between runs; only --budget minutes of new ones a day.
+        continue-on-error: true
+        timeout-minutes: 22
+        run: npm run data:service-links -- --budget 15
+      - name: Trailers and full movies on YouTube (play inside the site)
+        continue-on-error: true
+        timeout-minutes: 12
+        run: npm run data:trailers -- --budget 8
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      - name: Build site data
+        if: ${{ !cancelled() }}
+        timeout-minutes: 10
+        run: npm run data:build
+      - name: Commit
+        if: ${{ always() }}
+        run: .github/scripts/commit-data.sh links
