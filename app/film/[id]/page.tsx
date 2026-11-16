@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Poster } from "@/components/film-bits";
+import { MyShelf } from "@/components/my-shelf";
 import { ScoreDial } from "@/components/score-dial";
+import { ShareButton } from "@/components/share-button";
 import { SourceBars } from "@/components/source-bars";
+import { SplitStrip } from "@/components/split-strip";
+import { Trailer } from "@/components/trailer";
 import { freeInfo, getFilm, personName, posterUrl } from "@/lib/data";
+import { fmtDay, freshness } from "@/lib/fresh";
 import { serviceName } from "@/lib/free";
+import { describeShape, sameShape } from "@/lib/shape";
 import { SUBSCRIPTIONS } from "@/lib/subscriptions";
-import { notes } from "@/lib/verdict";
+import { confidence } from "@/lib/trust";
+import { why } from "@/lib/why";
 
 export async function generateMetadata({ params }: PageProps<"/film/[id]">): Promise<Metadata> {
   const film = getFilm((await params).id);
@@ -21,7 +28,10 @@ export async function generateMetadata({ params }: PageProps<"/film/[id]">): Pro
 export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
   const film = getFilm((await params).id);
   if (!film) notFound();
-  const filmNotes = notes(film);
+  const explain = why(film);
+  const trust = confidence(film);
+  const fresh = freshness();
+  const rhymes = sameShape(film);
   const backdrop = posterUrl(film.backdrop, "w1280");
 
   return (
@@ -58,35 +68,73 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
               </div>
             )}
             <ScoreDial film={film} />
+            <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+              <span
+                title={trust.detail}
+                className={`rounded-full border px-2.5 py-1 ${trust.tier === "solid" ? "border-line text-text-2" : "border-[var(--quad-xdarling)] text-[var(--quad-xdarling)]"}`}
+              >
+                {trust.label}
+              </span>
+              {fresh && <span className="text-text-3">{fresh.label}{fresh.stale ? ` (${fresh.when})` : ""}</span>}
+              <ShareButton title={`${film.title} (${film.year}) on Consensus`} text={`${film.title}: Consensus score ${film.score ?? "n/a"}. See where the sources split.`} className="ml-auto sm:ml-2" />
+            </div>
           </div>
         </div>
       </section>
 
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-8 lg:grid-cols-[1fr_20rem]">
-        <section className="rounded-2xl border border-line bg-surface p-4 sm:p-6">
-          <h2 className="mb-4 text-lg font-semibold">Every source, one scale</h2>
-          <SourceBars film={film} />
-          {(film.audience !== null || film.critics !== null) && (
-            <div className="mt-6 grid grid-cols-2 gap-3 border-t border-line pt-5">
-              <Stat label="Audiences" value={film.audience} hint="Letterboxd · IMDb · TMDB" />
-              <Stat label="Critics" value={film.critics} hint="Rotten Tomatoes · Metacritic" />
+        <div className="space-y-8">
+          <section className="rounded-2xl border border-line bg-surface p-5 sm:p-6">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-text-3">Why they split</div>
+            <h2 className="font-display mt-1 text-3xl leading-tight sm:text-4xl">{explain.headline}</h2>
+            <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-text-2">
+              {explain.paragraphs.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
             </div>
-          )}
-        </section>
+            {explain.quad && (
+              <Link
+                href={`/explore?film=${film.id}&quad=${explain.quad.key}`}
+                className="mt-4 inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-xs text-text-2 hover:bg-surface-2"
+              >
+                <span className="h-2 w-2 rounded-full" style={{ background: `var(--quad-${explain.quad.key})` }} />
+                On the Quad: {explain.quad.name} <span aria-hidden>→</span>
+              </Link>
+            )}
+          </section>
+
+          <section className="rounded-2xl border border-line bg-surface p-4 sm:p-6">
+            <h2 className="mb-4 text-lg font-semibold">Every source, one scale</h2>
+            <SourceBars film={film} />
+            {(film.audience !== null || film.critics !== null) && (
+              <div className="mt-6 grid grid-cols-2 gap-3 border-t border-line pt-5">
+                <Stat label="Audiences" value={film.audience} hint="Letterboxd · IMDb · TMDB" />
+                <Stat label="Critics" value={film.critics} hint="Rotten Tomatoes · Metacritic" />
+              </div>
+            )}
+            <div className="mt-5 border-t border-line pt-4 text-xs leading-relaxed text-text-3">
+              <p>
+                <span className="font-semibold text-text-2">{trust.label}.</span> {trust.detail}
+              </p>
+              <p className="mt-1.5">
+                Vote counts are shown for Letterboxd, IMDb and TMDB. Rotten Tomatoes and Metacritic don&apos;t publish a review count with the score, so a critic score from a dozen reviews looks the same as one from four hundred.
+                {fresh && (
+                  <>
+                    {" "}
+                    Scores as of {fmtDay(fresh.builtAt)}, {fresh.when}
+                    {fresh.stale ? ": the daily refresh has fallen behind, so newer ratings aren't in yet" : ""}.
+                  </>
+                )}
+              </p>
+            </div>
+          </section>
+        </div>
 
         <aside className="space-y-6">
+          {film.trailer && <Trailer id={film.trailer} title={film.title} />}
+          <MyShelf id={film.id} />
           {film.links && <StreamingOn links={film.links} />}
           {film.links && <WatchFree links={film.links} />}
-          {filmNotes.length > 0 && (
-            <div className="rounded-2xl border border-line bg-surface p-5">
-              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-3">What stands out</h2>
-              <ul className="space-y-3 text-sm leading-relaxed">
-                {filmNotes.map((n) => (
-                  <li key={n}>{n}</li>
-                ))}
-              </ul>
-            </div>
-          )}
           {film.overview && <p className="text-sm leading-relaxed text-text-2">{film.overview}</p>}
           {film.cast.length > 0 && (
             <div>
@@ -102,8 +150,37 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
           )}
         </aside>
       </div>
+
+      {rhymes.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 pb-12">
+          <h2 className="font-display text-3xl">Same shape</h2>
+          <p className="mb-5 mt-1 max-w-2xl text-sm text-text-2">
+            Not similar films: films the sources split on the same way. {describeLine(film)}
+          </p>
+          <div className="scroller -mx-4 flex gap-4 overflow-x-auto px-4 pb-2">
+            {rhymes.map(({ film: r, why: w }) => (
+              <Link key={r.id} href={`/film/${r.id}`} className="group block w-40 shrink-0 sm:w-44">
+                <div className="relative">
+                  <Poster film={r} className="transition group-hover:brightness-110" />
+                  <div className="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent px-2 pb-2 pt-8">
+                    <SplitStrip film={r} />
+                  </div>
+                </div>
+                <div className="mt-2 truncate text-sm">{r.title}</div>
+                <div className="text-xs text-text-3">{r.year}{w ? ` · ${w}` : ""}</div>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-2 text-xs text-text-3">Each strip is one film&apos;s sources on the 0–100 scale (colors as in the source list); the white tick is its Consensus score.</p>
+        </section>
+      )}
     </div>
   );
+}
+
+function describeLine(film: import("@/lib/types").Film) {
+  const d = describeShape(film);
+  return d ? `Here: ${d}.` : "Here, the sources largely agree, so these are films that every source also ranks about the same.";
 }
 
 /** Free services for this film, from JustWatch via TMDB. */
