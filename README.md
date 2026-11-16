@@ -30,6 +30,10 @@ Everything lives in `scripts/` and writes JSON to `data/`:
 
 Refresh cadence is by film age: released in the last 60 days, daily; last year, weekly; older, every ~6 weeks. A GitHub Action (`.github/workflows/daily-data.yml`) runs the pipeline every morning and commits the new data, which triggers a redeploy.
 
+`npm run dev` / `npm run build` first run `scripts/build-client.ts`, which writes compact browser copies of the catalog to `public/data/` (git-ignored) from `data/site/films.json`. `scripts/freshness.ts` writes `data/site/meta.json` (per-source "as of" dates).
+
+The workflow is two jobs: `core` (IMDb, TMDB, Letterboxd, OMDb, build, commit) and `streaming` (where-to-watch catalogs). Keep the slow streaming steps out of `core`: a single job once hit its time limit every day for a month and never committed.
+
 Keys go in `.env.local` locally (see `.env.example`) and in the repo's **Settings → Secrets → Actions** for the daily job.
 
 ## Run locally
