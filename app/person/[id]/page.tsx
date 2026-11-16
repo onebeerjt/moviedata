@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Poster, ScoreBadge } from "@/components/film-bits";
 import { Filmography } from "@/components/filmography";
+import { Trend } from "@/components/trend";
 import { filmsByIds, getPerson } from "@/lib/data";
 import { SOURCE, SOURCES } from "@/lib/sources";
 import type { Film } from "@/lib/types";
@@ -53,6 +54,8 @@ export default async function PersonPage({ params }: PageProps<"/person/[id]">) 
           hint={ca === null ? "Needs critic data" : ca > 3 ? "Critics like their films more" : ca < -3 ? "Audiences like their films more" : "Both agree"}
         />
       </div>
+
+      <Trend films={films} name={person.name} />
 
       {films.length >= 2 && (
         <section className="mt-10 rounded-2xl border border-line bg-surface p-4 sm:p-6">
