@@ -2,13 +2,27 @@ import Link from "next/link";
 import { FilmCard, SplitRow } from "@/components/film-bits";
 import { Search } from "@/components/search";
 import { TheatersRail } from "@/components/theaters-rail";
+import { QuadTeaser } from "@/components/quad-teaser";
 import { WeeklyRail, type WeekBucket } from "@/components/weekly-rail";
+import { Poster, ScoreBadge } from "@/components/film-bits";
+import { SplitStrip } from "@/components/split-strip";
+import { fmtDay, freshness } from "@/lib/fresh";
+import { hiddenGems, movers, oneFilm, onThisDay } from "@/lib/stories";
+import { why } from "@/lib/why";
 import { allFilms, isWellKnown } from "@/lib/data";
 import { SITE_TAGLINE } from "@/lib/site";
 import { SUBSCRIPTIONS } from "@/lib/subscriptions";
 import type { Film } from "@/lib/types";
 
+// Re-rendered at most every 30 minutes so "today" stays today.
+export const revalidate = 1800;
+
 export default function Home() {
+  const fresh = freshness();
+  const one = oneFilm();
+  const thisDay = onThisDay();
+  const moved = movers();
+  const gems = hiddenGems();
   const films = allFilms();
   const ninetyDaysAgo = new Date();
   ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
@@ -93,28 +107,38 @@ export default function Home() {
 
   return (
     <div>
-      <section className="hero mx-auto max-w-3xl px-4 pb-10 pt-14 text-center sm:pt-20">
-        <h1 className="hero-title font-display text-5xl leading-[0.95] sm:text-7xl">
-          Every score.
-          <br />
-          <span className="hero-accent text-text-2">One you can trust.</span>
-        </h1>
-        <p className="hero-sub mx-auto mt-5 max-w-xl text-text-2">
-          We pull Letterboxd, IMDb, Rotten Tomatoes, Metacritic and TMDB into a single balanced score, and show you exactly
-          where they disagree.
-        </p>
-        <div className="hero-search mx-auto mt-8 max-w-xl text-left">
+      <section className="hero mx-auto max-w-6xl px-4 pb-6 pt-6 sm:pt-10">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-line pb-2 text-xs text-text-3">
+          <span className="font-semibold uppercase tracking-wider text-text-2">
+            {new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric" }).format(new Date())}
+          </span>
+          {fresh && (
+            <span className={fresh.stale ? "text-[var(--quad-xdarling)]" : ""}>
+              {fresh.label} · {fresh.when}
+              {fresh.stale ? " · the daily refresh is behind; newer ratings aren't in yet" : ""}
+            </span>
+          )}
+        </div>
+        <div className="hero-search mt-4 hidden max-w-2xl sm:block">
           <Search large />
         </div>
-        <p className="sr-only">{SITE_TAGLINE}</p>
+        <p className="hero-sub sr-only">{SITE_TAGLINE}</p>
+        <h1 className="hero-title sr-only">Consensus: one balanced movie score from five sites</h1>
+        {one && <OneFilm film={one.film} anniversary={one.anniversary} yearsAgo={one.yearsAgo} />}
       </section>
 
-      <div className="mx-auto max-w-6xl space-y-14 px-4">
-        {weeks.length > 0 && <WeeklyRail weeks={weeks} />}
-        <WatchBanner />
-        {nowPlaying.length > 0 && (
-          <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} />
+      <div className="mx-auto max-w-6xl space-y-12 px-4">
+        {weeks.length > 0 && (
+          <WeeklyRail
+            weeks={weeks}
+            note={!weeks[0].current ? `Nothing dated for this week yet. The newest releases we have are the week of ${fmtDay(weeks[0].start)}.` : undefined}
+          />
         )}
+        {nowPlaying.length > 0 && (
+          <TheatersRail items={nowPlaying.map((f) => ({ id: f.id, releaseDate: f.releaseDate, card: <FilmCard film={f} /> }))} asOf={fresh?.theatersAt ? fmtDay(fresh.theatersAt) : undefined} />
+        )}
+        {moved.rows.length >= 3 && <Movers rows={moved.rows} from={moved.first} to={moved.last} />}
+        <QuadTeaser />
         {freeTonight.length > 0 && (
           <Rail title="Free tonight" subtitle="Top-rated on Tubi, Pluto, Plex and more" films={freeTonight} href="/watch" />
         )}
@@ -138,21 +162,18 @@ export default function Home() {
           />
         )}
 
+        {gems.length > 0 && (
+          <Rail title="Hidden gems" subtitle="Strong on every source, and under 40k ratings: few have seen them" films={gems} />
+        )}
+        {thisDay.length > 0 && <Rail title="On this day" subtitle="Released on this date in an earlier year" films={thisDay} />}
         {consensus.length > 0 && (
           <Rail title="Everyone agrees: these are great" subtitle="Top balanced scores with at least three sources" films={consensus} />
         )}
 
-        <section className="grid gap-4 sm:grid-cols-2">
-          <PromoCard
-            href="/explore"
-            title="Explore the map"
-            body="Every film plotted Letterboxd against IMDb (or any two sources). Filter by genre and decade and find the outliers."
-          />
-          <PromoCard
-            href="/insights"
-            title="What the gaps mean"
-            body="Which genres, decades and directors does each site love or underrate?"
-          />
+        <section className="grid gap-4 sm:grid-cols-3">
+          <PromoCard href="/insights" title="What the gaps mean" body="Which genres, decades and directors does each site love or underrate?" />
+          <PromoCard href="/versus" title="Versus" body="Two films, two directors or two decades, head to head across every source." />
+          <PromoCard href="/me" title="Who agrees with you?" body="Rate a handful of films and see which site's taste matches yours." />
         </section>
       </div>
     </div>
@@ -247,5 +268,56 @@ function PromoCard({ href, title, body }: { href: string; title: string; body: s
       </h3>
       <p className="mt-2 text-sm text-text-2">{body}</p>
     </Link>
+  );
+}
+
+/** Today's single most interesting score story, above the fold. */
+function OneFilm({ film, anniversary, yearsAgo }: { film: Film; anniversary: boolean; yearsAgo: number }) {
+  const w = why(film);
+  return (
+    <Link href={`/film/${film.id}`} className="group mt-6 grid grid-cols-[6.5rem_1fr] gap-4 rounded-3xl border border-line bg-surface p-4 transition hover:bg-surface-2 sm:grid-cols-[9rem_1fr] sm:gap-6 sm:p-6">
+      <Poster film={film} size="w342" className="w-full" />
+      <div className="min-w-0">
+        <div className="text-[11px] font-semibold uppercase tracking-wider text-text-3">
+          One film today{anniversary ? ` · released ${yearsAgo} years ago today` : ""}
+        </div>
+        <h2 className="font-display mt-1 text-3xl leading-none sm:text-5xl">{film.title}</h2>
+        <div className="mt-1 text-sm text-text-3">{film.year} · {film.directors.length ? "" : ""}{film.genres.slice(0, 2).join(", ")}</div>
+        <p className="font-display mt-3 text-xl leading-snug text-text sm:text-3xl">{w.headline}</p>
+        <div className="mt-3 flex items-center gap-3">
+          <ScoreBadge score={film.score} size="md" />
+          <div className="tabular text-sm text-text-2">
+            Critics <b className="text-text">{film.critics}</b> · Audiences <b className="text-text">{film.audience}</b>
+          </div>
+        </div>
+        <SplitStrip film={film} className="mt-3 max-w-md" />
+        <p className="mt-3 hidden max-w-xl text-sm text-text-2 sm:block">{w.paragraphs[0]}</p>
+      </div>
+    </Link>
+  );
+}
+
+function Movers({ rows, from, to }: { rows: ReturnType<typeof movers>["rows"]; from: string; to: string }) {
+  return (
+    <section>
+      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4">
+        <h2 className="font-display text-3xl">Score movers</h2>
+        <span className="text-xs text-text-3">Recent releases, audience score {fmtDay(from)} → {fmtDay(to)}</span>
+      </div>
+      <div className="grid gap-x-6 sm:grid-cols-2">
+        {rows.map(({ film, delta, detail }) => (
+          <Link key={film.id} href={`/film/${film.id}`} className="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-surface-2">
+            <Poster film={film} size="w185" className="w-10 shrink-0 rounded" />
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-sm">{film.title}</div>
+              <div className="truncate text-xs text-text-3">{detail}</div>
+            </div>
+            <div className={`tabular text-sm font-semibold ${delta > 0 ? "text-[var(--quad-canon)]" : "text-[var(--quad-bomb)]"}`}>
+              {delta > 0 ? "▲" : "▼"} {Math.abs(delta).toFixed(2)}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

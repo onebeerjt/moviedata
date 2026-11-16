@@ -81,7 +81,7 @@ function WeekCard({ film }: { film: WeekFilm }) {
 }
 
 /** "New this week": theatrical releases bucketed by week, ‹ › steps one week at a time. */
-export function WeeklyRail({ weeks }: { weeks: WeekBucket[] }) {
+export function WeeklyRail({ weeks, note }: { weeks: WeekBucket[]; note?: string }) {
   const [idx, setIdx] = useState(0);
   if (weeks.length === 0) return null;
   const week = weeks[Math.min(idx, weeks.length - 1)];
@@ -98,6 +98,7 @@ export function WeeklyRail({ weeks }: { weeks: WeekBucket[] }) {
             {week.current ? "This week" : "Week of"} · {fmtRange(week.start, week.end)} · {week.films.length}{" "}
             {week.films.length === 1 ? "release" : "releases"}
           </div>
+          {note && idx === 0 && <div className="mt-1 text-xs text-[var(--quad-xdarling)]">{note}</div>}
         </div>
         <div className="flex shrink-0 gap-2">
           <button type="button" aria-label="Previous week" disabled={!canOlder} onClick={() => setIdx(idx + 1)} className={arrow}>

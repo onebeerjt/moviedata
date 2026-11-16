@@ -16,14 +16,14 @@ function isNewRelease(releaseDate?: string) {
 }
 
 /** The "In theaters now" rail: now-playing films, filtered to new releases. */
-export function TheatersRail({ items }: { items: TheaterItem[] }) {
+export function TheatersRail({ items, asOf }: { items: TheaterItem[]; asOf?: string }) {
   const shown = items.filter((i) => isNewRelease(i.releaseDate));
   if (shown.length === 0) return null;
   return (
     <section>
       <div className="mb-4 flex items-baseline justify-between gap-4">
         <h2 className="font-display text-3xl">In theaters now</h2>
-        <span className="text-xs text-text-3">New releases · last 12 weeks</span>
+        <span className="text-xs text-text-3">{asOf ? `Theater list as of ${asOf}` : "New releases · last 12 weeks"}</span>
       </div>
       <div className="scroller -mx-4 flex gap-4 overflow-x-auto px-4 pb-2">
         {shown.map((i) => (
