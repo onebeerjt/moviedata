@@ -1,5 +1,25 @@
 name: Daily data refresh
 
+# Two jobs, because one job used to do everything and ran out of time.
+#
+# From Oct 18 to Nov 16 every run of the old single job was cancelled at its 120-minute
+# limit: the slow streaming-catalog steps (free catalog ~75 min, free links ~30 min,
+# Tubi/Pluto ~10+ min) ran first and used the whole budget, so the steps that matter
+# (TMDB, Letterboxd, OMDb, build, commit) never ran and no data was committed. Nothing
+# failed loudly, because the job was cancelled rather than errored.
+#
+# Why the slow steps were slow: on Oct 14 the whole run took ~110 min and succeeded. On Oct 15 the
+# free catalog step jumped from 4 to 85 minutes (it re-checks every film after its data format
+# changed) and the Tubi/Pluto step took 61. The re-check only saves its progress when it finishes;
+# since the job was cancelled before the commit, nothing was ever saved, so every following day
+# started the same 85-minute re-check from scratch. A loop. The streaming job below has room to
+# finish that re-check once; after that, runs should take minutes again.
+#
+# Now:
+#  - "core" runs the fast, essential sources first and always builds and commits what it has.
+#  - "streaming" runs the slow where-to-watch catalogs afterwards, on its own clock, and
+#    commits separately. If it times out, the site still has fresh scores.
+
 on:
   schedule:
     - cron: "17 9 * * *" # every day, 09:17 UTC
@@ -8,57 +28,48 @@ on:
 permissions:
   contents: write
 
+# One refresh at a time: two jobs pushing to main at once would reject each other.
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+env:
+  TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+  TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+  OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+  YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
 jobs:
-  refresh:
+  core:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Free streaming catalog (Tubi, Pluto, Plex, Roku...)
-        # Runs first so IMDb ingest picks up newly free films.
-        continue-on-error: true
-        run: npm run data:free
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: IMDb datasets
         run: npm run data:imdb
-      - name: Direct watch links for free films
-        # New or changed free films only; capped so the job stays short.
-        continue-on-error: true
-        run: npm run data:free-links -- --limit 2000
-      - name: Tubi and Pluto links from their own catalogs
-        continue-on-error: true
-        run: npm run data:service-links
-      - name: Trailers and full movies on YouTube (play inside the site)
-        continue-on-error: true
-        run: npm run data:trailers
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: TMDB (posters, now playing)
         # A bad key or API hiccup shouldn't block the other sources.
+        timeout-minutes: 20
         continue-on-error: true
         run: npm run data:tmdb
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
       - name: Letterboxd
         # Datacenter IPs can get blocked; a failure here shouldn't stop the rest.
+        timeout-minutes: 25
         continue-on-error: true
         run: npm run data:letterboxd -- --limit 1500
       - name: OMDb (Rotten Tomatoes, Metacritic)
+        timeout-minutes: 10
         continue-on-error: true
         run: npm run data:omdb
-        env:
-          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
       - name: Build site data
+        # Runs even if a source step above failed or timed out: partial fresh data beats none.
+        if: ${{ !cancelled() }}
         run: npm run data:build
       - name: Commit
+        if: ${{ !cancelled() }}
         run: |
           # Signed as the repo owner so Vercel's Hobby plan deploys the commit
           # (it blocks commits from authors it doesn't recognize).
@@ -66,4 +77,49 @@ jobs:
           git config user.email "258927197+onebeerjt@users.noreply.github.com"
           git add data/site data/sources
           git diff --cached --quiet || git commit -m "Daily data refresh $(date -u +%F)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
+
+  streaming:
+    needs: core
+    # Still runs if core had a problem: the two are independent.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 270
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: IMDb datasets (needed to rebuild)
+        run: npm run data:imdb
+      - name: Free streaming catalog (Tubi, Pluto, Plex, Roku...)
+        # Writes its results only when it finishes, so give it room rather than a tight cap.
+        timeout-minutes: 110
+        continue-on-error: true
+        run: npm run data:free
+      - name: Direct watch links for free films
+        # Saves progress as it goes, so a timeout loses little. Capped so the job stays short.
+        timeout-minutes: 35
+        continue-on-error: true
+        run: npm run data:free-links -- --limit 2000
+      - name: Tubi and Pluto links from their own catalogs
+        timeout-minutes: 75
+        continue-on-error: true
+        run: npm run data:service-links
+      - name: Trailers and full movies on YouTube
+        timeout-minutes: 15
+        continue-on-error: true
+        run: npm run data:trailers
+      - name: Build site data
+        if: ${{ !cancelled() }}
+        run: npm run data:build
+      - name: Commit
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "onebeerjt"
+          git config user.email "258927197+onebeerjt@users.noreply.github.com"
+          git add data/site data/sources
+          git diff --cached --quiet || git commit -m "Streaming data refresh $(date -u +%F)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
