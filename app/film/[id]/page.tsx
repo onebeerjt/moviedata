@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Poster } from "@/components/film-bits";
+import { FreshStamp } from "@/components/fresh-stamp";
 import { MyShelf } from "@/components/my-shelf";
 import { ScoreDial } from "@/components/score-dial";
 import { ShareButton } from "@/components/share-button";
@@ -9,7 +10,7 @@ import { SourceBars } from "@/components/source-bars";
 import { SplitStrip } from "@/components/split-strip";
 import { Trailer } from "@/components/trailer";
 import { freeInfo, getFilm, personName, posterUrl } from "@/lib/data";
-import { fmtDay, freshness } from "@/lib/fresh";
+import { freshness } from "@/lib/fresh";
 import { serviceName } from "@/lib/free";
 import { describeShape, sameShape } from "@/lib/shape";
 import { SUBSCRIPTIONS } from "@/lib/subscriptions";
@@ -75,7 +76,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
               >
                 {trust.label}
               </span>
-              {fresh && <span className="text-text-3">{fresh.label}{fresh.stale ? ` (${fresh.when})` : ""}</span>}
+              {fresh && <span className="text-text-3"><FreshStamp iso={fresh.builtAt} warn={false} /></span>}
               <ShareButton title={`${film.title} (${film.year}) on Consensus`} text={`${film.title}: Consensus score ${film.score ?? "n/a"}. See where the sources split.`} className="ml-auto sm:ml-2" />
             </div>
           </div>
@@ -121,8 +122,7 @@ export default async function FilmPage({ params }: PageProps<"/film/[id]">) {
                 {fresh && (
                   <>
                     {" "}
-                    Scores as of {fmtDay(fresh.builtAt)}, {fresh.when}
-                    {fresh.stale ? ": the daily refresh has fallen behind, so newer ratings aren't in yet" : ""}.
+                    <FreshStamp iso={fresh.builtAt} />.
                   </>
                 )}
               </p>

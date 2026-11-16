@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
 import { SITE_NAME } from "@/lib/site";
+import { daysSince, fmtDay, freshness } from "@/lib/fresh";
 import { SOURCES } from "@/lib/sources";
 
 export const metadata: Metadata = { title: "How it works" };
 
 export default function AboutPage() {
+  const fresh = freshness();
+  const rows: [string, string | null | undefined][] = fresh
+    ? [
+        ["Scores assembled", fresh.builtAt],
+        ["Letterboxd", fresh.sources.letterboxd?.updatedAt],
+        ["Rotten Tomatoes + Metacritic (OMDb)", fresh.sources.omdb?.updatedAt],
+        ["TMDB posters and ratings", fresh.sources.tmdb?.updatedAt],
+        ["In theaters list", fresh.theatersAt],
+        ["Streaming availability", fresh.streamingAt],
+      ]
+    : [];
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 leading-relaxed">
       <h1 className="font-display text-5xl">How it works</h1>
@@ -67,11 +79,27 @@ export default function AboutPage() {
         Films in theaters and recent releases are refreshed daily, films from the past year weekly, and the back catalogue
         every few weeks. Older scores barely move.
       </p>
+      {rows.length > 0 && (
+        <table className="mt-4 w-full text-sm">
+          <tbody>
+            {rows.map(([name, at]) => (
+              <tr key={name} className="border-b border-line/60">
+                <td className="py-2 text-text-2">{name}</td>
+                <td className="tabular py-2 text-right">{at ? `${fmtDay(at)} (${Math.max(0, daysSince(at))}d ago)` : "unknown"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      <p className="mt-3 text-xs text-text-3">
+        Each date is the newest per-film fetch time recorded for that source. A source that lags the others is usually
+        waiting on its next scheduled pass, not broken, but if everything is old the daily refresh has stalled.
+      </p>
 
       <h2 className="mt-10 text-xl font-semibold">Caveats</h2>
       <p className="mt-3 text-text-2">
-        Percentiles are relative to the roughly 12,000 most-rated films we track, not every film ever made. Rotten
-        Tomatoes&apos; audience score isn&apos;t included yet. All scores belong to their sites, and every film page links
+        Percentiles are relative to the roughly 16,000 films with at least 5,000 IMDb ratings, not every film ever made. Rotten
+        Tomatoes&apos; audience score isn&apos;t included yet. Rotten Tomatoes and Metacritic don&apos;t publish how many reviews sit behind a score, so we can&apos;t show critic counts or discount thin critic scores the way we do audience ones. All scores belong to their sites, and every film page links
         straight to the source.
       </p>
     </div>

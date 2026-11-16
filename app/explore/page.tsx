@@ -14,7 +14,7 @@ const axis = (v: string, d: AxisKey): AxisKey => (AXES.some((a) => a.key === v) 
 
 export default async function ExplorePage({ searchParams }: PageProps<"/explore">) {
   const sp = await searchParams;
-  let x = axis(first(sp.x), "audience");
+  const x = axis(first(sp.x), "audience");
   let y = axis(first(sp.y), "critics");
   if (x === y) y = x === "critics" ? "audience" : "critics";
   const quadIdx = QUAD_KEYS.findIndex((k) => k === first(sp.quad));

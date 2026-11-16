@@ -23,6 +23,7 @@ export function freshness() {
     when,
     theatersAt: meta.theatersAt,
     theatersAge: meta.theatersAt ? daysSince(meta.theatersAt) : null,
+    streamingAt: meta.streamingAt,
     sources: meta.sources,
   };
 }

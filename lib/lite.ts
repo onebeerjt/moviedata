@@ -59,7 +59,10 @@ export function loadLite(): Promise<Lite> {
         for (let i = 0; i < raw.n; i++) {
           let sum = 0;
           let k = 0;
-          for (const c of cols) if (c[i] >= 0) (sum += c[i], k++);
+          for (const c of cols) if (c[i] >= 0) {
+            sum += c[i];
+            k++;
+          }
           out[i] = k ? Math.round(sum / k) : -1;
         }
         return out;

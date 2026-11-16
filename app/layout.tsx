@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Bebas_Neue, Geist, Geist_Mono, Instrument_Serif, Inter_Tight, Playfair_Display, Source_Serif_4, Space_Mono, VT323 } from "next/font/google";
 import { Search } from "@/components/search";
 import { ThemeTabs } from "@/components/theme-tabs";
+import { FreshStamp } from "@/components/fresh-stamp";
+import { freshness } from "@/lib/fresh";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { DEFAULT_THEME, THEME_BOOT_SCRIPT } from "@/lib/themes";
 import "./globals.css";
@@ -24,6 +26,7 @@ const fonts = [geistSans, geistMono, display, playfair, sourceSerif, bebas, vt32
   .join(" ");
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://consensus-kohl.vercel.app"),
   title: { default: `${SITE_NAME}: ${SITE_TAGLINE}`, template: `%s · ${SITE_NAME}` },
   description:
     "One balanced movie score built from Letterboxd, IMDb, Rotten Tomatoes, Metacritic and TMDB, with every source side by side so you can see where they disagree.",
@@ -31,13 +34,16 @@ export const metadata: Metadata = {
 
 const nav = [
   { href: "/watch", label: "Find a movie" },
-  { href: "/explore", label: "Explore" },
+  { href: "/explore", label: "The Quad" },
   { href: "/insights", label: "Insights" },
+  { href: "/versus", label: "Versus" },
   { href: "/cult", label: "Cult" },
+  { href: "/me", label: "My taste" },
   { href: "/about", label: "How it works" },
 ];
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const fresh = freshness();
   return (
     // The boot script may change data-theme before React hydrates.
     <html lang="en" data-theme={DEFAULT_THEME} suppressHydrationWarning className={`${fonts} h-full antialiased`}>
@@ -76,6 +82,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               Ratings data from IMDb (non-commercial datasets), Letterboxd, TMDB and OMDb (Rotten Tomatoes and Metacritic). This
               product uses the TMDB API but is not endorsed or certified by TMDB. Scores belong to their respective sites;{" "}
               {SITE_NAME} links to every source.
+              {fresh && <> <FreshStamp iso={fresh.builtAt} />.</>}
             </div>
           </footer>
       </body>

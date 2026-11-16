@@ -280,11 +280,8 @@ export function Quad({ initial, asOf, totalFilms }: { initial: QuadInitial; asOf
   const [hover, setHover] = useState<{ i: number; x: number; y: number } | null>(null);
   const [size, setSize] = useState({ w: 360, h: 360 });
   const [status, setStatus] = useState("");
-  const [filtersOpen, setFiltersOpen] = useState(true);
-  useEffect(() => {
-    // Phones start with the axis/filter controls folded away so the chart is on screen.
-    if (window.innerWidth < 640) setFiltersOpen(false);
-  }, []);
+  // Phones start with the axis/filter controls folded away so the chart is on screen.
+  const [filtersOpen, setFiltersOpen] = useState(() => typeof window === "undefined" || window.innerWidth >= 640);
   const wrap = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const drag = useRef<{ pts: Map<number, { x: number; y: number }>; start?: { x: number; y: number; t: number; view: View }; moved: boolean; pinch?: number }>({
@@ -386,7 +383,10 @@ export function Quad({ initial, asOf, totalFilms }: { initial: QuadInitial; asOf
   // Keep the URL shareable: every setting lives in the query string.
   useEffect(() => {
     const q = new URLSearchParams();
-    if (x !== "audience" || y !== "critics") (q.set("x", x), q.set("y", y));
+    if (x !== "audience" || y !== "critics") {
+      q.set("x", x);
+      q.set("y", y);
+    }
     if (decade) q.set("decade", String(decade));
     if (genre) q.set("genre", genre);
     if (votes) q.set("votes", String(votes));
@@ -664,13 +664,17 @@ export function Quad({ initial, asOf, totalFilms }: { initial: QuadInitial; asOf
     <div>
       <div className="scroller -mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
         {PRESETS.map((p) => (
-          <button key={p.name} onClick={() => ((setX(p.x), setY(p.y), setView(FULL)))} className={chip(x === p.x && y === p.y)}>
+          <button key={p.name} onClick={() => {
+              setX(p.x);
+              setY(p.y);
+              setView(FULL);
+            }} className={chip(x === p.x && y === p.y)}>
             {p.name}
           </button>
         ))}
       </div>
 
-      <details open={filtersOpen} onToggle={(e) => setFiltersOpen(e.currentTarget.open)} className="mt-3">
+      <details suppressHydrationWarning open={filtersOpen} onToggle={(e) => setFiltersOpen(e.currentTarget.open)} className="mt-3">
       <summary className="flex cursor-pointer list-none items-center justify-between rounded-full border border-line px-4 py-2 text-sm text-text-2 sm:hidden">
         <span className="truncate">{xAxis.label} × {yAxis.label}{genre ? ` · ${genre}` : ""}{votes ? ` · ${fmtN(votes)}+ ratings` : ""}</span>
         <span aria-hidden>{filtersOpen ? "▴" : "▾ Axes & filters"}</span>
@@ -686,7 +690,11 @@ export function Quad({ initial, asOf, totalFilms }: { initial: QuadInitial; asOf
             ))}
           </select>
         </label>
-        <button aria-label="Swap axes" onClick={() => (setX(y), setY(x), setView(FULL))} className="h-9 w-9 shrink-0 rounded-full border border-line text-text-2 hover:bg-surface-2">
+        <button aria-label="Swap axes" onClick={() => {
+            setX(y);
+            setY(x);
+            setView(FULL);
+          }} className="h-9 w-9 shrink-0 rounded-full border border-line text-text-2 hover:bg-surface-2">
           ⇄
         </button>
         <label className="flex min-w-0 items-center gap-2 text-xs text-text-3">

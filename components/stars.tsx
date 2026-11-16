@@ -12,8 +12,13 @@ export function Stars({ value, onChange, size = 28 }: { value: number; onChange:
       aria-valuenow={value / 2}
       aria-valuetext={value ? `${value / 2} stars` : "not rated"}
       onKeyDown={(e) => {
-        if (e.key === "ArrowRight" || e.key === "ArrowUp") (e.preventDefault(), onChange(Math.min(10, value + 1)));
-        else if (e.key === "ArrowLeft" || e.key === "ArrowDown") (e.preventDefault(), onChange(Math.max(1, value - 1)));
+        if (e.key === "ArrowRight" || e.key === "ArrowUp") {
+          e.preventDefault();
+          onChange(Math.min(10, value + 1));
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
+          e.preventDefault();
+          onChange(Math.max(1, value - 1));
+        }
       }}
       className="inline-flex touch-manipulation select-none rounded outline-offset-2"
     >
