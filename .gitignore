@@ -45,3 +45,6 @@ next-env.d.ts
 /data/sources/imdb.json
 /data/sources/imdb-people.json
 .env
+
+# derived client data (scripts/build-client.ts, runs before dev/build)
+/public/data/

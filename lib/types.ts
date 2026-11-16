@@ -88,3 +88,12 @@ export type FreeService = {
   /** How many tracked films it streams free. */
   count: number;
 };
+
+/** When the data was last refreshed (data/site/meta.json, written by scripts/freshness.ts). */
+export type Meta = {
+  /** When films.json was assembled: every score on the site is as of this moment. */
+  builtAt: string;
+  sources: Record<string, { updatedAt: string | null; count: number }>;
+  theatersAt: string | null;
+  streamingAt: string | null;
+};

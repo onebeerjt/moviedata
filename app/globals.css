@@ -21,6 +21,12 @@
   --src-tmdb: #3987e5;
   --src-rt: #d95926;
   --src-metacritic: #9085e9;
+
+  /* The Quad's four boxes (components/quad.tsx). Validated as a set on --surface. */
+  --quad-canon: #27a577;
+  --quad-ydarling: #8a7ae0;
+  --quad-xdarling: #cc8a1c;
+  --quad-bomb: #e0527a;
 }
 
 @theme inline {
@@ -75,6 +81,13 @@ body {
 }
 
 /* Broadsheet: the film section of a daily paper. */
+[data-theme="broadsheet"],
+[data-theme="index"] {
+  --quad-canon: #0e7a55;
+  --quad-ydarling: #5d50cf;
+  --quad-xdarling: #a26600;
+  --quad-bomb: #c2325f;
+}
 [data-theme="broadsheet"] {
   color-scheme: light;
   --bg: #f2ede3;

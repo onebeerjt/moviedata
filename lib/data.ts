@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { Film, FreeService, Insights, Person } from "./types";
+import type { Film, FreeService, Insights, Meta, Person } from "./types";
 
 // The data pipeline (scripts/) writes these files; pages read them on the server.
 const dir = join(process.cwd(), "data/site");
@@ -18,6 +18,7 @@ let cache: {
   people: Record<string, Person>;
   insights: Insights | null;
   free: { updatedAt: string; services: FreeService[] };
+  meta: Meta | null;
 } | null = null;
 
 function db() {
@@ -29,6 +30,7 @@ function db() {
       people: load<Record<string, Person>>("people.json", {}),
       insights: load<Insights | null>("insights.json", null),
       free: load("free.json", { updatedAt: "", services: [] as FreeService[] }),
+      meta: load<Meta | null>("meta.json", null),
     };
   }
   return cache;
@@ -39,6 +41,8 @@ export const getFilm = (id: string) => db().byId.get(id);
 export const getPerson = (id: string) => db().people[id];
 export const getInsights = () => db().insights;
 export const freeInfo = () => db().free;
+export const getMeta = () => db().meta;
+export const allPeople = () => db().people;
 export const filmsByIds = (ids: string[]) => ids.map((id) => db().byId.get(id)).filter((f): f is Film => !!f);
 export const personName = (id: string) => db().people[id]?.name ?? "Unknown";
 
