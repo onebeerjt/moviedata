@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Bebas_Neue, Geist, Geist_Mono, Instrument_Serif, Inter_Tight, Playfair_Display, Source_Serif_4, Space_Mono, VT323 } from "next/font/google";
 import { Search } from "@/components/search";
 import { ThemeTabs } from "@/components/theme-tabs";
-import { VersionProvider } from "@/components/version-context";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { DEFAULT_THEME, THEME_BOOT_SCRIPT } from "@/lib/themes";
 import "./globals.css";
@@ -46,7 +45,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
       </head>
       <body className="min-h-full flex flex-col">
-        <VersionProvider>
           <ThemeTabs />
           <header className="site-header sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
@@ -80,7 +78,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               {SITE_NAME} links to every source.
             </div>
           </footer>
-        </VersionProvider>
       </body>
     </html>
   );
